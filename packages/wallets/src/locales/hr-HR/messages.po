@@ -34,7 +34,7 @@ msgstr ""
 #~ msgid "*Want to explore Cactus’s blocks further? Check out <0>Cactus Explorer</0> built by an open source developer."
 #~ msgstr "*Want to explore Cactus’s blocks further? Check out <0>Cactus Explorer</0> built by an open source developer."
 
-#: src/components/WalletHistory.tsx:150
+#: src/components/WalletHistory.tsx:212
 msgid "+"
 msgstr ""
 
@@ -50,7 +50,7 @@ msgstr ""
 #~ msgid "+ Add Wallet"
 #~ msgstr "+ Add Wallet"
 
-#: src/components/WalletHistory.tsx:149
+#: src/components/WalletHistory.tsx:212
 msgid "-"
 msgstr ""
 
@@ -118,8 +118,8 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/hero/WalletHeroAdd.tsx:99
-msgid "Add Custom Token"
-msgstr ""
+#~ msgid "Add Custom Token"
+#~ msgstr ""
 
 #: src/components/plot/PlotHeader.tsx:89
 #~ msgid "Add Plot Directory"
@@ -130,11 +130,9 @@ msgstr ""
 #~ msgstr "Add Plot to Queue"
 
 #: src/components/WalletsList.tsx:54
-#: src/components/WalletsManageTokens.tsx:166
+#: src/components/WalletsManageTokens.tsx:170
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:70
-#: src/components/hero/WalletHeroAdd.tsx:64
-#: src/components/hero/WalletHeroWallets.tsx:83
 msgid "Add Token"
 msgstr ""
 
@@ -193,7 +191,7 @@ msgstr "Adresa / Zagonetni hash"
 #~ msgid "Alternate tmpdir/tmpdir2"
 #~ msgstr "Alternate tmpdir/tmpdir2"
 
-#: src/components/WalletHistory.tsx:165
+#: src/components/WalletHistory.tsx:228
 #: src/components/WalletSend.tsx:164
 #: src/components/cat/WalletCATSend.tsx:206
 #: src/components/rateLimited/WalletRateLimited.jsx:719
@@ -378,6 +376,24 @@ msgstr "Stanje"
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
+#: src/electron/main.tsx:430
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr ""
+
+#: src/electron/main.tsx:369
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
+
+#: src/components/standard/WalletStandard.tsx:23
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
+
 #: src/components/_selectKey_old/SelectKey.tsx:212
 #~ msgid "Can be backed up to mnemonic seed"
 #~ msgstr "Can be backed up to mnemonic seed"
@@ -436,24 +452,6 @@ msgstr ""
 #: src/electron/main.tsx:412
 #~ msgid "Chat on KeyBase"
 #~ msgstr "Chat on KeyBase"
-
-#: src/electron/main.tsx:430
-#~ msgid "Cactus"
-#~ msgstr "Cactus"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr ""
-
-#: src/electron/main.tsx:369
-#~ msgid "Cactus Blockchain Wiki"
-#~ msgstr "Cactus Blockchain Wiki"
-
-#: src/components/standard/WalletStandard.tsx:23
-#~ msgid "Cactus Wallet"
-#~ msgstr "Cactus Wallet"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 #~ msgid "Choose Number of Plots"
@@ -547,11 +545,11 @@ msgstr ""
 msgid "Confirmation"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:111
+#: src/components/WalletHistory.tsx:158
 msgid "Confirmed"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:290
+#: src/components/WalletHistory.tsx:357
 msgid "Confirmed at Height"
 msgstr ""
 
@@ -641,8 +639,8 @@ msgid "Create An Attestation Packet"
 msgstr ""
 
 #: src/components/cat/WalletCATCreateExisting.tsx:76
-msgid "Create Cactus Asset Token Wallet from Existing TAIL"
-msgstr ""
+#~ msgid "Create Cactus Asset Token Wallet from Existing TAIL"
+#~ msgstr ""
 
 #: src/components/wallet/create/WalletCreate.jsx:290
 #~ msgid "Create DID wallet"
@@ -718,8 +716,8 @@ msgstr "Kreiraj Transakciju"
 #~ msgstr ""
 
 #: src/components/cat/WalletCATCreateExisting.tsx:75
-msgid "Create custom CAT Wallet"
-msgstr ""
+#~ msgid "Create custom CAT Wallet"
+#~ msgstr ""
 
 #: src/components/_wallet_old/create/WalletCreate.jsx:132
 #~ msgid "Create new coloured coin"
@@ -808,7 +806,7 @@ msgstr ""
 #~ msgid "DIDListItems.title"
 #~ msgstr ""
 
-#: src/components/WalletHistory.tsx:136
+#: src/components/WalletHistory.tsx:201
 msgid "Date"
 msgstr "Datum"
 
@@ -1125,7 +1123,7 @@ msgstr "Farma"
 #~ msgid "Farming Status"
 #~ msgstr "Farming Status"
 
-#: src/components/WalletHistory.tsx:177
+#: src/components/WalletHistory.tsx:240
 #: src/components/WalletSend.tsx:175
 #: src/components/cat/WalletCATSend.tsx:219
 #: src/components/create/createRLAdmin.jsx:243
@@ -1342,7 +1340,7 @@ msgstr "Uvezi Novčanik sa Mnemonics"
 #~ msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted."
 #~ msgstr ""
 
-#: src/components/WalletHistory.tsx:60
+#: src/components/WalletHistory.tsx:95
 msgid "Incoming"
 msgstr "Dolazni"
 
@@ -1379,19 +1377,6 @@ msgstr "Inicijaliziraj ograničeni Korisnički novčanik:"
 #~ msgid "Install Keybase"
 #~ msgstr ""
 
-#: src/components/offers/OfferViewer.tsx:358
-<<<<<<< HEAD
-msgid ""
-"Insufficient funds available to accept offer. Ensure that your\n"
-"spendable balance is sufficient to cover the offer amount."
-msgstr ""
-
-#: src/components/offers/OfferEditor.tsx:166
-msgid ""
-"Insufficient funds available to create offer. Ensure that your\n"
-"spendable balance is sufficient to cover the offer amount."
-msgstr ""
-=======
 #~ msgid ""
 #~ "Insufficient funds available to accept offer. Ensure that your\n"
 #~ "spendable balance is sufficient to cover the offer amount."
@@ -1401,8 +1386,7 @@ msgstr ""
 #~ msgid ""
 #~ "Insufficient funds available to create offer. Ensure that your\n"
 #~ "spendable balance is sufficient to cover the offer amount."
-#~ msgstr ""
->>>>>>> tmp
+#~ msgstr ">>>>>>> tmp"
 
 #: src/components/create/createRLAdmin.jsx:217
 msgid "Interval"
@@ -1522,9 +1506,9 @@ msgstr ""
 #~ msgid "Loading list of wallets"
 #~ msgstr "Loading list of wallets"
 
-#: src/components/plot/queue/PlotQueueLogDialog.tsx:35
-#~ msgid "Loading..."
-#~ msgstr "Loading..."
+#: src/components/WalletReceiveAddressField.tsx:40
+msgid "Loading..."
+msgstr "Loading..."
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:126
 #~ msgid "Local Harvester Plots"
@@ -1591,16 +1575,16 @@ msgstr ""
 #~ msgid "Manage Your Farming Rewards Target Addresses"
 #~ msgstr "Manage Your Farming Rewards Target Addresses"
 
-#: src/components/WalletsManageTokens.tsx:143
+#: src/components/WalletsManageTokens.tsx:147
 msgid "Manage token list"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:116
+#: src/components/WalletHistory.tsx:172
 #: src/components/cat/WalletCATSend.tsx:231
 msgid "Memo"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:294
+#: src/components/WalletHistory.tsx:366
 msgid "Memos"
 msgstr ""
 
@@ -1720,7 +1704,7 @@ msgstr "Nadimak"
 #~ msgid "No current offers"
 #~ msgstr ""
 
-#: src/components/WalletHistory.tsx:323
+#: src/components/WalletHistory.tsx:402
 msgid "No previous transactions"
 msgstr "Nema prethodnih transakcija"
 
@@ -1748,8 +1732,8 @@ msgstr "ID Čvora"
 #~ msgid "None of your plots have passed the plot filter yet."
 #~ msgstr "None of your plots have passed the plot filter yet."
 
-#: src/components/WalletHistory.tsx:286
-#: src/components/WalletHistory.tsx:291
+#: src/components/WalletHistory.tsx:351
+#: src/components/WalletHistory.tsx:361
 msgid "Not Available"
 msgstr "Nije dostupno"
 
@@ -1814,7 +1798,7 @@ msgstr "U redu"
 #~ msgid "Offer"
 #~ msgstr "Offer"
 
-#: src/components/WalletHistory.tsx:122
+#: src/components/WalletHistory.tsx:186
 msgid "Offer Accepted"
 msgstr ""
 
@@ -1879,7 +1863,7 @@ msgstr ""
 #~ msgid "Only one backup file is allowed. To add a new backup file, please delete any previously uploaded files and try again."
 #~ msgstr "Only one backup file is allowed. To add a new backup file, please delete any previously uploaded files and try again."
 
-#: src/components/WalletHistory.tsx:60
+#: src/components/WalletHistory.tsx:95
 msgid "Outgoing"
 msgstr "Odlazni"
 
@@ -1961,7 +1945,7 @@ msgstr ""
 #~ msgid "Peak Time"
 #~ msgstr "Peak Time"
 
-#: src/components/WalletHistory.tsx:113
+#: src/components/WalletHistory.tsx:165
 msgid "Pending"
 msgstr "Na čekanju"
 
@@ -2021,8 +2005,8 @@ msgid "Please enter a puzzlehash"
 msgstr ""
 
 #: src/components/cat/WalletCATCreateExisting.tsx:40
-msgid "Please enter a valid CAT name"
-msgstr ""
+#~ msgid "Please enter a valid CAT name"
+#~ msgstr ""
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:41
 msgid "Please enter a valid asset id"
@@ -2460,6 +2444,7 @@ msgid "Receive"
 msgstr ""
 
 #: src/components/WalletReceiveAddress.tsx:35
+#: src/components/WalletReceiveAddressField.tsx:38
 msgid "Receive Address"
 msgstr "Prijemna adresa"
 
@@ -2467,7 +2452,6 @@ msgstr "Prijemna adresa"
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr ""
 
-#: src/components/cat/WalletCATCreateExisting.tsx:104
 #: src/components/cat/WalletDID.tsx:463
 #: src/components/did/WalletDID.tsx:463
 #: src/components/did/WalletDIDRecovery.tsx:124
@@ -2557,7 +2541,7 @@ msgstr ""
 #~ msgid "Restore Smart Wallets From Backup"
 #~ msgstr ""
 
-#: src/components/WalletHistory.tsx:119
+#: src/components/WalletHistory.tsx:179
 msgid "Retire"
 msgstr ""
 
@@ -2642,7 +2626,6 @@ msgstr ""
 #~ msgstr "Select Temporary Directory"
 
 #: src/components/WalletsList.tsx:32
-#: src/components/hero/WalletHeroWallets.tsx:47
 msgid "Select Wallet"
 msgstr ""
 
@@ -3063,7 +3046,7 @@ msgstr ""
 #~ msgid "This feature is available only from the GUI."
 #~ msgstr "This feature is available only from the GUI."
 
-#: src/components/WalletHistory.tsx:90
+#: src/components/WalletHistory.tsx:132
 msgid "This is not a valid address for sending funds to"
 msgstr ""
 
@@ -3177,13 +3160,13 @@ msgstr "Ovo je ukupan saldo + saldo na čekanju: ono što će tvoj saldo biti na
 #~ msgid "Timestamp"
 #~ msgstr "Timestamp"
 
-#: src/components/WalletHistory.tsx:128
+#: src/components/WalletHistory.tsx:193
 msgid "To"
 msgstr "Za"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:85
-msgid "Token and Asset Issuance Limitations"
-msgstr ""
+#~ msgid "Token and Asset Issuance Limitations"
+#~ msgstr ""
 
 #: src/components/cat/WalletCATCreateSimple.tsx:45
 msgid "Token has empty asset id"
@@ -3266,7 +3249,7 @@ msgstr "Ukupno stanje"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr ""
 
-#: src/components/WalletHistory.tsx:244
+#: src/components/WalletHistory.tsx:309
 msgid "Transactions"
 msgstr ""
 
@@ -3449,12 +3432,12 @@ msgstr ""
 msgid "Wallet {walletId} not found"
 msgstr ""
 
-#: src/components/wallet/Wallets.tsx:34
-#~ msgid "WalletItem.ccWallet"
-#~ msgstr ""
-
 #: src/components/wallet/Wallets.tsx:30
 #~ msgid "WalletItem.cactusWallet"
+#~ msgstr ""
+
+#: src/components/wallet/Wallets.tsx:34
+#~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48

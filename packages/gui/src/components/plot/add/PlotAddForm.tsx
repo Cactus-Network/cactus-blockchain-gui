@@ -7,11 +7,7 @@ import {
   useCreateNewPoolWalletMutation,
 } from '@cactus/api-react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-<<<<<<< HEAD
-import { Back, useShowError, ButtonLoading, Flex, Form, toBech32m, fromBech32m } from '@cactus/core';
-=======
 import { Back, useShowError, ButtonLoading, Flex, Form } from '@cactus/core';
->>>>>>> tmp
 import PlotAddChoosePlotter from './PlotAddChoosePlotter';
 import PlotAddChooseSize from './PlotAddChooseSize';
 import PlotAddNumberOfPlots from './PlotAddNumberOfPlots';
