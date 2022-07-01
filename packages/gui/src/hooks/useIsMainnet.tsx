@@ -1,4 +1,4 @@
-import { useGetNetworkInfoQuery } from '@chia/api-react';
+import { useGetNetworkInfoQuery } from '@cactus/api-react';
 
 export default function useIsMainnet(): boolean | undefined {
   const { data: networkInfo, isLoading } = useGetNetworkInfoQuery(); 

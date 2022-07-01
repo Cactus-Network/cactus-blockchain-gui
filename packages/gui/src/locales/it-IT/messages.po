@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: it_IT\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-05-26 15:57\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: it\n"
 "X-Crowdin-File: /main/packages/gui/src/locales/en-US/messages.po\n"
@@ -31,8 +31,8 @@ msgid "(Optional)"
 msgstr "(Opzionale)"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:67
-msgid "*Want to explore Chia’s blocks further? Check out <0>Chia Explorer</0> built by an open source developer."
-msgstr "*Vuoi esplorare ulteriormente i blocchi della rete Chia? Dai uno sguardo a <0>Chia Explorer</0> creato da uno sviluppatore open source."
+msgid "*Want to explore Cactus’s blocks further? Check out <0>Cactus Explorer</0> built by an open source developer."
+msgstr "*Vuoi esplorare ulteriormente i blocchi della rete Cactus? Dai uno sguardo a <0>Cactus Explorer</0> creato da uno sviluppatore open source."
 
 #: src/components/app/AppSelectMode.tsx:120
 #~ msgid "+"
@@ -84,8 +84,8 @@ msgstr "Un valore di {0} è raccomandato"
 
 #: src/electron/main.tsx:572
 #: src/electron/main.tsx:659
-msgid "About Chia Blockchain"
-msgstr "Informazioni sulla Blockchain di Chia"
+msgid "About Cactus Blockchain"
+msgstr "Informazioni sulla Blockchain di Cactus"
 
 #: src/components/trading/ViewOffer.jsx:74
 #~ msgid "Accept"
@@ -188,7 +188,7 @@ msgstr "Aggiungi {currencyCode} dal Faucet"
 
 #: src/components/app/AppKeyringMigrator.tsx:247
 msgid "After your keys are successfully migrated to the new keyring, you may choose to have your keys removed from the old keyring."
-msgstr "Dopo che le chiavi saranno migrate con successo al nuovo keyring, sarà possibile rimuoverle da vecchio"
+msgstr "Dopo che le cactusvi saranno migrate con successo al nuovo keyring, sarà possibile rimuoverle da vecchio"
 
 #: src/components/nfts/NFTProfileDropdown.tsx:64
 #: src/components/nfts/gallery/NFTGallerySidebar.tsx:44
@@ -336,8 +336,8 @@ msgid "Block VDF Iterations"
 msgstr "Blocco Iterazioni VDF"
 
 #: src/components/block/Block.jsx:314
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "Blocco all'altezza {0} nella blockchain Chia"
+msgid "Block at height {0} in the Cactus blockchain"
+msgstr "Blocco all'altezza {0} nella blockchain Cactus"
 
 #: src/components/fullNode/FullNode.jsx:331
 #~ msgid "Block hash"
@@ -467,16 +467,16 @@ msgid "Check Provenance on Spacescan.io"
 msgstr ""
 
 #: src/electron/main.tsx:569
-msgid "Chia"
-msgstr "Chia"
+msgid "Cactus"
+msgstr "Cactus"
 
 #: src/electron/main.tsx:508
-msgid "Chia Blockchain Wiki"
-msgstr "Wiki della Blockchain Chia"
+msgid "Cactus Blockchain Wiki"
+msgstr "Wiki della Blockchain Cactus"
 
 #: src/components/_wallet_old/standard/WalletStandard.tsx:642
-#~ msgid "Chia Wallet"
-#~ msgstr "Chia Wallet"
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
 
 #: src/components/app/AppSelectMode.tsx:158
 msgid "Choose Farming Mode"
@@ -905,7 +905,7 @@ msgstr "Elimina"
 
 #: src/components/app/AppPassPrompt.tsx:110
 msgid "Delete Key"
-msgstr "Elimina Chiave"
+msgstr "Elimina Cactusve"
 
 #: src/components/plot/PlotAction.tsx:24
 #: src/components/plot/queue/PlotQueueActions.tsx:40
@@ -935,15 +935,15 @@ msgstr "Elimina Transazioni non Confermate"
 
 #: src/components/app/AppPassPrompt.tsx:106
 msgid "Deleting key"
-msgstr "Chiave in cancellazione"
+msgstr "Cactusve in cancellazione"
 
 #: src/components/selectKey/SelectKey.tsx:101
 #~ msgid "Deleting the key will permanently remove the key from your computer, make sure you have backups. Are you sure you want to continue?"
 #~ msgstr "Deleting the key will permanently remove the key from your computer, make sure you have backups. Are you sure you want to continue?"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:92
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "A seconda della configurazione del tuo sistema, potresti verificare che un plotter alternativo è più rapido del plotter predefinito. Se vi fossero dubbi, si consiglia di utilizzare il plotter standard Chia."
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
+msgstr "A seconda della configurazione del tuo sistema, potresti verificare che un plotter alternativo è più rapido del plotter predefinito. Se vi fossero dubbi, si consiglia di utilizzare il plotter standard Cactus."
 
 #: src/components/nfts/detail/NFTDetail.tsx:158
 #: src/components/nfts/detail/NFTDetailV2.tsx:142
@@ -1088,15 +1088,15 @@ msgstr "Abilita Simulatore"
 
 #: src/components/app/AppKeyringMigrator.tsx:149
 msgid "Enter a strong passphrase and click Migrate Keys to secure your keys"
-msgstr "Inserisci una Passphrase complessa e fai click su Migrare per mettere al sicuro le tue chiavi"
+msgstr "Inserisci una Passphrase complessa e fai click su Migrare per mettere al sicuro le tue cactusvi"
 
 #: src/components/settings/SetPassphrasePrompt.tsx:158
 msgid "Enter a strong passphrase to secure your keys:"
-msgstr "Inserisci una Passphrase complessa per proteggere le tue chiavi:"
+msgstr "Inserisci una Passphrase complessa per proteggere le tue cactusvi:"
 
 #: src/components/_wallet_old/WalletImport.tsx:146
-#~ msgid "Enter the 24 word mnemonic that you have saved in order to restore your Chia wallet."
-#~ msgstr "Enter the 24 word mnemonic that you have saved in order to restore your Chia wallet."
+#~ msgid "Enter the 24 word mnemonic that you have saved in order to restore your Cactus wallet."
+#~ msgstr "Enter the 24 word mnemonic that you have saved in order to restore your Cactus wallet."
 
 #: src/components/settings/RemovePassphrasePrompt.tsx:121
 msgid "Enter your passphrase:"
@@ -1113,8 +1113,8 @@ msgid "Error"
 msgstr "Errore"
 
 #: src/components/_wallet_old/standard/WalletStandard.tsx:450
-#~ msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
-#~ msgstr "Error: Cannot send chia to colored address. Please enter a chia address."
+#~ msgid "Error: Cannot send cactus to coloured address. Please enter a cactus address."
+#~ msgstr "Error: Cannot send cactus to colored address. Please enter a cactus address."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:14
 msgid "Estimated Network Space"
@@ -1185,7 +1185,7 @@ msgstr "Errore nell'aggiornare la tua Passphrase: {0}"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:297
 msgid "Farmer Public Key"
-msgstr "Chiave pubblica del farmer"
+msgstr "Cactusve pubblica del farmer"
 
 #: src/components/block/Block.jsx:245
 msgid "Farmer Puzzle Hash"
@@ -1560,7 +1560,7 @@ msgstr "Stato non valido"
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:66
 msgid "It is a one-time login link that can be used to log in to a pool's website. It contains a signature using the farmer's key from the plot NFT. Not all pools support this feature."
-msgstr "Si tratta di un collegamento di accesso una tantum che può essere utilizzato per accedere al sito web di una pool. Contiene una firma che utilizza la chiave del farmer dal plot NFT. Non tutte le pool supportano questa funzione."
+msgstr "Si tratta di un collegamento di accesso una tantum che può essere utilizzato per accedere al sito web di una pool. Contiene una firma che utilizza la cactusve del farmer dal plot NFT. Non tutte le pool supportano questa funzione."
 
 #: src/components/plotNFT/PlotNFTCard.tsx:402
 msgid "Join Pool"
@@ -1798,7 +1798,7 @@ msgstr "Migra Keyring"
 
 #: src/components/app/AppKeyringMigrator.tsx:278
 msgid "Migrate Keys"
-msgstr "Migra Chiavi"
+msgstr "Migra Cactusvi"
 
 #: src/components/app/AppKeyringMigrator.tsx:145
 msgid "Migration required"
@@ -1823,7 +1823,7 @@ msgstr "Minuti"
 
 #: src/components/plot/PlotHarvester.tsx:105
 msgid "Missing Keys"
-msgstr "Chiavi mancanti"
+msgstr "Cactusvi mancanti"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:118
 msgid "More memory slightly increases speed"
@@ -1965,7 +1965,7 @@ msgstr "Ancora nessun plot"
 #: src/components/block/FarmManageFarmingRewards.tsx:135
 #: src/components/farm/FarmManageFarmingRewards.tsx:146
 msgid "No private keys for one or both addresses. Safe only if you are sending rewards to another wallet."
-msgstr "Nessuna chiave privata per uno o entrambi gli indirizzi. Sicuro solo se stai inviando ricompense ad un altro wallet."
+msgstr "Nessuna cactusve privata per uno o entrambi gli indirizzi. Sicuro solo se stai inviando ricompense ad un altro wallet."
 
 #: src/components/offers/OfferViewer.tsx:180
 msgid "Node Count"
@@ -2198,7 +2198,7 @@ msgstr "La protezione Passphrase è stata abilitata"
 #: src/components/settings/Settings.tsx:118
 #: src/components/settings/SettingsPanel.tsx:132
 msgid "Passphrase support requires migrating your keys to a new keyring"
-msgstr "Il supporto alla Passphrase richiede la migrazione delle chiavi a un nuovo Keyring"
+msgstr "Il supporto alla Passphrase richiede la migrazione delle cactusvi a un nuovo Keyring"
 
 #: src/components/offers/OfferDataEntryDialog.tsx:40
 #: src/components/offers/OfferImport.tsx:155
@@ -2418,7 +2418,7 @@ msgstr "Id Plot"
 
 #: src/components/plot/PlotHarvesterPlots.tsx:46
 msgid "Plot Key"
-msgstr "Chiave Plot"
+msgstr "Cactusve Plot"
 
 #: src/components/pool/PoolOverview.tsx:38
 #~ msgid "Plot NFT"
@@ -2439,7 +2439,7 @@ msgstr "Il Plot NFT con p2_singleton_puzzle_hash {plotNFTId} non esiste"
 
 #: src/components/block/Block.jsx:237
 msgid "Plot Public Key"
-msgstr "Chiave Pubblica del Plot"
+msgstr "Cactusve Pubblica del Plot"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:49
 #~ msgid "Plot Seed"
@@ -2480,15 +2480,15 @@ msgstr "Plot che hanno passato il filtro"
 
 #: src/components/plot/card/PlotCardNotFound.tsx:11
 msgid "Plots With Missing Keys"
-msgstr "Plot con chiavi mancanti"
+msgstr "Plot con cactusvi mancanti"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:33
-#~ msgid "Plots are allocated space on your hard drive used to farm and earn Chia. <0>Learn more</0>"
+#~ msgid "Plots are allocated space on your hard drive used to farm and earn Cactus. <0>Learn more</0>"
 #~ msgstr ""
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:33
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.<0>Learn more</0>"
-msgstr "I plot hanno allocato spazio nel tuo hard disk per coltivare e guadagnare Chia.<0>Per saperne di piu<0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Cactus.<0>Learn more</0>"
+msgstr "I plot hanno allocato spazio nel tuo hard disk per coltivare e guadagnare Cactus.<0>Per saperne di piu<0>"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:103
 msgid "Plotter"
@@ -2541,7 +2541,7 @@ msgstr "Indirizzo Contratto Pool"
 
 #: src/components/plot/PlotHarvesterPlots.tsx:52
 msgid "Pool Key"
-msgstr "Chiave Pool"
+msgstr "Cactusve Pool"
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:53
 msgid "Pool Login Link"
@@ -2554,7 +2554,7 @@ msgstr "Istruzioni Di Pagamento Pool"
 #: src/components/block/Block.jsx:241
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:308
 msgid "Pool Public Key"
-msgstr "Chiave Pubblica Pool"
+msgstr "Cactusve Pubblica Pool"
 
 #: src/components/block/Block.jsx:261
 msgid "Pool Puzzle Hash"
@@ -2824,7 +2824,7 @@ msgstr "Rimuovi Passphrase"
 
 #: src/components/app/AppKeyringMigrator.tsx:244
 msgid "Remove keys from old keyring upon successful migration"
-msgstr "Rimuovere le chiavi dal vecchio keyring al momento della migrazione riuscita"
+msgstr "Rimuovere le cactusvi dal vecchio keyring al momento della migrazione riuscita"
 
 #: src/components/plot/queue/PlotQueueIndicator.tsx:36
 msgid "Removing"
@@ -2912,7 +2912,7 @@ msgstr "Posizione seconda cartella temporanea"
 #: src/components/settings/Settings.tsx:124
 #: src/components/settings/SettingsPanel.tsx:134
 msgid "Secure your keychain using a strong passphrase"
-msgstr "Proteggi il tuo portachiavi usando una Passphrase complessa"
+msgstr "Proteggi il tuo portacactusvi usando una Passphrase complessa"
 
 #: src/components/_selectKey_old/SelectKey.tsx:216
 #~ msgid "See private key"
@@ -3166,8 +3166,8 @@ msgstr "Discorso"
 
 #: src/components/_wallet_old/rateLimited/WalletRateLimited.jsx:401
 #: src/components/_wallet_old/rateLimited/WalletRateLimited.jsx:448
-#~ msgid "Spending Limit (chia per interval): {0}"
-#~ msgstr "Spending Limit (chia per interval): {0}"
+#~ msgid "Spending Limit (cactus per interval): {0}"
+#~ msgstr "Spending Limit (cactus per interval): {0}"
 
 #: src/components/app/AppState.tsx:172
 msgid "Starting services"
@@ -3223,8 +3223,8 @@ msgstr "Salva e invia XCH"
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Chia blockchain"
-#~ msgstr "Sub Block at height {0} in the Chia blockchain"
+#~ msgid "Sub Block at height {0} in the Cactus blockchain"
+#~ msgstr "Sub Block at height {0} in the Cactus blockchain"
 
 #: src/components/app/AppPassPrompt.tsx:114
 msgid "Submit"
@@ -3397,8 +3397,8 @@ msgid "This feature is available only from the GUI."
 msgstr "Questa funzione è disponibile solo sulla GUI."
 
 #: src/components/_wallet_old/card/WalletCardSpendableBalance.tsx:26
-#~ msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-#~ msgstr "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
+#~ msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+#~ msgstr "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
 
 #: src/components/_wallet_old/card/WalletCardPendingChange.tsx:26
 #~ msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -3421,8 +3421,8 @@ msgid "This is the timestamp of the most recent transaction block."
 msgstr "Questo è il timestamp del blocco di transazione più recente."
 
 #: src/components/_wallet_old/card/WalletCardTotalBalance.tsx:34
-#~ msgid "This is the total amount of chia in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-#~ msgstr "This is the total amount of chia in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+#~ msgid "This is the total amount of cactus in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+#~ msgstr "This is the total amount of cactus in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 
 #: src/components/_wallet_old/card/WalletCardPendingTotalBalance.tsx:29
 #~ msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
@@ -3466,7 +3466,7 @@ msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:307
 msgid "This plot NFT is assigned to a different key. You can still create plots for this plot NFT, but you can not make changes."
-msgstr "Questo plot NFT è assegnato a una chiave diversa. Puoi ancora creare dei plot per questo plot NFT, ma non puoi apportare modifiche."
+msgstr "Questo plot NFT è assegnato a una cactusve diversa. Puoi ancora creare dei plot per questo plot NFT, ma non puoi apportare modifiche."
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:52
 #~ msgid "This plot NFT is not connected to pool"
@@ -3489,8 +3489,8 @@ msgstr "Questa tabella ti mostra l'ultima volta che la tua fattoria ha tentato d
 #~ msgstr "This trade was included on blockchain at this block height"
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-#~ msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
-#~ msgstr "This version of Chia is no longer compatible with the blockchain and can not safely farm."
+#~ msgid "This version of Cactus is no longer compatible with the blockchain and can not safely farm."
+#~ msgstr "This version of Cactus is no longer compatible with the blockchain and can not safely farm."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:154
 msgid "Thread Multiplier for Phase 2"
@@ -3543,9 +3543,9 @@ msgstr ""
 #~ msgid "Total Balance"
 #~ msgstr "Total Balance"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-msgid "Total Chia Farmed"
-msgstr "Totale Chia guadagnati"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
+msgid "Total Cactus Farmed"
+msgstr "Totale Cactus guadagnati"
 
 #: src/components/plot/card/PlotCardTotalHarvesters.tsx:11
 msgid "Total Harvesters"
@@ -3834,7 +3834,7 @@ msgstr "Il Wallet non è stato definito"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.chiaWallet"
+#~ msgid "WalletItem.cactusWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
@@ -3870,7 +3870,7 @@ msgid "Want to Join a Pool? Create a Plot NFT"
 msgstr "Vuoi unirti a una Pool? Crea un plot NFT"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-#~ msgid "Want to earn more Chia? Add more plots to your farm."
+#~ msgid "Want to earn more Cactus? Add more plots to your farm."
 #~ msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:87
@@ -3919,8 +3919,8 @@ msgstr ""
 #~ msgstr "Weight is the total added difficulty of all sub blocks up to and including this one"
 
 #: src/components/_selectKey_old/SelectKey.tsx:183
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Welcome to Chia. Please log in with an existing key, or create a new key."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Welcome to Cactus. Please log in with an existing key, or create a new key."
 
 #: src/components/_wallet_old/WalletAdd.tsx:66
 #~ msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
@@ -4040,8 +4040,8 @@ msgid "You need to claim your rewards first"
 msgstr "Devi prima reclamare le tue ricompense"
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Chia application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Chia application as this version will stop working soon!"
+#~ msgid "You need to upgrade the Cactus application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the Cactus application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:36
 msgid "You need {currencyCode} to join a pool."
@@ -4091,7 +4091,7 @@ msgstr "Il tuo Keyring è bloccato"
 
 #: src/components/app/AppKeyringMigrator.tsx:69
 msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Are you sure you want to skip migrating your keys?"
-msgstr "Le chiavi non sono state migrate ad un nuovo keyring. Non sarà possibile creare nuove chiavi o eliminare le chiavi esistenti fino al completamento della migrazione. Vuoi migrare le tue chiavi ora?"
+msgstr "Le cactusvi non sono state migrate ad un nuovo keyring. Non sarà possibile creare nuove cactusvi o eliminare le cactusvi esistenti fino al completamento della migrazione. Vuoi migrare le tue cactusvi ora?"
 
 #: src/components/_selectKey_old/SelectKey.tsx:141
 #~ msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Would you like to migrate your keys now?"
@@ -4099,11 +4099,11 @@ msgstr "Le chiavi non sono state migrate ad un nuovo keyring. Non sarà possibil
 
 #: src/components/app/AppKeyringMigrator.tsx:112
 msgid "Your keys need to be migrated to a new keyring that is optionally secured by a master passphrase."
-msgstr "Le chiavi devono essere migrate a un nuovo keyring che è opzionalmente protetto da una master passphrase "
+msgstr "Le cactusvi devono essere migrate a un nuovo keyring che è opzionalmente protetto da una master passphrase "
 
 #: src/components/app/AppKeyringMigrator.tsx:118
 msgid "Your keys need to be migrated to a new keyring that is secured by a master passphrase."
-msgstr "Le chiavi devono essere migrate a un nuovo keyring che è opzionalmente protetto da una master passphrase "
+msgstr "Le cactusvi devono essere migrate a un nuovo keyring che è opzionalmente protetto da una master passphrase "
 
 #: src/components/offers/OfferShareDialog.tsx:1010
 msgid "Your offer has been successfully posted to Keybase."
@@ -4116,8 +4116,8 @@ msgstr ""
 #: src/components/app/AppKeyringMigrator.tsx:229
 #: src/components/settings/ChangePassphrasePrompt.tsx:271
 #: src/components/settings/SetPassphrasePrompt.tsx:238
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
-msgstr "La tua passphrase può essere memorizzata nell'archivio credenziali sicuro del tuo sistema. Chia sarà in grado di accedere alle tue chiavi senza richiedere la tua passphrase."
+msgid "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
+msgstr "La tua passphrase può essere memorizzata nell'archivio credenziali sicuro del tuo sistema. Cactus sarà in grado di accedere alle tue cactusvi senza richiedere la tua passphrase."
 
 #: src/components/settings/Settings.tsx:77
 #: src/components/settings/SettingsPanel.tsx:91
@@ -4223,9 +4223,9 @@ msgstr "{0} punti {1} - {2} ore fa"
 #~ msgid "{currencyCode} Block Rewards"
 #~ msgstr "{currencyCode} Block Rewards"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:29
-#~ msgid "{currencyCode} Total Chia Farmed"
-#~ msgstr "{currencyCode} Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:29
+#~ msgid "{currencyCode} Total Cactus Farmed"
+#~ msgstr "{currencyCode} Total Cactus Farmed"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28
 #~ msgid "{currencyCode} User Transaction Fees"

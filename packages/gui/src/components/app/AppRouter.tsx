@@ -6,13 +6,13 @@ import {
   LayoutDashboard,
   Mode,
   useMode,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   WalletAdd,
   WalletImport,
   Wallets,
   WalletStatusHeader,
-} from '@chia/wallets';
+} from '@cactus/wallets';
 import AppProviders from './AppProviders';
 import FullNode from '../fullNode/FullNode';
 import Block from '../block/Block';

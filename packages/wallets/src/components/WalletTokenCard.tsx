@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { WalletType } from '@chia/api';
-import { useSetCATNameMutation } from '@chia/api-react';
+import { WalletType } from '@cactus/api';
+import { useSetCATNameMutation } from '@cactus/api-react';
 import { Trans } from '@lingui/macro';
 import {
   Box,
@@ -9,7 +9,7 @@ import {
   CircularProgress,
   TextField,
 } from '@mui/material';
-import { Tooltip, CardListItem, Flex, Link, useShowError } from '@chia/core';
+import { Tooltip, CardListItem, Flex, Link, useShowError } from '@cactus/core';
 
 export type WalletTokenCardProps = {
   item: {
@@ -97,7 +97,7 @@ export default function WalletTokenCard(props: WalletTokenCardProps) {
     return assetId;
   }, [assetId, type, walletType]);
 
-  const currentName = walletType === WalletType.STANDARD_WALLET ? 'Chia' : name;
+  const currentName = walletType === WalletType.STANDARD_WALLET ? 'Cactus' : name;
 
   return (
     <CardListItem>

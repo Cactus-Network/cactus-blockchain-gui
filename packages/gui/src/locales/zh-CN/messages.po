@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: zh_CN\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-05-31 07:01\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /main/packages/gui/src/locales/en-US/messages.po\n"
@@ -31,7 +31,7 @@ msgid "(Optional)"
 msgstr "（可选）"
 
 #: src/components/farm/FarmLatestBlockChallenges.tsx:67
-msgid "*Want to explore Chia’s blocks further? Check out <0>Chia Explorer</0> built by an open source developer."
+msgid "*Want to explore Cactus’s blocks further? Check out <0>Cactus Explorer</0> built by an open source developer."
 msgstr "* 想要进一步了解奇亚？来看看一位开源开发者创建的 <0>奇亚区块浏览器</0>。"
 
 #: src/components/app/AppSelectMode.tsx:120
@@ -84,8 +84,8 @@ msgstr "建议值 {0}"
 
 #: src/electron/main.tsx:572
 #: src/electron/main.tsx:659
-msgid "About Chia Blockchain"
-msgstr "关于奇亚Chia区块链项目"
+msgid "About Cactus Blockchain"
+msgstr "关于奇亚Cactus区块链项目"
 
 #: src/components/trading/ViewOffer.jsx:74
 #~ msgid "Accept"
@@ -336,7 +336,7 @@ msgid "Block VDF Iterations"
 msgstr "区块可验证延迟函数迭代"
 
 #: src/components/block/Block.jsx:314
-msgid "Block at height {0} in the Chia blockchain"
+msgid "Block at height {0} in the Cactus blockchain"
 msgstr "奇亚区块链上高度为 {0} 的区块"
 
 #: src/components/fullNode/FullNode.jsx:331
@@ -467,16 +467,16 @@ msgid "Check Provenance on Spacescan.io"
 msgstr ""
 
 #: src/electron/main.tsx:569
-msgid "Chia"
+msgid "Cactus"
 msgstr "奇亚"
 
 #: src/electron/main.tsx:508
-msgid "Chia Blockchain Wiki"
+msgid "Cactus Blockchain Wiki"
 msgstr "奇亚区块链项目维基"
 
 #: src/components/_wallet_old/standard/WalletStandard.tsx:642
-#~ msgid "Chia Wallet"
-#~ msgstr "Chia Wallet"
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
 
 #: src/components/app/AppSelectMode.tsx:158
 msgid "Choose Farming Mode"
@@ -942,8 +942,8 @@ msgstr "正在删除密钥"
 #~ msgstr "Deleting the key will permanently remove the key from your computer, make sure you have backups. Are you sure you want to continue?"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:92
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "根据您的系统配置，您可能会发现替代的绘图器产生的农田比默认的空间绘图器Chia Proof 更快。 如果不确定, 请使用默认的Chia Proof空间绘图器。"
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
+msgstr "根据您的系统配置，您可能会发现替代的绘图器产生的农田比默认的空间绘图器Cactus Proof 更快。 如果不确定, 请使用默认的Cactus Proof空间绘图器。"
 
 #: src/components/nfts/detail/NFTDetail.tsx:158
 #: src/components/nfts/detail/NFTDetailV2.tsx:142
@@ -1095,8 +1095,8 @@ msgid "Enter a strong passphrase to secure your keys:"
 msgstr "输入复杂的密码来保护您的密钥串："
 
 #: src/components/_wallet_old/WalletImport.tsx:146
-#~ msgid "Enter the 24 word mnemonic that you have saved in order to restore your Chia wallet."
-#~ msgstr "Enter the 24 word mnemonic that you have saved in order to restore your Chia wallet."
+#~ msgid "Enter the 24 word mnemonic that you have saved in order to restore your Cactus wallet."
+#~ msgstr "Enter the 24 word mnemonic that you have saved in order to restore your Cactus wallet."
 
 #: src/components/settings/RemovePassphrasePrompt.tsx:121
 msgid "Enter your passphrase:"
@@ -1113,8 +1113,8 @@ msgid "Error"
 msgstr "错误"
 
 #: src/components/_wallet_old/standard/WalletStandard.tsx:450
-#~ msgid "Error: Cannot send chia to coloured address. Please enter a chia address."
-#~ msgstr "Error: Cannot send chia to colored address. Please enter a chia address."
+#~ msgid "Error: Cannot send cactus to coloured address. Please enter a cactus address."
+#~ msgstr "Error: Cannot send cactus to colored address. Please enter a cactus address."
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:14
 msgid "Estimated Network Space"
@@ -2483,11 +2483,11 @@ msgid "Plots With Missing Keys"
 msgstr "缺少密钥的农田"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:33
-#~ msgid "Plots are allocated space on your hard drive used to farm and earn Chia. <0>Learn more</0>"
+#~ msgid "Plots are allocated space on your hard drive used to farm and earn Cactus. <0>Learn more</0>"
 #~ msgstr ""
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:33
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.<0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Cactus.<0>Learn more</0>"
 msgstr "农田就是在你的硬盘上分配的一块空间，用来收获奇亚币。<0>了解更多</0>"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:103
@@ -3166,8 +3166,8 @@ msgstr "演说"
 
 #: src/components/_wallet_old/rateLimited/WalletRateLimited.jsx:401
 #: src/components/_wallet_old/rateLimited/WalletRateLimited.jsx:448
-#~ msgid "Spending Limit (chia per interval): {0}"
-#~ msgstr "Spending Limit (chia per interval): {0}"
+#~ msgid "Spending Limit (cactus per interval): {0}"
+#~ msgstr "Spending Limit (cactus per interval): {0}"
 
 #: src/components/app/AppState.tsx:172
 msgid "Starting services"
@@ -3223,8 +3223,8 @@ msgstr "存储并发送 XCH"
 #~ msgstr "Sub Block Height"
 
 #: src/components/block/Block.jsx:338
-#~ msgid "Sub Block at height {0} in the Chia blockchain"
-#~ msgstr "Sub Block at height {0} in the Chia blockchain"
+#~ msgid "Sub Block at height {0} in the Cactus blockchain"
+#~ msgstr "Sub Block at height {0} in the Cactus blockchain"
 
 #: src/components/app/AppPassPrompt.tsx:114
 msgid "Submit"
@@ -3397,8 +3397,8 @@ msgid "This feature is available only from the GUI."
 msgstr "此功能只在图形界面中提供。"
 
 #: src/components/_wallet_old/card/WalletCardSpendableBalance.tsx:26
-#~ msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-#~ msgstr "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
+#~ msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+#~ msgstr "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
 
 #: src/components/_wallet_old/card/WalletCardPendingChange.tsx:26
 #~ msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -3421,8 +3421,8 @@ msgid "This is the timestamp of the most recent transaction block."
 msgstr "这是最近交易块的时间戳。"
 
 #: src/components/_wallet_old/card/WalletCardTotalBalance.tsx:34
-#~ msgid "This is the total amount of chia in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-#~ msgstr "This is the total amount of chia in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+#~ msgid "This is the total amount of cactus in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+#~ msgstr "This is the total amount of cactus in the blockchain at the current peak sub block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 
 #: src/components/_wallet_old/card/WalletCardPendingTotalBalance.tsx:29
 #~ msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
@@ -3489,8 +3489,8 @@ msgstr "这个表格里面显示的是你的农场尝试过的区块挑战. <0>�
 #~ msgstr "This trade was included on blockchain at this block height"
 
 #: src/components/app/AppTimeBombAlert.tsx:19
-#~ msgid "This version of Chia is no longer compatible with the blockchain and can not safely farm."
-#~ msgstr "This version of Chia is no longer compatible with the blockchain and can not safely farm."
+#~ msgid "This version of Cactus is no longer compatible with the blockchain and can not safely farm."
+#~ msgstr "This version of Cactus is no longer compatible with the blockchain and can not safely farm."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:154
 msgid "Thread Multiplier for Phase 2"
@@ -3543,8 +3543,8 @@ msgstr ""
 #~ msgid "Total Balance"
 #~ msgstr "Total Balance"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-msgid "Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
+msgid "Total Cactus Farmed"
 msgstr "总共收获的奇亚"
 
 #: src/components/plot/card/PlotCardTotalHarvesters.tsx:11
@@ -3834,7 +3834,7 @@ msgstr "钱包未定义"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:30
-#~ msgid "WalletItem.chiaWallet"
+#~ msgid "WalletItem.cactusWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
@@ -3870,7 +3870,7 @@ msgid "Want to Join a Pool? Create a Plot NFT"
 msgstr "想要加入农业合作社？创建一个农田NFT"
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:139
-#~ msgid "Want to earn more Chia? Add more plots to your farm."
+#~ msgid "Want to earn more Cactus? Add more plots to your farm."
 #~ msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:87
@@ -3919,8 +3919,8 @@ msgstr "权重是施加给所有块包括目前这块的额外的困难度."
 #~ msgstr "Weight is the total added difficulty of all sub blocks up to and including this one"
 
 #: src/components/_selectKey_old/SelectKey.tsx:183
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Welcome to Chia. Please log in with an existing key, or create a new key."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Welcome to Cactus. Please log in with an existing key, or create a new key."
 
 #: src/components/_wallet_old/WalletAdd.tsx:66
 #~ msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
@@ -4040,8 +4040,8 @@ msgid "You need to claim your rewards first"
 msgstr "你需要先领取你的奖励。"
 
 #: src/components/app/AppTimeBomb.tsx:28
-#~ msgid "You need to upgrade the Chia application as this version will stop working soon!"
-#~ msgstr "You need to upgrade the Chia application as this version will stop working soon!"
+#~ msgid "You need to upgrade the Cactus application as this version will stop working soon!"
+#~ msgstr "You need to upgrade the Cactus application as this version will stop working soon!"
 
 #: src/components/plotNFT/select/PlotNFTSelectFaucet.tsx:36
 msgid "You need {currencyCode} to join a pool."
@@ -4116,8 +4116,8 @@ msgstr ""
 #: src/components/app/AppKeyringMigrator.tsx:229
 #: src/components/settings/ChangePassphrasePrompt.tsx:271
 #: src/components/settings/SetPassphrasePrompt.tsx:238
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
-msgstr "您的私钥密码可以存储在系统的安全凭据中。Chia将能够访问您的密钥，而无需提示输入您的私钥密码。"
+msgid "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
+msgstr "您的私钥密码可以存储在系统的安全凭据中。Cactus将能够访问您的密钥，而无需提示输入您的私钥密码。"
 
 #: src/components/settings/Settings.tsx:77
 #: src/components/settings/SettingsPanel.tsx:91
@@ -4223,9 +4223,9 @@ msgstr "{0} 积点 {1} - {2} 小时前"
 #~ msgid "{currencyCode} Block Rewards"
 #~ msgstr "{currencyCode} Block Rewards"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:29
-#~ msgid "{currencyCode} Total Chia Farmed"
-#~ msgstr "{currencyCode} Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:29
+#~ msgid "{currencyCode} Total Cactus Farmed"
+#~ msgstr "{currencyCode} Total Cactus Farmed"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:28
 #~ msgid "{currencyCode} User Transaction Fees"

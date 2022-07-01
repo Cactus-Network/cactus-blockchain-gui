@@ -17,8 +17,8 @@ import {
   TooltipIcon,
   useShowError,
   useOpenExternal,
-  mojoToChiaLocaleString,
-} from '@chia/core';
+  mojoToCactusLocaleString,
+} from '@cactus/core';
 import {
   Box,
   Button,
@@ -38,8 +38,8 @@ import {
   OfferTradeRecord,
   OfferCoinOfInterest,
   WalletType,
-} from '@chia/api';
-import { useCheckOfferValidityMutation } from '@chia/api-react';
+} from '@cactus/api';
+import { useCheckOfferValidityMutation } from '@cactus/api-react';
 import { colorForOfferState, displayStringForOfferState } from './utils';
 import useAcceptOfferHook from '../../hooks/useAcceptOfferHook';
 import OfferHeader from './OfferHeader';
@@ -194,7 +194,7 @@ function OfferDetails(props: OfferDetailsProps) {
         return (
           <Typography variant="body2">
             <Flex flexDirection="row" flexGrow={1} gap={1}>
-              {mojoToChiaLocaleString(coin.amount)}
+              {mojoToCactusLocaleString(coin.amount)}
             </Flex>
           </Typography>
         );
@@ -217,7 +217,7 @@ function OfferDetails(props: OfferDetailsProps) {
               onClick={(event: React.SyntheticEvent) =>
                 handleLinkClicked(
                   event,
-                  `https://www.chiaexplorer.com/blockchain/coin/${coin.parentCoinInfo}`,
+                  `https://www.cactusexplorer.com/blockchain/coin/${coin.parentCoinInfo}`,
                 )
               }
             >
@@ -245,7 +245,7 @@ function OfferDetails(props: OfferDetailsProps) {
               onClick={(event: React.SyntheticEvent) =>
                 handleLinkClicked(
                   event,
-                  `https://www.chiaexplorer.com/blockchain/puzzlehash/${coin.puzzleHash}`,
+                  `https://www.cactusexplorer.com/blockchain/puzzlehash/${coin.puzzleHash}`,
                 )
               }
             >

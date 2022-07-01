@@ -1,14 +1,14 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 import styled from 'styled-components';
-import { Button, Flex, Logo, Card, useMode, Mode } from '@chia/core';
+import { Button, Flex, Logo, Card, useMode, Mode } from '@cactus/core';
 import {
   AccountBalanceWallet as AccountBalanceWalletIcon,
   EnergySavingsLeaf as EcoIcon,
   Settings as SettingsIcon,
   Check as CheckIcon,
 } from '@mui/icons-material';
-import { Farming as FarmingIcon } from '@chia/icons';
+import { Farming as FarmingIcon } from '@cactus/icons';
 import { Box, Typography, Container, Grid } from '@mui/material';
 
 const StyledCheckIcon = styled(CheckIcon)`

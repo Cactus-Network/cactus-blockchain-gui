@@ -7,10 +7,10 @@ import {
   FormatLargeNumber,
   TooltipIcon,
   mojoToCATLocaleString,
-} from '@chia/core';
+} from '@cactus/core';
 import { Box, Typography } from '@mui/material';
 import useAssetIdName from '../../hooks/useAssetIdName';
-import { WalletType } from '@chia/api';
+import { WalletType } from '@cactus/api';
 import { formatAmountForWalletType } from './utils';
 import { launcherIdToNFTId } from '../../util/nfts';
 import NFTSummary from '../nfts/NFTSummary';

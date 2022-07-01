@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@chia/api';
-import { useCurrencyCode } from '@chia/core';
+import type { NFTInfo } from '@cactus/api';
+import { useCurrencyCode } from '@cactus/core';
 import useOpenExternal from './useOpenExternal';
 
 /* ========================================================================== */

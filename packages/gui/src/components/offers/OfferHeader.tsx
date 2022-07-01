@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
-import { Flex, useColorModeValue } from '@chia/core';
+import { Flex, useColorModeValue } from '@cactus/core';
 import { Typography } from '@mui/material';
 import styled from 'styled-components';
 

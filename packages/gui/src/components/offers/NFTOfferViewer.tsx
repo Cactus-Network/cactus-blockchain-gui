@@ -7,9 +7,9 @@ import {
   useCheckOfferValidityMutation,
   useGetNFTInfoQuery,
   useGetNFTWallets,
-} from '@chia/api-react';
-import type { Wallet } from '@chia/api';
-import { OfferSummaryRecord, OfferTradeRecord } from '@chia/api';
+} from '@cactus/api-react';
+import type { Wallet } from '@cactus/api';
+import { OfferSummaryRecord, OfferTradeRecord } from '@cactus/api';
 import {
   Back,
   Button,
@@ -21,12 +21,12 @@ import {
   StateColor,
   Tooltip,
   TooltipIcon,
-  chiaToMojo,
-  mojoToChia,
+  cactusToMojo,
+  mojoToCactus,
   useColorModeValue,
   useCurrencyCode,
   useShowError,
-} from '@chia/core';
+} from '@cactus/core';
 import { Box, Divider, Grid, Typography } from '@mui/material';
 import { Warning as WarningIcon } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
@@ -93,7 +93,7 @@ function NFTOfferSummaryRow(props: NFTOfferSummaryRowProps) {
         let assetType: OfferAsset | undefined;
 
         if (['xch', 'txch'].includes(key.toLowerCase())) {
-          assetType = OfferAsset.CHIA;
+          assetType = OfferAsset.CACTUS;
         } else if (infoDict?.type) {
           switch (infoDict.type.toLowerCase()) {
             case 'singleton':
@@ -121,7 +121,7 @@ function NFTOfferSummaryRow(props: NFTOfferSummaryRowProps) {
     switch (assetType) {
       case undefined:
         return null;
-      case OfferAsset.CHIA: // fall-through
+      case OfferAsset.CACTUS: // fall-through
       case OfferAsset.TOKEN:
         return (
           <OfferSummaryTokenRow
@@ -414,7 +414,7 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
     }
 
     const royaltyPercentage = convertRoyaltyToPercentage(nft.royaltyPercentage);
-    const xchMakerFee = mojoToChia(makerFee);
+    const xchMakerFee = mojoToCactus(makerFee);
 
     return {
       ...calculateNFTRoyalties(
@@ -432,7 +432,7 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
     : 'textSecondary';
   const overrideNFTSellerAmount =
     exchangeType === NFTOfferExchangeType.XCHForNFT
-      ? chiaToMojo(nftSaleInfo?.nftSellerNetAmount ?? 0)
+      ? cactusToMojo(nftSaleInfo?.nftSellerNetAmount ?? 0)
       : undefined;
 
   useMemo(async () => {

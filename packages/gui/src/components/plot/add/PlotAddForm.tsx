@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router';
 import { t, Trans } from '@lingui/macro';
-import { defaultPlotter, toBech32m } from '@chia/api';
+import { defaultPlotter, toBech32m } from '@cactus/api';
 import {
   useStartPlottingMutation,
   useCreateNewPoolWalletMutation,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 <<<<<<< HEAD
-import { Back, useShowError, ButtonLoading, Flex, Form, toBech32m, fromBech32m } from '@chia/core';
+import { Back, useShowError, ButtonLoading, Flex, Form, toBech32m, fromBech32m } from '@cactus/core';
 =======
-import { Back, useShowError, ButtonLoading, Flex, Form } from '@chia/core';
+import { Back, useShowError, ButtonLoading, Flex, Form } from '@cactus/core';
 >>>>>>> tmp
 import PlotAddChoosePlotter from './PlotAddChoosePlotter';
 import PlotAddChooseSize from './PlotAddChooseSize';

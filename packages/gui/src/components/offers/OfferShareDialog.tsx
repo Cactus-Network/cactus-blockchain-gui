@@ -10,8 +10,8 @@ import {
   useOpenDialog,
   useShowError,
   useOpenExternal,
-} from '@chia/core';
-import { OfferTradeRecord, toBech32m } from '@chia/api';
+} from '@cactus/core';
+import { OfferTradeRecord, toBech32m } from '@cactus/api';
 import {
   Button,
   Checkbox,
@@ -73,7 +73,7 @@ type CommonDialogProps = {
 
 type OfferShareServiceDialogProps = CommonOfferProps & CommonDialogProps;
 
-const testnetDummyHost = 'offers-api-sim.chia.net';
+const testnetDummyHost = 'offers-api-sim.cactus.net';
 
 const OfferSharingProviders: {
   [key in OfferSharingService]: OfferSharingProvider;
@@ -243,7 +243,7 @@ async function postToOfferBin(
   console.log('OfferBin upload completed');
 
   if (testnet) {
-    return 'https://www.chia.net/offers';
+    return 'https://www.cactus.net/offers';
   }
 
   const { hash } = JSON.parse(responseBody);
@@ -294,7 +294,7 @@ async function postToHashgreen(
     console.log('Hashgreen upload completed');
 
     if (testnet) {
-      return 'https://www.chia.net/offers';
+      return 'https://www.cactus.net/offers';
     }
 
     const jsonObj = JSON.parse(responseBody);
@@ -356,7 +356,7 @@ type KeybaseCLIRequest = {
   channelName: string;
 };
 
-const KeybaseTeamName = 'chia_offers';
+const KeybaseTeamName = 'cactus_offers';
 const KeybaseChannelName = 'offers-trading';
 
 async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {

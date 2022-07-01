@@ -20,14 +20,14 @@ import {
   TableControlled,
   TooltipIcon,
   useOpenDialog,
-  chiaToMojo,
+  cactusToMojo,
   useCurrencyCode,
   useSerializedNavigationState,
   useShowSaveDialog,
   Tooltip,
   LayoutDashboardSub,
-} from '@chia/core';
-import { OfferSummaryRecord, OfferTradeRecord } from '@chia/api';
+} from '@cactus/core';
+import { OfferSummaryRecord, OfferTradeRecord } from '@cactus/api';
 import {
   Box,
   Checkbox,
@@ -50,12 +50,12 @@ import {
   Reply as Share,
   Visibility,
 } from '@mui/icons-material';
-import { Offers } from '@chia/icons';
+import { Offers } from '@cactus/icons';
 import {
   useCancelOfferMutation,
   useGetOfferDataMutation,
   useGetWalletsQuery,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import {
   colorForOfferState,
   displayStringForOfferState,
@@ -101,7 +101,7 @@ function ConfirmOfferCancellation(props: ConfirmOfferCancellationProps) {
   async function handleConfirm() {
     const { fee: xchFee } = methods.getValues();
 
-    const fee = cancelWithTransaction ? chiaToMojo(xchFee) : new BigNumber(0);
+    const fee = cancelWithTransaction ? cactusToMojo(xchFee) : new BigNumber(0);
 
     onClose([true, { cancelWithTransaction, cancellationFee: fee }]);
   }

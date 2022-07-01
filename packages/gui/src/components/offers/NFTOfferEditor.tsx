@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import BigNumber from 'bignumber.js';
 import { Trans, t } from '@lingui/macro';
 import { useLocalStorage } from '@rehooks/local-storage';
-import type { NFTInfo, Wallet } from '@chia/api';
+import type { NFTInfo, Wallet } from '@cactus/api';
 import {
   useCreateOfferForIdsMutation,
   useGetNFTInfoQuery,
   useGetNFTWallets,
-} from '@chia/api-react';
+} from '@cactus/api-react';
 import {
   Amount,
   AmountProps,
@@ -24,12 +24,12 @@ import {
   TextField,
   Tooltip,
   TooltipIcon,
-  chiaToMojo,
+  cactusToMojo,
   useColorModeValue,
   useCurrencyCode,
   useOpenDialog,
   useShowError,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   Box,
   Divider,
@@ -464,12 +464,12 @@ function buildOfferRequest(
   xchAmount: string,
   fee: string,
 ) {
-  const baseMojoAmount: BigNumber = chiaToMojo(xchAmount);
+  const baseMojoAmount: BigNumber = cactusToMojo(xchAmount);
   const mojoAmount =
     exchangeType === NFTOfferExchangeType.NFTForXCH
       ? baseMojoAmount
       : baseMojoAmount.negated();
-  const feeMojoAmount = chiaToMojo(fee);
+  const feeMojoAmount = cactusToMojo(fee);
   const nftAmount = exchangeType === NFTOfferExchangeType.NFTForXCH ? -1 : 1;
   const xchWalletId = 1;
   const innerAlsoDict = nft.supportsDid

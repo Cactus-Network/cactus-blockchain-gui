@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plural, Trans } from '@lingui/macro';
 import styled from 'styled-components';
-import type { NFTInfo } from '@chia/api';
+import type { NFTInfo } from '@cactus/api';
 import {
   Button,
   ButtonLoading,
@@ -12,10 +12,10 @@ import {
   Flex,
   TextField,
   TooltipIcon,
-  chiaToMojo,
+  cactusToMojo,
   useCurrencyCode,
   useOpenDialog,
-} from '@chia/core';
+} from '@cactus/core';
 import {
   Box,
   Dialog,
@@ -27,7 +27,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useForm } from 'react-hook-form';
-import { useTransferNFTMutation } from '@chia/api-react';
+import { useTransferNFTMutation } from '@cactus/api-react';
 import NFTSummary from './NFTSummary';
 
 /* ========================================================================== */
@@ -69,7 +69,7 @@ function NFTTransferConfirmationDialog(
   props: NFTTransferConfirmationDialogProps,
 ) {
   const { destination, fee, ...rest } = props;
-  const feeInMojos = chiaToMojo(fee || 0);
+  const feeInMojos = cactusToMojo(fee || 0);
   const currencyCode = useCurrencyCode();
 
   return (
@@ -182,7 +182,7 @@ export default function NFTTransferAction(props: NFTTransferActionProps) {
 
   async function handleSubmit(formData: NFTTransferFormData) {
     const { destination, fee } = formData;
-    const feeInMojos = chiaToMojo(fee || 0);
+    const feeInMojos = cactusToMojo(fee || 0);
     let isValid = true;
     let confirmation = false;
 

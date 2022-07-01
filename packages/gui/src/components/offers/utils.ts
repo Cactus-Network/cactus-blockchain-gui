@@ -1,16 +1,16 @@
-import { WalletType } from '@chia/api';
+import { WalletType } from '@cactus/api';
 import { t } from '@lingui/macro';
 import type { ChipProps } from '@mui/material';
 import type {
   OfferSummaryAssetInfo,
   OfferSummaryInfos,
   OfferSummaryRecord,
-} from '@chia/api';
+} from '@cactus/api';
 import {
-  mojoToChia,
-  mojoToChiaLocaleString,
+  mojoToCactus,
+  mojoToCactusLocaleString,
   mojoToCATLocaleString,
-} from '@chia/core';
+} from '@cactus/core';
 import NFTOfferExchangeType from './NFTOfferExchangeType';
 import OfferState from './OfferState';
 import OfferAsset from './OfferAsset';
@@ -202,7 +202,7 @@ export function formatAmountForWalletType(
   locale?: string,
 ): string {
   if (walletType === WalletType.STANDARD_WALLET) {
-    return mojoToChiaLocaleString(amount, locale);
+    return mojoToCactusLocaleString(amount, locale);
   } else if (walletType === WalletType.CAT) {
     return mojoToCATLocaleString(amount, locale);
   }
@@ -237,7 +237,7 @@ export function offerAssetTypeForAssetId(
   let assetType: OfferAsset | undefined;
 
   if (['xch', 'txch'].includes(assetId)) {
-    assetType = OfferAsset.CHIA;
+    assetType = OfferAsset.CACTUS;
   } else {
     const infos: OfferSummaryInfos = offerSummary.infos;
     const info: OfferSummaryAssetInfo = infos[assetId];
@@ -318,7 +318,7 @@ export function getNFTPriceWithoutRoyalties(
   if (amountInMojos === undefined) {
     return undefined;
   }
-  return mojoToChia(amountInMojos).toNumber();
+  return mojoToCactus(amountInMojos).toNumber();
 }
 
 /* ========================================================================== */
