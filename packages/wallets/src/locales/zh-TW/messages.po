@@ -690,33 +690,17 @@ msgstr "建立交易"
 
 #: src/components/_wallet_old/create/WalletCreate.jsx:186
 #~ msgid "Create admin wallet"
-#~ msgstr "Create admin wallet"
+#~ msgstr "Create admin wallet<<<<<<< HEAD"
 
-<<<<<<< HEAD
-#: src/components/offers/OfferEditor.tsx:227
-#: src/components/offers/OfferManager.tsx:518
-<<<<<<< HEAD
-msgid "Create an Offer"
-msgstr "建立一個報價單"
-
-#: src/components/offers/OfferManager.tsx:512
-msgid "Create an offer to exchange CAC or other tokens. View an offer to inspect and accept an offer made by another party."
-msgstr "建立一個報價單以交換CAC或是其他代幣。查看報價單以檢查並接受另一方的報價單。"
-=======
-=======
->>>>>>> tmp2
 #~ msgid "Create an Offer"
 #~ msgstr ""
 
 #: src/components/offers/OfferManager.tsx:512
-<<<<<<< HEAD
 #~ msgid "Create an offer to exchange CAC or other tokens. View an offer to inspect and accept an offer made by another party."
-#~ msgstr ""
->>>>>>> tmp
-=======
+#~ msgstr ">>>>>>> tmp======="
+
 #~ msgid "Create an offer to exchange XCH or other tokens. View an offer to inspect and accept an offer made by another party."
-#~ msgstr ">>>>>>> tmp"
->>>>>>> tmp2
+#~ msgstr ">>>>>>> tmp>>>>>>> tmp2"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:75
 #~ msgid "Create custom CAT Wallet"
