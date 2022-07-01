@@ -55,7 +55,7 @@ import styled from 'styled-components';
 
 /* ========================================================================== */
 /*              Temporary home for the NFT-specific Offer Editor              */
-/*        An NFT offer consists of a single NFT being offered for XCH         */
+/*        An NFT offer consists of a single NFT being offered for CAC         */
 /* ========================================================================== */
 
 const StyledWarningIcon = styled(WarningIcon)`
@@ -93,7 +93,7 @@ function NFTOfferCreationFee(props: NFTOfferCreationFeeProps) {
               <Trans>
                 Including a fee in the offer can help expedite the transaction
                 when the offer is accepted. The recommended minimum fee is
-                0.000005 XCH (5,000,000 mojos)
+                0.000005 CAC (5,000,000 mojos)
               </Trans>
             </TooltipIcon>
           </Box>
@@ -119,7 +119,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
   const [makerFeeFocused, setMakerFeeFocused] = useState<boolean>(false);
 
   const tab = methods.watch('exchangeType');
-  const amount = methods.watch('xchAmount');
+  const amount = methods.watch('cacAmount');
   const makerFee = methods.watch('fee');
   const nftId = methods.watch('nftId');
   const launcherId = launcherIdFromNFTId(nftId ?? '');
@@ -189,7 +189,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
         id={`${tab}-amount}`}
         key={`${tab}-amount}`}
         variant="filled"
-        name="xchAmount"
+        name="cacAmount"
         color="secondary"
         disabled={disabled}
         label={<Trans>Amount</Trans>}
@@ -204,9 +204,9 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
     </Grid>
   );
   const offerElem =
-    tab === NFTOfferExchangeType.NFTForXCH ? nftElem : amountElem;
+    tab === NFTOfferExchangeType.NFTForCAC ? nftElem : amountElem;
   const takerElem =
-    tab === NFTOfferExchangeType.NFTForXCH ? amountElem : nftElem;
+    tab === NFTOfferExchangeType.NFTForCAC ? amountElem : nftElem;
   const showRoyaltyWarning = (royaltyPercentage ?? 0) >= 20;
   const royaltyPercentageColor = showRoyaltyWarning
     ? StateColor.WARNING
@@ -214,7 +214,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
   const showNegativeAmountWarning = (nftSellerNetAmount ?? 0) < 0;
 
   function handleAmountChange(amount: string) {
-    methods.setValue('xchAmount', amount);
+    methods.setValue('cacAmount', amount);
   }
 
   function handleFeeChange(fee: string) {
@@ -252,13 +252,13 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
         indicatorColor="primary"
       >
         <Tab
-          value={NFTOfferExchangeType.NFTForXCH}
-          label={<Trans>NFT for XCH</Trans>}
+          value={NFTOfferExchangeType.NFTForCAC}
+          label={<Trans>NFT for CAC</Trans>}
           disabled={disabled}
         />
         <Tab
-          value={NFTOfferExchangeType.XCHForNFT}
-          label={<Trans>XCH for NFT</Trans>}
+          value={NFTOfferExchangeType.CACForNFT}
+          label={<Trans>CAC for NFT</Trans>}
           disabled={disabled}
         />
       </Tabs>
@@ -305,7 +305,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
               </Flex>
             </Flex>
           ) : null}
-          {tab === NFTOfferExchangeType.XCHForNFT && (
+          {tab === NFTOfferExchangeType.CACForNFT && (
             <Flex flexDirection="column" gap={2}>
               {!nft?.royaltyPercentage && <Divider />}
               {makerFeeElem}
@@ -316,7 +316,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
               <>
                 <Flex flexDirection="column" gap={0.5}>
                   <Typography variant="body1" color="textSecondary">
-                    {tab === NFTOfferExchangeType.NFTForXCH ? (
+                    {tab === NFTOfferExchangeType.NFTForCAC ? (
                       <Trans>You will receive</Trans>
                     ) : (
                       <Trans>They will receive</Trans>
@@ -346,7 +346,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
                 <Flex flexDirection="column" gap={0.5}>
                   <Flex flexDirection="row" alignItems="center" gap={1}>
                     <Typography variant="h6" color="textSecondary">
-                      {tab === NFTOfferExchangeType.NFTForXCH ? (
+                      {tab === NFTOfferExchangeType.NFTForCAC ? (
                         <Trans>Total Amount Requested</Trans>
                       ) : (
                         <Trans>Total Amount Offered</Trans>
@@ -354,7 +354,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
                     </Typography>
                     <Flex justifyContent="center">
                       <TooltipIcon>
-                        {tab === NFTOfferExchangeType.NFTForXCH ? (
+                        {tab === NFTOfferExchangeType.NFTForCAC ? (
                           <Trans>
                             The total amount requested includes the asking
                             price, plus the associated creator fees (if the NFT
@@ -392,7 +392,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
               </>
             </Flex>
           ) : null}
-          {tab === NFTOfferExchangeType.NFTForXCH && (
+          {tab === NFTOfferExchangeType.NFTForCAC && (
             <Flex flexDirection="column" gap={2}>
               <Divider />
               {makerFeeElem}
@@ -435,20 +435,20 @@ NFTOfferConditionalsPanel.defaultProps = {
 
 /* ========================================================================== */
 /*                              NFT Offer Editor                              */
-/*             Currently only supports a single NFT <--> XCH offer            */
+/*             Currently only supports a single NFT <--> CAC offer            */
 /* ========================================================================== */
 
 type NFTOfferEditorFormData = {
   exchangeType: NFTOfferExchangeType;
   nftId?: string;
-  xchAmount: string;
+  cacAmount: string;
   fee: string;
 };
 
 type NFTOfferEditorValidatedFormData = {
   exchangeType: NFTOfferExchangeType;
   launcherId: string;
-  xchAmount: string;
+  cacAmount: string;
   fee: string;
 };
 
@@ -461,17 +461,17 @@ function buildOfferRequest(
   exchangeType: NFTOfferExchangeType,
   nft: NFTInfo,
   nftLauncherId: string,
-  xchAmount: string,
+  cacAmount: string,
   fee: string,
 ) {
-  const baseMojoAmount: BigNumber = cactusToMojo(xchAmount);
+  const baseMojoAmount: BigNumber = cactusToMojo(cacAmount);
   const mojoAmount =
-    exchangeType === NFTOfferExchangeType.NFTForXCH
+    exchangeType === NFTOfferExchangeType.NFTForCAC
       ? baseMojoAmount
       : baseMojoAmount.negated();
   const feeMojoAmount = cactusToMojo(fee);
-  const nftAmount = exchangeType === NFTOfferExchangeType.NFTForXCH ? -1 : 1;
-  const xchWalletId = 1;
+  const nftAmount = exchangeType === NFTOfferExchangeType.NFTForCAC ? -1 : 1;
+  const cacWalletId = 1;
   const innerAlsoDict = nft.supportsDid
     ? {
         type: 'ownership',
@@ -502,9 +502,9 @@ function buildOfferRequest(
   return [
     {
       [nftLauncherId]: nftAmount,
-      [xchWalletId]: mojoAmount,
+      [cacWalletId]: mojoAmount,
     },
-    exchangeType === NFTOfferExchangeType.XCHForNFT ? driverDict : undefined,
+    exchangeType === NFTOfferExchangeType.CACForNFT ? driverDict : undefined,
     // driverDict,
     feeMojoAmount,
   ];
@@ -526,9 +526,9 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
     OfferLocalStorageKeys.SUPPRESS_SHARE_ON_CREATE,
   );
   const defaultValues: NFTOfferEditorFormData = {
-    exchangeType: NFTOfferExchangeType.NFTForXCH,
+    exchangeType: NFTOfferExchangeType.NFTForCAC,
     nftId: nft?.$nftId ?? '',
-    xchAmount: '',
+    cacAmount: '',
     fee: '',
   };
   const methods = useForm<NFTOfferEditorFormData>({
@@ -542,7 +542,7 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
   function validateFormData(
     unvalidatedFormData: NFTOfferEditorFormData,
   ): NFTOfferEditorValidatedFormData | undefined {
-    const { exchangeType, nftId, xchAmount, fee } = unvalidatedFormData;
+    const { exchangeType, nftId, cacAmount, fee } = unvalidatedFormData;
     let result: NFTOfferEditorValidatedFormData | undefined = undefined;
 
     if (!nftId) {
@@ -551,13 +551,13 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
       errorDialog(new Error(t`Invalid NFT identifier`));
     } else if (!launcherId) {
       errorDialog(new Error(t`Failed to decode NFT identifier`));
-    } else if (!xchAmount || xchAmount === '0') {
+    } else if (!cacAmount || cacAmount === '0') {
       errorDialog(new Error(t`Please enter an amount`));
     } else {
       result = {
         exchangeType,
         launcherId,
-        xchAmount,
+        cacAmount,
         fee,
       };
     }
@@ -581,9 +581,9 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
       return;
     }
 
-    const { exchangeType, launcherId, xchAmount, fee } = formData;
+    const { exchangeType, launcherId, cacAmount, fee } = formData;
 
-    if (exchangeType === NFTOfferExchangeType.NFTForXCH) {
+    if (exchangeType === NFTOfferExchangeType.NFTForCAC) {
       const haveNFT =
         nfts.find((nft: NFTInfo) => nft.$nftId === offerNFT.$nftId) !==
         undefined;
@@ -615,7 +615,7 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
       exchangeType,
       offerNFT,
       launcherId,
-      xchAmount,
+      cacAmount,
       fee,
     );
 

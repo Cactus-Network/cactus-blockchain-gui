@@ -13,7 +13,7 @@ const display: {
   [key in Unit]: Display;
 } = {
   cactus: {
-    format: '{amount} XCH',
+    format: '{amount} CAC',
     fractionDigits: 12,
   },
   mojo: {

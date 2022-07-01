@@ -59,11 +59,11 @@ msgstr "+ Dodaj działkę"
 #~ msgstr "128 buckets is recommended"
 
 #: src/components/settings/ProfileAdd.tsx:87
-#~ msgid "<0>Get some XCH</0>"
+#~ msgid "<0>Get some CAC</0>"
 #~ msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:96
-msgid "<0>Need some XCH?</0>"
+msgid "<0>Need some CAC?</0>"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:104
@@ -296,7 +296,7 @@ msgstr "Plik kopii zapasowej służy do przywracania smart portfeli."
 #~ msgstr "Balance"
 
 #: src/components/settings/ProfileAdd.tsx:108
-msgid "Balance: {standardBalance} XCH"
+msgid "Balance: {standardBalance} CAC"
 msgstr ""
 
 #: src/components/block/Block.jsx:295
@@ -787,7 +787,7 @@ msgid "Create an Offer"
 msgstr ""
 
 #: src/components/offers/OfferManager.tsx:598
-msgid "Create an offer to exchange assets including XCH, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
+msgid "Create an offer to exchange assets including CAC, tokens, and NFTs. View an offer to inspect and accept an offer made by another party."
 msgstr ""
 
 #: src/components/_wallet_old/create/WalletCreate.jsx:132
@@ -1261,7 +1261,7 @@ msgid "Fee"
 msgstr "Opłata"
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
-#~ msgid "Fee (TXCH)"
+#~ msgid "Fee (TCAC)"
 #~ msgstr ""
 
 #: src/components/wallet/coloured/WalletColoured.tsx:420
@@ -1575,19 +1575,19 @@ msgid "Join a Pool"
 msgstr "Dołącz do Puli"
 
 #: src/components/plot/add/PlotAddNFT.tsx:49
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:63
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
 msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:138
-msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
+msgid "Join a pool and get more consistent CAC farming rewards. Create a plot NFT and assign your new plots to a group."
 msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:52
-#~ msgid "Join apool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
+#~ msgid "Join apool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile."
 #~ msgstr ""
 
 #: src/components/app/AppSelectMode.tsx:146
@@ -1886,7 +1886,7 @@ msgid "NFT details not available"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:140
-msgid "NFT for XCH"
+msgid "NFT for CAC"
 msgstr ""
 
 #: src/components/offers/NFTOfferPreview.tsx:85
@@ -2031,7 +2031,7 @@ msgstr "Nie połączono"
 
 #: src/components/block/FarmManageFarmingRewards.tsx:163
 #: src/components/farm/FarmManageFarmingRewards.tsx:174
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25CAC reward for pooling plots."
 msgstr ""
 
 #: src/components/plotNFT/PlotExternalNFTCard.tsx:117
@@ -2772,7 +2772,7 @@ msgid "Recommended"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:123
-msgid "Recommended: 0.000005 XCH"
+msgid "Recommended: 0.000005 CAC"
 msgstr ""
 
 #: src/components/_wallet_old/did/WalletDID.tsx:464
@@ -2990,7 +2990,7 @@ msgid "Self Pooling"
 msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:104
-msgid "Self pool. When you win a block you will earn XCH rewards."
+msgid "Self pool. When you win a block you will earn CAC rewards."
 msgstr ""
 
 #: src/components/trading/CreateOffer.jsx:165
@@ -3126,7 +3126,7 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Pomija dodawanie docelowego folderu do żniwiarza"
 
 #: src/components/pool/PoolHero.tsx:21
-msgid "Smooth out your XCH farming rewards by joining a pool."
+msgid "Smooth out your CAC farming rewards by joining a pool."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTGetPoolLoginLinkDialog.tsx:60
@@ -3211,7 +3211,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/app/AppSelectMode.tsx:89
-msgid "Store and Send XCH"
+msgid "Store and Send CAC"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:103
@@ -3261,23 +3261,23 @@ msgstr "Synchronizacja <0/>/<1/>"
 #~ msgstr "Syncing {progress}/{tip}"
 
 #: src/components/farm/card/FarmCardBlockRewards.tsx:15
-#~ msgid "TXCH Block Rewards"
+#~ msgid "TCAC Block Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardCoinbaseRewards.tsx:12
-#~ msgid "TXCH Farming Rewards"
+#~ msgid "TCAC Farming Rewards"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardFeesReward.tsx:12
-#~ msgid "TXCH Fees Collected"
+#~ msgid "TCAC Fees Collected"
 #~ msgstr ""
 
 #: src/components/farm/card/FarmCardUserFees.tsx:12
-#~ msgid "TXCH User Fees"
-#~ msgstr "TXCH User Fees"
+#~ msgid "TCAC User Fees"
+#~ msgstr "TCAC User Fees"
 
 #: src/components/farm/card/FarmCardUserFees.tsx:15
-#~ msgid "TXCH User Transaction Fees"
+#~ msgid "TCAC User Transaction Fees"
 #~ msgstr ""
 
 #: src/components/pool/PoolInfo.tsx:37
@@ -3376,7 +3376,7 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr "Łączne opłaty transakcyjne w tym bloku. Przyznawane rolnikowi."
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:106
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an CAC address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
 msgstr ""
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:15
@@ -3951,7 +3951,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:145
-msgid "XCH for NFT"
+msgid "CAC for NFT"
 msgstr ""
 
 #: src/components/plot/add/PlotAddChooseSize.tsx:48

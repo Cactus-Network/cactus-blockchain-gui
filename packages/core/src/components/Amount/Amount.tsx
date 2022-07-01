@@ -62,7 +62,7 @@ export default function Amount(props: AmountProps) {
   const correctedValue = value && value[0] === '.' ? `0${value}` : value;
 
   const currencyCode = symbol === undefined ? defaultCurrencyCode : symbol;
-  const isCactusCurrency = ['XCH', 'TXCH'].includes(currencyCode);
+  const isCactusCurrency = ['CAC', 'TCAC'].includes(currencyCode);
   const mojo = isCactusCurrency
     ? cactusToMojo(correctedValue)
     : catToMojo(correctedValue);

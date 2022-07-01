@@ -112,14 +112,14 @@ describe('units', () => {
     });
     it('updates an existing display', () => {
       units.setDisplay('cactus', {
-        format: '{amount} TXCH',
+        format: '{amount} TCAC',
         fractionDigits: 0,
       });
 
       const result = units.getDisplay('cactus');
 
       expect(result).toEqual({
-        format: '{amount} TXCH',
+        format: '{amount} TCAC',
         fractionDigits: 0,
       });
     });

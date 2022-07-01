@@ -49,7 +49,7 @@ export function summaryStringsForNFTOffer(
   ) => string,
 ): [makerString: string, takerString: string] {
   // const makerAssetType = offerAssetTypeForAssetId
-  // TODO: Remove 1:1 NFT <--> XCH assumption
+  // TODO: Remove 1:1 NFT <--> CAC assumption
   const makerEntry: [string, string] = Object.entries(summary.offered)[0];
   const takerEntry: [string, string] = Object.entries(summary.requested)[0];
   const makerAssetType = offerAssetTypeForAssetId(makerEntry[0], summary);
@@ -236,7 +236,7 @@ export function offerAssetTypeForAssetId(
 ): OfferAsset | undefined {
   let assetType: OfferAsset | undefined;
 
-  if (['xch', 'txch'].includes(assetId)) {
+  if (['cac', 'tcac'].includes(assetId)) {
     assetType = OfferAsset.CACTUS;
   } else {
     const infos: OfferSummaryInfos = offerSummary.infos;
@@ -304,8 +304,8 @@ export function determineNFTOfferExchangeType(
   }
 
   return nftOffered
-    ? NFTOfferExchangeType.NFTForXCH
-    : NFTOfferExchangeType.XCHForNFT;
+    ? NFTOfferExchangeType.NFTForCAC
+    : NFTOfferExchangeType.CACForNFT;
 }
 
 /* ========================================================================== */
@@ -313,8 +313,8 @@ export function determineNFTOfferExchangeType(
 export function getNFTPriceWithoutRoyalties(
   summary: OfferSummaryRecord,
 ): number | undefined {
-  // NFTs can only be exchanged for XCH currently
-  const amountInMojos = offerAssetAmountForAssetId('xch', summary);
+  // NFTs can only be exchanged for CAC currently
+  const amountInMojos = offerAssetAmountForAssetId('cac', summary);
   if (amountInMojos === undefined) {
     return undefined;
   }
@@ -342,14 +342,14 @@ export function calculateNFTRoyalties(
     : 0;
   const royaltyAmountString: string = formatAmount(royaltyAmount);
   const nftSellerNetAmount: number =
-    exchangeType === NFTOfferExchangeType.NFTForXCH
+    exchangeType === NFTOfferExchangeType.NFTForCAC
       ? amount
       : parseFloat((amount - parseFloat(royaltyAmountString)).toFixed(12));
   // : parseFloat(
   //     (amount - parseFloat(royaltyAmountString) - makerFee).toFixed(12),
   //   );
   const totalAmount: number =
-    exchangeType === NFTOfferExchangeType.NFTForXCH
+    exchangeType === NFTOfferExchangeType.NFTForCAC
       ? // ? amount + royaltyAmount + makerFee
         amount + royaltyAmount
       : amount + makerFee;

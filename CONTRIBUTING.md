@@ -9,7 +9,7 @@ This repo includes the code for the Cactus GUI in electron/react and TypeScript.
 It is an input to the [cactus-blockchain](https://github.com/Cactus-Network/cactus-blockchain) repository which also includes a verifiable delay function implementation that it imports from the [chiavdf repo](https://github.com/Cactus-Network/chiavdf) (in c/c++), and a proof of space implementation that it imports from the [chiapos repo](https://github.com/Cactus-Network/chiapos). BLS signatures are imported from the [bls-signatures repo](https://github.com/Cactus-Network/bls-signatures) as blspy. There is an additional dependency on the [chiabip158 repo](https://github.com/Cactus-Network/chiabip158).
 For major platforms, binary and source wheels are shipped to PyPI from each dependent repo and then cactus-blockchain can pip install those from PyPI or they can be prepackaged as is done for the Windows and MacOS installer. On unsupported platforms, pip will fall back to the source distributions to be compiled locally.
 
-If you want to learn more about this project, read the [wiki](https://github.com/Cactus-Network/cactus-blockchain/wiki), or check out the [green paper](https://www.cactus.net/assets/CactusGreenPaper.pdf).
+If you want to learn more about this project, read the [wiki](https://github.com/Cactus-Network/cactus-blockchain/wiki), or check out the [green paper](https://www.cactus-network.net/assets/CactusGreenPaper.pdf).
 
 ## Contributions
 

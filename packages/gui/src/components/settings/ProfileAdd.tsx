@@ -59,7 +59,7 @@ export default function ProfileAdd() {
   const openExternal = useOpenExternal();
 
   function handleClick() {
-    openExternal('https://faucet.cactus.net/');
+    openExternal('https://faucet.cactus-network.net/');
   }
 
   async function handleSubmit(data: CreateProfileData) {
@@ -93,7 +93,7 @@ export default function ProfileAdd() {
         </Flex>
         <StyledCard>
           <Flex flexDirection="column" gap={2.5} paddingBottom={1}>
-            <Trans><strong>Need some XCH?</strong></Trans>
+            <Trans><strong>Need some CAC?</strong></Trans>
           </Flex>
           <div style={{cursor: "pointer"}}>
             <Flex paddingBottom={5}>
@@ -105,7 +105,7 @@ export default function ProfileAdd() {
           </Flex>
           <Flex flexDirection="column" gap={2.5} paddingBottom={3}>
             <Typography variant="caption">
-              <Trans>Balance: {standardBalance} XCH</Trans>
+              <Trans>Balance: {standardBalance} CAC</Trans>
             </Typography>
           </Flex>
           <Flex flexDirection="column" gap={2.5} paddingBottom={1}>
@@ -120,7 +120,7 @@ export default function ProfileAdd() {
           </Flex>
           <Flex flexDirection="column" gap={2.5} paddingBottom={3}>
             <Typography variant="caption">
-              <Trans>Recommended: 0.000005 XCH</Trans>
+              <Trans>Recommended: 0.000005 CAC</Trans>
             </Typography>
           </Flex>
           <Flex justifyContent="flex-end">

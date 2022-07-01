@@ -53,13 +53,13 @@ export default function OfferSummary(props: Props) {
     takerEntries.length === 1 ? lookupByAssetId(takerEntries[0][0]) : undefined;
   const makerAmount =
     makerEntries.length > 0
-      ? ['xch', 'txch'].includes(makerEntries[0][0].toLowerCase())
+      ? ['cac', 'tcac'].includes(makerEntries[0][0].toLowerCase())
         ? mojoToCactus(makerEntries[0][1])
         : mojoToCAT(makerEntries[0][1])
       : undefined;
   const takerAmount =
     takerEntries.length > 0
-      ? ['xch', 'txch'].includes(takerEntries[0][0].toLowerCase())
+      ? ['cac', 'tcac'].includes(takerEntries[0][0].toLowerCase())
         ? mojoToCactus(takerEntries[0][1])
         : mojoToCAT(takerEntries[0][1])
       : undefined;

@@ -92,7 +92,7 @@ function NFTOfferSummaryRow(props: NFTOfferSummaryRowProps) {
         const infoDict = summaryInfo[key];
         let assetType: OfferAsset | undefined;
 
-        if (['xch', 'txch'].includes(key.toLowerCase())) {
+        if (['cac', 'tcac'].includes(key.toLowerCase())) {
           assetType = OfferAsset.CACTUS;
         } else if (infoDict?.type) {
           switch (infoDict.type.toLowerCase()) {
@@ -414,12 +414,12 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
     }
 
     const royaltyPercentage = convertRoyaltyToPercentage(nft.royaltyPercentage);
-    const xchMakerFee = mojoToCactus(makerFee);
+    const cacMakerFee = mojoToCactus(makerFee);
 
     return {
       ...calculateNFTRoyalties(
         amount,
-        parseFloat(xchMakerFee),
+        parseFloat(cacMakerFee),
         convertRoyaltyToPercentage(nft.royaltyPercentage),
         exchangeType,
       ),
@@ -431,7 +431,7 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
     ? StateColor.WARNING
     : 'textSecondary';
   const overrideNFTSellerAmount =
-    exchangeType === NFTOfferExchangeType.XCHForNFT
+    exchangeType === NFTOfferExchangeType.CACForNFT
       ? cactusToMojo(nftSaleInfo?.nftSellerNetAmount ?? 0)
       : undefined;
 
@@ -551,7 +551,7 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
                           <FormatLargeNumber
                             value={
                               new BigNumber(
-                                exchangeType === NFTOfferExchangeType.NFTForXCH
+                                exchangeType === NFTOfferExchangeType.NFTForCAC
                                   ? nftSaleInfo?.nftSellerNetAmount ?? 0
                                   : amount ?? 0,
                               )
@@ -602,7 +602,7 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
                   <Divider />
                   <Flex flexDirection="column" gap={0.5}>
                     <Flex flexDirection="row" alignItems="center" gap={1}>
-                      {exchangeType === NFTOfferExchangeType.NFTForXCH ? (
+                      {exchangeType === NFTOfferExchangeType.NFTForCAC ? (
                         <Typography variant="h6" color="textSecondary">
                           <Trans>Total Amount Requested</Trans>
                         </Typography>
@@ -613,7 +613,7 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
                       )}
                       <Flex justifyContent="center">
                         <TooltipIcon>
-                          {exchangeType === NFTOfferExchangeType.NFTForXCH ? (
+                          {exchangeType === NFTOfferExchangeType.NFTForCAC ? (
                             <Trans>
                               The total amount requested includes the asking
                               price, plus the associated creator fees (if the
@@ -642,12 +642,12 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
                     </Flex>
                     <Typography
                       variant={
-                        exchangeType === NFTOfferExchangeType.NFTForXCH
+                        exchangeType === NFTOfferExchangeType.NFTForCAC
                           ? 'h5'
                           : 'h6'
                       }
                       fontWeight={
-                        exchangeType === NFTOfferExchangeType.NFTForXCH
+                        exchangeType === NFTOfferExchangeType.NFTForCAC
                           ? 'bold'
                           : 'regular'
                       }
@@ -660,7 +660,7 @@ function NFTOfferDetails(props: NFTOfferDetailsProps) {
                       {currencyCode}
                     </Typography>
                   </Flex>
-                  {exchangeType === NFTOfferExchangeType.XCHForNFT && (
+                  {exchangeType === NFTOfferExchangeType.CACForNFT && (
                     <Flex flexDirection="column" gap={0.5}>
                       <Flex flexDirection="row" alignItems="center" gap={1}>
                         <Typography variant="h6" color="textSecondary">
