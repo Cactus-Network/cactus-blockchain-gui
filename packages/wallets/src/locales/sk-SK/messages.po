@@ -34,7 +34,7 @@ msgstr ""
 #~ msgid "*Want to explore Cactus’s blocks further? Check out <0>Cactus Explorer</0> built by an open source developer."
 #~ msgstr "*Want to explore Cactus’s blocks further? Check out <0>Cactus Explorer</0> built by an open source developer."
 
-#: src/components/WalletHistory.tsx:150
+#: src/components/WalletHistory.tsx:212
 msgid "+"
 msgstr "+"
 
@@ -50,7 +50,7 @@ msgstr "+"
 #~ msgid "+ Add Wallet"
 #~ msgstr "+ Add Wallet"
 
-#: src/components/WalletHistory.tsx:149
+#: src/components/WalletHistory.tsx:212
 msgid "-"
 msgstr "-"
 
@@ -118,8 +118,8 @@ msgstr "Pridať záložné ID"
 #~ msgstr "Pridajte CAT peňaženky, aby ste mali viac možností"
 
 #: src/components/hero/WalletHeroAdd.tsx:99
-msgid "Add Custom Token"
-msgstr "Pridať vlastný token"
+#~ msgid "Add Custom Token"
+#~ msgstr "Pridať vlastný token"
 
 #: src/components/plot/PlotHeader.tsx:89
 #~ msgid "Add Plot Directory"
@@ -130,11 +130,9 @@ msgstr "Pridať vlastný token"
 #~ msgstr "Add Plot to Queue"
 
 #: src/components/WalletsList.tsx:54
-#: src/components/WalletsManageTokens.tsx:166
+#: src/components/WalletsManageTokens.tsx:170
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:70
-#: src/components/hero/WalletHeroAdd.tsx:64
-#: src/components/hero/WalletHeroWallets.tsx:83
 msgid "Add Token"
 msgstr "Pridať token"
 
@@ -193,7 +191,7 @@ msgstr "Adresa"
 #~ msgid "Alternate tmpdir/tmpdir2"
 #~ msgstr "Alternate tmpdir/tmpdir2"
 
-#: src/components/WalletHistory.tsx:165
+#: src/components/WalletHistory.tsx:228
 #: src/components/WalletSend.tsx:164
 #: src/components/cat/WalletCATSend.tsx:206
 #: src/components/rateLimited/WalletRateLimited.jsx:719
@@ -378,6 +376,24 @@ msgstr "Zostatok"
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
+#: src/electron/main.tsx:430
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus Asset Token"
+
+#: src/electron/main.tsx:369
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
+
+#: src/components/standard/WalletStandard.tsx:23
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
+
 #: src/components/_selectKey_old/SelectKey.tsx:212
 #~ msgid "Can be backed up to mnemonic seed"
 #~ msgstr "Can be backed up to mnemonic seed"
@@ -436,24 +452,6 @@ msgstr "Cactus nie je možné odoslať na farebnú adresu. Zadajte prosím Cactu
 #: src/electron/main.tsx:412
 #~ msgid "Chat on KeyBase"
 #~ msgstr "Chat on KeyBase"
-
-#: src/electron/main.tsx:430
-#~ msgid "Cactus"
-#~ msgstr "Cactus"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr "Cactus Asset Token"
-
-#: src/electron/main.tsx:369
-#~ msgid "Cactus Blockchain Wiki"
-#~ msgstr "Cactus Blockchain Wiki"
-
-#: src/components/standard/WalletStandard.tsx:23
-#~ msgid "Cactus Wallet"
-#~ msgstr "Cactus Wallet"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 #~ msgid "Choose Number of Plots"
@@ -547,11 +545,11 @@ msgstr "Názov mince"
 msgid "Confirmation"
 msgstr "Potvrdenie"
 
-#: src/components/WalletHistory.tsx:111
+#: src/components/WalletHistory.tsx:158
 msgid "Confirmed"
 msgstr "Potvrdené"
 
-#: src/components/WalletHistory.tsx:290
+#: src/components/WalletHistory.tsx:357
 msgid "Confirmed at Height"
 msgstr "Potvrdené na pozícii"
 
@@ -641,8 +639,8 @@ msgid "Create An Attestation Packet"
 msgstr "Vytvoriť atestačný paket"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:76
-msgid "Create Cactus Asset Token Wallet from Existing TAIL"
-msgstr "Vytvorte peňaženku Cactus Asset Token z existujúcej TAIL"
+#~ msgid "Create Cactus Asset Token Wallet from Existing TAIL"
+#~ msgstr "Vytvorte peňaženku Cactus Asset Token z existujúcej TAIL"
 
 #: src/components/wallet/create/WalletCreate.jsx:290
 #~ msgid "Create DID wallet"
@@ -718,8 +716,8 @@ msgstr "Vytvoriť transakciu"
 #~ msgstr "Vytvoriť ponuku na výmenu CAC alebo iných tokenov. Pozrite si ponuku pre preskúmanie a prijatie ponuky vytvorenej inou stranou."
 
 #: src/components/cat/WalletCATCreateExisting.tsx:75
-msgid "Create custom CAT Wallet"
-msgstr "Vytvoriť vlastnú CAT peňaženku"
+#~ msgid "Create custom CAT Wallet"
+#~ msgstr "Vytvoriť vlastnú CAT peňaženku"
 
 #: src/components/_wallet_old/create/WalletCreate.jsx:132
 #~ msgid "Create new coloured coin"
@@ -808,7 +806,7 @@ msgstr "DID peňaženka"
 #~ msgid "DIDListItems.title"
 #~ msgstr ""
 
-#: src/components/WalletHistory.tsx:136
+#: src/components/WalletHistory.tsx:201
 msgid "Date"
 msgstr "Dátum"
 
@@ -1125,7 +1123,7 @@ msgstr "Farma"
 #~ msgid "Farming Status"
 #~ msgstr "Farming Status"
 
-#: src/components/WalletHistory.tsx:177
+#: src/components/WalletHistory.tsx:240
 #: src/components/WalletSend.tsx:175
 #: src/components/cat/WalletCATSend.tsx:219
 #: src/components/create/createRLAdmin.jsx:243
@@ -1342,7 +1340,7 @@ msgstr "Obnoviť peňaženku pomocou mnemotechnickej pomôcky"
 #~ msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted."
 #~ msgstr "Zahrnutie poplatku do ponuky môže pomôcť urýchliť transakciu, keď bude ponuka prijatá."
 
-#: src/components/WalletHistory.tsx:60
+#: src/components/WalletHistory.tsx:95
 msgid "Incoming"
 msgstr "Prichádzajúce"
 
@@ -1379,23 +1377,6 @@ msgstr "Inicializovať používateľskú peňaženku s obmedzenou sazbou:"
 #~ msgid "Install Keybase"
 #~ msgstr "Nainštalovať Keybase"
 
-#: src/components/offers/OfferViewer.tsx:358
-<<<<<<< HEAD
-msgid ""
-"Insufficient funds available to accept offer. Ensure that your\n"
-"spendable balance is sufficient to cover the offer amount."
-msgstr ""
-"Nedostatok finančných prostriedkov na prijatie ponuky. Uistite sa, že váš\n"
-"disponibilný zostatok je dostatočný na pokrytie ponuky."
-
-#: src/components/offers/OfferEditor.tsx:166
-msgid ""
-"Insufficient funds available to create offer. Ensure that your\n"
-"spendable balance is sufficient to cover the offer amount."
-msgstr ""
-"Nedostatok finančných prostriedkov na vytvorenie ponuky. Uistite sa, že váš\n"
-"disponibilný zostatok je dostatočný na pokrytie ponuky."
-=======
 #~ msgid ""
 #~ "Insufficient funds available to accept offer. Ensure that your\n"
 #~ "spendable balance is sufficient to cover the offer amount."
@@ -1409,8 +1390,7 @@ msgstr ""
 #~ "spendable balance is sufficient to cover the offer amount."
 #~ msgstr ""
 #~ "Nedostatok finančných prostriedkov na vytvorenie ponuky. Uistite sa, že váš\n"
-#~ "disponibilný zostatok je dostatočný na pokrytie ponuky."
->>>>>>> tmp
+#~ "disponibilný zostatok je dostatočný na pokrytie ponuky.>>>>>>> tmp"
 
 #: src/components/create/createRLAdmin.jsx:217
 msgid "Interval"
@@ -1530,9 +1510,9 @@ msgstr "Zoznam pripojení je prázdny"
 #~ msgid "Loading list of wallets"
 #~ msgstr "Loading list of wallets"
 
-#: src/components/plot/queue/PlotQueueLogDialog.tsx:35
-#~ msgid "Loading..."
-#~ msgstr "Loading..."
+#: src/components/WalletReceiveAddressField.tsx:40
+msgid "Loading..."
+msgstr "Loading..."
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:126
 #~ msgid "Local Harvester Plots"
@@ -1599,16 +1579,16 @@ msgstr "Spravovať obnovovacie DID"
 #~ msgid "Manage Your Farming Rewards Target Addresses"
 #~ msgstr "Manage Your Farming Rewards Target Addresses"
 
-#: src/components/WalletsManageTokens.tsx:143
+#: src/components/WalletsManageTokens.tsx:147
 msgid "Manage token list"
 msgstr "Spravovať zoznam tokenov"
 
-#: src/components/WalletHistory.tsx:116
+#: src/components/WalletHistory.tsx:172
 #: src/components/cat/WalletCATSend.tsx:231
 msgid "Memo"
 msgstr "Poznámka"
 
-#: src/components/WalletHistory.tsx:294
+#: src/components/WalletHistory.tsx:366
 msgid "Memos"
 msgstr "Poznámky"
 
@@ -1728,7 +1708,7 @@ msgstr "Prezývka"
 #~ msgid "No current offers"
 #~ msgstr "Žiadne aktuálne ponuky"
 
-#: src/components/WalletHistory.tsx:323
+#: src/components/WalletHistory.tsx:402
 msgid "No previous transactions"
 msgstr "Žiadne predchádzajúce transakcie"
 
@@ -1756,8 +1736,8 @@ msgstr "ID uzla"
 #~ msgid "None of your plots have passed the plot filter yet."
 #~ msgstr "None of your plots have passed the plot filter yet."
 
-#: src/components/WalletHistory.tsx:286
-#: src/components/WalletHistory.tsx:291
+#: src/components/WalletHistory.tsx:351
+#: src/components/WalletHistory.tsx:361
 msgid "Not Available"
 msgstr "Nie je k dispozícií"
 
@@ -1822,7 +1802,7 @@ msgstr "OK"
 #~ msgid "Offer"
 #~ msgstr "Offer"
 
-#: src/components/WalletHistory.tsx:122
+#: src/components/WalletHistory.tsx:186
 msgid "Offer Accepted"
 msgstr "Ponuka prijatá"
 
@@ -1887,7 +1867,7 @@ msgstr "Je povolený iba jeden záložný súbor."
 #~ msgid "Only one backup file is allowed. To add a new backup file, please delete any previously uploaded files and try again."
 #~ msgstr "Only one backup file is allowed. To add a new backup file, please delete any previously uploaded files and try again."
 
-#: src/components/WalletHistory.tsx:60
+#: src/components/WalletHistory.tsx:95
 msgid "Outgoing"
 msgstr "Odchádzajúce"
 
@@ -1969,7 +1949,7 @@ msgstr "Vložiť mnemotechniku (24 slov)"
 #~ msgid "Peak Time"
 #~ msgstr "Peak Time"
 
-#: src/components/WalletHistory.tsx:113
+#: src/components/WalletHistory.tsx:165
 msgid "Pending"
 msgstr "Spracúva sa"
 
@@ -2029,8 +2009,8 @@ msgid "Please enter a puzzlehash"
 msgstr "Zadajte prosím hash hádaniek"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:40
-msgid "Please enter a valid CAT name"
-msgstr "Prosím zadajte platný CAT názov"
+#~ msgid "Please enter a valid CAT name"
+#~ msgstr "Prosím zadajte platný CAT názov"
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:41
 msgid "Please enter a valid asset id"
@@ -2468,6 +2448,7 @@ msgid "Receive"
 msgstr "Prijať"
 
 #: src/components/WalletReceiveAddress.tsx:35
+#: src/components/WalletReceiveAddressField.tsx:38
 msgid "Receive Address"
 msgstr "Adresa príjemcu"
 
@@ -2475,7 +2456,6 @@ msgstr "Adresa príjemcu"
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr "Adresa príjemcu nie je adresa farebnej peňaženky. Prosím zadajte adresu farebnej peňaženky"
 
-#: src/components/cat/WalletCATCreateExisting.tsx:104
 #: src/components/cat/WalletDID.tsx:463
 #: src/components/did/WalletDID.tsx:463
 #: src/components/did/WalletDIDRecovery.tsx:124
@@ -2565,7 +2545,7 @@ msgstr "Premenovať peňaženku"
 #~ msgid "Restore Smart Wallets From Backup"
 #~ msgstr ""
 
-#: src/components/WalletHistory.tsx:119
+#: src/components/WalletHistory.tsx:179
 msgid "Retire"
 msgstr "Vyradiť"
 
@@ -2650,7 +2630,6 @@ msgstr "Hľadať v Tail databáze"
 #~ msgstr "Select Temporary Directory"
 
 #: src/components/WalletsList.tsx:32
-#: src/components/hero/WalletHeroWallets.tsx:47
 msgid "Select Wallet"
 msgstr "Vybrať peňaženku"
 
@@ -3071,7 +3050,7 @@ msgstr "Tento prístupový token je overený"
 #~ msgid "This feature is available only from the GUI."
 #~ msgstr "This feature is available only from the GUI."
 
-#: src/components/WalletHistory.tsx:90
+#: src/components/WalletHistory.tsx:132
 msgid "This is not a valid address for sending funds to"
 msgstr "Toto nie je platná adresa na posielanie prostriedkov"
 
@@ -3185,13 +3164,13 @@ msgstr "Toto je celkový zostatok + nespracovaný zostatok alebo to, aký bude v
 #~ msgid "Timestamp"
 #~ msgstr "Timestamp"
 
-#: src/components/WalletHistory.tsx:128
+#: src/components/WalletHistory.tsx:193
 msgid "To"
 msgstr "Príjemca"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:85
-msgid "Token and Asset Issuance Limitations"
-msgstr "Obmedzenia vydávania tokenov a aktív"
+#~ msgid "Token and Asset Issuance Limitations"
+#~ msgstr "Obmedzenia vydávania tokenov a aktív"
 
 #: src/components/cat/WalletCATCreateSimple.tsx:45
 msgid "Token has empty asset id"
@@ -3274,7 +3253,7 @@ msgstr "Celkový zostatok"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Transakcia bola úspešne odoslaná úplnému uzlu a zahrnutá do pamäťového fondu."
 
-#: src/components/WalletHistory.tsx:244
+#: src/components/WalletHistory.tsx:309
 msgid "Transactions"
 msgstr "Transakcie"
 
@@ -3457,12 +3436,12 @@ msgstr "Peňaženka typu {0} nie je podporovaná"
 msgid "Wallet {walletId} not found"
 msgstr "Peňaženka {walletId} nebola nájdená"
 
-#: src/components/wallet/Wallets.tsx:34
-#~ msgid "WalletItem.ccWallet"
-#~ msgstr ""
-
 #: src/components/wallet/Wallets.tsx:30
 #~ msgid "WalletItem.cactusWallet"
+#~ msgstr ""
+
+#: src/components/wallet/Wallets.tsx:34
+#~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48

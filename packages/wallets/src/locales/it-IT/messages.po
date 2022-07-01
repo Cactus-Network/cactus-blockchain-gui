@@ -34,7 +34,7 @@ msgstr ""
 #~ msgid "*Want to explore Cactus’s blocks further? Check out <0>Cactus Explorer</0> built by an open source developer."
 #~ msgstr "*Want to explore Cactus’s blocks further? Check out <0>Cactus Explorer</0> built by an open source developer."
 
-#: src/components/WalletHistory.tsx:150
+#: src/components/WalletHistory.tsx:212
 msgid "+"
 msgstr "+"
 
@@ -50,7 +50,7 @@ msgstr "+"
 #~ msgid "+ Add Wallet"
 #~ msgstr "+ Add Wallet"
 
-#: src/components/WalletHistory.tsx:149
+#: src/components/WalletHistory.tsx:212
 msgid "-"
 msgstr "-"
 
@@ -118,8 +118,8 @@ msgstr "Aggiungi Backup Id"
 #~ msgstr "Aggiungi portafogli CAT per avere più opzioni"
 
 #: src/components/hero/WalletHeroAdd.tsx:99
-msgid "Add Custom Token"
-msgstr "Aggiungi un nodo personalizzato"
+#~ msgid "Add Custom Token"
+#~ msgstr "Aggiungi un nodo personalizzato"
 
 #: src/components/plot/PlotHeader.tsx:89
 #~ msgid "Add Plot Directory"
@@ -130,11 +130,9 @@ msgstr "Aggiungi un nodo personalizzato"
 #~ msgstr "Add Plot to Queue"
 
 #: src/components/WalletsList.tsx:54
-#: src/components/WalletsManageTokens.tsx:166
+#: src/components/WalletsManageTokens.tsx:170
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:70
-#: src/components/hero/WalletHeroAdd.tsx:64
-#: src/components/hero/WalletHeroWallets.tsx:83
 msgid "Add Token"
 msgstr "Aggiungi token"
 
@@ -193,7 +191,7 @@ msgstr "Indirizzo / Puzzle hash"
 #~ msgid "Alternate tmpdir/tmpdir2"
 #~ msgstr "Alternate tmpdir/tmpdir2"
 
-#: src/components/WalletHistory.tsx:165
+#: src/components/WalletHistory.tsx:228
 #: src/components/WalletSend.tsx:164
 #: src/components/cat/WalletCATSend.tsx:206
 #: src/components/rateLimited/WalletRateLimited.jsx:719
@@ -378,6 +376,24 @@ msgstr "Bilancio"
 #~ msgid "CCListItems.title"
 #~ msgstr ""
 
+#: src/electron/main.tsx:430
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus Asset Token"
+
+#: src/electron/main.tsx:369
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
+
+#: src/components/standard/WalletStandard.tsx:23
+#~ msgid "Cactus Wallet"
+#~ msgstr "Cactus Wallet"
+
 #: src/components/_selectKey_old/SelectKey.tsx:212
 #~ msgid "Can be backed up to mnemonic seed"
 #~ msgstr "Can be backed up to mnemonic seed"
@@ -436,24 +452,6 @@ msgstr "Errore: impossibile inviare cactus ad un indirizzo colorato. Perfavore i
 #: src/electron/main.tsx:412
 #~ msgid "Chat on KeyBase"
 #~ msgstr "Chat on KeyBase"
-
-#: src/electron/main.tsx:430
-#~ msgid "Cactus"
-#~ msgstr "Cactus"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr "Cactus Asset Token"
-
-#: src/electron/main.tsx:369
-#~ msgid "Cactus Blockchain Wiki"
-#~ msgstr "Cactus Blockchain Wiki"
-
-#: src/components/standard/WalletStandard.tsx:23
-#~ msgid "Cactus Wallet"
-#~ msgstr "Cactus Wallet"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:34
 #~ msgid "Choose Number of Plots"
@@ -547,11 +545,11 @@ msgstr "Nome Della Moneta"
 msgid "Confirmation"
 msgstr "Conferma"
 
-#: src/components/WalletHistory.tsx:111
+#: src/components/WalletHistory.tsx:158
 msgid "Confirmed"
 msgstr "Confermato"
 
-#: src/components/WalletHistory.tsx:290
+#: src/components/WalletHistory.tsx:357
 msgid "Confirmed at Height"
 msgstr "Confermato all'altezza"
 
@@ -641,8 +639,8 @@ msgid "Create An Attestation Packet"
 msgstr "Crea un Attestation Packet"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:76
-msgid "Create Cactus Asset Token Wallet from Existing TAIL"
-msgstr "Crea Portafoglio Cactus Asset Token dal TAIL esistente"
+#~ msgid "Create Cactus Asset Token Wallet from Existing TAIL"
+#~ msgstr "Crea Portafoglio Cactus Asset Token dal TAIL esistente"
 
 #: src/components/wallet/create/WalletCreate.jsx:290
 #~ msgid "Create DID wallet"
@@ -718,8 +716,8 @@ msgstr "Crea una transazione"
 #~ msgstr "Crea un'offerta per scambiare CAC o altri token. Carica un offer file per ispezionare e accettare un'offerta fatta da un'altro utente."
 
 #: src/components/cat/WalletCATCreateExisting.tsx:75
-msgid "Create custom CAT Wallet"
-msgstr "Crea portafoglio CAT personalizzato"
+#~ msgid "Create custom CAT Wallet"
+#~ msgstr "Crea portafoglio CAT personalizzato"
 
 #: src/components/_wallet_old/create/WalletCreate.jsx:132
 #~ msgid "Create new coloured coin"
@@ -808,7 +806,7 @@ msgstr "Portafoglio DID"
 #~ msgid "DIDListItems.title"
 #~ msgstr ""
 
-#: src/components/WalletHistory.tsx:136
+#: src/components/WalletHistory.tsx:201
 msgid "Date"
 msgstr "Data"
 
@@ -1125,7 +1123,7 @@ msgstr "Coltiva"
 #~ msgid "Farming Status"
 #~ msgstr "Farming Status"
 
-#: src/components/WalletHistory.tsx:177
+#: src/components/WalletHistory.tsx:240
 #: src/components/WalletSend.tsx:175
 #: src/components/cat/WalletCATSend.tsx:219
 #: src/components/create/createRLAdmin.jsx:243
@@ -1342,7 +1340,7 @@ msgstr "Importa Wallet dalle Mnemonic"
 #~ msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted."
 #~ msgstr "Includere una fee nell'offerta può aiutare ad accelerare la transazione quando l'offerta è accettata."
 
-#: src/components/WalletHistory.tsx:60
+#: src/components/WalletHistory.tsx:95
 msgid "Incoming"
 msgstr "In arrivo"
 
@@ -1379,23 +1377,6 @@ msgstr "Inizializza un Wallet Utente a tariffa Limitata:"
 #~ msgid "Install Keybase"
 #~ msgstr "Installa Keybase"
 
-#: src/components/offers/OfferViewer.tsx:358
-<<<<<<< HEAD
-msgid ""
-"Insufficient funds available to accept offer. Ensure that your\n"
-"spendable balance is sufficient to cover the offer amount."
-msgstr ""
-"Fondi insufficienti per accettare l'offerta. Assicurati che il tuo saldo spendibile\n"
-"sia sufficiente a coprire l'importo dell'offerta."
-
-#: src/components/offers/OfferEditor.tsx:166
-msgid ""
-"Insufficient funds available to create offer. Ensure that your\n"
-"spendable balance is sufficient to cover the offer amount."
-msgstr ""
-"Fondi insufficienti per creare l'offerta. Assicurati che il tuo saldo spendibile\n"
-"sia sufficiente a coprire l'importo dell'offerta."
-=======
 #~ msgid ""
 #~ "Insufficient funds available to accept offer. Ensure that your\n"
 #~ "spendable balance is sufficient to cover the offer amount."
@@ -1409,8 +1390,7 @@ msgstr ""
 #~ "spendable balance is sufficient to cover the offer amount."
 #~ msgstr ""
 #~ "Fondi insufficienti per creare l'offerta. Assicurati che il tuo saldo spendibile\n"
-#~ "sia sufficiente a coprire l'importo dell'offerta."
->>>>>>> tmp
+#~ "sia sufficiente a coprire l'importo dell'offerta.>>>>>>> tmp"
 
 #: src/components/create/createRLAdmin.jsx:217
 msgid "Interval"
@@ -1530,9 +1510,9 @@ msgstr "La lista delle connessioni è vuoto"
 #~ msgid "Loading list of wallets"
 #~ msgstr "Loading list of wallets"
 
-#: src/components/plot/queue/PlotQueueLogDialog.tsx:35
-#~ msgid "Loading..."
-#~ msgstr "Loading..."
+#: src/components/WalletReceiveAddressField.tsx:40
+msgid "Loading..."
+msgstr "Loading..."
 
 #: src/components/plot/overview/PlotOverviewPlots.tsx:126
 #~ msgid "Local Harvester Plots"
@@ -1599,16 +1579,16 @@ msgstr "Gestisci DID di Recupero"
 #~ msgid "Manage Your Farming Rewards Target Addresses"
 #~ msgstr "Manage Your Farming Rewards Target Addresses"
 
-#: src/components/WalletsManageTokens.tsx:143
+#: src/components/WalletsManageTokens.tsx:147
 msgid "Manage token list"
 msgstr "Gestisci l'elenco dei token"
 
-#: src/components/WalletHistory.tsx:116
+#: src/components/WalletHistory.tsx:172
 #: src/components/cat/WalletCATSend.tsx:231
 msgid "Memo"
 msgstr "Memo"
 
-#: src/components/WalletHistory.tsx:294
+#: src/components/WalletHistory.tsx:366
 msgid "Memos"
 msgstr "Memo"
 
@@ -1728,7 +1708,7 @@ msgstr "Nickname"
 #~ msgid "No current offers"
 #~ msgstr "Nessuna offerta attiva"
 
-#: src/components/WalletHistory.tsx:323
+#: src/components/WalletHistory.tsx:402
 msgid "No previous transactions"
 msgstr "Nessuna transazione precedente"
 
@@ -1756,8 +1736,8 @@ msgstr "ID nodo"
 #~ msgid "None of your plots have passed the plot filter yet."
 #~ msgstr "None of your plots have passed the plot filter yet."
 
-#: src/components/WalletHistory.tsx:286
-#: src/components/WalletHistory.tsx:291
+#: src/components/WalletHistory.tsx:351
+#: src/components/WalletHistory.tsx:361
 msgid "Not Available"
 msgstr "Non Disponibile"
 
@@ -1822,7 +1802,7 @@ msgstr "OK"
 #~ msgid "Offer"
 #~ msgstr "Offer"
 
-#: src/components/WalletHistory.tsx:122
+#: src/components/WalletHistory.tsx:186
 msgid "Offer Accepted"
 msgstr "Offerta accettata"
 
@@ -1887,7 +1867,7 @@ msgstr "È consentito un solo file di backup."
 #~ msgid "Only one backup file is allowed. To add a new backup file, please delete any previously uploaded files and try again."
 #~ msgstr "Only one backup file is allowed. To add a new backup file, please delete any previously uploaded files and try again."
 
-#: src/components/WalletHistory.tsx:60
+#: src/components/WalletHistory.tsx:95
 msgid "Outgoing"
 msgstr "In uscita"
 
@@ -1969,7 +1949,7 @@ msgstr ""
 #~ msgid "Peak Time"
 #~ msgstr "Peak Time"
 
-#: src/components/WalletHistory.tsx:113
+#: src/components/WalletHistory.tsx:165
 msgid "Pending"
 msgstr "In attesa"
 
@@ -2029,8 +2009,8 @@ msgid "Please enter a puzzlehash"
 msgstr "Per favore, inserisci un Puzzlehash"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:40
-msgid "Please enter a valid CAT name"
-msgstr "Si prega di inserire il nome di un CAT valido"
+#~ msgid "Please enter a valid CAT name"
+#~ msgstr "Si prega di inserire il nome di un CAT valido"
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:41
 msgid "Please enter a valid asset id"
@@ -2468,6 +2448,7 @@ msgid "Receive"
 msgstr "Ricevi"
 
 #: src/components/WalletReceiveAddress.tsx:35
+#: src/components/WalletReceiveAddressField.tsx:38
 msgid "Receive Address"
 msgstr "Indirizzo per Ricevere"
 
@@ -2475,7 +2456,6 @@ msgstr "Indirizzo per Ricevere"
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr "L'indirizzo del destinatario non è un indirizzo coloured. Inserisci un indirizzo coloured al portafoglio"
 
-#: src/components/cat/WalletCATCreateExisting.tsx:104
 #: src/components/cat/WalletDID.tsx:463
 #: src/components/did/WalletDID.tsx:463
 #: src/components/did/WalletDIDRecovery.tsx:124
@@ -2565,7 +2545,7 @@ msgstr "Rinomina Portafoglio"
 #~ msgid "Restore Smart Wallets From Backup"
 #~ msgstr ""
 
-#: src/components/WalletHistory.tsx:119
+#: src/components/WalletHistory.tsx:179
 msgid "Retire"
 msgstr "Ritira"
 
@@ -2650,7 +2630,6 @@ msgstr "Cerca nel Tail Database"
 #~ msgstr "Select Temporary Directory"
 
 #: src/components/WalletsList.tsx:32
-#: src/components/hero/WalletHeroWallets.tsx:47
 msgid "Select Wallet"
 msgstr "Scegli il portafoglio"
 
@@ -3071,7 +3050,7 @@ msgstr "Questo token di accesso è stato verificato"
 #~ msgid "This feature is available only from the GUI."
 #~ msgstr "This feature is available only from the GUI."
 
-#: src/components/WalletHistory.tsx:90
+#: src/components/WalletHistory.tsx:132
 msgid "This is not a valid address for sending funds to"
 msgstr "Questo indirizzo non è valido per l'invio di fondi"
 
@@ -3185,13 +3164,13 @@ msgstr "Questo è il bilancio totale + il bilancio in attesa: questo è il bilan
 #~ msgid "Timestamp"
 #~ msgstr "Timestamp"
 
-#: src/components/WalletHistory.tsx:128
+#: src/components/WalletHistory.tsx:193
 msgid "To"
 msgstr "A"
 
 #: src/components/cat/WalletCATCreateExisting.tsx:85
-msgid "Token and Asset Issuance Limitations"
-msgstr "Token e Limitazioni nell'emissioni di beni"
+#~ msgid "Token and Asset Issuance Limitations"
+#~ msgstr "Token e Limitazioni nell'emissioni di beni"
 
 #: src/components/cat/WalletCATCreateSimple.tsx:45
 msgid "Token has empty asset id"
@@ -3274,7 +3253,7 @@ msgstr "Bilancio Totale"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "La transazione é stata inviata con successo ad un nodo completo ed inclusa nella mempol."
 
-#: src/components/WalletHistory.tsx:244
+#: src/components/WalletHistory.tsx:309
 msgid "Transactions"
 msgstr "Transazioni"
 
@@ -3457,12 +3436,12 @@ msgstr "Portafoglio con tipo {0} non supportato"
 msgid "Wallet {walletId} not found"
 msgstr "Portafoglio {walletId} non trovato"
 
-#: src/components/wallet/Wallets.tsx:34
-#~ msgid "WalletItem.ccWallet"
-#~ msgstr ""
-
 #: src/components/wallet/Wallets.tsx:30
 #~ msgid "WalletItem.cactusWallet"
+#~ msgstr ""
+
+#: src/components/wallet/Wallets.tsx:34
+#~ msgid "WalletItem.ccWallet"
 #~ msgstr ""
 
 #: src/components/wallet/Wallets.tsx:48
