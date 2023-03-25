@@ -1,5 +1,5 @@
-import api, { store, useGetLoggedInFingerprintQuery, useLogInAndSkipImportMutation } from '@chia-network/api-react';
-import { useOpenDialog } from '@chia-network/core';
+import api, { store, useGetLoggedInFingerprintQuery, useLogInAndSkipImportMutation } from '@cactus-network/api-react';
+import { useOpenDialog } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import debug from 'debug';
 import React, { ReactNode } from 'react';
@@ -12,7 +12,7 @@ import waitForWalletSync from '../util/waitForWalletSync';
 import useWalletConnectPairs from './useWalletConnectPairs';
 import useWalletConnectPreferences from './useWalletConnectPreferences';
 
-const log = debug('chia-gui:walletConnectCommand');
+const log = debug('cactus-gui:walletConnectCommand');
 
 /*
 export const STANDARD_ERROR_MAP = {

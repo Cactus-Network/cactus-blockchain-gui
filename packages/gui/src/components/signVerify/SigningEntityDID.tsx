@@ -1,6 +1,6 @@
-import type { Wallet } from '@chia-network/api';
-import { useGetDIDInfoQuery, useGetDIDsQuery } from '@chia-network/api-react';
-import { CopyToClipboard, Flex, TextField } from '@chia-network/core';
+import type { Wallet } from '@cactus-network/api';
+import { useGetDIDInfoQuery, useGetDIDsQuery } from '@cactus-network/api-react';
+import { CopyToClipboard, Flex, TextField } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Grid, InputAdornment } from '@mui/material';
 import React, { useEffect, useState } from 'react';

@@ -1,5 +1,5 @@
-import { WalletType } from '@chia-network/api';
-import { Suspender } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import { Suspender } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert } from '@mui/material';
 import React from 'react';

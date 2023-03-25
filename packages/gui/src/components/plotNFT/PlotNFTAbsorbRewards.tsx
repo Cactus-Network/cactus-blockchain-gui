@@ -1,4 +1,4 @@
-import { usePwAbsorbRewardsMutation, useGetPlotNFTsQuery, useGetCurrentAddressQuery } from '@chia-network/api-react';
+import { usePwAbsorbRewardsMutation, useGetPlotNFTsQuery, useGetCurrentAddressQuery } from '@cactus-network/api-react';
 import {
   UnitFormat,
   CardStep,
@@ -8,10 +8,10 @@ import {
   Flex,
   Form,
   State,
-  mojoToChiaLocaleString,
-  chiaToMojo,
+  mojoToCactusLocaleString,
+  cactusToMojo,
   Back,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
 import { Grid, Typography } from '@mui/material';
@@ -63,7 +63,7 @@ export default function PlotNFTAbsorbRewards(props: Props) {
       setWorking(true);
       const walletId = nft?.poolWalletStatus.walletId;
 
-      const feeMojos = chiaToMojo(fee);
+      const feeMojos = cactusToMojo(fee);
 
       if (walletId === undefined) {
         throw new Error(t`Wallet is not defined`);
@@ -142,7 +142,7 @@ export default function PlotNFTAbsorbRewards(props: Props) {
             <Typography variant="subtitle1">
               <Trans>
                 You will recieve{' '}
-                <UnitFormat value={mojoToChiaLocaleString(balance)} display="inline" state={State.SUCCESS} /> to{' '}
+                <UnitFormat value={mojoToCactusLocaleString(balance)} display="inline" state={State.SUCCESS} /> to{' '}
                 {address}
               </Trans>
             </Typography>

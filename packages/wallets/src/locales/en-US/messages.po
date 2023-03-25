@@ -6,23 +6,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en_US\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:17\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: en\n"
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1890\n"
 
-#: src/components/WalletHistory.tsx:109
+#: src/components/WalletHistory.tsx:118
 msgid "+"
 msgstr "+"
 
-#: src/components/WalletHistory.tsx:109
+#: src/components/WalletHistory.tsx:118
 msgid "-"
 msgstr "-"
 
@@ -53,7 +53,7 @@ msgstr "Address"
 msgid "Address / Puzzle hash"
 msgstr "Address / Puzzle hash"
 
-#: src/components/WalletHistory.tsx:119
+#: src/components/WalletHistory.tsx:128
 #: src/components/WalletSend.tsx:184
 #: src/components/cat/WalletCATSend.tsx:207
 msgid "Amount"
@@ -77,6 +77,12 @@ msgstr "Atomic Swap Wallet"
 msgid "Authorized Payee Wallet"
 msgstr "Authorized Payee Wallet"
 
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus Asset Token"
+
 #: src/components/PasteMnemonic.tsx:76
 #: src/components/WalletRenameDialog.tsx:72
 msgid "Cancel"
@@ -84,32 +90,26 @@ msgstr "Cancel"
 
 #: src/components/WalletSend.tsx:106
 #: src/components/cat/WalletCATSend.tsx:116
-msgid "Cannot send chia to coloured address. Please enter a chia address."
-msgstr "Cannot send chia to coloured address. Please enter a chia address."
+msgid "Cannot send cactus to coloured address. Please enter a cactus address."
+msgstr "Cannot send cactus to coloured address. Please enter a cactus address."
 
 #: src/components/WalletsSidebar.tsx:130
-msgid "Check my snapshot balance"
-msgstr "Check my snapshot balance"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
-msgstr "Chia Asset Token"
+#~ msgid "Check my snapshot balance"
+#~ msgstr "Check my snapshot balance"
 
 #: src/components/WalletsSidebar.tsx:141
-msgid "Click here to download an older version of the wallet"
-msgstr "Click here to download an older version of the wallet"
+#~ msgid "Click here to download an older version of the wallet"
+#~ msgstr "Click here to download an older version of the wallet"
 
 #: src/components/WalletHeader.tsx:25
 msgid "Confirmation"
 msgstr "Confirmation"
 
-#: src/components/WalletHistory.tsx:170
+#: src/components/WalletHistory.tsx:179
 msgid "Confirmed"
 msgstr "Confirmed"
 
-#: src/components/WalletHistory.tsx:333
+#: src/components/WalletHistory.tsx:342
 msgid "Confirmed at Height"
 msgstr "Confirmed at Height"
 
@@ -155,7 +155,7 @@ msgstr "DID Wallet"
 msgid "Datalayer Wallet"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:100
+#: src/components/WalletHistory.tsx:109
 msgid "Date"
 msgstr "Date"
 
@@ -176,8 +176,8 @@ msgid "Distributed Identity"
 msgstr "Distributed Identity"
 
 #: src/components/WalletImport.tsx:158
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
-msgstr "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
+msgstr "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
 
 #: src/components/cat/WalletCATSend.tsx:126
 msgid "Error the entered address appears to be for a different colour."
@@ -188,7 +188,7 @@ msgstr "Error the entered address appears to be for a different colour."
 msgid "Farm"
 msgstr "Farm"
 
-#: src/components/WalletHistory.tsx:131
+#: src/components/WalletHistory.tsx:140
 #: src/components/WalletSend.tsx:197
 #: src/components/cat/WalletCATSend.tsx:221
 msgid "Fee"
@@ -218,7 +218,7 @@ msgstr "Import Wallet from Mnemonics"
 msgid "Import from {alternativeWordCount} word mnemonic"
 msgstr "Import from {alternativeWordCount} word mnemonic"
 
-#: src/components/WalletHistory.tsx:87
+#: src/components/WalletHistory.tsx:96
 msgid "Incoming"
 msgstr "Incoming"
 
@@ -230,13 +230,13 @@ msgstr "List of connections is empty"
 msgid "Manage token list"
 msgstr "Manage token list"
 
-#: src/components/WalletHistory.tsx:174
+#: src/components/WalletHistory.tsx:183
 #: src/components/WalletSend.tsx:211
 #: src/components/cat/WalletCATSend.tsx:235
 msgid "Memo"
 msgstr "Memo"
 
-#: src/components/WalletHistory.tsx:338
+#: src/components/WalletHistory.tsx:347
 msgid "Memos"
 msgstr "Memos"
 
@@ -281,7 +281,7 @@ msgstr "Next"
 msgid "Nickname"
 msgstr "Nickname"
 
-#: src/components/WalletHistory.tsx:369
+#: src/components/WalletHistory.tsx:378
 msgid "No previous transactions"
 msgstr "No previous transactions"
 
@@ -289,8 +289,8 @@ msgstr "No previous transactions"
 msgid "Node ID"
 msgstr "Node ID"
 
-#: src/components/WalletHistory.tsx:327
-#: src/components/WalletHistory.tsx:334
+#: src/components/WalletHistory.tsx:336
+#: src/components/WalletHistory.tsx:343
 msgid "Not Available"
 msgstr "Not Available"
 
@@ -302,7 +302,7 @@ msgstr "Not Synced"
 msgid "OK"
 msgstr "OK"
 
-#: src/components/WalletHistory.tsx:176
+#: src/components/WalletHistory.tsx:185
 msgid "Offer Accepted"
 msgstr "Offer Accepted"
 
@@ -311,7 +311,7 @@ msgstr "Offer Accepted"
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 
-#: src/components/WalletHistory.tsx:87
+#: src/components/WalletHistory.tsx:96
 msgid "Outgoing"
 msgstr "Outgoing"
 
@@ -323,7 +323,7 @@ msgstr "Paste Mnemonic"
 msgid "Paste Mnemonic ({0} words)"
 msgstr "Paste Mnemonic ({0} words)"
 
-#: src/components/WalletHistory.tsx:172
+#: src/components/WalletHistory.tsx:181
 msgid "Pending"
 msgstr "Pending"
 
@@ -388,8 +388,8 @@ msgid "Rate Limited"
 msgstr "Rate Limited"
 
 #: src/components/WalletsSidebar.tsx:133
-msgid "Read the blog post for details"
-msgstr "Read the blog post for details"
+#~ msgid "Read the blog post for details"
+#~ msgstr "Read the blog post for details"
 
 #: src/components/WalletHeader.tsx:48
 msgid "Receive"
@@ -416,7 +416,7 @@ msgstr "Recovery Wallet"
 msgid "Rename Wallet"
 msgstr "Rename Wallet"
 
-#: src/components/WalletHistory.tsx:175
+#: src/components/WalletHistory.tsx:184
 msgid "Retire"
 msgstr "Retire"
 
@@ -468,8 +468,8 @@ msgid "Syncing"
 msgstr "Syncing"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 
 #: src/components/WalletSendTransactionResultDialog.tsx:34
 msgid "The transaction could not be immediately included in the mempool because the specified fee is too low. The transaction will be retried periodically, and may be included in the mempool once fees are lower, or if space becomes available."
@@ -479,13 +479,13 @@ msgstr "The transaction could not be immediately included in the mempool because
 msgid "This access token is verified"
 msgstr "This access token is verified"
 
-#: src/components/WalletHistory.tsx:156
+#: src/components/WalletHistory.tsx:165
 msgid "This is not a valid address for sending funds to"
 msgstr "This is not a valid address for sending funds to"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+msgstr "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -496,14 +496,14 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "This is the sum of the incoming and outgoing pending transactions (not yet included into the blockchain). This does not include farming rewards."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 
-#: src/components/WalletHistory.tsx:181
+#: src/components/WalletHistory.tsx:190
 msgid "To"
 msgstr "To"
 
@@ -515,7 +515,7 @@ msgstr "Token has empty asset id"
 msgid "Token has empty name"
 msgstr "Token has empty name"
 
-#: src/components/WalletsSidebar.tsx:187
+#: src/components/WalletsSidebar.tsx:92
 msgid "Tokens"
 msgstr "Tokens"
 
@@ -527,7 +527,7 @@ msgstr "Total Balance"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Transaction has successfully been sent to a full node and included in the mempool."
 
-#: src/components/WalletHistory.tsx:258
+#: src/components/WalletHistory.tsx:267
 msgid "Transactions"
 msgstr "Transactions"
 
@@ -553,20 +553,20 @@ msgid "Wallet {walletId} not found"
 msgstr "Wallet {walletId} not found"
 
 #: src/components/WalletsSidebar.tsx:138
-msgid "Want to see your old balance for yourself?"
-msgstr "Want to see your old balance for yourself?"
+#~ msgid "Want to see your old balance for yourself?"
+#~ msgstr "Want to see your old balance for yourself?"
 
 #: src/components/WalletsSidebar.tsx:110
-msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
-msgstr "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
+#~ msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
+#~ msgstr "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
 
 #: src/components/WalletAdd.tsx:67
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 
 #: src/components/WalletsSidebar.tsx:106
-msgid "Your CAT tokens have been upgraded!"
-msgstr "Your CAT tokens have been upgraded!"
+#~ msgid "Your CAT tokens have been upgraded!"
+#~ msgstr "Your CAT tokens have been upgraded!"
 
 #: src/components/WalletImport.tsx:72
 msgid "Your pasted list does not include {mnemonicWordCount} valid mnemonic words."

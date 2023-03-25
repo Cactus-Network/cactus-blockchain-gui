@@ -1,12 +1,12 @@
-# chia-blockchain-gui/api
+# cactus-blockchain-gui/api
 
-![Chia logo](https://www.chia.net/wp-content/uploads/2022/09/chia-logo.svg)
+![Cactus logo](https://www.cactus-network.net/wp-content/uploads/2022/09/cactus-logo.svg)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Chia-Network/chia-blockchain-gui?logo=GitHub)
+![GitHub contributors](https://img.shields.io/github/contributors/Cactus-Network/cactus-blockchain-gui?logo=GitHub)
 
-This library provides support for TypeScript/JavaScript [Chia](https://www.chia.net) apps to access the [Chia Blockchain RPC](https://docs.chia.net/rpc/), by making it easier to perform the following actions:
+This library provides support for TypeScript/JavaScript [Cactus](https://www.cactus-network.net) apps to access the [Cactus Blockchain RPC](https://docs.cactus-network.net/rpc/), by making it easier to perform the following actions:
 
-- Making requests to the Chia Blockchain RPC.
+- Making requests to the Cactus Blockchain RPC.
 - Catch responses and errors with standard try/catch and async/await syntax.
 - Catch error when the request has a timeout. Each request has a default timeout of 10 minutes.
 - Auto-connect to daemon when you send the first request.
@@ -17,7 +17,7 @@ This library provides support for TypeScript/JavaScript [Chia](https://www.chia.
 ## Example
 
 ```ts
-import Client, { Wallet } from '@chia-network/api';
+import Client, { Wallet } from '@cactus-network/api';
 import Websocket from 'ws';
 import sleep from 'sleep-promise';
 
@@ -60,4 +60,4 @@ import sleep from 'sleep-promise';
 
 ## Development
 
-Please read and follow the main [README.md](https://github.com/Chia-Network/chia-blockchain-gui) of this monorepo.
+Please read and follow the main [README.md](https://github.com/Cactus-Network/cactus-blockchain-gui) of this monorepo.

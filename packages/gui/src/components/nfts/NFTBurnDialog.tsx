@@ -1,5 +1,5 @@
-import { type NFTInfo } from '@chia-network/api';
-import { useTransferNFTMutation, useLocalStorage } from '@chia-network/api-react';
+import { type NFTInfo } from '@cactus-network/api';
+import { useTransferNFTMutation, useLocalStorage } from '@cactus-network/api-react';
 import {
   Button,
   ButtonLoading,
@@ -7,10 +7,10 @@ import {
   Form,
   Flex,
   TextField,
-  chiaToMojo,
+  cactusToMojo,
   useOpenDialog,
   useShowError,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
@@ -94,7 +94,7 @@ export default function NFTBurnDialog(props: NFTPreviewDialogProps) {
     }
 
     try {
-      const feeInMojos = chiaToMojo(fee || 0);
+      const feeInMojos = cactusToMojo(fee || 0);
 
       await transferNFT({
         walletId: nfts[0].walletId,

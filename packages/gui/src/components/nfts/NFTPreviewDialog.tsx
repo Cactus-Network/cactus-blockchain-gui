@@ -1,5 +1,5 @@
-import { type NFTInfo } from '@chia-network/api';
-import { Flex } from '@chia-network/core';
+import { type NFTInfo } from '@cactus-network/api';
+import { Flex } from '@cactus-network/core';
 import { Dialog, Paper } from '@mui/material';
 import { styled } from '@mui/styles';
 import React from 'react';

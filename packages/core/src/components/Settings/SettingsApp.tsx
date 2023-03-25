@@ -1,6 +1,6 @@
 import { type Shell } from 'electron';
 
-import { Farming } from '@chia-network/icons';
+import { Farming } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import {
   WbSunny as WbSunnyIcon,
@@ -42,7 +42,7 @@ export default function SettingsApp(props: SettingsAppProps) {
   async function handleOpenFAQURL(): Promise<void> {
     try {
       const { shell } = window as unknown as { shell: Shell };
-      await shell.openExternal('https://github.com/Chia-Network/chia-blockchain/wiki/FAQ');
+      await shell.openExternal('https://github.com/Cactus-Network/cactus-blockchain/wiki/FAQ');
     } catch (error: any) {
       showError(error);
     }
@@ -51,7 +51,7 @@ export default function SettingsApp(props: SettingsAppProps) {
   async function handleOpenSendFeedbackURL(): Promise<void> {
     try {
       const { shell } = window as unknown as { shell: Shell };
-      await shell.openExternal('https://feedback.chia.net/lightwallet');
+      await shell.openExternal('https://feedback.cactus-network.net/lightwallet');
     } catch (error: any) {
       showError(error);
     }

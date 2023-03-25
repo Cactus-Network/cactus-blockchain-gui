@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign -- This file use Immer */
-import { Farmer } from '@chia-network/api';
-import type { Plot, FarmerConnection, RewardTargets, SignagePoint, Pool, FarmingInfo } from '@chia-network/api';
+import { Farmer } from '@cactus-network/api';
+import type { Plot, FarmerConnection, RewardTargets, SignagePoint, Pool, FarmingInfo } from '@cactus-network/api';
 
 import api, { baseQuery } from '../api';
 import onCacheEntryAddedInvalidate from '../utils/onCacheEntryAddedInvalidate';

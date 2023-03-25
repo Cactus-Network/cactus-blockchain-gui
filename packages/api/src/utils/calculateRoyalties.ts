@@ -6,7 +6,7 @@ import toBech32m from './toBech32m';
 export default function royaltyAssetFromNFTInfo(nftInfo: NFTInfo, testnet = false): RoyaltyCalculationRoyaltyAsset {
   return {
     asset: nftInfo.$nftId,
-    royaltyAddress: toBech32m(nftInfo.royaltyPuzzleHash, testnet ? 'txch' : 'xch'),
+    royaltyAddress: toBech32m(nftInfo.royaltyPuzzleHash, testnet ? 'tcac' : 'cac'),
     royaltyPercentage: nftInfo.royaltyPercentage,
   };
 }

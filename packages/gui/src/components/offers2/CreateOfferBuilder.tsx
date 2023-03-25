@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import { useGetWalletsQuery, useCreateOfferForIdsMutation } from '@chia-network/api-react';
-import { Flex, ButtonLoading, useOpenDialog, Loading } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import { useGetWalletsQuery, useCreateOfferForIdsMutation } from '@cactus-network/api-react';
+import { Flex, ButtonLoading, useOpenDialog, Loading } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import React, { useRef, useMemo, useCallback } from 'react';
@@ -16,7 +16,7 @@ import OfferEditorConflictAlertDialog from './OfferEditorCancelConflictingOffers
 import OfferNavigationHeader from './OfferNavigationHeader';
 
 type CreateDefaultValuesParams = {
-  walletType?: WalletType; // CAT or STANDARD_WALLET (XCH), indicates whether a token or CAT has a default entry
+  walletType?: WalletType; // CAT or STANDARD_WALLET (CAC), indicates whether a token or CAT has a default entry
   assetId?: string; // Asset ID of the CAT
   nftId?: string; // NFT to include in the offer by default
   nftIds?: string[]; // multiple NFT selection
@@ -34,7 +34,7 @@ export function createDefaultValues(params: CreateDefaultValuesParams): OfferBui
     offered: {
       ...emptyDefaultValues.offered,
       nfts,
-      xch: walletType === WalletType.STANDARD_WALLET ? [{ amount: '' }] : [],
+      cac: walletType === WalletType.STANDARD_WALLET ? [{ amount: '' }] : [],
       tokens: walletType === WalletType.CAT && assetId ? [{ assetId, amount: '' }] : [],
     },
     requested: {

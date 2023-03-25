@@ -1,4 +1,4 @@
-import { Flex, LayoutDashboardSub } from '@chia-network/core';
+import { Flex, LayoutDashboardSub } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography, Tab, Tabs } from '@mui/material';
 import React from 'react';

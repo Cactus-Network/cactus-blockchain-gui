@@ -1,4 +1,4 @@
-import type { NFTInfo } from '@chia-network/api';
+import type { NFTInfo } from '@cactus-network/api';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import isURL from 'validator/lib/isURL';
 

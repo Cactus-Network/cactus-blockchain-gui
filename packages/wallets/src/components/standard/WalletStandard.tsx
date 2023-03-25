@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import { Flex, MenuItem } from '@chia-network/core';
-import { Offers as OffersIcon } from '@chia-network/icons';
+import { WalletType } from '@cactus-network/api';
+import { Flex, MenuItem } from '@cactus-network/core';
+import { Offers as OffersIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Box, Typography, ListItemIcon } from '@mui/material';
 import React, { useState } from 'react';

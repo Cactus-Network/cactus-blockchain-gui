@@ -1,6 +1,6 @@
-import type { PlotNFT, PlotNFTExternal } from '@chia-network/api';
-import { useGetPoolLoginLinkQuery } from '@chia-network/api-react';
-import { Button, CopyToClipboard, Flex, Link, Loading } from '@chia-network/core';
+import type { PlotNFT, PlotNFTExternal } from '@cactus-network/api';
+import { useGetPoolLoginLinkQuery } from '@cactus-network/api-react';
+import { Button, CopyToClipboard, Flex, Link, Loading } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Dialog, DialogActions, DialogTitle, DialogContent, Typography } from '@mui/material';
 import React from 'react';
@@ -69,7 +69,7 @@ export default function PlotNFTGetPoolLoginLinkDialog(props: Props) {
                 </Trans>{' '}
                 <Link
                   target="_blank"
-                  href="https://github.com/Chia-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
+                  href="https://github.com/Cactus-Network/pool-reference/blob/main/SPECIFICATION.md#get-login"
                   noWrap
                 >
                   <Trans>Learn More</Trans>

@@ -6,17 +6,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: ko_KR\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:14\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: ko\n"
 "X-Crowdin-File: /main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1886\n"
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:61
+msgid "(>5 min)"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:61
+msgid "(~{selectedTime} min)"
+msgstr ""
 
 #: src/components/Amount/Amount.tsx:36
 msgid "Amount"
@@ -31,12 +39,11 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr ""
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:80
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "뒤로"
 
-#: src/components/ConfirmDialog/ConfirmDialog.tsx:27
+#: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:17
 #: src/screens/SelectKey/SelectKeyRenameForm.tsx:90
 msgid "Cancel"
@@ -60,33 +67,32 @@ msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
 #: src/screens/SelectKey/SelectKey.tsx:170
-msgid "Create a new private key"
-msgstr "새로운 개인 키 만들기"
+#~ msgid "Create a new private key"
+#~ msgstr "새로운 개인 키 만들기"
 
 #: src/components/Settings/SettingsApp.tsx:105
 msgid "Dark"
 msgstr "어두운 테마"
 
-#: src/screens/SelectKey/SelectKey.tsx:79
-#: src/screens/SelectKey/SelectKeyItem.tsx:100
+#: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "삭제"
 
 #: src/screens/SelectKey/SelectKey.tsx:193
 #: src/screens/SelectKey/SelectKey.tsx:78
-msgid "Delete all keys"
-msgstr "모든 키 삭제"
+#~ msgid "Delete all keys"
+#~ msgstr "모든 키 삭제"
 
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:96
 msgid "Delete key {fingerprint}"
 msgstr "보호키 삭제 {fingerprint}"
 
 #: src/screens/SelectKey/SelectKey.tsx:84
-msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
-msgstr "모든 키를 컴퓨터에서 영구적으로 제거합니다. 만일을 대비하여 백업이 준비되었는지 확인하십시오. 계속하시겠습니까?"
+#~ msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
+#~ msgstr "모든 키를 컴퓨터에서 영구적으로 제거합니다. 만일을 대비하여 백업이 준비되었는지 확인하십시오. 계속하시겠습니까?"
 
-#: src/screens/SelectKey/SelectKeyItem.tsx:92
+#: src/screens/SelectKey/SelectKeyItem.tsx:105
 msgid "Details"
 msgstr ""
 
@@ -128,8 +134,8 @@ msgstr "농부 퍼블릭 키"
 msgid "Farming"
 msgstr "재배 중"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:334
-#: src/components/EstimatedFee/EstimatedFee.tsx:368
+#: src/components/EstimatedFee/EstimatedFee.tsx:366
+#: src/components/EstimatedFee/EstimatedFee.tsx:400
 #: src/components/Fee/Fee.tsx:53
 msgid "Fee"
 msgstr "수수료"
@@ -160,8 +166,8 @@ msgid "Hide Advanced Options"
 msgstr "고급 옵션 숨기기"
 
 #: src/screens/SelectKey/SelectKey.tsx:181
-msgid "Import from Mnemonics (12 or 24 words)"
-msgstr ""
+#~ msgid "Import from Mnemonics (12 or 24 words)"
+#~ msgstr ""
 
 #: src/components/Fee/Fee.tsx:41
 msgid "Incorrect value"
@@ -175,11 +181,15 @@ msgstr "언어설정"
 msgid "Light"
 msgstr "밝은 테마"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:232
+#: src/components/EstimatedFee/EstimatedFee.tsx:254
+msgid "Likely in >5 minutes"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:255
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:232
+#: src/components/EstimatedFee/EstimatedFee.tsx:252
 msgid "Likely in {minutes} minutes"
 msgstr ""
 
@@ -188,15 +198,15 @@ msgid "Loading details"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:117
-msgid "Loading list of the keys"
-msgstr "키 목록 로드 중"
+#~ msgid "Loading list of the keys"
+#~ msgstr "키 목록 로드 중"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:150
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:169
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:236
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:255
 msgid "Log Out"
 msgstr "로그아웃"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:254
 msgid "Logout"
 msgstr "로그아웃"
 
@@ -226,15 +236,15 @@ msgid "No 24 word seed, since this key is imported."
 msgstr "24 단어의 씨드가 없습니다, 나중에 키를 가져 옵니다."
 
 #: src/screens/SelectKey/WalletStatus.tsx:61
-msgid "Not Synced"
-msgstr ""
+#~ msgid "Not Synced"
+#~ msgstr ""
 
 #: src/components/FormatConnectionStatus/FormatConnectionStatus.tsx:38
 msgid "Not connected"
 msgstr "연결되지 않음"
 
 #: src/components/AlertDialog/AlertDialog.tsx:23
-#: src/components/ConfirmDialog/ConfirmDialog.tsx:28
+#: src/components/ConfirmDialog/ConfirmDialog.tsx:30
 msgid "OK"
 msgstr "확인"
 
@@ -267,7 +277,7 @@ msgstr "퍼블릭 키:"
 msgid "Reload Application"
 msgstr "애플리케이션 새로고침"
 
-#: src/screens/SelectKey/SelectKeyItem.tsx:84
+#: src/screens/SelectKey/SelectKeyItem.tsx:97
 msgid "Rename"
 msgstr ""
 
@@ -284,6 +294,11 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:159
+#: src/screens/SelectKey/Search.tsx:34
+msgid "Search"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:113
 msgid "Secret Key"
 msgstr ""
@@ -297,8 +312,8 @@ msgid "Seed:"
 msgstr "시드:"
 
 #: src/screens/SelectKey/SelectKey.tsx:134
-msgid "Select Key"
-msgstr "키 선택"
+#~ msgid "Select Key"
+#~ msgstr "키 선택"
 
 #: src/components/Dropdown/Dropdown.tsx:28
 msgid "Select..."
@@ -322,8 +337,8 @@ msgid "Show Advanced Options"
 msgstr "고급 옵션 표시"
 
 #: src/screens/SelectKey/SelectKey.tsx:139
-msgid "Sign In"
-msgstr "로그인"
+#~ msgid "Sign In"
+#~ msgstr "로그인"
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
@@ -338,12 +353,12 @@ msgid "Something went wrong"
 msgstr "문제가 발생함"
 
 #: src/screens/SelectKey/WalletStatus.tsx:73
-msgid "Synced"
-msgstr ""
+#~ msgid "Synced"
+#~ msgstr ""
 
 #: src/screens/SelectKey/WalletStatus.tsx:85
-msgid "Syncing"
-msgstr ""
+#~ msgid "Syncing"
+#~ msgstr ""
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:28
 msgid "The provided passphrase and confirmation do not match"
@@ -378,12 +393,12 @@ msgid "Transaction has successfully been sent to a full node and included in the
 msgstr "거래가 전체 노드로 성공적으로 전송되었고 mempool에 포함되었습니다."
 
 #: src/screens/SelectKey/SelectKey.tsx:124
-msgid "Try Again"
-msgstr "다시 시도"
+#~ msgid "Try Again"
+#~ msgstr "다시 시도"
 
 #: src/screens/SelectKey/SelectKey.tsx:128
-msgid "Unable to load the list of the keys"
-msgstr "키 목록을 로드할 수 없습니다."
+#~ msgid "Unable to load the list of the keys"
+#~ msgstr "키 목록을 로드할 수 없습니다."
 
 #: src/components/LocaleToggle/LocaleToggle.tsx:44
 msgid "Unknown"
@@ -402,7 +417,7 @@ msgstr "키를 보호하려면 암호를 사용하는 것이 좋습니다. 암�
 msgid "Value seems high"
 msgstr "값이 높음"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:116
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:189
 #: src/components/Settings/SettingsApp.tsx:81
 msgid "Wallet"
 msgstr "내 지갑"
@@ -412,13 +427,13 @@ msgid "Wallet Fingerprint"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:63
-#: src/screens/SelectKey/SelectKeyItem.tsx:69
+#: src/screens/SelectKey/SelectKeyItem.tsx:234
 msgid "Wallet {0}"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-msgstr "Chia에 오신 것을 환영합니다. 사용하고 계신 키로 로그인하시거나 새로운 키를 만드세요."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Cactus에 오신 것을 환영합니다. 사용하고 계신 키로 로그인하시거나 새로운 키를 만드세요."
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

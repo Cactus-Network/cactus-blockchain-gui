@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@chia-network/api';
-import { useTransferNFTMutation } from '@chia-network/api-react';
+import type { NFTInfo } from '@cactus-network/api';
+import { useTransferNFTMutation } from '@cactus-network/api-react';
 import {
   Button,
   ButtonLoading,
@@ -7,12 +7,12 @@ import {
   Form,
   Flex,
   TextField,
-  chiaToMojo,
+  cactusToMojo,
   useCurrencyCode,
   useOpenDialog,
   validAddress,
   useShowError,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import React, { useState } from 'react';
@@ -77,7 +77,7 @@ export default function NFTTransferAction(props: NFTTransferActionProps) {
 
   async function handleSubmit(formData: NFTTransferFormData) {
     const { destination: destinationLocal, fee } = formData;
-    const feeInMojos = chiaToMojo(fee || 0);
+    const feeInMojos = cactusToMojo(fee || 0);
 
     try {
       if (!currencyCode) {

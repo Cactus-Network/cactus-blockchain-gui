@@ -1,4 +1,4 @@
-import { useDarkMode } from '@chia-network/core';
+import { useDarkMode } from '@cactus-network/core';
 import { InputBase, InputBaseProps } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';

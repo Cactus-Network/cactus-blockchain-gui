@@ -1,4 +1,4 @@
-import { Flex, Link, useColorModeValue } from '@chia-network/core';
+import { Flex, Link, useColorModeValue } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';
@@ -47,7 +47,7 @@ export default function OfferHeader(props: OfferHeaderProps) {
           {'This offer is no longer valid. To understand why, click '}
           <Link
             target="_blank"
-            href="https://chialisp.com/docs/tutorials/offers_gui_tutorial/#taker-attempts-to-accept-an-invalid-offer"
+            href="https://cactuslisp.com/docs/tutorials/offers_gui_tutorial/#taker-attempts-to-accept-an-invalid-offer"
           >
             here
           </Link>{' '}

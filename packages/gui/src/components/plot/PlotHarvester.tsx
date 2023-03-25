@@ -1,5 +1,5 @@
-import { useGetHarvesterQuery } from '@chia-network/api-react';
-import { Accordion, Flex, FormatBytes, Tooltip, FormatLargeNumber } from '@chia-network/core';
+import { useGetHarvesterQuery } from '@cactus-network/api-react';
+import { Accordion, Flex, FormatBytes, Tooltip, FormatLargeNumber } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { ExpandMore, ExpandLess } from '@mui/icons-material';
 import { Typography, Chip, Box, Tab, Tabs } from '@mui/material';

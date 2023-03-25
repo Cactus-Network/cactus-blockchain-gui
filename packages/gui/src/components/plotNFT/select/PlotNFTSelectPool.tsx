@@ -1,4 +1,4 @@
-import { ButtonLoading, Loading, Flex, Form, Back, chiaToMojo, ConfirmDialog, useOpenDialog } from '@chia-network/core';
+import { ButtonLoading, Loading, Flex, Form, Back, cactusToMojo, ConfirmDialog, useOpenDialog } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { Alert } from '@mui/material';
 import React, { useState, ReactNode, forwardRef, useImperativeHandle } from 'react';
@@ -38,7 +38,7 @@ async function prepareSubmitData(data: FormData): SubmitData {
     initialTargetState.relativeLockHeight = relativeLockHeight;
   }
 
-  const feeMojos = chiaToMojo(fee || '0');
+  const feeMojos = cactusToMojo(fee || '0');
 
   return {
     fee: feeMojos,

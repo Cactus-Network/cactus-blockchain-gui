@@ -6,23 +6,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: fi_FI\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:16\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: fi\n"
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1890\n"
 
-#: src/components/WalletHistory.tsx:109
+#: src/components/WalletHistory.tsx:118
 msgid "+"
 msgstr "+"
 
-#: src/components/WalletHistory.tsx:109
+#: src/components/WalletHistory.tsx:118
 msgid "-"
 msgstr "-"
 
@@ -53,7 +53,7 @@ msgstr "Osoite"
 msgid "Address / Puzzle hash"
 msgstr "Osoite / Puzzle-tiiviste"
 
-#: src/components/WalletHistory.tsx:119
+#: src/components/WalletHistory.tsx:128
 #: src/components/WalletSend.tsx:184
 #: src/components/cat/WalletCATSend.tsx:207
 msgid "Amount"
@@ -77,6 +77,12 @@ msgstr "Atomic Swap Lompakko"
 msgid "Authorized Payee Wallet"
 msgstr "Valtuutettu Lompakko"
 
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus Asset Token"
+
 #: src/components/PasteMnemonic.tsx:76
 #: src/components/WalletRenameDialog.tsx:72
 msgid "Cancel"
@@ -84,32 +90,26 @@ msgstr "Peru"
 
 #: src/components/WalletSend.tsx:106
 #: src/components/cat/WalletCATSend.tsx:116
-msgid "Cannot send chia to coloured address. Please enter a chia address."
-msgstr "Chiaa (XCH) ei voi lähettää CAT-osoitteeseen. Anna chia-osoite."
+msgid "Cannot send cactus to coloured address. Please enter a cactus address."
+msgstr "Cactusa (CAC) ei voi lähettää CAT-osoitteeseen. Anna cactus-osoite."
 
 #: src/components/WalletsSidebar.tsx:130
-msgid "Check my snapshot balance"
-msgstr "Tarkista snapshot-saldo"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
-msgstr "Chia Asset Token"
+#~ msgid "Check my snapshot balance"
+#~ msgstr "Tarkista snapshot-saldo"
 
 #: src/components/WalletsSidebar.tsx:141
-msgid "Click here to download an older version of the wallet"
-msgstr "Napsauta tästä ladataksesi vanhan version lompakosta"
+#~ msgid "Click here to download an older version of the wallet"
+#~ msgstr "Napsauta tästä ladataksesi vanhan version lompakosta"
 
 #: src/components/WalletHeader.tsx:25
 msgid "Confirmation"
 msgstr "Vahvista"
 
-#: src/components/WalletHistory.tsx:170
+#: src/components/WalletHistory.tsx:179
 msgid "Confirmed"
 msgstr "Vahvistettu"
 
-#: src/components/WalletHistory.tsx:333
+#: src/components/WalletHistory.tsx:342
 msgid "Confirmed at Height"
 msgstr "Vahvistettu korkeudessa"
 
@@ -155,7 +155,7 @@ msgstr "DID-lompakko"
 msgid "Datalayer Wallet"
 msgstr "Datakerroksen Lompakko"
 
-#: src/components/WalletHistory.tsx:100
+#: src/components/WalletHistory.tsx:109
 msgid "Date"
 msgstr "Päiväys"
 
@@ -176,7 +176,7 @@ msgid "Distributed Identity"
 msgstr "Hajautettu Identiteetti"
 
 #: src/components/WalletImport.tsx:158
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:126
@@ -188,7 +188,7 @@ msgstr "Virhe, annettu osoite näyttää olevan eri tokenille."
 msgid "Farm"
 msgstr "Farmi"
 
-#: src/components/WalletHistory.tsx:131
+#: src/components/WalletHistory.tsx:140
 #: src/components/WalletSend.tsx:197
 #: src/components/cat/WalletCATSend.tsx:221
 msgid "Fee"
@@ -218,7 +218,7 @@ msgstr "Tuo Lompakko Muistisanoista"
 msgid "Import from {alternativeWordCount} word mnemonic"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:87
+#: src/components/WalletHistory.tsx:96
 msgid "Incoming"
 msgstr "Saapuva"
 
@@ -230,13 +230,13 @@ msgstr "Yhteyksien luettelo on tyhjä"
 msgid "Manage token list"
 msgstr "Hallitse tokenilistaa"
 
-#: src/components/WalletHistory.tsx:174
+#: src/components/WalletHistory.tsx:183
 #: src/components/WalletSend.tsx:211
 #: src/components/cat/WalletCATSend.tsx:235
 msgid "Memo"
 msgstr "Muistio"
 
-#: src/components/WalletHistory.tsx:338
+#: src/components/WalletHistory.tsx:347
 msgid "Memos"
 msgstr "Muistiot"
 
@@ -281,7 +281,7 @@ msgstr "Seuraava"
 msgid "Nickname"
 msgstr "Alias"
 
-#: src/components/WalletHistory.tsx:369
+#: src/components/WalletHistory.tsx:378
 msgid "No previous transactions"
 msgstr "Ei aiempia transaktioita"
 
@@ -289,8 +289,8 @@ msgstr "Ei aiempia transaktioita"
 msgid "Node ID"
 msgstr "Noodin tunnus"
 
-#: src/components/WalletHistory.tsx:327
-#: src/components/WalletHistory.tsx:334
+#: src/components/WalletHistory.tsx:336
+#: src/components/WalletHistory.tsx:343
 msgid "Not Available"
 msgstr "Ei Saatavilla"
 
@@ -302,7 +302,7 @@ msgstr "Ei Synkronoitu"
 msgid "OK"
 msgstr "OK"
 
-#: src/components/WalletHistory.tsx:176
+#: src/components/WalletHistory.tsx:185
 msgid "Offer Accepted"
 msgstr "Tarjous Hyväksytty"
 
@@ -311,7 +311,7 @@ msgstr "Tarjous Hyväksytty"
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "Transaktiolohkon väli on keskimäärin minuutti. Ruuhkattomana aikana transaktiosi voidaan lisätä alle minuutissa lohkoketjuun."
 
-#: src/components/WalletHistory.tsx:87
+#: src/components/WalletHistory.tsx:96
 msgid "Outgoing"
 msgstr "Lähtevä"
 
@@ -323,7 +323,7 @@ msgstr "Liitä Muistisanat"
 msgid "Paste Mnemonic ({0} words)"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:172
+#: src/components/WalletHistory.tsx:181
 msgid "Pending"
 msgstr "Odottaa"
 
@@ -388,8 +388,8 @@ msgid "Rate Limited"
 msgstr "Siirtorajoitettu"
 
 #: src/components/WalletsSidebar.tsx:133
-msgid "Read the blog post for details"
-msgstr "Lue blogikirjoitus lisätietoja varten"
+#~ msgid "Read the blog post for details"
+#~ msgstr "Lue blogikirjoitus lisätietoja varten"
 
 #: src/components/WalletHeader.tsx:48
 msgid "Receive"
@@ -416,7 +416,7 @@ msgstr "Recovery-lompakko"
 msgid "Rename Wallet"
 msgstr "Uudelleennimeä Lompakko"
 
-#: src/components/WalletHistory.tsx:175
+#: src/components/WalletHistory.tsx:184
 msgid "Retire"
 msgstr "Poista vanhentunut"
 
@@ -468,8 +468,8 @@ msgid "Syncing"
 msgstr "Synkronoi"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "Derivaatioindeksi asettaa lompakon osoitteiden määrän, jota lompakko skannaa lohkoketjusta. Tämä luku on yleensä suurempi, jos sinulla on paljon tapahtumia tai peruutettuja tarjouksia XCH-, CAT- tai NFT-kolikoille. Jos uskot, että saldo on väärä, nosta derivaatioindeksiä, mikä auttaa lompakkoa sisällyttämään puuttuvat kolikot saldoon."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "Derivaatioindeksi asettaa lompakon osoitteiden määrän, jota lompakko skannaa lohkoketjusta. Tämä luku on yleensä suurempi, jos sinulla on paljon tapahtumia tai peruutettuja tarjouksia CAC-, CAT- tai NFT-kolikoille. Jos uskot, että saldo on väärä, nosta derivaatioindeksiä, mikä auttaa lompakkoa sisällyttämään puuttuvat kolikot saldoon."
 
 #: src/components/WalletSendTransactionResultDialog.tsx:34
 msgid "The transaction could not be immediately included in the mempool because the specified fee is too low. The transaction will be retried periodically, and may be included in the mempool once fees are lower, or if space becomes available."
@@ -479,12 +479,12 @@ msgstr "Tapahtumaa ei voitu välittömästi sisällyttää mempooliin, koska mä
 msgid "This access token is verified"
 msgstr "Tämä käyttöoikeustoken on vahvistettu"
 
-#: src/components/WalletHistory.tsx:156
+#: src/components/WalletHistory.tsx:165
 msgid "This is not a valid address for sending funds to"
 msgstr "Tämä ei ole kelvollinen osoite varojen lähettämiseen"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
 msgstr "Transaktioihin käytettävissä oleva Chiojen määrä. Ei sisällä avoimia farmarin palkkioita, avoimia saapuvia transaktioita eikä lähetettyjä, mutta vahvistamattomia transaktioita."
 
 #: src/components/standard/WalletStandardCards.tsx:42
@@ -496,14 +496,14 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "Lähtevien ja saapuvien avointen transaktioiden summa (ei vielä lohkoketjussa). Ei sisällä farmarin palkkioita."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "Yksityisten avaimiesi hallinoimien Chiojen kokonaissumma lohkoketjussa. Sisälytää jäädytetyt palkkiot, mutta ei keskeneräisiä tulevia tai lähteviä transaktioita."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "Nykyinen saldo + avoin saldo, eli tuleva saldo avointen transaktioiden jälkeen."
 
-#: src/components/WalletHistory.tsx:181
+#: src/components/WalletHistory.tsx:190
 msgid "To"
 msgstr "Osoitteeseen"
 
@@ -515,7 +515,7 @@ msgstr "Tokenilla on tyhjä assettitunnus"
 msgid "Token has empty name"
 msgstr "Tokenilla on tyhjä nimi"
 
-#: src/components/WalletsSidebar.tsx:187
+#: src/components/WalletsSidebar.tsx:92
 msgid "Tokens"
 msgstr "Tokenit"
 
@@ -527,7 +527,7 @@ msgstr "Kokonaissaldo"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Transaktio on onnistuneesti lähetetty noodille ja sisällytetty mempooliin."
 
-#: src/components/WalletHistory.tsx:258
+#: src/components/WalletHistory.tsx:267
 msgid "Transactions"
 msgstr "Transaktiot"
 
@@ -553,20 +553,20 @@ msgid "Wallet {walletId} not found"
 msgstr "Lompakkoa {walletId} ei löydy"
 
 #: src/components/WalletsSidebar.tsx:138
-msgid "Want to see your old balance for yourself?"
-msgstr "Haluatko nähdä vanhan saldosi?"
+#~ msgid "Want to see your old balance for yourself?"
+#~ msgstr "Haluatko nähdä vanhan saldosi?"
 
 #: src/components/WalletsSidebar.tsx:110
-msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
-msgstr "Olemme tehneet päivityksen CAT-standardiin, joka edellyttää, että kaikki CAT:t annetaan uudelleen. Sinulle airdropataan uudet tokenit, koska ne ovat uudelleen liikkeeseenlaskettuja. Airdropatut tokenit perustuvat saldoon lohkokorkeudessa:<0/><1/><2/>(likimääräinen aika: 26 heinäkuu, 2022 @ 17:00 UTC)"
+#~ msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
+#~ msgstr "Olemme tehneet päivityksen CAT-standardiin, joka edellyttää, että kaikki CAT:t annetaan uudelleen. Sinulle airdropataan uudet tokenit, koska ne ovat uudelleen liikkeeseenlaskettuja. Airdropatut tokenit perustuvat saldoon lohkokorkeudessa:<0/><1/><2/>(likimääräinen aika: 26 heinäkuu, 2022 @ 17:00 UTC)"
 
 #: src/components/WalletAdd.tsx:67
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Tervetuloa! Seuraavia muistisanoja käytetään lompakon varmuuskopiointiin. Ilman niitä sinulla ei ole pääsyä lompakkoosi. Pidä ne tallessa! Kirjoita ylös sanat ja niiden järjestysnumerot. (Oikea järjestys on tärkeää)"
 
 #: src/components/WalletsSidebar.tsx:106
-msgid "Your CAT tokens have been upgraded!"
-msgstr "CAT-tokenisi ovat päivitetty."
+#~ msgid "Your CAT tokens have been upgraded!"
+#~ msgstr "CAT-tokenisi ovat päivitetty."
 
 #: src/components/WalletImport.tsx:72
 msgid "Your pasted list does not include {mnemonicWordCount} valid mnemonic words."

@@ -1,4 +1,4 @@
-import { Back, Flex } from '@chia-network/core';
+import { Back, Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Restore as RestoreIcon, Add as AddIcon } from '@mui/icons-material';
 import { Grid } from '@mui/material';
@@ -22,7 +22,7 @@ export default function WalletCATSelect() {
     <Flex flexDirection="column" gap={3}>
       <Flex flexGrow={1}>
         <Back variant="h5" to="/dashboard/wallets/create">
-          <Trans>Chia Asset Token</Trans>
+          <Trans>Cactus Asset Token</Trans>
         </Back>
       </Flex>
       <Grid spacing={3} alignItems="stretch" container>

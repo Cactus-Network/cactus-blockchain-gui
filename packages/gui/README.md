@@ -1,14 +1,14 @@
-# chia-blockchain-gui/gui
+# cactus-blockchain-gui/gui
 
-![Chia logo](https://www.chia.net/wp-content/uploads/2022/09/chia-logo.svg)
+![Cactus logo](https://www.cactus-network.net/wp-content/uploads/2022/09/cactus-logo.svg)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Chia-Network/chia-blockchain-gui?logo=GitHub)
+![GitHub contributors](https://img.shields.io/github/contributors/Cactus-Network/cactus-blockchain-gui?logo=GitHub)
 
-Chia GUI - written in TypeScript and uses Electron/React.
+Cactus GUI - written in TypeScript and uses Electron/React.
 
 ## Development
 
-Please read and follow the main [README.md](https://github.com/Chia-Network/chia-blockchain-gui) of this monorepo.
+Please read and follow the main [README.md](https://github.com/Cactus-Network/cactus-blockchain-gui) of this monorepo.
 
 ## Best practices
 

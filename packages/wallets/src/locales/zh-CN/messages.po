@@ -6,23 +6,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: zh_CN\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:17\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1890\n"
 
-#: src/components/WalletHistory.tsx:109
+#: src/components/WalletHistory.tsx:118
 msgid "+"
 msgstr "+"
 
-#: src/components/WalletHistory.tsx:109
+#: src/components/WalletHistory.tsx:118
 msgid "-"
 msgstr "-"
 
@@ -53,7 +53,7 @@ msgstr "地址"
 msgid "Address / Puzzle hash"
 msgstr "地址 / 谜语哈希"
 
-#: src/components/WalletHistory.tsx:119
+#: src/components/WalletHistory.tsx:128
 #: src/components/WalletSend.tsx:184
 #: src/components/cat/WalletCATSend.tsx:207
 msgid "Amount"
@@ -77,6 +77,12 @@ msgstr "原子交换钱包"
 msgid "Authorized Payee Wallet"
 msgstr "授权的 Payee 钱包"
 
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "奇亚资产代币"
+
 #: src/components/PasteMnemonic.tsx:76
 #: src/components/WalletRenameDialog.tsx:72
 msgid "Cancel"
@@ -84,32 +90,26 @@ msgstr "取消"
 
 #: src/components/WalletSend.tsx:106
 #: src/components/cat/WalletCATSend.tsx:116
-msgid "Cannot send chia to coloured address. Please enter a chia address."
+msgid "Cannot send cactus to coloured address. Please enter a cactus address."
 msgstr "错误: 无法发送奇亚到上色的地址. 请输入一个奇亚钱包地址."
 
 #: src/components/WalletsSidebar.tsx:130
-msgid "Check my snapshot balance"
-msgstr "检查我的快照余额"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
-msgstr "奇亚资产代币"
+#~ msgid "Check my snapshot balance"
+#~ msgstr "检查我的快照余额"
 
 #: src/components/WalletsSidebar.tsx:141
-msgid "Click here to download an older version of the wallet"
-msgstr "点击这里下载旧版本的钱包"
+#~ msgid "Click here to download an older version of the wallet"
+#~ msgstr "点击这里下载旧版本的钱包"
 
 #: src/components/WalletHeader.tsx:25
 msgid "Confirmation"
 msgstr "确认"
 
-#: src/components/WalletHistory.tsx:170
+#: src/components/WalletHistory.tsx:179
 msgid "Confirmed"
 msgstr "已确认"
 
-#: src/components/WalletHistory.tsx:333
+#: src/components/WalletHistory.tsx:342
 msgid "Confirmed at Height"
 msgstr "确认于区块高度"
 
@@ -155,7 +155,7 @@ msgstr "DID钱包"
 msgid "Datalayer Wallet"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:100
+#: src/components/WalletHistory.tsx:109
 msgid "Date"
 msgstr "日期"
 
@@ -176,7 +176,7 @@ msgid "Distributed Identity"
 msgstr "分布式身份认证"
 
 #: src/components/WalletImport.tsx:158
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:126
@@ -188,7 +188,7 @@ msgstr "错误，输入的地址似乎有不同的颜色。"
 msgid "Farm"
 msgstr "农场"
 
-#: src/components/WalletHistory.tsx:131
+#: src/components/WalletHistory.tsx:140
 #: src/components/WalletSend.tsx:197
 #: src/components/cat/WalletCATSend.tsx:221
 msgid "Fee"
@@ -218,7 +218,7 @@ msgstr "使用助记词导入钱包"
 msgid "Import from {alternativeWordCount} word mnemonic"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:87
+#: src/components/WalletHistory.tsx:96
 msgid "Incoming"
 msgstr "收入"
 
@@ -230,13 +230,13 @@ msgstr "连接列表为空"
 msgid "Manage token list"
 msgstr "管理代币列表"
 
-#: src/components/WalletHistory.tsx:174
+#: src/components/WalletHistory.tsx:183
 #: src/components/WalletSend.tsx:211
 #: src/components/cat/WalletCATSend.tsx:235
 msgid "Memo"
 msgstr "备注"
 
-#: src/components/WalletHistory.tsx:338
+#: src/components/WalletHistory.tsx:347
 msgid "Memos"
 msgstr "备注"
 
@@ -281,7 +281,7 @@ msgstr "下一步"
 msgid "Nickname"
 msgstr "昵称"
 
-#: src/components/WalletHistory.tsx:369
+#: src/components/WalletHistory.tsx:378
 msgid "No previous transactions"
 msgstr "无过往交易"
 
@@ -289,8 +289,8 @@ msgstr "无过往交易"
 msgid "Node ID"
 msgstr "节点ID"
 
-#: src/components/WalletHistory.tsx:327
-#: src/components/WalletHistory.tsx:334
+#: src/components/WalletHistory.tsx:336
+#: src/components/WalletHistory.tsx:343
 msgid "Not Available"
 msgstr "不可用"
 
@@ -302,7 +302,7 @@ msgstr "未同步"
 msgid "OK"
 msgstr "确定"
 
-#: src/components/WalletHistory.tsx:176
+#: src/components/WalletHistory.tsx:185
 msgid "Offer Accepted"
 msgstr "报价已接受"
 
@@ -311,7 +311,7 @@ msgstr "报价已接受"
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "每个交易区块平均打包时间为一分钟。通常您的交易将在一分钟内被确认，除非出现拥堵。"
 
-#: src/components/WalletHistory.tsx:87
+#: src/components/WalletHistory.tsx:96
 msgid "Outgoing"
 msgstr "支出"
 
@@ -323,7 +323,7 @@ msgstr "粘贴助记符"
 msgid "Paste Mnemonic ({0} words)"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:172
+#: src/components/WalletHistory.tsx:181
 msgid "Pending"
 msgstr "待处理"
 
@@ -388,8 +388,8 @@ msgid "Rate Limited"
 msgstr "费用限定"
 
 #: src/components/WalletsSidebar.tsx:133
-msgid "Read the blog post for details"
-msgstr "阅读博客文章了解详情"
+#~ msgid "Read the blog post for details"
+#~ msgstr "阅读博客文章了解详情"
 
 #: src/components/WalletHeader.tsx:48
 msgid "Receive"
@@ -416,7 +416,7 @@ msgstr "恢复钱包"
 msgid "Rename Wallet"
 msgstr "重命名钱包"
 
-#: src/components/WalletHistory.tsx:175
+#: src/components/WalletHistory.tsx:184
 msgid "Retire"
 msgstr "废弃"
 
@@ -468,8 +468,8 @@ msgid "Syncing"
 msgstr "正在同步"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "衍生指数设置钱包链扫描钱包地址的范围。 如果您有大量交易或取消了 XCH、CATs 或 NFT 的报价，这个数字通常更高。 如果你认为你的余额是不正确的，因为它缺少硬币， 增加衍生指数可以帮助钱包在余额总额中包括缺失的硬币。"
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "衍生指数设置钱包链扫描钱包地址的范围。 如果您有大量交易或取消了 CAC、CATs 或 NFT 的报价，这个数字通常更高。 如果你认为你的余额是不正确的，因为它缺少硬币， 增加衍生指数可以帮助钱包在余额总额中包括缺失的硬币。"
 
 #: src/components/WalletSendTransactionResultDialog.tsx:34
 msgid "The transaction could not be immediately included in the mempool because the specified fee is too low. The transaction will be retried periodically, and may be included in the mempool once fees are lower, or if space becomes available."
@@ -479,12 +479,12 @@ msgstr "由于指定的费用太低，无法立即将交易记录入内存池。
 msgid "This access token is verified"
 msgstr "通行币已被验证"
 
-#: src/components/WalletHistory.tsx:156
+#: src/components/WalletHistory.tsx:165
 msgid "This is not a valid address for sending funds to"
 msgstr "这不是一个有效的可发送资金进入的地址"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
 msgstr "这是你目前可以交易的奇亚币数额。该数额不包含处理中的农场奖励、收入交易，以及未经区块链确认的支付交易。"
 
 #: src/components/standard/WalletStandardCards.tsx:42
@@ -496,14 +496,14 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "待处理的收入与支出总和(还未上链). 不包括农场耕种奖励."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "这里是你的私钥所控制的，到目前最新子块高度为止的全部奇亚数。包含被冻结的耕种奖励， 但不包含待处理的收入与支出。"
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "目前结余+待处理的结余: 在链上确认完成后就是你的最终总结余."
 
-#: src/components/WalletHistory.tsx:181
+#: src/components/WalletHistory.tsx:190
 msgid "To"
 msgstr "目标地址"
 
@@ -515,7 +515,7 @@ msgstr "代币有空资产ID"
 msgid "Token has empty name"
 msgstr "代币名称为空"
 
-#: src/components/WalletsSidebar.tsx:187
+#: src/components/WalletsSidebar.tsx:92
 msgid "Tokens"
 msgstr "代币"
 
@@ -527,7 +527,7 @@ msgstr "总余额"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "交易已成功发送到一个完整的节点，并包含在备注库中。"
 
-#: src/components/WalletHistory.tsx:258
+#: src/components/WalletHistory.tsx:267
 msgid "Transactions"
 msgstr "交易"
 
@@ -553,20 +553,20 @@ msgid "Wallet {walletId} not found"
 msgstr "未找到钱包 {walletId}"
 
 #: src/components/WalletsSidebar.tsx:138
-msgid "Want to see your old balance for yourself?"
-msgstr "想看到你自己的旧余额吗？"
+#~ msgid "Want to see your old balance for yourself?"
+#~ msgstr "想看到你自己的旧余额吗？"
 
 #: src/components/WalletsSidebar.tsx:110
-msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
-msgstr "我们已经升级到CAT标准，该标准要求所有CAT代币必须重新发布。 您将被空投您的新代币，因为它们是由原始发行者重新发行的。 空投代币将基于块高度的余额：<0/><1/><2/>(大约时间：7月26日，2022@ 17:00 UTC)"
+#~ msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
+#~ msgstr "我们已经升级到CAT标准，该标准要求所有CAT代币必须重新发布。 您将被空投您的新代币，因为它们是由原始发行者重新发行的。 空投代币将基于块高度的余额：<0/><1/><2/>(大约时间：7月26日，2022@ 17:00 UTC)"
 
 #: src/components/WalletAdd.tsx:67
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "欢迎使用奇亚! 下面的词语列表是你的钱包密语, 请务必严格完整的把它们记下来(保持顺序). 没有这段密语的话, 你就没办法找回钱包里的币. 千万也不要透露给别人."
 
 #: src/components/WalletsSidebar.tsx:106
-msgid "Your CAT tokens have been upgraded!"
-msgstr "您的 CAT 代币已被升级！"
+#~ msgid "Your CAT tokens have been upgraded!"
+#~ msgstr "您的 CAT 代币已被升级！"
 
 #: src/components/WalletImport.tsx:72
 msgid "Your pasted list does not include {mnemonicWordCount} valid mnemonic words."

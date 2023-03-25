@@ -1,12 +1,12 @@
-import { SyncingStatus } from '@chia-network/api';
+import { SyncingStatus } from '@cactus-network/api';
 import {
   useGetNotificationsQuery,
   usePrefs,
   useDeleteNotificationsMutation,
   useCurrentFingerprintSettings,
-} from '@chia-network/api-react';
-import { ConfirmDialog, useOpenDialog } from '@chia-network/core';
-import { useWalletState } from '@chia-network/wallets';
+} from '@cactus-network/api-react';
+import { ConfirmDialog, useOpenDialog } from '@cactus-network/core';
+import { useWalletState } from '@cactus-network/wallets';
 import { Trans } from '@lingui/macro';
 import debug from 'debug';
 import { orderBy } from 'lodash';
@@ -19,7 +19,7 @@ import fetchOffer from '../../util/fetchOffer';
 import parseNotification from '../../util/parseNotification';
 import resolveOfferInfo from '../../util/resolveOfferInfo';
 
-const log = debug('chia-gui:useNotifications');
+const log = debug('cactus-gui:useNotifications');
 
 type Notification = {
   id: string;

@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign -- This file use Immer */
-import { CAT, DID, Farmer, NFT, OfferTradeRecord, Pool, WalletService, WalletType, toBech32m } from '@chia-network/api';
+import { CAT, DID, Farmer, NFT, OfferTradeRecord, Pool, WalletService, WalletType, toBech32m } from '@cactus-network/api';
 import type {
   CalculateRoyaltiesRequest,
   CalculateRoyaltiesResponse,
@@ -11,7 +11,7 @@ import type {
   Wallet,
   WalletBalance,
   WalletConnections,
-} from '@chia-network/api';
+} from '@cactus-network/api';
 import BigNumber from 'bignumber.js';
 
 import api, { baseQuery } from '../api';

@@ -1,4 +1,4 @@
-import { useGetFeeEstimateQuery } from '@chia-network/api-react';
+import { useGetFeeEstimateQuery } from '@cactus-network/api-react';
 import { Trans, t } from '@lingui/macro';
 import {
   Box,
@@ -14,7 +14,7 @@ import { Controller, useFormContext, useWatch } from 'react-hook-form';
 
 import useCurrencyCode from '../../hooks/useCurrencyCode';
 import useLocale from '../../hooks/useLocale';
-import mojoToChiaLocaleString from '../../utils/mojoToChiaLocaleString';
+import mojoToCactusLocaleString from '../../utils/mojoToCactusLocaleString';
 import Fee from '../Fee';
 import Flex from '../Flex';
 
@@ -155,7 +155,7 @@ function CountdownBar({ startTime, refreshSeconds }: { startTime: number; refres
 }
 
 enum FeeTxType {
-  walletSendXCH = 'walletSendXCH',
+  walletSendCAC = 'walletSendCAC',
   spendCATtx = 'spendCATtx',
   acceptOffer = 'acceptOffer',
   cancelOffer = 'cancelOffer',
@@ -200,7 +200,7 @@ export default function EstimatedFee(props: FeeProps) {
   const maxBlockCostCLVM = 11_000_000_000;
 
   const txCostEstimates = {
-    walletSendXCH: Math.floor(maxBlockCostCLVM / 1170),
+    walletSendCAC: Math.floor(maxBlockCostCLVM / 1170),
     spendCATtx: 36_382_111,
     acceptOffer: 721_393_265,
     cancelOffer: 212_443_993,
@@ -222,7 +222,7 @@ export default function EstimatedFee(props: FeeProps) {
   const formatEst = useCallback(
     (number: number, multiplierLocal: number, localeLocal: string) => {
       const num = multiplyEstimate(number, multiplierLocal);
-      return mojoToChiaLocaleString(num, localeLocal);
+      return mojoToCactusLocaleString(num, localeLocal);
     },
     [multiplyEstimate]
   );
@@ -283,9 +283,9 @@ export default function EstimatedFee(props: FeeProps) {
       if (selectedTime) {
         const estimate = formattedEstimates.find((formattedEstimate) => formattedEstimate.minutes === selectedTime);
         if (estimate) {
-          const xchFee = mojoToChiaLocaleString(estimate.estimate, 'en-US');
+          const cacFee = mojoToCactusLocaleString(estimate.estimate, 'en-US');
           setSelectedValue(estimate.formattedEstimate);
-          setValue(name, xchFee);
+          setValue(name, cacFee);
         }
       }
     }

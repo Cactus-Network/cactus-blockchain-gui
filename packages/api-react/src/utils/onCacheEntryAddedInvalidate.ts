@@ -1,4 +1,4 @@
-import type { Service } from '@chia-network/api';
+import type { Service } from '@cactus-network/api';
 
 type Invalidate =
   | {

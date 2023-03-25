@@ -6,17 +6,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: da_DK\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:14\n"
 "Last-Translator: \n"
 "Language-Team: Danish\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: da\n"
 "X-Crowdin-File: /main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1886\n"
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:61
+msgid "(>5 min)"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:61
+msgid "(~{selectedTime} min)"
+msgstr ""
 
 #: src/components/Amount/Amount.tsx:36
 msgid "Amount"
@@ -31,12 +39,11 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr ""
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:80
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "Tilbage"
 
-#: src/components/ConfirmDialog/ConfirmDialog.tsx:27
+#: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:17
 #: src/screens/SelectKey/SelectKeyRenameForm.tsx:90
 msgid "Cancel"
@@ -60,33 +67,32 @@ msgid "Copy to Clipboard"
 msgstr "Kopier til Udklipsholder"
 
 #: src/screens/SelectKey/SelectKey.tsx:170
-msgid "Create a new private key"
-msgstr "Generer en ny privat nøgle"
+#~ msgid "Create a new private key"
+#~ msgstr "Generer en ny privat nøgle"
 
 #: src/components/Settings/SettingsApp.tsx:105
 msgid "Dark"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:79
-#: src/screens/SelectKey/SelectKeyItem.tsx:100
+#: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "Slet"
 
 #: src/screens/SelectKey/SelectKey.tsx:193
 #: src/screens/SelectKey/SelectKey.tsx:78
-msgid "Delete all keys"
-msgstr "Slet alle nøgler"
+#~ msgid "Delete all keys"
+#~ msgstr "Slet alle nøgler"
 
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:96
 msgid "Delete key {fingerprint}"
 msgstr "Slet nøgle {fingerprint}"
 
 #: src/screens/SelectKey/SelectKey.tsx:84
-msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
-msgstr "Sletning af alle nøgler vil permanent fjerne nøglerne fra din computer, vær sikker på at du har backup. Er du sikker du vil fortsætte?"
+#~ msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
+#~ msgstr "Sletning af alle nøgler vil permanent fjerne nøglerne fra din computer, vær sikker på at du har backup. Er du sikker du vil fortsætte?"
 
-#: src/screens/SelectKey/SelectKeyItem.tsx:92
+#: src/screens/SelectKey/SelectKeyItem.tsx:105
 msgid "Details"
 msgstr ""
 
@@ -128,8 +134,8 @@ msgstr "Farmer offentlig nøgle:"
 msgid "Farming"
 msgstr "Farmer"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:334
-#: src/components/EstimatedFee/EstimatedFee.tsx:368
+#: src/components/EstimatedFee/EstimatedFee.tsx:366
+#: src/components/EstimatedFee/EstimatedFee.tsx:400
 #: src/components/Fee/Fee.tsx:53
 msgid "Fee"
 msgstr "Gebyr"
@@ -160,8 +166,8 @@ msgid "Hide Advanced Options"
 msgstr "Gem Avanceret Indstillinger"
 
 #: src/screens/SelectKey/SelectKey.tsx:181
-msgid "Import from Mnemonics (12 or 24 words)"
-msgstr ""
+#~ msgid "Import from Mnemonics (12 or 24 words)"
+#~ msgstr ""
 
 #: src/components/Fee/Fee.tsx:41
 msgid "Incorrect value"
@@ -175,11 +181,15 @@ msgstr ""
 msgid "Light"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:232
+#: src/components/EstimatedFee/EstimatedFee.tsx:254
+msgid "Likely in >5 minutes"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:255
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:232
+#: src/components/EstimatedFee/EstimatedFee.tsx:252
 msgid "Likely in {minutes} minutes"
 msgstr ""
 
@@ -188,15 +198,15 @@ msgid "Loading details"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:117
-msgid "Loading list of the keys"
-msgstr ""
+#~ msgid "Loading list of the keys"
+#~ msgstr ""
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:150
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:169
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:236
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:255
 msgid "Log Out"
 msgstr ""
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:254
 msgid "Logout"
 msgstr ""
 
@@ -226,15 +236,15 @@ msgid "No 24 word seed, since this key is imported."
 msgstr "Ingen 24 ord seed, da denne nøgle allerede er importeret."
 
 #: src/screens/SelectKey/WalletStatus.tsx:61
-msgid "Not Synced"
-msgstr ""
+#~ msgid "Not Synced"
+#~ msgstr ""
 
 #: src/components/FormatConnectionStatus/FormatConnectionStatus.tsx:38
 msgid "Not connected"
 msgstr "Ikke forbundet"
 
 #: src/components/AlertDialog/AlertDialog.tsx:23
-#: src/components/ConfirmDialog/ConfirmDialog.tsx:28
+#: src/components/ConfirmDialog/ConfirmDialog.tsx:30
 msgid "OK"
 msgstr ""
 
@@ -267,7 +277,7 @@ msgstr "Offentlig nøgle:"
 msgid "Reload Application"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKeyItem.tsx:84
+#: src/screens/SelectKey/SelectKeyItem.tsx:97
 msgid "Rename"
 msgstr ""
 
@@ -284,6 +294,11 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:159
+#: src/screens/SelectKey/Search.tsx:34
+msgid "Search"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:113
 msgid "Secret Key"
 msgstr ""
@@ -297,8 +312,8 @@ msgid "Seed:"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:134
-msgid "Select Key"
-msgstr "Vælg Nøgle"
+#~ msgid "Select Key"
+#~ msgstr "Vælg Nøgle"
 
 #: src/components/Dropdown/Dropdown.tsx:28
 msgid "Select..."
@@ -322,8 +337,8 @@ msgid "Show Advanced Options"
 msgstr "Vis Avanceret Indstillinger"
 
 #: src/screens/SelectKey/SelectKey.tsx:139
-msgid "Sign In"
-msgstr "Log Ind"
+#~ msgid "Sign In"
+#~ msgstr "Log Ind"
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
@@ -338,12 +353,12 @@ msgid "Something went wrong"
 msgstr ""
 
 #: src/screens/SelectKey/WalletStatus.tsx:73
-msgid "Synced"
-msgstr ""
+#~ msgid "Synced"
+#~ msgstr ""
 
 #: src/screens/SelectKey/WalletStatus.tsx:85
-msgid "Syncing"
-msgstr ""
+#~ msgid "Syncing"
+#~ msgstr ""
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:28
 msgid "The provided passphrase and confirmation do not match"
@@ -378,12 +393,12 @@ msgid "Transaction has successfully been sent to a full node and included in the
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:124
-msgid "Try Again"
-msgstr ""
+#~ msgid "Try Again"
+#~ msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:128
-msgid "Unable to load the list of the keys"
-msgstr ""
+#~ msgid "Unable to load the list of the keys"
+#~ msgstr ""
 
 #: src/components/LocaleToggle/LocaleToggle.tsx:44
 msgid "Unknown"
@@ -402,7 +417,7 @@ msgstr ""
 msgid "Value seems high"
 msgstr "Værdi virker høj"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:116
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:189
 #: src/components/Settings/SettingsApp.tsx:81
 msgid "Wallet"
 msgstr ""
@@ -412,13 +427,13 @@ msgid "Wallet Fingerprint"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:63
-#: src/screens/SelectKey/SelectKeyItem.tsx:69
+#: src/screens/SelectKey/SelectKeyItem.tsx:234
 msgid "Wallet {0}"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-msgstr "Velkommen til Chia. Venligst log ind med en eksisterende nøgle, eller generer en ny nøgle."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Velkommen til Cactus. Venligst log ind med en eksisterende nøgle, eller generer en ny nøgle."
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

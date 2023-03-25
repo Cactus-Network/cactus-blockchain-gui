@@ -1,4 +1,4 @@
-import { StateIndicator, State, CardSimple } from '@chia-network/core';
+import { StateIndicator, State, CardSimple } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

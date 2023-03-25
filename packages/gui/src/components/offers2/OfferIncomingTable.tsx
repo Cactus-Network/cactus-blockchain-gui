@@ -1,6 +1,6 @@
-import { toBech32m } from '@chia-network/api';
-import { Card, Flex, Table, LoadingOverlay, Button, useShowError, Tooltip, useCurrencyCode } from '@chia-network/core';
-import { Offers as OffersIcon } from '@chia-network/icons';
+import { toBech32m } from '@cactus-network/api';
+import { Card, Flex, Table, LoadingOverlay, Button, useShowError, Tooltip, useCurrencyCode } from '@cactus-network/core';
+import { Offers as OffersIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React, { useMemo, type ReactNode } from 'react';

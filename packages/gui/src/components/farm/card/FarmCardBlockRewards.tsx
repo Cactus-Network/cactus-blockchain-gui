@@ -1,5 +1,5 @@
-import { useGetFarmedAmountQuery } from '@chia-network/api-react';
-import { useCurrencyCode, mojoToChiaLocaleString, CardSimple, useLocale } from '@chia-network/core';
+import { useGetFarmedAmountQuery } from '@cactus-network/api-react';
+import { useCurrencyCode, mojoToCactusLocaleString, CardSimple, useLocale } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import React, { useMemo } from 'react';
@@ -18,7 +18,7 @@ export default function FarmCardBlockRewards() {
 
       return (
         <>
-          {mojoToChiaLocaleString(val, locale)}
+          {mojoToCactusLocaleString(val, locale)}
           &nbsp;
           {currencyCode}
         </>

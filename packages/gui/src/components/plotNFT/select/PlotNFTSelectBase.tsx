@@ -1,4 +1,4 @@
-import { Button, Flex, Loading, CardStep, RadioGroup, EstimatedFee, TextField } from '@chia-network/core';
+import { Button, Flex, Loading, CardStep, RadioGroup, EstimatedFee, TextField } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Grid, FormControl, FormControlLabel, Typography, Radio, Collapse } from '@mui/material';
 import React, { ReactNode } from 'react';
@@ -83,7 +83,7 @@ export default function PlotNFTSelectBase(props: Props) {
                 <Flex gap={1} flexDirection="column">
                   <FormControlLabel
                     control={<Radio />}
-                    label={<Trans>Self pool. When you win a block you will earn XCH rewards.</Trans>}
+                    label={<Trans>Self pool. When you win a block you will earn CAC rewards.</Trans>}
                     value
                   />
                   <Flex gap={2}>

@@ -1,4 +1,4 @@
-import Client, { Service } from '@chia-network/api';
+import Client, { Service } from '@cactus-network/api';
 import { BaseQueryApi } from '@reduxjs/toolkit/dist/query/baseQueryTypes';
 import { BaseQueryFn } from '@reduxjs/toolkit/query/react';
 
@@ -34,7 +34,7 @@ type Options = {
   service?: Service;
 };
 
-export default function chiaLazyBaseQuery(options: Options = {}): BaseQueryFn<
+export default function cactusLazyBaseQuery(options: Options = {}): BaseQueryFn<
   | {
       command: string;
       service: Service;

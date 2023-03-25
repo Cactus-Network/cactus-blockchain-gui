@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@chia-network/api';
-import { useGetNFTWallets } from '@chia-network/api-react';
+import type { NFTInfo } from '@cactus-network/api';
+import { useGetNFTWallets } from '@cactus-network/api-react';
 import React from 'react';
 
 import useFetchNFTs from '../../../hooks/useFetchNFTs';

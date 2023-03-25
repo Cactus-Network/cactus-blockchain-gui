@@ -1,4 +1,4 @@
-import { type ServiceName } from '@chia-network/api';
+import { type ServiceName } from '@cactus-network/api';
 import { ReactNode } from 'react';
 
 import type WalletConnectCommandParam from './WalletConnectCommandParam';

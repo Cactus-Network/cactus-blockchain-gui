@@ -24,7 +24,7 @@ test('Verify that new address button creates new address', async () => {
   await page.locator('text=975437849').click();
 
   //And I confirm page has correct Title
-  expect(page).toHaveTitle('Chia Blockchain');
+  expect(page).toHaveTitle('Cactus Blockchain');
 
   //And I navigate to Receive page
   await page.locator('[data-testid="WalletHeader-tab-receive"]').click();

@@ -1,4 +1,4 @@
-import { Flex, SettingsLabel } from '@chia-network/core';
+import { Flex, SettingsLabel } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { FormGroup, FormControlLabel, Grid, Switch, Typography } from '@mui/material';
 import React from 'react';
@@ -29,7 +29,7 @@ export default function SettingsStartup() {
             />
           </FormGroup>
           <Typography variant="body2" color="textSecondary">
-            <Trans>Changes will take effect the next time Chia is started</Trans>
+            <Trans>Changes will take effect the next time Cactus is started</Trans>
           </Typography>
         </Flex>
       </Grid>

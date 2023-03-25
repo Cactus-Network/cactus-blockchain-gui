@@ -1,7 +1,7 @@
-import { WalletType } from '@chia-network/api';
-import { useGetCatListQuery, useGetWalletsQuery } from '@chia-network/api-react';
-import type { CATToken, Wallet } from '@chia-network/core';
-import { useCurrencyCode } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network/api-react';
+import type { CATToken, Wallet } from '@cactus-network/core';
+import { useCurrencyCode } from '@cactus-network/core';
 import { useMemo, useRef, useCallback } from 'react';
 
 export type AssetIdMapEntry = {
@@ -37,8 +37,8 @@ export default function useAssetIdName() {
       let isVerified = false;
 
       if (walletType === WalletType.STANDARD_WALLET) {
-        assetId = 'xch';
-        name = 'Chia';
+        assetId = 'cac';
+        name = 'Cactus';
         symbol = currencyCode;
         isVerified = true;
       } else if (walletType === WalletType.CAT) {
@@ -89,11 +89,11 @@ export default function useAssetIdName() {
       assetIdNameMapping.set(assetId, entry);
     });
 
-    // If using testnet, add a TXCH assetId entry
-    if (currencyCode === 'TXCH') {
-      const assetId = 'txch';
-      const name = 'Chia (Testnet)';
-      const symbol = 'TXCH';
+    // If using testnet, add a TCAC assetId entry
+    if (currencyCode === 'TCAC') {
+      const assetId = 'tcac';
+      const name = 'Cactus (Testnet)';
+      const symbol = 'TCAC';
       const displayName = symbol || name;
       const entry: AssetIdMapEntry = {
         walletId: 1,

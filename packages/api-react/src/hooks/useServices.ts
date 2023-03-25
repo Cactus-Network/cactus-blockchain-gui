@@ -1,4 +1,4 @@
-import { ServiceName } from '@chia-network/api';
+import { ServiceName } from '@cactus-network/api';
 
 import useService, { ServiceState } from './useService';
 

@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@chia-network/api';
-import { useGetNFTsQuery } from '@chia-network/api-react';
+import type { NFTInfo } from '@cactus-network/api';
+import { useGetNFTsQuery } from '@cactus-network/api-react';
 import { useMemo } from 'react';
 
 type UseFetchNFTsResult = {

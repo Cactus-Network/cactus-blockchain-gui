@@ -1,5 +1,5 @@
-import { Flex /* , Button */ } from '@chia-network/core';
-import { Search as SearchIcon } from '@chia-network/icons';
+import { Flex /* , Button */ } from '@cactus-network/core';
+import { Search as SearchIcon } from '@cactus-network/icons';
 import data from '@emoji-mart/data';
 import { t } from '@lingui/macro';
 import { InputBase /* , InputBaseProps */, Box } from '@mui/material';

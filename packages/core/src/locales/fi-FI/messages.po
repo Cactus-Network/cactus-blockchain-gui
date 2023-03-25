@@ -6,17 +6,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: fi_FI\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:14\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: fi\n"
 "X-Crowdin-File: /main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1886\n"
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:61
+msgid "(>5 min)"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:61
+msgid "(~{selectedTime} min)"
+msgstr ""
 
 #: src/components/Amount/Amount.tsx:36
 msgid "Amount"
@@ -31,12 +39,11 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr "Oletko varma, että haluat jatkaa? Kirjoita tämän lompakon sormenjälki vahvistaaksesi poistamisen."
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:80
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "Palaa"
 
-#: src/components/ConfirmDialog/ConfirmDialog.tsx:27
+#: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:17
 #: src/screens/SelectKey/SelectKeyRenameForm.tsx:90
 msgid "Cancel"
@@ -60,33 +67,32 @@ msgid "Copy to Clipboard"
 msgstr "Kopioi Leikepöydälle"
 
 #: src/screens/SelectKey/SelectKey.tsx:170
-msgid "Create a new private key"
-msgstr "Luo yksityinen avain"
+#~ msgid "Create a new private key"
+#~ msgstr "Luo yksityinen avain"
 
 #: src/components/Settings/SettingsApp.tsx:105
 msgid "Dark"
 msgstr "Tumma"
 
-#: src/screens/SelectKey/SelectKey.tsx:79
-#: src/screens/SelectKey/SelectKeyItem.tsx:100
+#: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "Poista"
 
 #: src/screens/SelectKey/SelectKey.tsx:193
 #: src/screens/SelectKey/SelectKey.tsx:78
-msgid "Delete all keys"
-msgstr "Poista kaikki avaimet"
+#~ msgid "Delete all keys"
+#~ msgstr "Poista kaikki avaimet"
 
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:96
 msgid "Delete key {fingerprint}"
 msgstr "Poista avain {fingerprint}"
 
 #: src/screens/SelectKey/SelectKey.tsx:84
-msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
-msgstr "Avainten poisto poistaa ne tietokoneeltasi. Varmista että sinulla on varmuuskopio. Haluatko jatkaa?"
+#~ msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
+#~ msgstr "Avainten poisto poistaa ne tietokoneeltasi. Varmista että sinulla on varmuuskopio. Haluatko jatkaa?"
 
-#: src/screens/SelectKey/SelectKeyItem.tsx:92
+#: src/screens/SelectKey/SelectKeyItem.tsx:105
 msgid "Details"
 msgstr "Lisätiedot"
 
@@ -128,8 +134,8 @@ msgstr "Farmarin julkinen avain:"
 msgid "Farming"
 msgstr "Farmaroidaan"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:334
-#: src/components/EstimatedFee/EstimatedFee.tsx:368
+#: src/components/EstimatedFee/EstimatedFee.tsx:366
+#: src/components/EstimatedFee/EstimatedFee.tsx:400
 #: src/components/Fee/Fee.tsx:53
 msgid "Fee"
 msgstr "Maksu"
@@ -160,8 +166,8 @@ msgid "Hide Advanced Options"
 msgstr "Piilota Lisävalinnat"
 
 #: src/screens/SelectKey/SelectKey.tsx:181
-msgid "Import from Mnemonics (12 or 24 words)"
-msgstr ""
+#~ msgid "Import from Mnemonics (12 or 24 words)"
+#~ msgstr ""
 
 #: src/components/Fee/Fee.tsx:41
 msgid "Incorrect value"
@@ -175,11 +181,15 @@ msgstr "Kieli"
 msgid "Light"
 msgstr "Vaalea"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:232
+#: src/components/EstimatedFee/EstimatedFee.tsx:254
+msgid "Likely in >5 minutes"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:255
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:232
+#: src/components/EstimatedFee/EstimatedFee.tsx:252
 msgid "Likely in {minutes} minutes"
 msgstr ""
 
@@ -188,15 +198,15 @@ msgid "Loading details"
 msgstr "Ladataan lisätietoja"
 
 #: src/screens/SelectKey/SelectKey.tsx:117
-msgid "Loading list of the keys"
-msgstr "Ladataan avaimien luetteloa"
+#~ msgid "Loading list of the keys"
+#~ msgstr "Ladataan avaimien luetteloa"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:150
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:169
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:236
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:255
 msgid "Log Out"
 msgstr "Kirjaudu ulos"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:254
 msgid "Logout"
 msgstr "Kirjaudu Ulos"
 
@@ -226,15 +236,15 @@ msgid "No 24 word seed, since this key is imported."
 msgstr "Tuotu avain, ei 24 muistisanaa."
 
 #: src/screens/SelectKey/WalletStatus.tsx:61
-msgid "Not Synced"
-msgstr "Ei synkronoitu"
+#~ msgid "Not Synced"
+#~ msgstr "Ei synkronoitu"
 
 #: src/components/FormatConnectionStatus/FormatConnectionStatus.tsx:38
 msgid "Not connected"
 msgstr "Ei yhteyttä"
 
 #: src/components/AlertDialog/AlertDialog.tsx:23
-#: src/components/ConfirmDialog/ConfirmDialog.tsx:28
+#: src/components/ConfirmDialog/ConfirmDialog.tsx:30
 msgid "OK"
 msgstr "OK"
 
@@ -267,7 +277,7 @@ msgstr "Julkinen avain:"
 msgid "Reload Application"
 msgstr "Uudelleenkäynnistä Sovellus"
 
-#: src/screens/SelectKey/SelectKeyItem.tsx:84
+#: src/screens/SelectKey/SelectKeyItem.tsx:97
 msgid "Rename"
 msgstr "Nimeä uudelleen"
 
@@ -284,6 +294,11 @@ msgstr "Näytä"
 msgid "Save"
 msgstr "Tallenna"
 
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:159
+#: src/screens/SelectKey/Search.tsx:34
+msgid "Search"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:113
 msgid "Secret Key"
 msgstr "Salainen avain"
@@ -297,8 +312,8 @@ msgid "Seed:"
 msgstr "Siemenarvo:"
 
 #: src/screens/SelectKey/SelectKey.tsx:134
-msgid "Select Key"
-msgstr "Valitse Avain"
+#~ msgid "Select Key"
+#~ msgstr "Valitse Avain"
 
 #: src/components/Dropdown/Dropdown.tsx:28
 msgid "Select..."
@@ -322,8 +337,8 @@ msgid "Show Advanced Options"
 msgstr "Näytä Lisävalinnat"
 
 #: src/screens/SelectKey/SelectKey.tsx:139
-msgid "Sign In"
-msgstr "Kirjaudu"
+#~ msgid "Sign In"
+#~ msgstr "Kirjaudu"
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
@@ -338,12 +353,12 @@ msgid "Something went wrong"
 msgstr "Jokin meni pieleen"
 
 #: src/screens/SelectKey/WalletStatus.tsx:73
-msgid "Synced"
-msgstr "Synkronissa"
+#~ msgid "Synced"
+#~ msgstr "Synkronissa"
 
 #: src/screens/SelectKey/WalletStatus.tsx:85
-msgid "Syncing"
-msgstr "Synkronoi"
+#~ msgid "Syncing"
+#~ msgstr "Synkronoi"
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:28
 msgid "The provided passphrase and confirmation do not match"
@@ -378,12 +393,12 @@ msgid "Transaction has successfully been sent to a full node and included in the
 msgstr "Tapahtuma on onnistuneesti lähetetty noodille ja sisällytetty mempooliin."
 
 #: src/screens/SelectKey/SelectKey.tsx:124
-msgid "Try Again"
-msgstr "Yritä uudelleen"
+#~ msgid "Try Again"
+#~ msgstr "Yritä uudelleen"
 
 #: src/screens/SelectKey/SelectKey.tsx:128
-msgid "Unable to load the list of the keys"
-msgstr "Avainten luetteloa ei voitu ladata"
+#~ msgid "Unable to load the list of the keys"
+#~ msgstr "Avainten luetteloa ei voitu ladata"
 
 #: src/components/LocaleToggle/LocaleToggle.tsx:44
 msgid "Unknown"
@@ -402,7 +417,7 @@ msgstr "Salasanan asettaminen on erittäin suositeltavaa avaimien suojaamiseksi.
 msgid "Value seems high"
 msgstr "Arvo vaikuttaa suurelta"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:116
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:189
 #: src/components/Settings/SettingsApp.tsx:81
 msgid "Wallet"
 msgstr "Lompakko"
@@ -412,13 +427,13 @@ msgid "Wallet Fingerprint"
 msgstr "Lompakon Sormenjälki"
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:63
-#: src/screens/SelectKey/SelectKeyItem.tsx:69
+#: src/screens/SelectKey/SelectKeyItem.tsx:234
 msgid "Wallet {0}"
 msgstr "Lompakko {0}"
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-msgstr "Tervetuloa Chiaan. Kirjaudu sisään avaimella tai luo uusi avain."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Tervetuloa Cactusan. Kirjaudu sisään avaimella tai luo uusi avain."
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

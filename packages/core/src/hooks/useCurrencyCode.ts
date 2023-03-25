@@ -1,4 +1,4 @@
-import { useGetNetworkInfoQuery } from '@chia-network/api-react';
+import { useGetNetworkInfoQuery } from '@cactus-network/api-react';
 
 export default function useCurrencyCode(): string | undefined {
   const { data: networkInfo, isLoading } = useGetNetworkInfoQuery();

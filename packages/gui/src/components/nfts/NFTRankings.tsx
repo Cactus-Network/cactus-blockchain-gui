@@ -1,5 +1,5 @@
-import type { NFTAttribute } from '@chia-network/api';
-import { Flex } from '@chia-network/core';
+import type { NFTAttribute } from '@cactus-network/api';
+import { Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography, LinearProgress } from '@mui/material';
 import { styled } from '@mui/material/styles';

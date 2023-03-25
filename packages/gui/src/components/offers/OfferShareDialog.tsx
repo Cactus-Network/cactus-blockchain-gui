@@ -2,7 +2,7 @@ import child_process from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
-import { OfferTradeRecord } from '@chia-network/api';
+import { OfferTradeRecord } from '@cactus-network/api';
 import {
   ButtonLoading,
   CopyToClipboard,
@@ -13,7 +13,7 @@ import {
   useOpenDialog,
   useShowError,
   useOpenExternal,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import {
   Button,
@@ -38,7 +38,7 @@ import { NFTOfferSummary } from './NFTOfferViewer';
 import OfferSummary from './OfferSummary';
 import { offerContainsAssetOfType, shortSummaryForOffer, suggestedFilenameForOffer } from './utils';
 
-const log = debug('chia-gui:offers');
+const log = debug('cactus-gui:offers');
 
 /* ========================================================================== */
 
@@ -90,7 +90,7 @@ type CommonShareServiceDialogProps = CommonDialogProps & {
 
 type OfferShareServiceDialogProps = CommonOfferProps & CommonShareServiceDialogProps;
 
-const testnetDummyHost = 'offers-api-sim.chia.net';
+const testnetDummyHost = 'offers-api-sim.cactus-network.net';
 
 const OfferSharingProviders: {
   [key in OfferSharingService]: OfferSharingProvider;
@@ -257,7 +257,7 @@ async function postToOfferBin(offerData: string, sharePrivately: boolean, testne
   log('OfferBin upload completed');
 
   if (testnet) {
-    return 'https://www.chia.net/offers';
+    return 'https://www.cactus-network.net/offers';
   }
 
   const { hash } = JSON.parse(responseBody);
@@ -267,7 +267,7 @@ async function postToOfferBin(offerData: string, sharePrivately: boolean, testne
 
 enum HashgreenErrorCodes {
   OFFERED_AMOUNT_TOO_SMALL = 40_020, // The offered amount is too small
-  MARKET_NOT_FOUND = 50_029, // Pairing doesn't exist e.g. XCH/RandoCoin
+  MARKET_NOT_FOUND = 50_029, // Pairing doesn't exist e.g. CAC/RandoCoin
   OFFER_FILE_EXISTS = 50_037, // Offer already shared
   COINS_ALREADY_COMMITTED = 50_041, // Coins in the offer are already committed in another offer
 }
@@ -304,7 +304,7 @@ async function postToHashgreen(offerData: string, testnet: boolean): Promise<str
     log('Hashgreen upload completed');
 
     if (testnet) {
-      return 'https://www.chia.net/offers';
+      return 'https://www.cactus-network.net/offers';
     }
 
     const jsonObj = JSON.parse(responseBody);
@@ -355,7 +355,7 @@ async function postToSpacescan(offerData: string, testnet: boolean): Promise<{ v
     protocol: 'https:',
     hostname: 'api2.spacescan.io',
     port: 443,
-    path: `/api/offer/upload?coin=${testnet ? 'txch' : 'xch'}&version=1`,
+    path: `/api/offer/upload?coin=${testnet ? 'tcac' : 'cac'}&version=1`,
   };
   const requestHeaders = {
     'Content-Type': 'application/json',
@@ -399,7 +399,7 @@ type KeybaseCLIRequest = {
   channelName: string;
 };
 
-const KeybaseTeamName = 'chia_offers';
+const KeybaseTeamName = 'cactus_offers';
 const KeybaseChannelName = 'offers-trading';
 
 async function execKeybaseCLI(request: KeybaseCLIRequest): Promise<boolean> {
@@ -1023,7 +1023,7 @@ function OfferShareKeybaseDialog(props: OfferShareServiceDialogProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isJoiningTeam, setIsJoiningTeam] = React.useState(false);
   const [shared, setShared] = React.useState(false);
-  const teamName = testnet ? 'testxchoffersdev' : KeybaseTeamName;
+  const teamName = testnet ? 'testcacoffersdev' : KeybaseTeamName;
   const channelName = testnet ? 'offers' : KeybaseChannelName;
 
   function handleClose() {

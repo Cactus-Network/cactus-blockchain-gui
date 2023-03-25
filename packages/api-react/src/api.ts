@@ -1,11 +1,11 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
-import chiaLazyBaseQuery from './chiaLazyBaseQuery';
+import cactusLazyBaseQuery from './cactusLazyBaseQuery';
 
-export const baseQuery = chiaLazyBaseQuery({});
+export const baseQuery = cactusLazyBaseQuery({});
 
 export default createApi({
-  reducerPath: 'chiaApi',
+  reducerPath: 'cactusApi',
   baseQuery,
   endpoints: () => ({}),
 });

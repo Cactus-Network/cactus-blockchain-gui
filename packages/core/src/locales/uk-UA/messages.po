@@ -6,17 +6,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: uk_UA\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:14\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: uk\n"
 "X-Crowdin-File: /main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1886\n"
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:61
+msgid "(>5 min)"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:61
+msgid "(~{selectedTime} min)"
+msgstr ""
 
 #: src/components/Amount/Amount.tsx:36
 msgid "Amount"
@@ -31,12 +39,11 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr "Ви впевнені, що хочете продовжити? Введіть fingerprint цього гаманця для підтвердження видалення."
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:80
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "Назад"
 
-#: src/components/ConfirmDialog/ConfirmDialog.tsx:27
+#: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:17
 #: src/screens/SelectKey/SelectKeyRenameForm.tsx:90
 msgid "Cancel"
@@ -60,33 +67,32 @@ msgid "Copy to Clipboard"
 msgstr "Скопіювати до буферу обміну"
 
 #: src/screens/SelectKey/SelectKey.tsx:170
-msgid "Create a new private key"
-msgstr "Створити новий приватний ключ"
+#~ msgid "Create a new private key"
+#~ msgstr "Створити новий приватний ключ"
 
 #: src/components/Settings/SettingsApp.tsx:105
 msgid "Dark"
 msgstr "Темний"
 
-#: src/screens/SelectKey/SelectKey.tsx:79
-#: src/screens/SelectKey/SelectKeyItem.tsx:100
+#: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "Видалити"
 
 #: src/screens/SelectKey/SelectKey.tsx:193
 #: src/screens/SelectKey/SelectKey.tsx:78
-msgid "Delete all keys"
-msgstr "Видалити всі ключі"
+#~ msgid "Delete all keys"
+#~ msgstr "Видалити всі ключі"
 
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:96
 msgid "Delete key {fingerprint}"
 msgstr "Видалити ключ {fingerprint}"
 
 #: src/screens/SelectKey/SelectKey.tsx:84
-msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
-msgstr "Видалення усіх ключів призведе до безповоротного видалення ключів з Вашого комп'ютеру. Переконайтесь, що маєте резервні копії. Ви впевнені, що хочете продовжити?"
+#~ msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
+#~ msgstr "Видалення усіх ключів призведе до безповоротного видалення ключів з Вашого комп'ютеру. Переконайтесь, що маєте резервні копії. Ви впевнені, що хочете продовжити?"
 
-#: src/screens/SelectKey/SelectKeyItem.tsx:92
+#: src/screens/SelectKey/SelectKeyItem.tsx:105
 msgid "Details"
 msgstr "Докладніше"
 
@@ -128,8 +134,8 @@ msgstr "Публічний ключ фермера:"
 msgid "Farming"
 msgstr "Фермерство"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:334
-#: src/components/EstimatedFee/EstimatedFee.tsx:368
+#: src/components/EstimatedFee/EstimatedFee.tsx:366
+#: src/components/EstimatedFee/EstimatedFee.tsx:400
 #: src/components/Fee/Fee.tsx:53
 msgid "Fee"
 msgstr "Комісія"
@@ -160,8 +166,8 @@ msgid "Hide Advanced Options"
 msgstr "Приховати додаткові параметри"
 
 #: src/screens/SelectKey/SelectKey.tsx:181
-msgid "Import from Mnemonics (12 or 24 words)"
-msgstr ""
+#~ msgid "Import from Mnemonics (12 or 24 words)"
+#~ msgstr ""
 
 #: src/components/Fee/Fee.tsx:41
 msgid "Incorrect value"
@@ -175,11 +181,15 @@ msgstr "Мова"
 msgid "Light"
 msgstr "Світлий"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:232
+#: src/components/EstimatedFee/EstimatedFee.tsx:254
+msgid "Likely in >5 minutes"
+msgstr ""
+
+#: src/components/EstimatedFee/EstimatedFee.tsx:255
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:232
+#: src/components/EstimatedFee/EstimatedFee.tsx:252
 msgid "Likely in {minutes} minutes"
 msgstr ""
 
@@ -188,15 +198,15 @@ msgid "Loading details"
 msgstr "Завантаження подробиць"
 
 #: src/screens/SelectKey/SelectKey.tsx:117
-msgid "Loading list of the keys"
-msgstr "Завантаження списку ключів"
+#~ msgid "Loading list of the keys"
+#~ msgstr "Завантаження списку ключів"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:150
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:169
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:236
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:255
 msgid "Log Out"
 msgstr "Вийти"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:254
 msgid "Logout"
 msgstr "Вийти"
 
@@ -226,15 +236,15 @@ msgid "No 24 word seed, since this key is imported."
 msgstr "Відсутні 24 ключових слова, оскільки ключ імпортовано."
 
 #: src/screens/SelectKey/WalletStatus.tsx:61
-msgid "Not Synced"
-msgstr "Не синхронізовано"
+#~ msgid "Not Synced"
+#~ msgstr "Не синхронізовано"
 
 #: src/components/FormatConnectionStatus/FormatConnectionStatus.tsx:38
 msgid "Not connected"
 msgstr "Немає з'єднання"
 
 #: src/components/AlertDialog/AlertDialog.tsx:23
-#: src/components/ConfirmDialog/ConfirmDialog.tsx:28
+#: src/components/ConfirmDialog/ConfirmDialog.tsx:30
 msgid "OK"
 msgstr "ОК"
 
@@ -267,7 +277,7 @@ msgstr "Публічний ключ:"
 msgid "Reload Application"
 msgstr "Перезавантажити додаток"
 
-#: src/screens/SelectKey/SelectKeyItem.tsx:84
+#: src/screens/SelectKey/SelectKeyItem.tsx:97
 msgid "Rename"
 msgstr "Перейменувати"
 
@@ -284,6 +294,11 @@ msgstr "Показати"
 msgid "Save"
 msgstr "Зберегти"
 
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:159
+#: src/screens/SelectKey/Search.tsx:34
+msgid "Search"
+msgstr ""
+
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:113
 msgid "Secret Key"
 msgstr "Секретний ключ"
@@ -297,8 +312,8 @@ msgid "Seed:"
 msgstr "Фраза:"
 
 #: src/screens/SelectKey/SelectKey.tsx:134
-msgid "Select Key"
-msgstr "Вибрати ключ"
+#~ msgid "Select Key"
+#~ msgstr "Вибрати ключ"
 
 #: src/components/Dropdown/Dropdown.tsx:28
 msgid "Select..."
@@ -322,8 +337,8 @@ msgid "Show Advanced Options"
 msgstr "Показати розширені параметри"
 
 #: src/screens/SelectKey/SelectKey.tsx:139
-msgid "Sign In"
-msgstr "Увійти"
+#~ msgid "Sign In"
+#~ msgstr "Увійти"
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
@@ -338,12 +353,12 @@ msgid "Something went wrong"
 msgstr "Сталася помилка"
 
 #: src/screens/SelectKey/WalletStatus.tsx:73
-msgid "Synced"
-msgstr "Синхронізовано"
+#~ msgid "Synced"
+#~ msgstr "Синхронізовано"
 
 #: src/screens/SelectKey/WalletStatus.tsx:85
-msgid "Syncing"
-msgstr "Синхронізація"
+#~ msgid "Syncing"
+#~ msgstr "Синхронізація"
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:28
 msgid "The provided passphrase and confirmation do not match"
@@ -378,12 +393,12 @@ msgid "Transaction has successfully been sent to a full node and included in the
 msgstr "Транзакція успішно відправлена до повного вузла та була включена в mempool."
 
 #: src/screens/SelectKey/SelectKey.tsx:124
-msgid "Try Again"
-msgstr "Спробувати ще раз"
+#~ msgid "Try Again"
+#~ msgstr "Спробувати ще раз"
 
 #: src/screens/SelectKey/SelectKey.tsx:128
-msgid "Unable to load the list of the keys"
-msgstr "Не вдалося завантажити список ключів"
+#~ msgid "Unable to load the list of the keys"
+#~ msgstr "Не вдалося завантажити список ключів"
 
 #: src/components/LocaleToggle/LocaleToggle.tsx:44
 msgid "Unknown"
@@ -402,7 +417,7 @@ msgstr "Рекомендовано використовувати пароль �
 msgid "Value seems high"
 msgstr "Значення здається високим"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:116
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:189
 #: src/components/Settings/SettingsApp.tsx:81
 msgid "Wallet"
 msgstr "Гаманець"
@@ -412,13 +427,13 @@ msgid "Wallet Fingerprint"
 msgstr "Fingerprint Гаманця"
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:63
-#: src/screens/SelectKey/SelectKeyItem.tsx:69
+#: src/screens/SelectKey/SelectKeyItem.tsx:234
 msgid "Wallet {0}"
 msgstr "Гаманець {0}"
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-msgstr "Ласкаво просимо в Chia. Будь ласка, увійдіть за допомогою існуючого ключа або створіть новий ключ."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Ласкаво просимо в Cactus. Будь ласка, увійдіть за допомогою існуючого ключа або створіть новий ключ."
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

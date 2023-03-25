@@ -26,7 +26,7 @@ test.afterAll(async () => {
 
 test('Verify that renaming work and canceling the renaming wallet flow works.', async () => {
   const orgName = 'Jahi 1st Wallet';
-  const newName = 'MyChiaMainWallet';
+  const newName = 'MyCactusMainWallet';
 
   //Given I click on miniMenu on a Wallet name
   await page.locator('[data-testid="SelectKeyItem-fingerprint-1922132445"] [aria-label="more"]').click();

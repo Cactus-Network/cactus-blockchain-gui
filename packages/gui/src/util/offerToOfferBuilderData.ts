@@ -1,5 +1,5 @@
-import { OfferSummaryRecord } from '@chia-network/api';
-import { mojoToCAT, mojoToChia } from '@chia-network/core';
+import { OfferSummaryRecord } from '@cactus-network/api';
+import { mojoToCAT, mojoToCactus } from '@cactus-network/core';
 import BigNumber from 'bignumber.js';
 
 import type OfferBuilderData from '../@types/OfferBuilderData';
@@ -13,13 +13,13 @@ export default function offerToOfferBuilderData(
 ): OfferBuilderData {
   const { fees, offered, requested, infos } = offerSummary;
 
-  const defaultFeeXCH = defaultFee ? mojoToChia(defaultFee).toFixed() : '';
+  const defaultFeeCAC = defaultFee ? mojoToCactus(defaultFee).toFixed() : '';
 
-  const offeredXch: OfferBuilderData['offered']['xch'] = [];
+  const offeredCac: OfferBuilderData['offered']['cac'] = [];
   const offeredTokens: OfferBuilderData['offered']['tokens'] = [];
   const offeredNfts: OfferBuilderData['offered']['nfts'] = [];
-  const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeeXCH }] : [];
-  const requestedXch: OfferBuilderData['requested']['xch'] = [];
+  const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeeCAC }] : [];
+  const requestedCac: OfferBuilderData['requested']['cac'] = [];
   const requestedTokens: OfferBuilderData['requested']['tokens'] = [];
   const requestedNfts: OfferBuilderData['requested']['nfts'] = [];
 
@@ -38,9 +38,9 @@ export default function offerToOfferBuilderData(
       offeredNfts.push({
         nftId: launcherIdToNFTId(info.launcherId),
       });
-    } else if (id === 'xch') {
-      offeredXch.push({
-        amount: mojoToChia(amount).toFixed(),
+    } else if (id === 'cac') {
+      offeredCac.push({
+        amount: mojoToCactus(amount).toFixed(),
       });
     }
   });
@@ -58,27 +58,27 @@ export default function offerToOfferBuilderData(
       requestedNfts.push({
         nftId: launcherIdToNFTId(info.launcherId),
       });
-    } else if (id === 'xch') {
-      requestedXch.push({
-        amount: mojoToChia(amount).toFixed(),
+    } else if (id === 'cac') {
+      requestedCac.push({
+        amount: mojoToCactus(amount).toFixed(),
       });
     }
   });
 
   return {
     offered: {
-      xch: offeredXch,
+      cac: offeredCac,
       tokens: offeredTokens,
       nfts: offeredNfts,
       fee: offeredFee,
     },
     requested: {
-      xch: requestedXch,
+      cac: requestedCac,
       tokens: requestedTokens,
       nfts: requestedNfts,
       fee: [
         {
-          amount: mojoToChia(fees).toFixed(),
+          amount: mojoToCactus(fees).toFixed(),
         },
       ],
     },
