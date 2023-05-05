@@ -16,8 +16,8 @@ test.afterAll(async () => {
   await page.close();
 });
 
-test('Confirm that User can Send TXCH to another Wallet', async () => {
-  let receive_wallet = 'txch1u237ltq0pp4348ppwv6cge7fks87mn4wz3c0ywvgswvpwhkqqn8qn8jeq6';
+test('Confirm that User can Send TCAC to another Wallet', async () => {
+  let receive_wallet = 'tcac1u237ltq0pp4348ppwv6cge7fks87mn4wz3c0ywvgswvpwhkqqn8qn8jeq6';
   let funded_wallet = '1922132445';
 
   //Given I enter correct credentials in Passphrase dialog
@@ -37,7 +37,7 @@ test('Confirm that User can Send TXCH to another Wallet', async () => {
 
   const balance = getWalletBalance(funded_wallet);
 
-  console.log(`XCH Balance: ${balance}`);
+  console.log(`CAC Balance: ${balance}`);
   //End: Wait for Wallet to Sync
 
   //And I click on Send Page
@@ -50,7 +50,7 @@ test('Confirm that User can Send TXCH to another Wallet', async () => {
   await page.locator('[data-testid="WalletSend-amount"]').fill('0.01');
 
   //And I enter a valid Fee
-  await page.locator('text=Fee *TXCH >> input[type="text"]').fill('0.000005');
+  await page.locator('text=Fee *TCAC >> input[type="text"]').fill('0.000005');
 
   //And I click Send button
   await page.locator('[data-testid="WalletSend-send"]').click();

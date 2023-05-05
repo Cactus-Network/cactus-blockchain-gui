@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: tlh_AA\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:15\n"
 "Last-Translator: \n"
 "Language-Team: Klingon\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: tlh-AA\n"
 "X-Crowdin-File: /main/packages/core/src/locales/en-US/messages.po\n"
@@ -449,7 +449,7 @@ msgstr ""
 #~ msgstr "Warning: This key is used for your pool rewards address. By deleting this key you may lose access to any future pool rewards"
 
 #: src/screens/SelectKey/SelectKey.tsx:149
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
+msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
 msgstr ""
 
 #: src/components/Back/Back.tsx:38
@@ -466,7 +466,7 @@ msgid "{0, plural, one {mojo} other {mojos}}"
 msgstr ""
 
 #: src/components/EstimatedFee/EstimatedFee.tsx:159
-msgid "{0} TXCH"
+msgid "{0} TCAC"
 msgstr ""
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:39

@@ -1,4 +1,4 @@
-import { type NFTInfo } from '@chia-network/api';
+import { type NFTInfo } from '@cactus-network/api';
 
 type NFTOnDemand = {
   nft?: NFTInfo;

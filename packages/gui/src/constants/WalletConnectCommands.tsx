@@ -1,5 +1,5 @@
-import { ServiceName } from '@chia-network/api';
-import { MojoToChia } from '@chia-network/core';
+import { ServiceName } from '@cactus-network/api';
+import { MojoToCactus } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 
@@ -96,13 +96,13 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.AMOUNT,
         label: <Trans>Amount</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
       {
         name: WalletConnectCommandParamName.FEE,
         label: <Trans>Fee</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
       {
         name: WalletConnectCommandParamName.ADDRESS,
@@ -333,7 +333,7 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.FEE,
         label: <Trans>Fee</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
     ],
   },
@@ -368,7 +368,7 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.FEE,
         label: <Trans>Fee</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
     ],
   },
@@ -425,13 +425,13 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.AMOUNT,
         label: <Trans>Amount</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
       {
         name: WalletConnectCommandParamName.FEE,
         label: <Trans>Fee</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
     ],
   },
@@ -488,7 +488,7 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.FEE,
         label: <Trans>Fee</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
       {
         name: WalletConnectCommandParamName.MEMOS,
@@ -596,7 +596,7 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.FEE,
         label: <Trans>Fee</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
     ],
   },
@@ -628,13 +628,13 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.AMOUNT,
         label: <Trans>Amount</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
       {
         name: WalletConnectCommandParamName.FEE,
         label: <Trans>Fee</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
       {
         name: WalletConnectCommandParamName.BACKUP_DIDS,
@@ -692,7 +692,7 @@ const walletConnectCommands: WalletConnectCommand[] = [
         name: WalletConnectCommandParamName.FEE,
         label: <Trans>Fee</Trans>,
         type: 'BigNumber',
-        displayComponent: (value) => <MojoToChia value={value} />,
+        displayComponent: (value) => <MojoToCactus value={value} />,
       },
     ],
   },

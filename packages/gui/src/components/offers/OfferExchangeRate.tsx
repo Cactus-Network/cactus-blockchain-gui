@@ -1,5 +1,5 @@
-import { WalletType } from '@chia-network/api';
-import { Flex } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import { Flex } from '@cactus-network/core';
 import { ImportExport } from '@mui/icons-material';
 import { InputAdornment, TextField, Typography } from '@mui/material';
 import React, { useMemo, useState } from 'react';

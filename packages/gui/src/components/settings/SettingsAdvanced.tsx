@@ -6,7 +6,7 @@ import {
   SettingsTitle,
   SettingsText,
   useOpenDialog,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { RateReview as SignIcon, Verified as VerifyIcon } from '@mui/icons-material';
 import { Grid } from '@mui/material';

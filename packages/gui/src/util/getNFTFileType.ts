@@ -1,4 +1,4 @@
-import { type NFTInfo } from '@chia-network/api';
+import { type NFTInfo } from '@cactus-network/api';
 
 import FileType from '../@types/FileType';
 import getFileType from './getFileType';

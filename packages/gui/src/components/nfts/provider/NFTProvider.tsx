@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import { type NFTInfo, type Wallet } from '@chia-network/api';
+import { type NFTInfo, type Wallet } from '@cactus-network/api';
 import {
   useGetNFTWallets,
   useLazyGetNFTsQuery,
@@ -10,7 +10,7 @@ import {
   useNFTCoinUpdated,
   useGetLoggedInFingerprintQuery,
   useLazyGetNFTInfoQuery,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import debug from 'debug';
 import React, { useMemo, useCallback, useEffect, type ReactNode } from 'react';
 
@@ -27,7 +27,7 @@ import { launcherIdFromNFTId } from '../../../util/nfts';
 import parseFileContent from '../../../util/parseFileContent';
 import NFTProviderContext from './NFTProviderContext';
 
-const log = debug('chia-gui:NFTProvider');
+const log = debug('cactus-gui:NFTProvider');
 
 function parseMetadataFile(content: Buffer, headers: any) {
   const metadataString = parseFileContent(content, headers);

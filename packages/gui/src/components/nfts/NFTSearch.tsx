@@ -1,4 +1,4 @@
-import { Flex, useDarkMode } from '@chia-network/core';
+import { Flex, useDarkMode } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 import styled from 'styled-components';

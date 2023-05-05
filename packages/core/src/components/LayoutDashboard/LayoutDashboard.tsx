@@ -1,5 +1,5 @@
-import { useGetLoggedInFingerprintQuery, useGetKeyQuery, useFingerprintSettings } from '@chia-network/api-react';
-import { Exit as ExitIcon } from '@chia-network/icons';
+import { useGetLoggedInFingerprintQuery, useGetKeyQuery, useFingerprintSettings } from '@cactus-network/api-react';
+import { Exit as ExitIcon } from '@cactus-network/icons';
 import { t, Trans } from '@lingui/macro';
 import { ExitToApp as ExitToAppIcon, Edit as EditIcon } from '@mui/icons-material';
 import {

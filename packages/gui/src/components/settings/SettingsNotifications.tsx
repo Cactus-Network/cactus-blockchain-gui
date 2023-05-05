@@ -1,4 +1,4 @@
-import { Flex, SettingsHR, SettingsSection, SettingsTitle, SettingsText } from '@chia-network/core';
+import { Flex, SettingsHR, SettingsSection, SettingsTitle, SettingsText } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { FormControlLabel, Grid, Switch } from '@mui/material';
 import React from 'react';

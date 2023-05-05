@@ -1,4 +1,4 @@
-import { Button, CardStep, Select, Flex, Link, Loading } from '@chia-network/core';
+import { Button, CardStep, Select, Flex, Link, Loading } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Grid, FormControl, InputLabel, MenuItem, Typography } from '@mui/material';
 import React, { useState, forwardRef } from 'react';
@@ -39,7 +39,7 @@ const PlotAddNFT = forwardRef((props: Props, ref) => {
         title={<Trans>Create a Plot NFT</Trans>}
         description={
           <Trans>
-            Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less
+            Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less
             volatile.
           </Trans>
         }
@@ -72,7 +72,7 @@ const PlotAddNFT = forwardRef((props: Props, ref) => {
               need to replot in order to join any of the standard pools.
             </Trans>
             &nbsp;
-            <Link target="_blank" href="https://docs.chia.net/pool-farming">
+            <Link target="_blank" href="https://docs.cactus-network.net/pool-farming">
               <Trans>Learn more</Trans>
             </Link>
           </Typography>
@@ -128,7 +128,7 @@ const PlotAddNFT = forwardRef((props: Props, ref) => {
         <>
           <Typography variant="subtitle1">
             <Trans>
-              Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a
+              Join a pool and get more consistent CAC farming rewards. Create a plot NFT and assign your new plots to a
               group.
             </Trans>
           </Typography>

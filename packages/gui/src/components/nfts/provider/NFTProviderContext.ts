@@ -1,6 +1,6 @@
 import { type EventEmitter } from 'events';
 
-import { type NFTInfo } from '@chia-network/api';
+import { type NFTInfo } from '@cactus-network/api';
 import { createContext } from 'react';
 
 import type Metadata from '../../../@types/Metadata';

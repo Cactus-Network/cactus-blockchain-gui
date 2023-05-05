@@ -17,8 +17,8 @@ test.afterAll(async () => {
   await page.close();
 });
 
-test('Confirm that User cannot send a TXCH amount greater then in Wallet', async () => {
-  let receive_wallet = 'txch1u237ltq0pp4348ppwv6cge7fks87mn4wz3c0ywvgswvpwhkqqn8qn8jeq6';
+test('Confirm that User cannot send a TCAC amount greater then in Wallet', async () => {
+  let receive_wallet = 'tcac1u237ltq0pp4348ppwv6cge7fks87mn4wz3c0ywvgswvpwhkqqn8qn8jeq6';
   let funded_wallet = '1922132445';
 
   //Given I enter correct credentials in Passphrase dialog
@@ -38,7 +38,7 @@ test('Confirm that User cannot send a TXCH amount greater then in Wallet', async
 
   const balance = getWalletBalance(funded_wallet);
 
-  console.log(`XCH Balance: ${balance}`);
+  console.log(`CAC Balance: ${balance}`);
   //End: Wait for Wallet to Sync
 
   //And I click on Send Page
@@ -51,7 +51,7 @@ test('Confirm that User cannot send a TXCH amount greater then in Wallet', async
   await page.locator('[data-testid="WalletSend-amount"]').fill('25');
 
   //And I enter a valid Fee
-  await page.locator('text=Fee *TXCH >> input[type="text"]').fill('0.000005');
+  await page.locator('text=Fee *TCAC >> input[type="text"]').fill('0.000005');
 
   //And I click Send button
   await page.locator('[data-testid="WalletSend-send"]').click();
@@ -70,5 +70,5 @@ test('Confirm that User cannot send a TXCH amount greater then in Wallet', async
   await page.locator('[data-testid="WalletHeader-tab-summary"]').click();
 
   //Then there are no changes in the Pending Balance section
-  await expect(page.locator('text=Pending Balance0 TXCH')).toBeVisible();
+  await expect(page.locator('text=Pending Balance0 TCAC')).toBeVisible();
 });

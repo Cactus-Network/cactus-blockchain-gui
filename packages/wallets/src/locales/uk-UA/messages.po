@@ -6,23 +6,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: uk_UA\n"
-"Project-Id-Version: chia-blockchain\n"
+"Project-Id-Version: cactus-blockchain\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2022-10-24 18:17\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
-"X-Crowdin-Project: chia-blockchain\n"
+"X-Crowdin-Project: cactus-blockchain\n"
 "X-Crowdin-Project-ID: 440660\n"
 "X-Crowdin-Language: uk\n"
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1890\n"
 
-#: src/components/WalletHistory.tsx:109
+#: src/components/WalletHistory.tsx:118
 msgid "+"
 msgstr "+"
 
-#: src/components/WalletHistory.tsx:109
+#: src/components/WalletHistory.tsx:118
 msgid "-"
 msgstr "-"
 
@@ -48,14 +48,14 @@ msgstr "Додавання {0} токенів"
 msgid "Address"
 msgstr "Адреса"
 
-#: src/components/WalletSend.tsx:172
-#: src/components/cat/WalletCATSend.tsx:195
+#: src/components/WalletSend.tsx:173
+#: src/components/cat/WalletCATSend.tsx:196
 msgid "Address / Puzzle hash"
 msgstr "Адреса / Хеш-головоломка"
 
-#: src/components/WalletHistory.tsx:119
-#: src/components/WalletSend.tsx:184
-#: src/components/cat/WalletCATSend.tsx:207
+#: src/components/WalletHistory.tsx:128
+#: src/components/WalletSend.tsx:185
+#: src/components/cat/WalletCATSend.tsx:208
 msgid "Amount"
 msgstr "Кількість"
 
@@ -77,39 +77,39 @@ msgstr "Гаманець для атомарного обміну"
 msgid "Authorized Payee Wallet"
 msgstr "Авторизований Payee Гаманець"
 
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus Asset Token"
+
 #: src/components/PasteMnemonic.tsx:76
 #: src/components/WalletRenameDialog.tsx:72
 msgid "Cancel"
 msgstr "Відміна"
 
-#: src/components/WalletSend.tsx:106
-#: src/components/cat/WalletCATSend.tsx:116
-msgid "Cannot send chia to coloured address. Please enter a chia address."
-msgstr "Не вдалося відправити Chia за кольоровою адресою. Будь ласка, введіть звичайну адресу Chia."
+#: src/components/WalletSend.tsx:107
+#: src/components/cat/WalletCATSend.tsx:117
+msgid "Cannot send cactus to coloured address. Please enter a cactus address."
+msgstr "Не вдалося відправити Cactus за кольоровою адресою. Будь ласка, введіть звичайну адресу Cactus."
 
 #: src/components/WalletsSidebar.tsx:130
-msgid "Check my snapshot balance"
-msgstr "Перевірте мій snapshot баланс"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
-msgstr "Chia Asset Token"
+#~ msgid "Check my snapshot balance"
+#~ msgstr "Перевірте мій snapshot баланс"
 
 #: src/components/WalletsSidebar.tsx:141
-msgid "Click here to download an older version of the wallet"
-msgstr "Натисніть тут, щоб завантажити старішу версію гаманця"
+#~ msgid "Click here to download an older version of the wallet"
+#~ msgstr "Натисніть тут, щоб завантажити старішу версію гаманця"
 
 #: src/components/WalletHeader.tsx:25
 msgid "Confirmation"
 msgstr "Підтвердження"
 
-#: src/components/WalletHistory.tsx:170
+#: src/components/WalletHistory.tsx:179
 msgid "Confirmed"
 msgstr "Підтверджено"
 
-#: src/components/WalletHistory.tsx:333
+#: src/components/WalletHistory.tsx:342
 msgid "Confirmed at Height"
 msgstr "Підтверджено на висоті блоку"
 
@@ -134,8 +134,8 @@ msgstr "Створити новий гаманець"
 msgid "Create Offer"
 msgstr "Створити пропозицію"
 
-#: src/components/WalletSend.tsx:154
-#: src/components/cat/WalletCATSend.tsx:177
+#: src/components/WalletSend.tsx:155
+#: src/components/cat/WalletCATSend.tsx:178
 msgid "Create Transaction"
 msgstr "Створити транзакцію"
 
@@ -155,7 +155,7 @@ msgstr "DID гаманець"
 msgid "Datalayer Wallet"
 msgstr "Гаманець Datalayer"
 
-#: src/components/WalletHistory.tsx:100
+#: src/components/WalletHistory.tsx:109
 msgid "Date"
 msgstr "Дата"
 
@@ -176,21 +176,21 @@ msgid "Distributed Identity"
 msgstr "Розподілена ідентифікація"
 
 #: src/components/WalletImport.tsx:158
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
 msgstr ""
 
-#: src/components/cat/WalletCATSend.tsx:126
+#: src/components/cat/WalletCATSend.tsx:127
 msgid "Error the entered address appears to be for a different colour."
 msgstr "Помилка при введенні адреси, здається, це адреса для іншого кольору."
 
-#: src/components/WalletSend.tsx:221
-#: src/components/cat/WalletCATSend.tsx:245
+#: src/components/WalletSend.tsx:222
+#: src/components/cat/WalletCATSend.tsx:246
 msgid "Farm"
 msgstr "Ферма"
 
-#: src/components/WalletHistory.tsx:131
-#: src/components/WalletSend.tsx:197
-#: src/components/cat/WalletCATSend.tsx:221
+#: src/components/WalletHistory.tsx:140
+#: src/components/WalletSend.tsx:198
+#: src/components/cat/WalletCATSend.tsx:222
 msgid "Fee"
 msgstr "Комісія"
 
@@ -218,7 +218,7 @@ msgstr "Імпортувати гаманець за допомогою мнем
 msgid "Import from {alternativeWordCount} word mnemonic"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:87
+#: src/components/WalletHistory.tsx:96
 msgid "Incoming"
 msgstr "Вхідні"
 
@@ -230,13 +230,13 @@ msgstr "Список підключень порожній"
 msgid "Manage token list"
 msgstr "Керування списком токенів"
 
-#: src/components/WalletHistory.tsx:174
-#: src/components/WalletSend.tsx:211
-#: src/components/cat/WalletCATSend.tsx:235
+#: src/components/WalletHistory.tsx:183
+#: src/components/WalletSend.tsx:212
+#: src/components/cat/WalletCATSend.tsx:236
 msgid "Memo"
 msgstr "Примітка"
 
-#: src/components/WalletHistory.tsx:338
+#: src/components/WalletHistory.tsx:347
 msgid "Memos"
 msgstr "Примітки"
 
@@ -281,7 +281,7 @@ msgstr "Далі"
 msgid "Nickname"
 msgstr "Прізвисько"
 
-#: src/components/WalletHistory.tsx:369
+#: src/components/WalletHistory.tsx:378
 msgid "No previous transactions"
 msgstr "Немає попередніх транзакцій"
 
@@ -289,8 +289,8 @@ msgstr "Немає попередніх транзакцій"
 msgid "Node ID"
 msgstr "ID вузла"
 
-#: src/components/WalletHistory.tsx:327
-#: src/components/WalletHistory.tsx:334
+#: src/components/WalletHistory.tsx:336
+#: src/components/WalletHistory.tsx:343
 msgid "Not Available"
 msgstr "Не доступно"
 
@@ -302,16 +302,16 @@ msgstr "Не синхронізовано"
 msgid "OK"
 msgstr "ОК"
 
-#: src/components/WalletHistory.tsx:176
+#: src/components/WalletHistory.tsx:185
 msgid "Offer Accepted"
 msgstr "Пропозицію прийнято"
 
-#: src/components/WalletSend.tsx:157
-#: src/components/cat/WalletCATSend.tsx:180
+#: src/components/WalletSend.tsx:158
+#: src/components/cat/WalletCATSend.tsx:181
 msgid "On average there is one minute between each transaction block. Unless there is congestion you can expect your transaction to be included in less than a minute."
 msgstr "У середньому між кожним блоком транзакції триває одна хвилина. За відсутністю заторів ви можете очікувати, що ваша транзакція буде включена менш ніж за хвилину."
 
-#: src/components/WalletHistory.tsx:87
+#: src/components/WalletHistory.tsx:96
 msgid "Outgoing"
 msgstr "Вихідні"
 
@@ -323,7 +323,7 @@ msgstr "Вставити мнемоніку"
 msgid "Paste Mnemonic ({0} words)"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:172
+#: src/components/WalletHistory.tsx:181
 msgid "Pending"
 msgstr "В очікуванні"
 
@@ -343,13 +343,13 @@ msgstr "Загальний баланс очікується"
 msgid "Please enter a valid asset id"
 msgstr "Введіть дійсний ID активу"
 
-#: src/components/WalletSend.tsx:96
-#: src/components/cat/WalletCATSend.tsx:102
+#: src/components/WalletSend.tsx:97
+#: src/components/cat/WalletCATSend.tsx:103
 msgid "Please enter a valid numeric amount"
 msgstr "Будь ласка, введіть припустиму числову кількість"
 
-#: src/components/WalletSend.tsx:101
-#: src/components/cat/WalletCATSend.tsx:107
+#: src/components/WalletSend.tsx:102
+#: src/components/cat/WalletCATSend.tsx:108
 msgid "Please enter a valid numeric fee"
 msgstr "Будь ласка, введіть припустиму числову комісію"
 
@@ -361,8 +361,8 @@ msgstr "Будь ласка, введіть дійсну назву токена
 msgid "Please enter valid wallet name"
 msgstr "Будь ласка, введіть коректну назву гаманця"
 
-#: src/components/WalletSend.tsx:91
-#: src/components/cat/WalletCATSend.tsx:93
+#: src/components/WalletSend.tsx:92
+#: src/components/cat/WalletCATSend.tsx:94
 msgid "Please finish syncing before making a transaction"
 msgstr "Будь ласка, завершіть синхронізацію перед створенням транзакції"
 
@@ -388,8 +388,8 @@ msgid "Rate Limited"
 msgstr "Обмеження частоти"
 
 #: src/components/WalletsSidebar.tsx:133
-msgid "Read the blog post for details"
-msgstr "Прочитайте допис у блозі, щоб дізнатися більше"
+#~ msgid "Read the blog post for details"
+#~ msgstr "Прочитайте допис у блозі, щоб дізнатися більше"
 
 #: src/components/WalletHeader.tsx:48
 msgid "Receive"
@@ -399,7 +399,7 @@ msgstr "Отримати"
 msgid "Receive Address"
 msgstr "Адреса отримання"
 
-#: src/components/cat/WalletCATSend.tsx:120
+#: src/components/cat/WalletCATSend.tsx:121
 msgid "Recipient address is not a coloured wallet address. Please enter a coloured wallet address"
 msgstr "Адреса одержувача не є адресою кольорового гаманця. Будь ласка, введіть адресу кольорового гаманця"
 
@@ -416,7 +416,7 @@ msgstr "Відновити гаманець"
 msgid "Rename Wallet"
 msgstr "Перейменувати гаманець"
 
-#: src/components/WalletHistory.tsx:175
+#: src/components/WalletHistory.tsx:184
 msgid "Retire"
 msgstr "Відкликати"
 
@@ -434,8 +434,8 @@ msgid "Select Wallet Type"
 msgstr "Оберіть тип гаманця"
 
 #: src/components/WalletHeader.tsx:47
-#: src/components/WalletSend.tsx:232
-#: src/components/cat/WalletCATSend.tsx:256
+#: src/components/WalletSend.tsx:233
+#: src/components/cat/WalletCATSend.tsx:257
 msgid "Send"
 msgstr "Надіслати"
 
@@ -468,8 +468,8 @@ msgid "Syncing"
 msgstr "Синхронізація"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "Індекс деривації встановлює діапазон адрес гаманця, для яких гаманець відсканує блокчейн. Це число, в загальному, більше за використання багатьох транзакцій або скасованих пропозицій для XCH, CATS або NFTs. Якщо ви вважаєте, що ваш баланс неправильний тому що на ньому недостатньо транзакцій, тоді збільшення індексу деривації може допомогти для формування правильного балансу."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "Індекс деривації встановлює діапазон адрес гаманця, для яких гаманець відсканує блокчейн. Це число, в загальному, більше за використання багатьох транзакцій або скасованих пропозицій для CAC, CATS або NFTs. Якщо ви вважаєте, що ваш баланс неправильний тому що на ньому недостатньо транзакцій, тоді збільшення індексу деривації може допомогти для формування правильного балансу."
 
 #: src/components/WalletSendTransactionResultDialog.tsx:34
 msgid "The transaction could not be immediately included in the mempool because the specified fee is too low. The transaction will be retried periodically, and may be included in the mempool once fees are lower, or if space becomes available."
@@ -479,13 +479,13 @@ msgstr "Транзакція не може бути одразу включен�
 msgid "This access token is verified"
 msgstr "Цей токен доступу перевірено"
 
-#: src/components/WalletHistory.tsx:156
+#: src/components/WalletHistory.tsx:165
 msgid "This is not a valid address for sending funds to"
 msgstr "Це не є дійсною адресою для відправки на неї коштів"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "Це кількість Chia, яку можна використовувати для здійснення транзакцій. Не включає в себе очікувані винагороди за фермерство, очікувані вхідні транзакції і Chia, що ви щойно витратили, але які ще не потрапили в blockchain."
+msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+msgstr "Це кількість Cactus, яку можна використовувати для здійснення транзакцій. Не включає в себе очікувані винагороди за фермерство, очікувані вхідні транзакції і Cactus, що ви щойно витратили, але які ще не потрапили в blockchain."
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -496,14 +496,14 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "Це сума вхідних та вихідних відкладених транзакцій (не включена в блокчейну). Це не включає винагороди фермерства."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "Це загальна кількість монет Chia у блокчейні у поточному піковому блоці, який контролюється вашими приватними ключами. Він включає заморожені винагороди за фармінг, але не очікуючі вхідні і вихідні транзакції."
+msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "Це загальна кількість монет Cactus у блокчейні у поточному піковому блоці, який контролюється вашими приватними ключами. Він включає заморожені винагороди за фармінг, але не очікуючі вхідні і вихідні транзакції."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "Це сукупний баланс + очікуваний баланс: це ваш майбутній баланс після підтвердження усіх очікуючих транзакцій."
 
-#: src/components/WalletHistory.tsx:181
+#: src/components/WalletHistory.tsx:190
 msgid "To"
 msgstr "До"
 
@@ -515,7 +515,7 @@ msgstr "Токен має порожній Id активу"
 msgid "Token has empty name"
 msgstr "Токен має порожнє ім'я"
 
-#: src/components/WalletsSidebar.tsx:187
+#: src/components/WalletsSidebar.tsx:92
 msgid "Tokens"
 msgstr "Токени"
 
@@ -527,7 +527,7 @@ msgstr "Загальний баланс"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Транзакція успішно відправлена на повний вузол та включена до мемпулу."
 
-#: src/components/WalletHistory.tsx:258
+#: src/components/WalletHistory.tsx:267
 msgid "Transactions"
 msgstr "Транзакції"
 
@@ -553,20 +553,20 @@ msgid "Wallet {walletId} not found"
 msgstr "Гаманець {walletId} не знайдено"
 
 #: src/components/WalletsSidebar.tsx:138
-msgid "Want to see your old balance for yourself?"
-msgstr "Хочете побачити свій попередній баланс?"
+#~ msgid "Want to see your old balance for yourself?"
+#~ msgstr "Хочете побачити свій попередній баланс?"
 
 #: src/components/WalletsSidebar.tsx:110
-msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
-msgstr "Ми зробили оновлення до стандарту CAT, який вимагає перевипущення всіх CAT. Ви отримаєте доступ до Ваших нових токенів, оскільки вони повторно будуть випущені вихідними видавцями. Токени ЛА базуються на балансі за висотою блоку:<0/><1/><2/>(Приблизний час: 26 липня, 2022 @ 17:00 UTC)"
+#~ msgid "We've made an upgrade to the CAT standard which requires all CATs to be re-issued. You will be airdropped your new tokens as they are re-issued by the original issuers. The airdropped tokens will be based on the balance as of block height:<0/><1/><2/>(Approximate time: July 26th, 2022 @ 17:00 UTC)"
+#~ msgstr "Ми зробили оновлення до стандарту CAT, який вимагає перевипущення всіх CAT. Ви отримаєте доступ до Ваших нових токенів, оскільки вони повторно будуть випущені вихідними видавцями. Токени ЛА базуються на балансі за висотою блоку:<0/><1/><2/>(Приблизний час: 26 липня, 2022 @ 17:00 UTC)"
 
 #: src/components/WalletAdd.tsx:67
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Ласкаво просимо! Ці слова використовуються для резервної копії вашого гаманця. Без них Ви втратите доступ до свого гаманця, тримайте їх у безпеці! Запишіть кожне слово разом з порядковим номером поруч з ними. (Порядок важливий)"
 
 #: src/components/WalletsSidebar.tsx:106
-msgid "Your CAT tokens have been upgraded!"
-msgstr "Ваші CAT токени оновлено!"
+#~ msgid "Your CAT tokens have been upgraded!"
+#~ msgstr "Ваші CAT токени оновлено!"
 
 #: src/components/WalletImport.tsx:72
 msgid "Your pasted list does not include {mnemonicWordCount} valid mnemonic words."

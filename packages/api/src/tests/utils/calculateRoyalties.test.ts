@@ -46,19 +46,19 @@ describe('calculateRoyalties', () => {
     it('converts mainnet NFTInfo to a RoyaltyCalculationRoyaltyAsset object', () => {
       const royaltyAsset: RoyaltyCalculationRoyaltyAsset = royaltyAssetFromNFTInfo(exampleNFT, false);
       expect(royaltyAsset.asset).toBe('nft1g9xfeujpq402dhxrms5wqvh73rr02remvwvycr9s4cxzzlkg324s3nu8vj');
-      expect(royaltyAsset.royaltyAddress).toBe('xch17mp20xhhy7l6m20u37nw4ft338r2tt2yquenu4earcyzjwqh6kksc8dyjc');
+      expect(royaltyAsset.royaltyAddress).toBe('cac17mp20xhhy7l6m20u37nw4ft338r2tt2yquenu4earcyzjwqh6kksc8dyjc');
       expect(royaltyAsset.royaltyPercentage).toBe(350);
     });
     it('converts mainnet NFTInfo to a RoyaltyCalculationRoyaltyAsset object, mainnet as default', () => {
       const royaltyAsset: RoyaltyCalculationRoyaltyAsset = royaltyAssetFromNFTInfo(exampleNFT);
       expect(royaltyAsset.asset).toBe('nft1g9xfeujpq402dhxrms5wqvh73rr02remvwvycr9s4cxzzlkg324s3nu8vj');
-      expect(royaltyAsset.royaltyAddress).toBe('xch17mp20xhhy7l6m20u37nw4ft338r2tt2yquenu4earcyzjwqh6kksc8dyjc');
+      expect(royaltyAsset.royaltyAddress).toBe('cac17mp20xhhy7l6m20u37nw4ft338r2tt2yquenu4earcyzjwqh6kksc8dyjc');
       expect(royaltyAsset.royaltyPercentage).toBe(350);
     });
     it('converts testnet NFTInfo to a RoyaltyCalculationRoyaltyAsset object', () => {
       const royaltyAsset: RoyaltyCalculationRoyaltyAsset = royaltyAssetFromNFTInfo(exampleNFT, true);
       expect(royaltyAsset.asset).toBe('nft1g9xfeujpq402dhxrms5wqvh73rr02remvwvycr9s4cxzzlkg324s3nu8vj');
-      expect(royaltyAsset.royaltyAddress).toBe('txch17mp20xhhy7l6m20u37nw4ft338r2tt2yquenu4earcyzjwqh6kks4q2jnt');
+      expect(royaltyAsset.royaltyAddress).toBe('tcac17mp20xhhy7l6m20u37nw4ft338r2tt2yquenu4earcyzjwqh6kks4q2jnt');
       expect(royaltyAsset.royaltyPercentage).toBe(350);
     });
   });

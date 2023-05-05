@@ -1,8 +1,8 @@
 {
-  "name": "@chia-network/icons",
-  "author": "Chia Network <hello@chia.net> (https://chia.net/)",
-  "description": "Chia Icons Library",
-  "productName": "Chia Blockchain",
+  "name": "@cactus-network/icons",
+  "author": "Cactus Network <hello@cactus-network.net> (https://cactus-network.net/)",
+  "description": "Cactus Icons Library",
+  "productName": "Cactus Blockchain",
   "version": "1.0.0",
   "engines": {
     "node": ">=16.15.0"

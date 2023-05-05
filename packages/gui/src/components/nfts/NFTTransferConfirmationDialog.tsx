@@ -1,4 +1,4 @@
-import { useCurrencyCode, chiaToMojo, ConfirmDialog, Flex, TooltipIcon, FormatLargeNumber } from '@chia-network/core';
+import { useCurrencyCode, cactusToMojo, ConfirmDialog, Flex, TooltipIcon, FormatLargeNumber } from '@cactus-network/core';
 import { Trans, Plural } from '@lingui/macro';
 import { Box, Divider, Typography } from '@mui/material';
 import React, { type ReactNode } from 'react';
@@ -38,7 +38,7 @@ export default function NFTTransferConfirmationDialog(props: NFTTransferConfirma
     confirmColor = 'secondary',
     ...rest
   } = props;
-  const feeInMojos = chiaToMojo(fee || 0);
+  const feeInMojos = cactusToMojo(fee || 0);
   const currencyCode = useCurrencyCode();
 
   return (

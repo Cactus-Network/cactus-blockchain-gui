@@ -1,4 +1,4 @@
-import { Loading } from '@chia-network/core';
+import { Loading } from '@cactus-network/core';
 import { Error as ErrorIcon } from '@mui/icons-material';
 import React from 'react';
 

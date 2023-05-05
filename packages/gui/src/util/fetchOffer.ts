@@ -1,4 +1,4 @@
-import { store, walletApi } from '@chia-network/api-react';
+import { store, walletApi } from '@cactus-network/api-react';
 import isURL from 'validator/lib/isURL';
 
 import OfferServices from '../constants/OfferServices';

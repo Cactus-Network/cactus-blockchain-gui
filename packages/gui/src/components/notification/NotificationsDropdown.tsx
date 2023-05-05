@@ -1,5 +1,5 @@
-import { DropdownBase, Tooltip } from '@chia-network/core';
-import { Notification as NotificationIcon } from '@chia-network/icons';
+import { DropdownBase, Tooltip } from '@cactus-network/core';
+import { Notification as NotificationIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Badge, Box, Button } from '@mui/material';
 import React from 'react';

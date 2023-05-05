@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unstable-nested-components -- These components are at the edges of the component tree, so no perf issues */
 
-import { useGetKeyringStatusQuery } from '@chia-network/api-react';
+import { useGetKeyringStatusQuery } from '@cactus-network/api-react';
 import {
   Button,
   AlertDialog,
@@ -13,7 +13,7 @@ import {
   StateTypography,
   State,
   TooltipIcon,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Help as HelpIcon } from '@mui/icons-material';
 import { Tooltip } from '@mui/material';
@@ -164,7 +164,7 @@ export default function SettingsPanel() {
             <TooltipIcon>
               <Trans>
                 The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This
-                number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs.
+                number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs.
                 If you believe your balance is incorrect because it’s missing coins, then increasing the derivation
                 index could help the wallet include the missing coins in the balance total.
               </Trans>

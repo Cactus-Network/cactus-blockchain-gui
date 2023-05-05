@@ -1,7 +1,7 @@
-import { defaultPlotter, PlotterName } from '@chia-network/api';
-import type { Plotter, PlotterMap } from '@chia-network/api';
-import { useGetPlottersQuery } from '@chia-network/api-react';
-import { CardStep, Select, StateColor } from '@chia-network/core';
+import { defaultPlotter, PlotterName } from '@cactus-network/api';
+import type { Plotter, PlotterMap } from '@cactus-network/api';
+import { useGetPlottersQuery } from '@cactus-network/api-react';
+import { CardStep, Select, StateColor } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { FormControl, FormHelperText, Grid, InputLabel, MenuItem, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
@@ -80,7 +80,7 @@ export default function PlotAddChoosePlotter(props: Props) {
       <Typography variant="subtitle1">
         <Trans>
           Depending on your system configuration, you may find that an alternative plotter produces plots faster than
-          the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter.
+          the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter.
         </Trans>
       </Typography>
 

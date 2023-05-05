@@ -19,8 +19,8 @@ test.afterAll(async () => {
 
 test('Verify that a recipient wallet receives funds from sending wallet!', async () => {
   //Pre-requisites
-  let receive_wallet = 'txch1u237ltq0pp4348ppwv6cge7fks87mn4wz3c0ywvgswvpwhkqqn8qn8jeq6';
-  let send_wallet = 'txch160r38yfdqfeplderp7tf8zm7u8tv48vm0qd3rs3r2kp4yw4ahl8qd27qrr';
+  let receive_wallet = 'tcac1u237ltq0pp4348ppwv6cge7fks87mn4wz3c0ywvgswvpwhkqqn8qn8jeq6';
+  let send_wallet = 'tcac160r38yfdqfeplderp7tf8zm7u8tv48vm0qd3rs3r2kp4yw4ahl8qd27qrr';
 
   //Given I enter correct credentials in Passphrase dialog
   await new LoginPage(page).login('password2022!@');
@@ -69,7 +69,7 @@ test('Verify that a recipient wallet receives funds from sending wallet!', async
 
   const balance = getWalletBalance('854449615');
 
-  console.log(`XCH Balance: ${balance}`);
+  console.log(`CAC Balance: ${balance}`);
   // End: Wait for Wallet to Sync
 
   // Given I send funds back

@@ -1,7 +1,7 @@
 import path from 'path';
 
-import { OfferTradeRecord } from '@chia-network/api';
-import { Flex, useColorModeValue } from '@chia-network/core';
+import { OfferTradeRecord } from '@cactus-network/api';
+import { Flex, useColorModeValue } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import moment from 'moment';

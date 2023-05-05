@@ -1,5 +1,5 @@
-import type { Transaction } from '@chia-network/api';
-import { useGetTransactionsQuery, useGetTransactionsCountQuery } from '@chia-network/api-react';
+import type { Transaction } from '@cactus-network/api';
+import { useGetTransactionsQuery, useGetTransactionsCountQuery } from '@cactus-network/api-react';
 import { useState } from 'react';
 
 export default function useWalletTransactions(

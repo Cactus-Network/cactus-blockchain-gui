@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import { useGetWalletsQuery } from '@chia-network/api-react';
-import { Flex, LayoutDashboardSub, SettingsHR, SettingsSection, SettingsText } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import { useGetWalletsQuery } from '@cactus-network/api-react';
+import { Flex, LayoutDashboardSub, SettingsHR, SettingsSection, SettingsText } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import React, { useEffect, useMemo, useState } from 'react';

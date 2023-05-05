@@ -1,4 +1,4 @@
-import { type ServiceNameValue, ServiceName } from '@chia-network/api';
+import { type ServiceNameValue, ServiceName } from '@cactus-network/api';
 import { useMemo } from 'react';
 
 import useService, { ServiceState } from './useService';

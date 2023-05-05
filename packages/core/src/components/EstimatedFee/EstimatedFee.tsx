@@ -1,4 +1,4 @@
-import { useGetFeeEstimateQuery } from '@chia-network/api-react';
+import { useGetFeeEstimateQuery } from '@cactus-network/api-react';
 import { Trans, t } from '@lingui/macro';
 import {
   Box,
@@ -14,7 +14,7 @@ import { Controller, useFormContext, useWatch } from 'react-hook-form';
 
 import useCurrencyCode from '../../hooks/useCurrencyCode';
 import useLocale from '../../hooks/useLocale';
-import mojoToChiaLocaleString from '../../utils/mojoToChiaLocaleString';
+import mojoToCactusLocaleString from '../../utils/mojoToCactusLocaleString';
 import Fee from '../Fee';
 import Flex from '../Flex';
 
@@ -155,7 +155,7 @@ function CountdownBar({ startTime, refreshSeconds }: { startTime: number; refres
 }
 
 export enum FeeTxType {
-  walletSendXCH = 'send_xch_transaction',
+  walletSendCAC = 'send_cac_transaction',
   spendCATtx = 'cat_spend',
   acceptOffer = 'take_offer',
   cancelOffer = 'cancel_offer',
@@ -209,7 +209,7 @@ export default function EstimatedFee(props: FeeProps) {
       : estimateList.concat([0]);
 
     return estList.map((estimate: number, i: number) => {
-      const formattedEstimate = mojoToChiaLocaleString(estimate, locale);
+      const formattedEstimate = mojoToCactusLocaleString(estimate, locale);
       const minutes = i === 3 ? -1 : TARGET_TIMES[i] / 60; // -1 designates a conditionally-added fourth dropdown selection with 0 fee and >5 minutes
 
       return {
@@ -250,9 +250,9 @@ export default function EstimatedFee(props: FeeProps) {
       if (selectedTime) {
         const estimate = formattedEstimates.find((formattedEstimate) => formattedEstimate.minutes === selectedTime);
         if (estimate) {
-          const xchFee = mojoToChiaLocaleString(estimate.estimate, 'en-US');
+          const cacFee = mojoToCactusLocaleString(estimate.estimate, 'en-US');
           setSelectedValue(estimate.formattedEstimate);
-          setValue(name, xchFee);
+          setValue(name, cacFee);
         }
       }
     }

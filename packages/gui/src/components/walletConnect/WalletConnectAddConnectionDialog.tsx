@@ -1,4 +1,4 @@
-import { useGetKeysQuery, useGetLoggedInFingerprintQuery } from '@chia-network/api-react';
+import { useGetKeysQuery, useGetLoggedInFingerprintQuery } from '@cactus-network/api-react';
 import {
   ButtonLoading,
   DialogActions,
@@ -9,7 +9,7 @@ import {
   Loading,
   useCurrencyCode,
   CardListItem,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import CloseIcon from '@mui/icons-material/Close';
 import { Box, Divider, Dialog, DialogContent, DialogTitle, IconButton, Typography, Checkbox } from '@mui/material';
@@ -18,7 +18,7 @@ import { useForm, useWatch } from 'react-hook-form';
 
 // import useWalletConnectContext from '../../hooks/useWalletConnectContext';
 import { WalletConnectContext } from './WalletConnectProvider';
-import HeroImage from './images/walletConnectToChia.svg';
+import HeroImage from './images/walletConnectToCactus.svg';
 
 enum Step {
   CONNECT,
@@ -44,7 +44,7 @@ export default function WalletConnectAddConnectionDialog(props: WalletConnectAdd
   const { pair, isLoading: isLoadingWallet } = context;
   const { data: keys, isLoading: isLoadingPublicKeys } = useGetKeysQuery();
   const { data: fingerprint, isLoading: isLoadingLoggedInFingerprint } = useGetLoggedInFingerprintQuery();
-  const mainnet = useCurrencyCode() === 'XCH';
+  const mainnet = useCurrencyCode() === 'CAC';
   const methods = useForm<FormData>({
     defaultValues: {
       uri: '',

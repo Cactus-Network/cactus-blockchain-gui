@@ -9,8 +9,8 @@ import {
   FormatLargeNumber,
   Link,
   useOpenDialog,
-} from '@chia-network/core';
-import { Plot as PlotIcon } from '@chia-network/icons';
+} from '@cactus-network/core';
+import { Plot as PlotIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { /* Link as LinkIcon, */ Payment as PaymentIcon } from '@mui/icons-material';
 import { Box, Card, CardContent, Typography, ListItemIcon } from '@mui/material';

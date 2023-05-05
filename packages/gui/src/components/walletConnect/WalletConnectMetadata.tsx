@@ -1,4 +1,4 @@
-import { Flex } from '@chia-network/core';
+import { Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Link as LinkIcon } from '@mui/icons-material';
 import { Avatar, IconButton, Typography } from '@mui/material';

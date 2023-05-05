@@ -1,4 +1,4 @@
-import Client from '@chia-network/api';
+import Client from '@cactus-network/api';
 
 import type ServiceConstructor from './@types/ServiceConstructor';
 import { selectApiConfig } from './slices/api';
@@ -30,7 +30,7 @@ async function getInstance<TService extends ServiceConstructor>(
   return instances.get(service) as InstanceType<TService>;
 }
 
-const chiaLazyBaseQuery = async <
+const cactusLazyBaseQuery = async <
   TService extends ServiceConstructor,
   TMethod extends keyof InstanceType<TService> & string,
   // TParameter extends Parameters<InstanceType<TService>[TMethod]>[0],
@@ -78,4 +78,4 @@ const chiaLazyBaseQuery = async <
   }
 };
 
-export default chiaLazyBaseQuery;
+export default cactusLazyBaseQuery;

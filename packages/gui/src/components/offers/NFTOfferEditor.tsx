@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import type { NFTInfo } from '@chia-network/api';
-import { useCreateOfferForIdsMutation, useGetWalletBalanceQuery } from '@chia-network/api-react';
+import { WalletType } from '@cactus-network/api';
+import type { NFTInfo } from '@cactus-network/api';
+import { useCreateOfferForIdsMutation, useGetWalletBalanceQuery } from '@cactus-network/api-react';
 import {
   Amount,
   AmountProps,
@@ -16,17 +16,17 @@ import {
   Tooltip,
   TooltipIcon,
   catToMojo,
-  chiaToMojo,
+  cactusToMojo,
   mojoToCAT,
   mojoToCATLocaleString,
-  mojoToChia,
-  mojoToChiaLocaleString,
+  mojoToCactus,
+  mojoToCactusLocaleString,
   useColorModeValue,
   useCurrencyCode,
   useLocale,
   useOpenDialog,
   useShowError,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Warning as WarningIcon } from '@mui/icons-material';
 import { Box, Divider, Grid, Tabs, Tab, Typography, useTheme } from '@mui/material';
@@ -48,7 +48,7 @@ import { calculateNFTRoyalties } from './utils';
 
 /* ========================================================================== */
 /*              Temporary home for the NFT-specific Offer Editor              */
-/*       An NFT offer consists of a single NFT being offered for XCH/CAT      */
+/*       An NFT offer consists of a single NFT being offered for CAC/CAT      */
 /* ========================================================================== */
 
 const StyledWarningIcon = styled(WarningIcon)`
@@ -85,7 +85,7 @@ function NFTOfferCreationFee(props: NFTOfferCreationFeeProps) {
             <TooltipIcon>
               <Trans>
                 Including a fee in the offer can help expedite the transaction when the offer is accepted. The
-                recommended minimum fee is 0.000005 XCH (5,000,000 mojos)
+                recommended minimum fee is 0.000005 CAC (5,000,000 mojos)
               </Trans>
             </TooltipIcon>
           </Box>
@@ -138,8 +138,8 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
     ) {
       switch (tokenWalletInfo.walletType) {
         case WalletType.STANDARD_WALLET:
-          balanceString = mojoToChiaLocaleString(walletBalance.spendableBalance, locale);
-          balance = mojoToChia(walletBalance.spendableBalance);
+          balanceString = mojoToCactusLocaleString(walletBalance.spendableBalance, locale);
+          balance = mojoToCactus(walletBalance.spendableBalance);
           break;
         case WalletType.CAT:
           balanceString = mojoToCATLocaleString(walletBalance.spendableBalance, locale);
@@ -412,7 +412,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
                       makerFee > 0 && (
                         <div>
                           <FormatLargeNumber value={new BigNumber(makerFee ?? 0)} />
-                          {' XCH'}
+                          {' CAC'}
                         </div>
                       )}
                   </Typography>
@@ -444,7 +444,7 @@ function NFTOfferConditionalsPanel(props: NFTOfferConditionalsPanelProps) {
 
 /* ========================================================================== */
 /*                              NFT Offer Editor                              */
-/*           Currently only supports a single NFT <--> XCH/CAT offer          */
+/*           Currently only supports a single NFT <--> CAC/CAT offer          */
 /* ========================================================================== */
 
 export type NFTOfferEditorTokenWalletInfo = {
@@ -490,9 +490,9 @@ type NFTBuildOfferRequestParams = {
 function buildOfferRequest(params: NFTBuildOfferRequestParams) {
   const { exchangeType, nft, nftLauncherId, tokenWalletInfo, tokenAmount, fee } = params;
   const baseMojoAmount: BigNumber =
-    tokenWalletInfo.walletType === WalletType.CAT ? catToMojo(tokenAmount) : chiaToMojo(tokenAmount);
+    tokenWalletInfo.walletType === WalletType.CAT ? catToMojo(tokenAmount) : cactusToMojo(tokenAmount);
   const mojoAmount = exchangeType === NFTOfferExchangeType.NFTForToken ? baseMojoAmount : baseMojoAmount.negated();
-  const feeMojoAmount = chiaToMojo(fee);
+  const feeMojoAmount = cactusToMojo(fee);
   const nftAmount = exchangeType === NFTOfferExchangeType.NFTForToken ? -1 : 1;
   const innerAlsoDict = nft.supportsDid
     ? {
@@ -549,7 +549,7 @@ export default function NFTOfferEditor(props: NFTOfferEditorProps) {
       walletId: 1,
       walletType: WalletType.STANDARD_WALLET,
       symbol: currencyCode,
-      name: 'Chia',
+      name: 'Cactus',
       spendableBalance: new BigNumber(0),
     },
     tokenAmount: '',

@@ -1,4 +1,4 @@
-import { Harvester } from '@chia-network/api';
+import { Harvester } from '@cactus-network/api';
 
 import { query, mutation } from '../utils/reduxToolkitEndpointAbstractions';
 import { apiWithTag } from './farmer';

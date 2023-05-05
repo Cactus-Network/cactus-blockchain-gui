@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import type { CATToken, Wallet } from '@chia-network/api';
-import { useGetCatListQuery, useGetWalletsQuery } from '@chia-network/api-react';
+import { WalletType } from '@cactus-network/api';
+import type { CATToken, Wallet } from '@cactus-network/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network/api-react';
 import { Trans, t } from '@lingui/macro';
 import { FormControl, InputLabel, MenuItem, Select, Typography } from '@mui/material';
 import { orderBy } from 'lodash';

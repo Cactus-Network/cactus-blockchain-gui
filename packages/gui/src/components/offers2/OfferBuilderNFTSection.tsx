@@ -1,5 +1,5 @@
-import { Flex } from '@chia-network/core';
-import { NFTs } from '@chia-network/icons';
+import { Flex } from '@cactus-network/core';
+import { NFTs } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 import { useFieldArray } from 'react-hook-form';
