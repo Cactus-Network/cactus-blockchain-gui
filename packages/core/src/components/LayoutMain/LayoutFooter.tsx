@@ -21,7 +21,7 @@ const SendFeedback = styled.a`
 async function openFAQURL(): Promise<void> {
   try {
     const { shell } = window as any;
-    await shell.openExternal('https://github.com/Chia-Network/chia-blockchain/wiki/FAQ');
+    await shell.openExternal('https://github.com/Cactus-Network/cactus-blockchain/wiki/FAQ');
   } catch (e) {
     console.error(e);
   }
@@ -30,7 +30,7 @@ async function openFAQURL(): Promise<void> {
 async function openSendFeedbackURL(): Promise<void> {
   try {
     const { shell } = window as any;
-    await shell.openExternal('https://feedback.chia.net/lightwallet');
+    await shell.openExternal('https://feedback.cactus-network.net/lightwallet');
   } catch (e) {
     console.error(e);
   }

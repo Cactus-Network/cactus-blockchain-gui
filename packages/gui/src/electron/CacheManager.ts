@@ -18,7 +18,7 @@ import getChecksum from './utils/getChecksum';
 import handleWithCustomErrors from './utils/handleWithCustomErrors';
 import sanitizeNumber from './utils/sanitizeNumber';
 
-const log = debug('chia-gui:CacheManager');
+const log = debug('cactus-gui:CacheManager');
 
 async function safeUnlink(filePath: string) {
   try {
@@ -29,18 +29,18 @@ async function safeUnlink(filePath: string) {
 }
 
 const INFO_SUFFIX = '-info';
-const FILE_SUFFIX = '-chiacache';
+const FILE_SUFFIX = '-cactuscache';
 const MAX_TOTAL_SIZE = 1024 * 1024 * 1024; // 1GB
 const MAX_FILE_SIZE = 1024 * 1024 * 100; // 100MB
 
 const SUFFIXES = [FILE_SUFFIX, `${FILE_SUFFIX}${INFO_SUFFIX}`];
 
-function isChiaCacheFile(filePath: string) {
+function isCactusCacheFile(filePath: string) {
   return SUFFIXES.some((suffix) => filePath.endsWith(suffix));
 }
 
-function isChiaCacheInfoFile(filePath: string) {
-  return isChiaCacheFile(filePath) && filePath.endsWith(INFO_SUFFIX);
+function isCactusCacheInfoFile(filePath: string) {
+  return isCactusCacheFile(filePath) && filePath.endsWith(INFO_SUFFIX);
 }
 
 function getInfoFilePath(filePath: string) {
@@ -517,7 +517,7 @@ export default class CacheManager extends EventEmitter {
     // move the files from the current cache directory to the new directory
     const files = await fs.readdir(this.cacheDirectory);
     const movePromises = files.map(async (file) => {
-      if (!isChiaCacheFile(file)) {
+      if (!isCactusCacheFile(file)) {
         return;
       }
 
@@ -539,7 +539,7 @@ export default class CacheManager extends EventEmitter {
   private async removeOldestFiles(targetSize: number): Promise<void> {
     const files = await fs.readdir(this.cacheDirectory);
     const filePaths = files
-      .filter((file) => isChiaCacheFile(file) && !isChiaCacheInfoFile(file))
+      .filter((file) => isCactusCacheFile(file) && !isCactusCacheInfoFile(file))
       .map((file) => path.join(this.cacheDirectory, file));
 
     // get the file sizes
@@ -602,7 +602,7 @@ export default class CacheManager extends EventEmitter {
   async getCacheSize() {
     const files = await fs.readdir(this.cacheDirectory);
     const filePaths = files
-      .filter((filename) => isChiaCacheFile(filename))
+      .filter((filename) => isCactusCacheFile(filename))
       .map((filename) => path.join(this.cacheDirectory, filename));
 
     // Get the file sizes and calculate the total size

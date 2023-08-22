@@ -1,4 +1,4 @@
-import { Loading } from '@chia-network/core';
+import { Loading } from '@cactus-network/core';
 import React, { useMemo } from 'react';
 
 import Notification from '../../@types/Notification';

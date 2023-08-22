@@ -1,4 +1,4 @@
-import { Flex, Loading, Tooltip } from '@chia-network/core';
+import { Flex, Loading, Tooltip } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography, Card } from '@mui/material';
 import React from 'react';

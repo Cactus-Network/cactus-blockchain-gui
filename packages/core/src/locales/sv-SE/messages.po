@@ -15,14 +15,14 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: sv\n"
-"X-Crowdin-File: /[Chia-Network.chia-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Cactus-Network.cactus-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1304\n"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(>5 min)"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(~{selectedTime} min)"
 msgstr ""
 
@@ -35,14 +35,14 @@ msgid "{minPassphraseLength, plural, one {Passphrases must be at least # charact
 msgstr "{minPassphraseLength, plural, one {Lösenfraser måste vara minst # tecken lång} other {Lösenfraser måste vara minst # tecken lång}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
-msgid "A new version of Chia is available!"
+msgid "A new version of Cactus is available!"
 msgstr ""
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:258
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:268
 msgid "Add Icon"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:172
+#: src/screens/SelectKey/SelectKey.tsx:173
 msgid "Add wallet"
 msgstr ""
 
@@ -59,10 +59,18 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr "Är du säker på att du vill fortsätta? Skriv in fingeravtrycket för denna plånboksnyckel för att bekräfta borttagning."
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:127
+#: src/screens/SelectKey/SelectKey.tsx:128
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "Tillbaka"
+
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Cactus {latestVersion} is currently the latest version available."
+msgstr ""
+
+#: src/components/Settings/SettingsApp.tsx:125
+msgid "Cactus Application Version:"
+msgstr ""
 
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:17
@@ -76,14 +84,6 @@ msgstr ""
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:93
 msgid "Checking for updates..."
-msgstr ""
-
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Chia {latestVersion} is currently the latest version available."
-msgstr ""
-
-#: src/components/Settings/SettingsApp.tsx:125
-msgid "Chia Application Version:"
 msgstr ""
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:110
@@ -108,15 +108,15 @@ msgstr "Kopiera till Urklipp"
 #~ msgid "Create a new private key"
 #~ msgstr "Skapa ny privat nyckel"
 
-#: src/screens/SelectKey/SelectKey.tsx:270
+#: src/screens/SelectKey/SelectKey.tsx:273
 msgid "Create a new wallet key"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:262
-msgid "Create a new wallet key to get started with Chia."
+#: src/screens/SelectKey/SelectKey.tsx:265
+msgid "Create a new wallet key to get started with Cactus."
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:175
+#: src/screens/SelectKey/SelectKey.tsx:176
 msgid "Create New"
 msgstr ""
 
@@ -124,17 +124,17 @@ msgstr ""
 msgid "Dark"
 msgstr "Mörkt"
 
-#: src/screens/SelectKey/SelectKey.tsx:126
+#: src/screens/SelectKey/SelectKey.tsx:127
 #: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "Ta bort"
 
-#: src/screens/SelectKey/SelectKey.tsx:125
+#: src/screens/SelectKey/SelectKey.tsx:126
 msgid "Delete all keys"
 msgstr "Ta bort alla nycklar"
 
-#: src/screens/SelectKey/SelectKey.tsx:200
+#: src/screens/SelectKey/SelectKey.tsx:201
 msgid "Delete All Keys"
 msgstr ""
 
@@ -142,7 +142,7 @@ msgstr ""
 msgid "Delete key {fingerprint}"
 msgstr "Ta bort nyckel {fingerprint}"
 
-#: src/screens/SelectKey/SelectKey.tsx:131
+#: src/screens/SelectKey/SelectKey.tsx:132
 msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
 msgstr "Om du tar bort alla nycklar kommer de att permanent tas bort från datorn. Se till att du har säkerhetskopierat dem. Är du säker på att du vill fortsätta?"
 
@@ -163,7 +163,7 @@ msgstr "Inaktivera lösenfrasskydd"
 msgid "Discard"
 msgstr "Spara inte"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:183
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:147
 msgid "Download"
 msgstr ""
 
@@ -180,7 +180,7 @@ msgstr "Fel:"
 msgid "Esc"
 msgstr ""
 
-#: src/components/LayoutMain/LayoutFooter.tsx:48
+#: src/components/LayoutMain/LayoutFooter.tsx:49
 msgid "FAQ"
 msgstr ""
 
@@ -196,8 +196,8 @@ msgstr "Publik nyckel för odlare:"
 msgid "Farming"
 msgstr "Odlar"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:333
-#: src/components/EstimatedFee/EstimatedFee.tsx:367
+#: src/components/EstimatedFee/EstimatedFee.tsx:334
+#: src/components/EstimatedFee/EstimatedFee.tsx:368
 #: src/components/Fee/Fee.tsx:44
 msgid "Fee"
 msgstr "Avgift"
@@ -231,7 +231,7 @@ msgstr "Dölj"
 msgid "Hide Advanced Options"
 msgstr "Dölj avancerade alternativ"
 
-#: src/screens/SelectKey/SelectKey.tsx:180
+#: src/screens/SelectKey/SelectKey.tsx:181
 msgid "Import Existing"
 msgstr ""
 
@@ -255,15 +255,15 @@ msgstr ""
 msgid "Light"
 msgstr "Ljust"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:222
+#: src/components/EstimatedFee/EstimatedFee.tsx:223
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:219
+#: src/components/EstimatedFee/EstimatedFee.tsx:220
 msgid "Likely in {minutes} minutes"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:221
+#: src/components/EstimatedFee/EstimatedFee.tsx:222
 msgid "Likely in >5 minutes"
 msgstr ""
 
@@ -271,7 +271,7 @@ msgstr ""
 msgid "Loading details"
 msgstr "Läser in information"
 
-#: src/screens/SelectKey/SelectKey.tsx:232
+#: src/screens/SelectKey/SelectKey.tsx:235
 msgid "Loading keys"
 msgstr ""
 
@@ -281,12 +281,12 @@ msgstr ""
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:317
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:336
-msgid "Log Out"
-msgstr "Logga ut"
+#~ msgid "Log Out"
+#~ msgstr "Logga ut"
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:335
-msgid "Logout"
-msgstr "Logga ut"
+#~ msgid "Logout"
+#~ msgstr "Logga ut"
 
 #: src/hooks/useKeyringMigrationPrompt.tsx:16
 msgid "Migrate"
@@ -308,7 +308,7 @@ msgstr "DELA ALDRIG DESSA MED NÅGON ANNAN"
 msgid "New passphrase is the same as your current passphrase"
 msgstr "Ny lösenfras är densamma som din nuvarande lösenfras"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:132
 msgid "New version {latestVersion} available"
 msgstr ""
 
@@ -330,7 +330,7 @@ msgstr "Inte ansluten"
 msgid "OK"
 msgstr "OK"
 
-#: src/screens/SelectKey/SelectKey.tsx:254
+#: src/screens/SelectKey/SelectKey.tsx:257
 msgid "Open a world of possibilities."
 msgstr ""
 
@@ -359,7 +359,7 @@ msgstr "Publik nyckel"
 msgid "Public key:"
 msgstr "Publik nyckel:"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:277
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:287
 msgid "Random"
 msgstr ""
 
@@ -375,7 +375,7 @@ msgstr ""
 msgid "Reload Application"
 msgstr "Läs in applikationen på nytt"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:258
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:268
 msgid "Remove Icon"
 msgstr ""
 
@@ -396,7 +396,7 @@ msgstr ""
 msgid "Save"
 msgstr "Spara"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:170
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:180
 #: src/screens/SelectKey/Search.tsx:34
 msgid "Search"
 msgstr ""
@@ -421,7 +421,7 @@ msgstr "Minnesfras:"
 msgid "Select..."
 msgstr "Välj..."
 
-#: src/components/LayoutMain/LayoutFooter.tsx:51
+#: src/components/LayoutMain/LayoutFooter.tsx:52
 #: src/components/Settings/SettingsApp.tsx:154
 msgid "Send Feedback"
 msgstr "Skicka feedback"
@@ -443,7 +443,7 @@ msgstr "Visa avancerade alternativ"
 #~ msgid "Sign In"
 #~ msgstr "Logga in"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:171
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:135
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
 msgstr "Hoppa över"
@@ -496,11 +496,11 @@ msgstr "Transaktionen har skickats till en fullständig nod och väntar på att 
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Transaktionen har skickats till en hel nod och inkluderats i mempoolen."
 
-#: src/screens/SelectKey/SelectKey.tsx:239
+#: src/screens/SelectKey/SelectKey.tsx:242
 msgid "Try Again"
 msgstr "Försök igen"
 
-#: src/screens/SelectKey/SelectKey.tsx:243
+#: src/screens/SelectKey/SelectKey.tsx:246
 msgid "Unable to load keys"
 msgstr ""
 
@@ -525,7 +525,7 @@ msgstr "Att använda en lösenfras rekommenderas starkt för att skydda dina nyc
 msgid "Value seems high"
 msgstr "Värdet verkar högt"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:270
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:232
 #: src/components/Settings/SettingsApp.tsx:86
 msgid "Wallet"
 msgstr "Plånbok"
@@ -539,15 +539,15 @@ msgstr "Plånbok {0}"
 msgid "Wallet Fingerprint"
 msgstr "Plånbokens fingeravtryck"
 
-#: src/screens/SelectKey/SelectKey.tsx:219
+#: src/screens/SelectKey/SelectKey.tsx:222
 msgid "Wallet Keys"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Välkommen till Chia. Logga in med en existerande nyckel, eller skapa en ny nyckel."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Välkommen till Cactus. Logga in med en existerande nyckel, eller skapa en ny nyckel."
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:177
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:141
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr ""

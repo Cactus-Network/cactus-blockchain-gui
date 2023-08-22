@@ -22,8 +22,8 @@ test.afterAll(async () => {
 
 test('Verify that a recipient wallet receives funds from sending wallet!', async () => {
   //Pre-requisites
-  let receive_wallet = 'txch1km02nle6485x6fv676m7nx67zfyk75ed0znq3dwumj8wvxm2pvms9m0dnf';
-  let send_wallet = 'txch1ls7ur56shuh58zlvzkqkwgzch8zy6llfwr7ydm3n8rvky4rdf3dqlceyzx';
+  let receive_wallet = 'tcac1km02nle6485x6fv676m7nx67zfyk75ed0znq3dwumj8wvxm2pvms9m0dnf';
+  let send_wallet = 'tcac1ls7ur56shuh58zlvzkqkwgzch8zy6llfwr7ydm3n8rvky4rdf3dqlceyzx';
 
   //Pre-requisites to get user back to Wallet selection page
   await new CloseDialog(page).closeIt();
@@ -41,7 +41,7 @@ test('Verify that a recipient wallet receives funds from sending wallet!', async
   await page.locator('[data-testid="WalletHeader-tab-send"]').click();
 
   //When I enter a valid Fee amount
-  await page.getByRole('button', { name: '0 (>5 min) TXCH' }).click();
+  await page.getByRole('button', { name: '0 (>5 min) TCAC' }).click();
   await page.getByRole('option', { name: 'Enter a custom fee...' }).click();
   await page.getByLabel('Fee').fill('0.0005');
 
@@ -110,15 +110,15 @@ test('Verify that a recipient wallet receives funds from sending wallet!', async
   // ; //Saw instances where page was not ready
   // //await page.locator('[data-testid="LayoutDashboard-log-out"]').click();
   // //await page.locator('h6:has-text("send_wallet")').click();
-  // //await page.getByRole('row', { name: 'April 19, 2023 5:29 PM + 0.09 TXCH 0 TXCH txch1km02...0dnf Confirmed expand row' }).getByRole('button', { name: 'expand row' }).click();
+  // //await page.getByRole('row', { name: 'April 19, 2023 5:29 PM + 0.09 TCAC 0 TCAC tcac1km02...0dnf Confirmed expand row' }).getByRole('button', { name: 'expand row' }).click();
   // //await page.getByText('Memos', { exact: true }).click();
-  // //await page.getByRole('row', { name: `${date.format(now, 'MMMM D, YYYY h:mm A')} + 0.09 TXCH 0 TXCH txch1km02...0dnf Confirmed expand row` }).getByRole('button', { name: 'expand row' }).click();
-  // //await page.getByRole('row', { name: `${date.format(now, 'MMMM D, YYYY')} + 0.09 TXCH 0 TXCH txch1km02...0dnf Confirmed Memo expand row` }).getByRole('button', { name: 'expand row' }).first().click();
-  // //await expect(page.getByRole('row', { name: `${date.format(now, 'MMMM D, YYYY')} + 0.09 TXCH 0 TXCH txch1km02...0dnf Confirmed expand row` }).nth(0)).toBeVisible();
+  // //await page.getByRole('row', { name: `${date.format(now, 'MMMM D, YYYY h:mm A')} + 0.09 TCAC 0 TCAC tcac1km02...0dnf Confirmed expand row` }).getByRole('button', { name: 'expand row' }).click();
+  // //await page.getByRole('row', { name: `${date.format(now, 'MMMM D, YYYY')} + 0.09 TCAC 0 TCAC tcac1km02...0dnf Confirmed Memo expand row` }).getByRole('button', { name: 'expand row' }).first().click();
+  // //await expect(page.getByRole('row', { name: `${date.format(now, 'MMMM D, YYYY')} + 0.09 TCAC 0 TCAC tcac1km02...0dnf Confirmed expand row` }).nth(0)).toBeVisible();
 
   // //await page.getByRole('button', { name: 'expand row' }).nth(0).click();
 
-  // //await page.getByRole('row', { name: 'April 19, 2023 6:38 PM + 0.09 TXCH 0 TXCH txch1km02...0dnf Confirmed Memo expand row' }).getByRole('button', { name: 'expand row' }).click();
+  // //await page.getByRole('row', { name: 'April 19, 2023 6:38 PM + 0.09 TCAC 0 TCAC tcac1km02...0dnf Confirmed Memo expand row' }).getByRole('button', { name: 'expand row' }).click();
 
   // console.log(date.format(now, 'MMMM D, YYYY h:mm A'));
   // //await page.getByText('Show me the money').click();

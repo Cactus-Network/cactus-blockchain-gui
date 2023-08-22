@@ -1,5 +1,5 @@
-import type { AddressContact } from '@chia-network/core';
-import { AddressBookContext } from '@chia-network/core';
+import type { AddressContact } from '@cactus-network/core';
+import { AddressBookContext } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Autocomplete as MaterialAutocomplete, FormControl, TextField, TextFieldProps } from '@mui/material';
 import React, { useEffect, useState, useContext } from 'react';

@@ -1,5 +1,5 @@
-import { SyncingStatus } from '@chia-network/api';
-import { useWalletState } from '@chia-network/wallets';
+import { SyncingStatus } from '@cactus-network/api';
+import { useWalletState } from '@cactus-network/wallets';
 import { useCallback, useState, useRef, useEffect } from 'react';
 
 export default function useWaitForWalletSync() {

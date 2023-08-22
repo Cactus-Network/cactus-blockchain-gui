@@ -9,7 +9,7 @@ const path = require('path');
 const PY_MAC_DIST_FOLDER = '../../../app.asar.unpacked/daemon';
 const PY_WIN_DIST_FOLDER = '../../../app.asar.unpacked/daemon';
 const PY_DIST_FILE = 'daemon';
-const PY_FOLDER = '../../../chia/daemon';
+const PY_FOLDER = '../../../cactus/daemon';
 const PY_MODULE = 'server'; // without .py suffix
 
 let pyProc = null;
@@ -41,10 +41,10 @@ const getScriptPath = (dist_file) => {
   return getExecutablePath(dist_file);
 };
 
-const getChiaVersion = () => {
+const getCactusVersion = () => {
   let version = null;
-  const exePath = getExecutablePath('chia');
-  // first see if we can get a chia exe in a standard location relative to where we are
+  const exePath = getExecutablePath('cactus');
+  // first see if we can get a cactus exe in a standard location relative to where we are
   try {
     version = childProcess
       .execFileSync(exePath, ['version'], {
@@ -52,7 +52,7 @@ const getChiaVersion = () => {
       })
       .trim();
   } catch (e1) {
-    // that didn't work, let's try as if we're in the venv or chia is on the path
+    // that didn't work, let's try as if we're in the venv or cactus is on the path
     try {
       version = childProcess
         .execFileSync(path.basename(exePath), ['version'], {
@@ -67,7 +67,7 @@ const getChiaVersion = () => {
   return version;
 };
 
-const startChiaDaemon = () => {
+const startCactusDaemon = () => {
   const script = getScriptPath(PY_DIST_FILE);
   const processOptions = {};
   // processOptions.detached = true;
@@ -140,7 +140,7 @@ const startChiaDaemon = () => {
 };
 
 module.exports = {
-  startChiaDaemon,
-  getChiaVersion,
+  startCactusDaemon,
+  getCactusVersion,
   guessPackaged,
 };

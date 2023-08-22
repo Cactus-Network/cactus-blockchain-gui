@@ -15,7 +15,7 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: lt\n"
-"X-Crowdin-File: /[Chia-Network.chia-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Cactus-Network.cactus-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1304\n"
 
 #: src/components/Amount/Amount.tsx:36
@@ -417,8 +417,8 @@ msgid "Wallet {0}"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-msgstr "Sveiki atvykę į Chia. Prašome prisijungti su egzistuojančiu raktu arba sukurkite naują raktą"
+msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+msgstr "Sveiki atvykę į Cactus. Prašome prisijungti su egzistuojančiu raktu arba sukurkite naują raktą"
 
 #: src/components/Back/Back.tsx:40
 #: src/components/FormBackButton/FormBackButton.tsx:31

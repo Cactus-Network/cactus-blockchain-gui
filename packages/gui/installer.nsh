@@ -6,10 +6,10 @@
 XPStyle on
 
 Var AlreadyAlerted
-Var IsChiaProcessRunning
+Var IsCactusProcessRunning
 Var RemainingProcesses
 
-Page custom checkIsChiaRunning checkIsChiaRunningLeave
+Page custom checkIsCactusRunning checkIsCactusRunningLeave
 
 ;https://nsis.sourceforge.io/StrTok_function
 ;author bigmac666
@@ -77,22 +77,22 @@ Function StrTok
  
 FunctionEnd
 
-Function checkIsChiaRunning
+Function checkIsCactusRunning
   StrCpy $AlreadyAlerted 0
   loop:
     ClearErrors
-    ; Check if the main Chia.exe process is running
-    ${nsProcess::FindProcess} "chia.exe" $IsChiaProcessRunning
-    ${If} $IsChiaProcessRunning == 0
+    ; Check if the main Cactus.exe process is running
+    ${nsProcess::FindProcess} "cactus.exe" $IsCactusProcessRunning
+    ${If} $IsCactusProcessRunning == 0
       ${If} $AlreadyAlerted == 0
         StrCpy $AlreadyAlerted 1
-        MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "Installation cannot continue while Chia is still running. Please exit the Chia application and then click OK to proceed." IDOK retry IDCANCEL exit
+        MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "Installation cannot continue while Cactus is still running. Please exit the Cactus application and then click OK to proceed." IDOK retry IDCANCEL exit
       ${Else}
-        MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "Chia is still running. Please exit the Chia application and then click OK to proceed." IDOK retry IDCANCEL exit
+        MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "Cactus is still running. Please exit the Cactus application and then click OK to proceed." IDOK retry IDCANCEL exit
       ${EndIf}
     ${EndIf}
 
-    StrCpy $R0 "daemon.exe chia_data_layer.exe start_data_layer.exe chia_data_layer_http.exe start_data_layer_http.exe chia_farmer.exe start_farmer.exe chia_full_node.exe start_full_node.exe chia_harvester.exe start_harvester.exe chia_wallet.exe start_wallet.exe"
+    StrCpy $R0 "daemon.exe cactus_data_layer.exe start_data_layer.exe cactus_data_layer_http.exe start_data_layer_http.exe cactus_farmer.exe start_farmer.exe cactus_full_node.exe start_full_node.exe cactus_harvester.exe start_harvester.exe cactus_wallet.exe start_wallet.exe"
     StrCpy $R3 "" ; Accumulator for the names of all running processes
   processLoop:
     ClearErrors
@@ -125,7 +125,7 @@ Function checkIsChiaRunning
   endLoop:
     ; If any processes are running, show a message box with their names
     ${If} $R3 != ""
-      MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "The following Chia processes are still running. Please stop all Chia services and then click OK to proceed.$\n$\nRunning processes:$\n$R3" IDOK retry IDCANCEL exit
+      MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION "The following Cactus processes are still running. Please stop all Cactus services and then click OK to proceed.$\n$\nRunning processes:$\n$R3" IDOK retry IDCANCEL exit
     ${Else}
       Goto done
     ${EndIf}
@@ -138,8 +138,8 @@ Function checkIsChiaRunning
 FunctionEnd
 
 
-Function checkIsChiaRunningLeave
-  ${nsProcess::FindProcess} "chia.exe" $R0
+Function checkIsCactusRunningLeave
+  ${nsProcess::FindProcess} "cactus.exe" $R0
   Pop $0
 FunctionEnd
 !macroend ; customWelcomePage
@@ -151,43 +151,43 @@ XPStyle on
 
 Var DetectDlg
 Var FinishDlg
-Var ChiaSquirrelInstallLocation
-Var ChiaSquirrelInstallVersion
-Var ChiaSquirrelUninstaller
+Var CactusSquirrelInstallLocation
+Var CactusSquirrelInstallVersion
+Var CactusSquirrelUninstaller
 Var CheckboxUninstall
 Var CheckboxLaunchOnExit
 Var CheckboxAddToPath
 Var LaunchOnExit
 Var AddToPath
-Var UninstallChiaSquirrelInstall
+Var UninstallCactusSquirrelInstall
 Var BackButton
 Var NextButton
 
-Page custom detectOldChiaVersion detectOldChiaVersionPageLeave
+Page custom detectOldCactusVersion detectOldCactusVersionPageLeave
 Page custom finish finishLeave
 
-; Add a page offering to uninstall an older build installed into the chia-blockchain dir
-Function detectOldChiaVersion
-  ; Check the registry for old chia-blockchain installer keys
-  ReadRegStr $ChiaSquirrelInstallLocation HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\chia-blockchain" "InstallLocation"
-  ReadRegStr $ChiaSquirrelInstallVersion HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\chia-blockchain" "DisplayVersion"
-  ReadRegStr $ChiaSquirrelUninstaller HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\chia-blockchain" "QuietUninstallString"
+; Add a page offering to uninstall an older build installed into the cactus-blockchain dir
+Function detectOldCactusVersion
+  ; Check the registry for old cactus-blockchain installer keys
+  ReadRegStr $CactusSquirrelInstallLocation HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\cactus-blockchain" "InstallLocation"
+  ReadRegStr $CactusSquirrelInstallVersion HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\cactus-blockchain" "DisplayVersion"
+  ReadRegStr $CactusSquirrelUninstaller HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\cactus-blockchain" "QuietUninstallString"
 
-  StrCpy $UninstallChiaSquirrelInstall ${BST_UNCHECKED} ; Initialize to unchecked so that a silent install skips uninstalling
+  StrCpy $UninstallCactusSquirrelInstall ${BST_UNCHECKED} ; Initialize to unchecked so that a silent install skips uninstalling
 
   ; If registry keys aren't found, skip (Abort) this page and move forward
-  ${If} ChiaSquirrelInstallVersion == error
-  ${OrIf} ChiaSquirrelInstallLocation == error
-  ${OrIf} $ChiaSquirrelUninstaller == error
-  ${OrIf} $ChiaSquirrelInstallVersion == ""
-  ${OrIf} $ChiaSquirrelInstallLocation == ""
-  ${OrIf} $ChiaSquirrelUninstaller == ""
+  ${If} CactusSquirrelInstallVersion == error
+  ${OrIf} CactusSquirrelInstallLocation == error
+  ${OrIf} $CactusSquirrelUninstaller == error
+  ${OrIf} $CactusSquirrelInstallVersion == ""
+  ${OrIf} $CactusSquirrelInstallLocation == ""
+  ${OrIf} $CactusSquirrelUninstaller == ""
   ${OrIf} ${Silent}
     Abort
   ${EndIf}
 
   ; Check the uninstall checkbox by default
-  StrCpy $UninstallChiaSquirrelInstall ${BST_CHECKED}
+  StrCpy $UninstallCactusSquirrelInstall ${BST_CHECKED}
 
   ; Magic create dialog incantation
   nsDialogs::Create 1018
@@ -197,14 +197,14 @@ Function detectOldChiaVersion
     Abort
   ${EndIf}
 
-  !insertmacro MUI_HEADER_TEXT "Uninstall Old Version" "Would you like to uninstall the old version of Chia Blockchain?"
+  !insertmacro MUI_HEADER_TEXT "Uninstall Old Version" "Would you like to uninstall the old version of Cactus Blockchain?"
 
-  ${NSD_CreateLabel} 0 35 100% 12u "Found Chia Blockchain $ChiaSquirrelInstallVersion installed in an old location:"
-  ${NSD_CreateLabel} 12 57 100% 12u "$ChiaSquirrelInstallLocation"
+  ${NSD_CreateLabel} 0 35 100% 12u "Found Cactus Blockchain $CactusSquirrelInstallVersion installed in an old location:"
+  ${NSD_CreateLabel} 12 57 100% 12u "$CactusSquirrelInstallLocation"
 
-  ${NSD_CreateCheckBox} 12 81 100% 12u "Uninstall Chia Blockchain $ChiaSquirrelInstallVersion"
+  ${NSD_CreateCheckBox} 12 81 100% 12u "Uninstall Cactus Blockchain $CactusSquirrelInstallVersion"
   Pop $CheckboxUninstall
-  ${NSD_SetState} $CheckboxUninstall $UninstallChiaSquirrelInstall
+  ${NSD_SetState} $CheckboxUninstall $UninstallCactusSquirrelInstall
   ${NSD_OnClick} $CheckboxUninstall SetUninstall
 
   nsDialogs::Show
@@ -212,15 +212,15 @@ Function detectOldChiaVersion
 FunctionEnd
 
 Function SetUninstall
-  ; Set UninstallChiaSquirrelInstall accordingly
-  ${NSD_GetState} $CheckboxUninstall $UninstallChiaSquirrelInstall
+  ; Set UninstallCactusSquirrelInstall accordingly
+  ${NSD_GetState} $CheckboxUninstall $UninstallCactusSquirrelInstall
 FunctionEnd
 
-Function detectOldChiaVersionPageLeave
-  ${If} $UninstallChiaSquirrelInstall == 1
+Function detectOldCactusVersionPageLeave
+  ${If} $UninstallCactusSquirrelInstall == 1
     ; This could be improved... Experiments with adding an indeterminate progress bar (PBM_SETMARQUEE)
     ; were unsatisfactory.
-    ExecWait $ChiaSquirrelUninstaller ; Blocks until complete (doesn't take long though)
+    ExecWait $CactusSquirrelUninstaller ; Blocks until complete (doesn't take long though)
   ${EndIf}
 FunctionEnd
 
@@ -234,14 +234,14 @@ Function finish
     Abort
   ${EndIf}
 
-  ${NSD_CreateCheckbox} 0 40% 100% 10% "Launch Chia"
+  ${NSD_CreateCheckbox} 0 40% 100% 10% "Launch Cactus"
   Pop $CheckboxLaunchOnExit
   ${NSD_SetState} $CheckboxLaunchOnExit ${BST_CHECKED}
   ${NSD_OnClick} $CheckboxLaunchOnExit SetLaunchOnExit
   StrCpy $LaunchOnExit 1
   
   ${NSD_CreateLabel} 0 65% 100% 10% "Advanced Options:"
-  ${NSD_CreateCheckbox} 5% 75% 100% 10% "Add Chia Command Line executable to PATH"
+  ${NSD_CreateCheckbox} 5% 75% 100% 10% "Add Cactus Command Line executable to PATH"
   Pop $CheckboxAddToPath
   ${NSD_SetState} $CheckboxAddToPath ${BST_UNCHECKED}
   ${NSD_OnClick} $CheckboxAddToPath SetAddToPath
@@ -249,7 +249,7 @@ Function finish
   GetDlgItem $NextButton $HWNDPARENT 1 ; 1 = Next button
   GetDlgItem $BackButton $HWNDPARENT 3 ; 3 = Back button
 
-  ${NSD_CreateLabel} 0 35 100% 12u "Chia has been installed successfully!"
+  ${NSD_CreateLabel} 0 35 100% 12u "Cactus has been installed successfully!"
   EnableWindow $BackButton 0 ; Disable the Back button
   SendMessage $NextButton ${WM_SETTEXT} 0 "STR:Finish" ; Button title is "Close" by default. Update it here.
 

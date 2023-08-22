@@ -1,4 +1,4 @@
-import { AlertDialog, useOpenDialog } from '@chia-network/core';
+import { AlertDialog, useOpenDialog } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 import { useNavigate } from 'react-router';

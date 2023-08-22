@@ -1,4 +1,4 @@
-import { Color, Flex, Indicator, StateColor, TooltipIcon } from '@chia-network/core';
+import { Color, Flex, Indicator, StateColor, TooltipIcon } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box } from '@mui/material';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { MojoToCAT } from '@chia-network/core';
+import { MojoToCAT } from '@cactus-network/core';
 import { t } from '@lingui/macro';
 import React from 'react';
 

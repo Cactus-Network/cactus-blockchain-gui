@@ -1,5 +1,5 @@
-import { useLocalStorage } from '@chia-network/api-react';
-import { Flex, SettingsHR, SettingsSection, SettingsText } from '@chia-network/core';
+import { useLocalStorage } from '@cactus-network/api-react';
+import { Flex, SettingsHR, SettingsSection, SettingsText } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Box } from '@mui/material';
 import React from 'react';
@@ -38,11 +38,11 @@ export default function SettingsCustody() {
 
       <Box>
         <SettingsSection>
-          <Trans>Default claw back time for outgoing XCH transactions</Trans>
+          <Trans>Default claw back time for outgoing CAC transactions</Trans>
         </SettingsSection>
 
         <SettingsText>
-          <Trans>Set a default time frame for all outbound XCH transactions.</Trans>
+          <Trans>Set a default time frame for all outbound CAC transactions.</Trans>
         </SettingsText>
 
         <SettingsText>

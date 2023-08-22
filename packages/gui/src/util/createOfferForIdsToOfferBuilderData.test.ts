@@ -1,11 +1,11 @@
-import * as chiaCore from '@chia-network/core';
+import * as cactusCore from '@cactus-network/core';
 import BigNumber from 'bignumber.js';
 
 import { AssetIdMapEntry } from '../hooks/useAssetIdName';
 import createOfferForIdsToOfferBuilderData from './createOfferForIdsToOfferBuilderData';
 
-jest.mock('@chia-network/core', () => ({
-  mojoToChia: jest.fn(),
+jest.mock('@cactus-network/core', () => ({
+  mojoToCactus: jest.fn(),
   mojoToCAT: jest.fn(),
 }));
 
@@ -14,7 +14,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
     jest.clearAllMocks();
   });
 
-  describe('when offering XCH for CAT', () => {
+  describe('when offering CAC for CAT', () => {
     it('should return a valid offer builder data object', () => {
       const calledLookupByWalletIdWithIds: string[] = [];
       const assetIdMapEntriesByWalletId: Record<string, AssetIdMapEntry> = {
@@ -22,10 +22,10 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           walletId: 1,
           walletType: 0, // STANDARD_WALLET
           isVerified: true,
-          name: 'Chia',
-          symbol: 'XCH',
-          displayName: 'XCH',
-          assetId: 'xch',
+          name: 'Cactus',
+          symbol: 'CAC',
+          displayName: 'CAC',
+          assetId: 'cac',
         },
         2: {
           walletId: 2,
@@ -48,13 +48,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
         2: 600_000,
       };
 
-      jest.mock('@chia-network/core', () => ({
-        mojoToChia: jest.fn(),
+      jest.mock('@cactus-network/core', () => ({
+        mojoToCactus: jest.fn(),
         mojoToCAT: jest.fn(),
       }));
 
-      chiaCore.mojoToChia.mockReturnValue(new BigNumber(111.555));
-      chiaCore.mojoToCAT.mockReturnValue(new BigNumber(600));
+      cactusCore.mojoToCactus.mockReturnValue(new BigNumber(111.555));
+      cactusCore.mojoToCAT.mockReturnValue(new BigNumber(600));
 
       const result = createOfferForIdsToOfferBuilderData(walletIdsAndAmounts, lookupByWalletId);
 
@@ -62,13 +62,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [{ amount: '111.555' }],
+          cac: [{ amount: '111.555' }],
           tokens: [],
           nfts: [],
           fee: [],
         },
         requested: {
-          xch: [],
+          cac: [],
           tokens: [{ amount: '600', assetId: 'f17f88130c63522821f1a75466849354eee69c414c774bd9f3873ab643e9574d' }],
           nfts: [],
           fee: [],
@@ -77,7 +77,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
     });
   });
 
-  describe('when offering a CAT for XCH', () => {
+  describe('when offering a CAT for CAC', () => {
     it('should return a valid offer builder data object', () => {
       const calledLookupByWalletIdWithIds: string[] = [];
       const assetIdMapEntriesByWalletId: Record<string, AssetIdMapEntry> = {
@@ -85,10 +85,10 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           walletId: 1,
           walletType: 0, // STANDARD_WALLET
           isVerified: true,
-          name: 'Chia',
-          symbol: 'XCH',
-          displayName: 'XCH',
-          assetId: 'xch',
+          name: 'Cactus',
+          symbol: 'CAC',
+          displayName: 'CAC',
+          assetId: 'cac',
         },
         2: {
           walletId: 2,
@@ -111,8 +111,8 @@ describe('createOfferForIdsToOfferBuilderData', () => {
         2: -1234,
       };
 
-      chiaCore.mojoToChia.mockReturnValue(new BigNumber(2));
-      chiaCore.mojoToCAT.mockReturnValue(new BigNumber(1.234));
+      cactusCore.mojoToCactus.mockReturnValue(new BigNumber(2));
+      cactusCore.mojoToCAT.mockReturnValue(new BigNumber(1.234));
 
       const result = createOfferForIdsToOfferBuilderData(walletIdsAndAmounts, lookupByWalletId);
 
@@ -120,7 +120,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [],
+          cac: [],
           tokens: [
             {
               amount: '1.234',
@@ -131,7 +131,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           fee: [],
         },
         requested: {
-          xch: [
+          cac: [
             {
               amount: '2',
             },
@@ -143,7 +143,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
       });
     });
   });
-  describe('when offering XCH for an NFT', () => {
+  describe('when offering CAC for an NFT', () => {
     it('should return a valid offer builder data object', () => {
       const calledLookupByWalletIdWithIds: string[] = [];
       const assetIdMapEntriesByWalletId: Record<string, AssetIdMapEntry> = {
@@ -151,10 +151,10 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           walletId: 1,
           walletType: 0, // STANDARD_WALLET
           isVerified: true,
-          name: 'Chia',
-          symbol: 'XCH',
-          displayName: 'XCH',
-          assetId: 'xch',
+          name: 'Cactus',
+          symbol: 'CAC',
+          displayName: 'CAC',
+          assetId: 'cac',
         },
       };
 
@@ -168,7 +168,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
         '8d3ed4c44a1ad053907044f12c8ba0f6a4fdad4eeff585ec76580b50a8de3d2d': 1,
       };
 
-      chiaCore.mojoToChia.mockReturnValue(new BigNumber(3));
+      cactusCore.mojoToCactus.mockReturnValue(new BigNumber(3));
 
       const result = createOfferForIdsToOfferBuilderData(walletIdsAndAmounts, lookupByWalletId);
 
@@ -179,13 +179,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [{ amount: '3' }],
+          cac: [{ amount: '3' }],
           tokens: [],
           nfts: [],
           fee: [],
         },
         requested: {
-          xch: [],
+          cac: [],
           tokens: [],
           nfts: [
             {
@@ -218,10 +218,10 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           walletId: 1,
           walletType: 0, // STANDARD_WALLET
           isVerified: true,
-          name: 'Chia',
-          symbol: 'XCH',
-          displayName: 'XCH',
-          assetId: 'xch',
+          name: 'Cactus',
+          symbol: 'CAC',
+          displayName: 'CAC',
+          assetId: 'cac',
         },
         2: {
           walletId: 2,
@@ -244,7 +244,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
         2: -1,
       };
 
-      chiaCore.mojoToChia.mockReturnValue(new BigNumber(0.5));
+      cactusCore.mojoToCactus.mockReturnValue(new BigNumber(0.5));
 
       const result = createOfferForIdsToOfferBuilderData(walletIdsAndAmounts, lookupByWalletId);
 
@@ -252,13 +252,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [],
+          cac: [],
           tokens: [],
           nfts: [],
           fee: [],
         },
         requested: {
-          xch: [
+          cac: [
             {
               amount: '0.5',
             },
@@ -290,8 +290,8 @@ describe('createOfferForIdsToOfferBuilderData', () => {
         2: -1_000_000,
       };
 
-      chiaCore.mojoToChia.mockReturnValue(new BigNumber(5));
-      chiaCore.mojoToCAT.mockReturnValue(new BigNumber(1000));
+      cactusCore.mojoToCactus.mockReturnValue(new BigNumber(5));
+      cactusCore.mojoToCAT.mockReturnValue(new BigNumber(1000));
 
       const result = createOfferForIdsToOfferBuilderData(walletIdsAndAmounts, lookupByWalletId);
 
@@ -299,13 +299,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [],
+          cac: [],
           tokens: [],
           nfts: [],
           fee: [],
         },
         requested: {
-          xch: [],
+          cac: [],
           tokens: [],
           nfts: [],
           fee: [],

@@ -1,7 +1,7 @@
-import { WalletType } from '@chia-network/api';
-import { useGetWalletBalanceQuery } from '@chia-network/api-react';
-import { mojoToCATLocaleString, mojoToChiaLocaleString, useLocale } from '@chia-network/core';
-import { useWallet } from '@chia-network/wallets';
+import { WalletType } from '@cactus-network/api';
+import { useGetWalletBalanceQuery } from '@cactus-network/api-react';
+import { mojoToCATLocaleString, mojoToCactusLocaleString, useLocale } from '@cactus-network/core';
+import { useWallet } from '@cactus-network/wallets';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 
@@ -20,13 +20,13 @@ export default function OfferBuilderWalletBalance(props: OfferBuilderWalletBalan
 
   const isLoading = isLoadingWalletBalance || loading;
 
-  const xchBalance = useMemo(() => {
+  const cacBalance = useMemo(() => {
     if (isLoading || !wallet || !walletBalance || !('spendableBalance' in walletBalance)) {
       return undefined;
     }
 
     if (wallet.type === WalletType.STANDARD_WALLET) {
-      return mojoToChiaLocaleString(walletBalance.spendableBalance, locale);
+      return mojoToCactusLocaleString(walletBalance.spendableBalance, locale);
     }
 
     if (wallet.type === WalletType.CAT) {
@@ -36,7 +36,7 @@ export default function OfferBuilderWalletBalance(props: OfferBuilderWalletBalan
     return undefined;
   }, [isLoading, wallet, walletBalance, locale]);
 
-  if (!isLoading && xchBalance === undefined) {
+  if (!isLoading && cacBalance === undefined) {
     return null;
   }
 
@@ -47,7 +47,7 @@ export default function OfferBuilderWalletBalance(props: OfferBuilderWalletBalan
         'Loading...'
       ) : (
         <>
-          {xchBalance}
+          {cacBalance}
           &nbsp;
           {unit?.toUpperCase()}
         </>

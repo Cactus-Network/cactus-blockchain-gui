@@ -1,7 +1,7 @@
-import { TransactionType, WalletType } from '@chia-network/api';
-import type { Transaction } from '@chia-network/api';
-import { useGetWalletBalanceQuery } from '@chia-network/api-react';
-import { Color, mojoToChia, mojoToCAT, blockHeightToTimestamp } from '@chia-network/core';
+import { TransactionType, WalletType } from '@cactus-network/api';
+import type { Transaction } from '@cactus-network/api';
+import { useGetWalletBalanceQuery } from '@cactus-network/api-react';
+import { Color, mojoToCactus, mojoToCAT, blockHeightToTimestamp } from '@cactus-network/core';
 import { alpha } from '@mui/material';
 import BigNumber from 'bignumber.js';
 import { orderBy, groupBy, map } from 'lodash';
@@ -104,8 +104,8 @@ function prepareGraphPoints(
   const points = [
     {
       x: blockHeightToTimestamp(peakTransaction.confirmedAtHeight, peakTransaction),
-      y: BigNumber.max(0, (walletType === WalletType.CAT ? mojoToCAT(start) : mojoToChia(start)).toNumber()), // max 21,000,000 safe to number
-      tooltip: (walletType === WalletType.CAT ? mojoToCAT(balance) : mojoToChia(balance)).toString(), // bignumber is not supported by react
+      y: BigNumber.max(0, (walletType === WalletType.CAT ? mojoToCAT(start) : mojoToCactus(start)).toNumber()), // max 21,000,000 safe to number
+      tooltip: (walletType === WalletType.CAT ? mojoToCAT(balance) : mojoToCactus(balance)).toString(), // bignumber is not supported by react
     },
   ];
 
@@ -121,8 +121,8 @@ function prepareGraphPoints(
 
     points.push({
       x: timestamp,
-      y: BigNumber.max(0, (walletType === WalletType.CAT ? mojoToCAT(start) : mojoToChia(start)).toNumber()), // max 21,000,000 safe to number
-      tooltip: walletType === WalletType.CAT ? mojoToCAT(start) : mojoToChia(start).toString(), // bignumber is not supported by react
+      y: BigNumber.max(0, (walletType === WalletType.CAT ? mojoToCAT(start) : mojoToCactus(start)).toNumber()), // max 21,000,000 safe to number
+      tooltip: walletType === WalletType.CAT ? mojoToCAT(start) : mojoToCactus(start).toString(), // bignumber is not supported by react
     });
   });
 

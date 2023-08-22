@@ -1,5 +1,5 @@
-import { Loading, chiaToMojo, mojoToChiaLocaleString, useCurrencyCode } from '@chia-network/core';
-import { Farming } from '@chia-network/icons';
+import { Loading, cactusToMojo, mojoToCactusLocaleString, useCurrencyCode } from '@cactus-network/core';
+import { Farming } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 import { useFieldArray, useWatch } from 'react-hook-form';
@@ -9,13 +9,13 @@ import useStandardWallet from '../../hooks/useStandardWallet';
 import OfferBuilderSection from './OfferBuilderSection';
 import OfferBuilderWalletAmount from './OfferBuilderWalletAmount';
 
-export type OfferBuilderXCHSectionProps = {
+export type OfferBuilderCACSectionProps = {
   name: string;
   offering?: boolean;
   muted?: boolean;
 };
 
-export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProps) {
+export default function OfferBuilderCACSection(props: OfferBuilderCACSectionProps) {
   const { name, offering, muted = false } = props;
   const { wallet, loading: isLoadingWallet } = useStandardWallet();
   const currencyCode = useCurrencyCode();
@@ -25,10 +25,10 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
   const amount =
     useWatch({
       name,
-    })?.[0]?.amount ?? 0; // Assume there's only 1 XCH field per trade side
+    })?.[0]?.amount ?? 0; // Assume there's only 1 CAC field per trade side
   const { requestedRoyalties, offeredRoyalties, isCalculatingRoyalties } = useOfferBuilderContext();
 
-  // Yes, this is correct. Fungible (XCH) assets used to pay royalties are from the opposite side of the trade.
+  // Yes, this is correct. Fungible (CAC) assets used to pay royalties are from the opposite side of the trade.
   const allRoyalties = offering ? requestedRoyalties : offeredRoyalties;
 
   const loading = isLoadingWallet || isCalculatingRoyalties;
@@ -38,23 +38,23 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
       return [];
     }
 
-    let amountWithRoyaltiesLocal = chiaToMojo(amount);
+    let amountWithRoyaltiesLocal = cactusToMojo(amount);
     const rows: Record<string, any>[] = [];
     Object.entries(allRoyalties).forEach(([nftId, royaltyPaymentsLocal]) => {
-      const matchingPayment = royaltyPaymentsLocal?.find((payment) => payment.asset === 'xch');
+      const matchingPayment = royaltyPaymentsLocal?.find((payment) => payment.asset === 'cac');
       if (matchingPayment) {
         amountWithRoyaltiesLocal = amountWithRoyaltiesLocal.plus(matchingPayment.amount);
         rows.push({
           nftId,
           payment: {
             ...matchingPayment,
-            displayAmount: mojoToChiaLocaleString(matchingPayment.amount),
+            displayAmount: mojoToCactusLocaleString(matchingPayment.amount),
           },
         });
       }
     });
 
-    return [mojoToChiaLocaleString(amountWithRoyaltiesLocal), rows];
+    return [mojoToCactusLocaleString(amountWithRoyaltiesLocal), rows];
   }, [allRoyalties, amount]);
 
   function handleAdd() {
@@ -73,7 +73,7 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
     <OfferBuilderSection
       icon={<Farming color="info" />}
       title={currencyCode}
-      subtitle={<Trans>Chia ({currencyCode}) is a digital currency that is secure and sustainable</Trans>}
+      subtitle={<Trans>Cactus ({currencyCode}) is a digital currency that is secure and sustainable</Trans>}
       onAdd={!fields.length ? handleAdd : undefined}
       expanded={!!fields.length}
       muted={muted}

@@ -1,5 +1,5 @@
-import { Button, CardHero, Link, useOpenDialog } from '@chia-network/core';
-import { Farming } from '@chia-network/icons';
+import { Button, CardHero, Link, useOpenDialog } from '@cactus-network/core';
+import { Farming } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
@@ -28,7 +28,7 @@ export default function FarmHero() {
             <Trans>
               Farmers earn block rewards and transaction fees by committing spare space to the network to help secure
               transactions. This is where your farm will be once you add a plot.{' '}
-              <Link target="_blank" href="https://github.com/Chia-Network/chia-blockchain/wiki/Network-Architecture">
+              <Link target="_blank" href="https://github.com/Cactus-Network/cactus-blockchain/wiki/Network-Architecture">
                 Learn more
               </Link>
             </Trans>

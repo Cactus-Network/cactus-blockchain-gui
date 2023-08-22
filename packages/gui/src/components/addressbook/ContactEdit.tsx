@@ -1,6 +1,6 @@
-// import { useGetNFTInfoQuery } from '@chia-network/api-react';
-import { fromBech32m } from '@chia-network/api';
-import { AddressBookContext, Color, EmojiAndColorPicker, Flex, Form, TextField } from '@chia-network/core';
+// import { useGetNFTInfoQuery } from '@cactus-network/api-react';
+import { fromBech32m } from '@cactus-network/api';
+import { AddressBookContext, Color, EmojiAndColorPicker, Flex, Form, TextField } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Add, Remove } from '@mui/icons-material';
 import { Box, Button, IconButton, Typography } from '@mui/material';
@@ -220,13 +220,13 @@ export default function ContactEdit() {
     filteredAddresses.forEach((entry) => {
       try {
         if (entry.address[3] === '1') {
-          if (entry.address.slice(0, 3).toLowerCase() !== 'xch') {
+          if (entry.address.slice(0, 3).toLowerCase() !== 'cac') {
             throw new Error();
           } else if (fromBech32m(entry.address).length !== 64) {
             throw new Error();
           }
         } else if (entry.address[4] === '1') {
-          if (entry.address.slice(0, 4).toLowerCase() !== 'txch') {
+          if (entry.address.slice(0, 4).toLowerCase() !== 'tcac') {
             throw new Error();
           } else if (fromBech32m(entry.address).length !== 64) {
             throw new Error();
@@ -251,7 +251,7 @@ export default function ContactEdit() {
     });
     filteredProfiles.forEach((entry) => {
       try {
-        if (entry.did.slice(0, 9).toLowerCase() !== 'did:chia:') {
+        if (entry.did.slice(0, 9).toLowerCase() !== 'did:cactus:') {
           throw new Error();
         } else if (fromBech32m(entry.did).length !== 64) {
           throw new Error();

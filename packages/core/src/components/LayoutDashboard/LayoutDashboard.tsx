@@ -1,4 +1,4 @@
-import { useGetLoggedInFingerprintQuery, useGetKeyQuery, useFingerprintSettings } from '@chia-network/api-react';
+import { useGetLoggedInFingerprintQuery, useGetKeyQuery, useFingerprintSettings } from '@cactus-network/api-react';
 import { Trans } from '@lingui/macro';
 import { Edit as EditIcon } from '@mui/icons-material';
 import { Box, AppBar, Toolbar, Drawer, IconButton, Typography, CircularProgress, Button } from '@mui/material';

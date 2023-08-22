@@ -15,7 +15,7 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: si\n"
-"X-Crowdin-File: /[Chia-Network.chia-blockchain-gui] main/packages/gui/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Cactus-Network.cactus-blockchain-gui] main/packages/gui/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1306\n"
 
 #: src/components/offers2/OfferBuilderImport.tsx:167
@@ -47,7 +47,7 @@ msgid "+ Add a Plot"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:80
-msgid "<0>Need some XCH?</0>"
+msgid "<0>Need some CAC?</0>"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:92
@@ -68,7 +68,7 @@ msgstr ""
 
 #: src/electron/main.tsx:1101
 #: src/electron/main.tsx:1188
-msgid "About Chia Blockchain"
+msgid "About Cactus Blockchain"
 msgstr ""
 
 #: src/components/offers/NFTOfferViewer.tsx:638
@@ -208,7 +208,7 @@ msgid "Amount before adding royalties"
 msgstr ""
 
 #: src/util/offerBuilderDataToOffer.ts:59
-msgid "Amount exceeds XCH spendable balance"
+msgid "Amount exceeds CAC spendable balance"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:596
@@ -319,7 +319,7 @@ msgid "Back"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:98
-msgid "Balance: {standardBalance} XCH"
+msgid "Balance: {standardBalance} CAC"
 msgstr ""
 
 #: src/components/block/Block.jsx:235
@@ -351,7 +351,7 @@ msgid "Block VDF Iterations"
 msgstr ""
 
 #: src/components/block/Block.jsx:250
-msgid "Block at height {0} in the Chia blockchain"
+msgid "Block at height {0} in the Cactus blockchain"
 msgstr ""
 
 #: src/components/block/Block.jsx:120
@@ -474,11 +474,11 @@ msgid "Change Pool"
 msgstr ""
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Chia is started"
+msgid "Changes will take effect the next time Cactus is started"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Chia is started."
+msgid "Changes will take effect the next time Cactus is started."
 msgstr ""
 
 #: src/electron/main.tsx:1080
@@ -500,19 +500,19 @@ msgid "Check Provenance on Spacescan.io"
 msgstr ""
 
 #: src/electron/main.tsx:1098
-msgid "Chia"
+msgid "Cactus"
 msgstr ""
 
-#: src/components/offers2/OfferBuilderXCHSection.tsx:76
-msgid "Chia ({currencyCode}) is a digital currency that is secure and sustainable"
+#: src/components/offers2/OfferBuilderCACSection.tsx:76
+msgid "Cactus ({currencyCode}) is a digital currency that is secure and sustainable"
 msgstr ""
 
 #: src/components/offers2/OfferBuilderTokensSection.tsx:114
-msgid "Chia Asset Tokens (CATs) are tokens built on top of XCH"
+msgid "Cactus Asset Tokens (CATs) are tokens built on top of CAC"
 msgstr ""
 
 #: src/electron/main.tsx:1047
-msgid "Chia Blockchain Wiki"
+msgid "Cactus Blockchain Wiki"
 msgstr ""
 
 #: src/components/app/AppSelectMode.tsx:145
@@ -748,7 +748,7 @@ msgid "Create a Plot NFT"
 msgstr ""
 
 #: src/components/offers/OfferManager.tsx:440
-msgid "Create a file that you can use to trade XCH, Chia Asset Tokens, or NFTs with no counter-party risk."
+msgid "Create a file that you can use to trade CAC, Cactus Asset Tokens, or NFTs with no counter-party risk."
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:75
@@ -838,7 +838,7 @@ msgid "DataLayer Services"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:21
-msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Chia Blockchain."
+msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Cactus Blockchain."
 msgstr ""
 
 #: src/components/farm/FarmLastAttemptedProof.tsx:31
@@ -877,7 +877,7 @@ msgid "Deleting key"
 msgstr ""
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:81
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
 msgstr ""
 
 #: src/components/settings/SettingsPanel.tsx:163
@@ -1161,7 +1161,7 @@ msgid "Exclude final directory"
 msgstr ""
 
 #: src/components/nfts/gallery/NFTGalleryHero.tsx:18
-msgid "Explore the Chia ecosystem; discover and trade great NFTs"
+msgid "Explore the Cactus ecosystem; discover and trade great NFTs"
 msgstr ""
 
 #: src/components/offers/utils.ts:161
@@ -1559,7 +1559,7 @@ msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:91
 #: src/components/offers/OfferEditorConditionsPanel.tsx:392
-msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XCH (5,000,000 mojos)"
+msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 CAC (5,000,000 mojos)"
 msgstr ""
 
 #: src/components/offers2/OfferIncomingTable.tsx:112
@@ -1626,15 +1626,15 @@ msgid "Join a Pool"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:41
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:61
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
 msgstr ""
 
 #: src/components/plot/add/PlotAddNFT.tsx:122
-msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
+msgid "Join a pool and get more consistent CAC farming rewards. Create a plot NFT and assign your new plots to a group."
 msgstr ""
 
 #: src/components/app/AppSelectMode.tsx:133
@@ -2118,7 +2118,7 @@ msgid "Not connected"
 msgstr "සම්බන්ධ වී නැත"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:152
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25XCH reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.25CAC reward for pooling plots."
 msgstr ""
 
 #: src/components/notification/NotificationSendDialog.tsx:145
@@ -2456,7 +2456,7 @@ msgstr ""
 
 #: src/util/offerBuilderDataToOffer.ts:46
 #: src/util/offerBuilderDataToOffer.ts:111
-msgid "Please enter an XCH amount"
+msgid "Please enter an CAC amount"
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:591
@@ -2589,7 +2589,7 @@ msgid "Plots With Missing Keys"
 msgstr ""
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:34
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.  <0>Learn more</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Cactus.  <0>Learn more</0>"
 msgstr ""
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:217
@@ -2799,7 +2799,7 @@ msgid "Recommended"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:114
-msgid "Recommended: 0.000005 XCH"
+msgid "Recommended: 0.000005 CAC"
 msgstr ""
 
 #: src/components/nfts/NFTContextualActions.tsx:602
@@ -3004,7 +3004,7 @@ msgid "Self Pooling"
 msgstr ""
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:86
-msgid "Self pool. When you win a block you will earn XCH rewards."
+msgid "Self pool. When you win a block you will earn CAC rewards."
 msgstr ""
 
 #: src/components/offers/NFTOfferEditor.tsx:313
@@ -3170,7 +3170,7 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr ""
 
 #: src/components/pool/PoolHero.tsx:21
-msgid "Smooth out your XCH farming rewards by joining a pool."
+msgid "Smooth out your CAC farming rewards by joining a pool."
 msgstr ""
 
 #: src/components/notification/NotificationNFTTitle.tsx:30
@@ -3232,7 +3232,7 @@ msgid "Status"
 msgstr "තත්වය"
 
 #: src/components/app/AppSelectMode.tsx:78
-msgid "Store and Send XCH"
+msgid "Store and Send CAC"
 msgstr ""
 
 #: src/components/app/AppPassPrompt.tsx:111
@@ -3282,7 +3282,7 @@ msgid "Temporary folder location"
 msgstr ""
 
 #: src/components/app/AppVersionWarning.tsx:35
-msgid "The Chia application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Chia services version: {backV}<2/>Chia application version: {guiV}<3/><4/>It is recommended that you quit the Chia application and stop all Chia services."
+msgid "The Cactus application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Cactus services version: {backV}<2/>Cactus application version: {guiV}<3/><4/>It is recommended that you quit the Cactus application and stop all Cactus services."
 msgstr ""
 
 #: src/components/nfts/NFTMoveToProfileDialog.tsx:210
@@ -3310,7 +3310,7 @@ msgid "The NFT transfer transaction has been successfully submitted to the block
 msgstr ""
 
 #: src/components/settings/SettingsPanel.tsx:165
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 msgstr ""
 
 #: src/components/plot/add/PlotAddSelectTemporaryDirectory.tsx:88
@@ -3393,7 +3393,7 @@ msgid "The total transactions fees in this block. Rewarded to the farmer."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:91
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an CAC address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
 msgstr ""
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:13
@@ -3496,7 +3496,7 @@ msgid "Title Not Available"
 msgstr ""
 
 #: src/components/settings/ResyncPrompt.tsx:41
-msgid "To initiate a wallet resync, all Chia services must first be shut down. After shutting down, you will be required to restart Chia to begin the resyncing process. Are you sure you want to shut down and resync?"
+msgid "To initiate a wallet resync, all Cactus services must first be shut down. After shutting down, you will be required to restart Cactus to begin the resyncing process. Are you sure you want to shut down and resync?"
 msgstr ""
 
 #: src/components/settings/ProfileView.tsx:127
@@ -3530,8 +3530,8 @@ msgstr ""
 msgid "Total Amount with Royalties"
 msgstr ""
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-msgid "Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
+msgid "Total Cactus Farmed"
 msgstr ""
 
 #: src/components/plot/card/PlotCardTotalHarvesters.tsx:11
@@ -3892,7 +3892,7 @@ msgid "WalletConnect Integration"
 msgstr ""
 
 #: src/components/settings/SettingsIntegration.tsx:26
-msgid "WalletConnect enables a decentralized app on the Chia blockchain to communicate and make requests directly to a Chia wallet."
+msgid "WalletConnect enables a decentralized app on the Cactus blockchain to communicate and make requests directly to a Cactus wallet."
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:59
@@ -4066,7 +4066,7 @@ msgstr ""
 #: src/components/app/AppKeyringMigrator.tsx:229
 #: src/components/settings/ChangePassphrasePrompt.tsx:277
 #: src/components/settings/SetPassphrasePrompt.tsx:246
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
+msgid "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
 msgstr ""
 
 #: src/components/settings/SettingsPanel.tsx:55

@@ -1,6 +1,6 @@
 import { ElectronApplication, Page, _electron as electron } from 'playwright';
 import { test, expect } from '@playwright/test';
-import { stopAllChia } from '../utils/wallet';
+import { stopAllCactus } from '../utils/wallet';
 
 let electronApp: ElectronApplication;
 let page: Page;

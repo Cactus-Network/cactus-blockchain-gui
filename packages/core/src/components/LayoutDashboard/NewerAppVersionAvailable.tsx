@@ -79,7 +79,7 @@ export default function NewerAppVersionAvailable(props: NewerAppVersionAvailable
     return (
       <Box sx={{ padding: '0 0 60px 0' }}>
         <Typography variant="body1" color="textPrimary">
-          <Trans>Chia {latestVersion} is currently the latest version available.</Trans>
+          <Trans>Cactus {latestVersion} is currently the latest version available.</Trans>
         </Typography>
       </Box>
     );
@@ -92,7 +92,7 @@ export default function NewerAppVersionAvailable(props: NewerAppVersionAvailable
           {isLoadingVersion ? (
             <Trans>Checking for updates...</Trans>
           ) : newVersionAvailable ? (
-            <Trans>A new version of Chia is available!</Trans>
+            <Trans>A new version of Cactus is available!</Trans>
           ) : (
             <Trans>You're up to date</Trans>
           )}

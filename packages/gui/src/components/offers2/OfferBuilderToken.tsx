@@ -1,6 +1,6 @@
-import type { Wallet } from '@chia-network/api';
-import { useGetWalletsQuery } from '@chia-network/api-react';
-import { Flex } from '@chia-network/core';
+import type { Wallet } from '@cactus-network/api';
+import { useGetWalletsQuery } from '@cactus-network/api-react';
+import { Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import React from 'react';

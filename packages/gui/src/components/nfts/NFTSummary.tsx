@@ -1,5 +1,5 @@
-import type { NFTAttribute } from '@chia-network/api';
-import { Color, CopyToClipboard, Flex, Loading, TooltipIcon, truncateValue } from '@chia-network/core';
+import type { NFTAttribute } from '@cactus-network/api';
+import { Color, CopyToClipboard, Flex, Loading, TooltipIcon, truncateValue } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { alpha, Box, Card, CardContent, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

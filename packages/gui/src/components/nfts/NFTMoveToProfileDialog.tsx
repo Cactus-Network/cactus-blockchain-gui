@@ -1,6 +1,6 @@
-import { NFTInfo } from '@chia-network/api';
-import type { Wallet } from '@chia-network/api';
-import { useGetDIDsQuery, useGetNFTWallets, useSetNFTDIDMutation, useLocalStorage } from '@chia-network/api-react';
+import { NFTInfo } from '@cactus-network/api';
+import type { Wallet } from '@cactus-network/api';
+import { useGetDIDsQuery, useGetNFTWallets, useSetNFTDIDMutation, useLocalStorage } from '@cactus-network/api-react';
 import {
   AlertDialog,
   Button,
@@ -12,11 +12,11 @@ import {
   Flex,
   Form,
   TooltipIcon,
-  chiaToMojo,
+  cactusToMojo,
   truncateValue,
   useOpenDialog,
   useShowError,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
@@ -147,7 +147,7 @@ export function NFTMoveToProfileAction(props: NFTMoveToProfileActionProps) {
 
   async function handleSubmit(formData: NFTMoveToProfileFormData) {
     const { destination: destinationLocal, fee } = formData;
-    const feeInMojos = chiaToMojo(fee || 0);
+    const feeInMojos = cactusToMojo(fee || 0);
     let isValid = true;
 
     if (!destinationLocal || destinationLocal === currentDIDId) {

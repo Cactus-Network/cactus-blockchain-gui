@@ -1,5 +1,5 @@
-import { HarvesterInfo, LatencyData } from '@chia-network/api';
-import { Flex, FormatBytes, Tooltip, TooltipIcon } from '@chia-network/core';
+import { HarvesterInfo, LatencyData } from '@cactus-network/api';
+import { Flex, FormatBytes, Tooltip, TooltipIcon } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Paper, Typography, LinearProgress, Chip } from '@mui/material';
 import BigNumber from 'bignumber.js';

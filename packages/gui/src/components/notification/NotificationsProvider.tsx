@@ -2,7 +2,7 @@ import {
   useGetLoggedInFingerprintQuery,
   useCurrentFingerprintSettings,
   useLocalStorage,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import { orderBy } from 'lodash';
 import React, { useMemo, useEffect, useCallback, createContext, type ReactNode } from 'react';
 

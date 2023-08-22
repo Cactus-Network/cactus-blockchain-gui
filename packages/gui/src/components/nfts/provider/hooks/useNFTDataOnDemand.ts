@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 
-import { type NFTInfo } from '@chia-network/api';
-import { useLazyGetNFTInfoQuery } from '@chia-network/api-react';
+import { type NFTInfo } from '@cactus-network/api';
+import { useLazyGetNFTInfoQuery } from '@cactus-network/api-react';
 import debug from 'debug';
 import { useState, useCallback, useMemo } from 'react';
 
@@ -11,7 +11,7 @@ import getNFTId from '../../../../util/getNFTId';
 import limit from '../../../../util/limit';
 import { launcherIdFromNFTId } from '../../../../util/nfts';
 
-const log = debug('chia-gui:NFTProvider:useMetadataData');
+const log = debug('cactus-gui:NFTProvider:useMetadataData');
 
 export function getChangedEventName(nftId: string) {
   return `nftChanged:${nftId}`;

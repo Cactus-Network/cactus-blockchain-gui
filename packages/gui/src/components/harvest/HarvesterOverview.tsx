@@ -1,5 +1,5 @@
-import { useGetBlockchainStateQuery, useGetHarvestersQuery, useGetNewFarmingInfoQuery } from '@chia-network/api-react';
-import { Flex, FormatBytes, FormatLargeNumber, CardSimple, useCurrencyCode } from '@chia-network/core';
+import { useGetBlockchainStateQuery, useGetHarvestersQuery, useGetNewFarmingInfoQuery } from '@cactus-network/api-react';
+import { Flex, FormatBytes, FormatLargeNumber, CardSimple, useCurrencyCode } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import BigNumber from 'bignumber.js';
@@ -12,7 +12,7 @@ export default function HarvesterOverview() {
   const { isLoading: isLoadingBlockchainState, data: blockChainState } = useGetBlockchainStateQuery();
   const { isLoading: isLoadingHarvesters, data: harvesters } = useGetHarvestersQuery();
   const { isLoading: isLoadingFarmingInfo, data } = useGetNewFarmingInfoQuery();
-  const isTestnet = (useCurrencyCode() ?? 'XCH').toUpperCase() === 'TXCH';
+  const isTestnet = (useCurrencyCode() ?? 'CAC').toUpperCase() === 'TCAC';
 
   const newFarmingInfo = data?.newFarmingInfo;
   const latencyData = data?.latencyData;

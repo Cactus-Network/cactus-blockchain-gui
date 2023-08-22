@@ -3,7 +3,7 @@ import {
   useSetAutoClaimMutation,
   useSpendClawbackCoinsMutation,
   useGetSyncStatusQuery,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import {
   AlertDialog,
   Button,
@@ -12,15 +12,15 @@ import {
   EstimatedFee,
   FeeTxType,
   useCurrencyCode,
-  mojoToChia,
+  mojoToCactus,
   FormatLargeNumber,
   truncateValue,
   CopyToClipboard,
   Flex,
-  chiaToMojo,
+  cactusToMojo,
   Checkbox,
   useOpenDialog,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Close as CloseIcon } from '@mui/icons-material';
 import {
@@ -60,7 +60,7 @@ export default function ClawbackClaimTransactionDialog(props: Props) {
   const openDialog = useOpenDialog();
 
   const isAutoClaimEnabled = autoClaimData?.enabled;
-  const autoClaimFee = autoClaimData?.txFee ? mojoToChia(autoClaimData.txFee) : 0;
+  const autoClaimFee = autoClaimData?.txFee ? mojoToCactus(autoClaimData.txFee) : 0;
 
   const willBeAutoClaimed = isAutoClaimEnabled && fromOrTo === 'from';
 
@@ -103,7 +103,7 @@ export default function ClawbackClaimTransactionDialog(props: Props) {
 
   async function handleSubmit(values: FormData) {
     const { fee, shouldEnableAutoClaim } = values;
-    const feeInMojos = chiaToMojo(fee);
+    const feeInMojos = cactusToMojo(fee);
     const response = await spendClawbackCoins({ coinIds: [coinId], fee: feeInMojos }).unwrap();
     if (response.transactionIds.length === 0) {
       throw new Error('No transaction ids returned');
@@ -166,7 +166,7 @@ export default function ClawbackClaimTransactionDialog(props: Props) {
             <Flex gap={2} flexDirection="column" sx={{ textAlign: 'center', alignItems: 'center' }}>
               <Box sx={{ mb: 3 }}>
                 <Typography variant="h5">
-                  <FormatLargeNumber value={mojoToChia(amountInMojo)} />{' '}
+                  <FormatLargeNumber value={mojoToCactus(amountInMojo)} />{' '}
                   <Box component="span" sx={{ color: (theme) => theme.palette.grey[600] }}>
                     {currencyCode}
                   </Box>
@@ -216,7 +216,7 @@ export default function ClawbackClaimTransactionDialog(props: Props) {
                 color="secondary"
                 fullWidth
                 sx={{ width: '300px', textAlign: 'left' }}
-                txType={FeeTxType.walletSendXCH}
+                txType={FeeTxType.walletSendCAC}
               />
             </Flex>
           </DialogContent>

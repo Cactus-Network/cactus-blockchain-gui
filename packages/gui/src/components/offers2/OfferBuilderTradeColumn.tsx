@@ -1,5 +1,5 @@
-import { Flex } from '@chia-network/core';
-import { Offering, Requesting } from '@chia-network/icons';
+import { Flex } from '@cactus-network/core';
+import { Offering, Requesting } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 import { useWatch } from 'react-hook-form';
@@ -9,7 +9,7 @@ import OfferBuilderFeeSection from './OfferBuilderFeeSection';
 import OfferBuilderHeader from './OfferBuilderHeader';
 import OfferBuilderNFTSection from './OfferBuilderNFTSection';
 import OfferBuilderTokensSection from './OfferBuilderTokensSection';
-import OfferBuilderXCHSection from './OfferBuilderXCHSection';
+import OfferBuilderCACSection from './OfferBuilderCACSection';
 
 function getTitle(offeringParam = false, viewer = false, isMyOffer = false) {
   const offering = isMyOffer ? !offeringParam : offeringParam;
@@ -64,8 +64,8 @@ export default function OfferBuilderTradeColumn(props: OfferBuilderTradeColumnPr
   const { name, offering = false, viewer = false, isMyOffer = false } = props;
   const { readOnly } = useOfferBuilderContext();
 
-  const xch = useWatch({
-    name: `${name}.xch`,
+  const cac = useWatch({
+    name: `${name}.cac`,
   });
 
   const nfts = useWatch({
@@ -76,14 +76,14 @@ export default function OfferBuilderTradeColumn(props: OfferBuilderTradeColumnPr
     name: `${name}.tokens`,
   });
 
-  const showXCH = !readOnly || !!xch.length;
+  const showCAC = !readOnly || !!cac.length;
   const showTokensSection = !readOnly || !!tokens.length;
   const showNFTSection = !readOnly || !!nfts.length;
   const showFeeSection = offering || viewer;
 
-  const mutedXCH = nfts.length || tokens.length;
-  const mutedTokens = xch.length || nfts.length;
-  const mutedNFTs = xch.length || tokens.length;
+  const mutedCAC = nfts.length || tokens.length;
+  const mutedTokens = cac.length || nfts.length;
+  const mutedNFTs = cac.length || tokens.length;
 
   return (
     <Flex flexDirection="column" gap={3}>
@@ -104,7 +104,7 @@ export default function OfferBuilderTradeColumn(props: OfferBuilderTradeColumnPr
           padding: 1,
         }}
       >
-        {showXCH && <OfferBuilderXCHSection name={`${name}.xch`} offering={offering} muted={mutedXCH} />}
+        {showCAC && <OfferBuilderCACSection name={`${name}.cac`} offering={offering} muted={mutedCAC} />}
 
         {showTokensSection && (
           <OfferBuilderTokensSection name={`${name}.tokens`} offering={offering} muted={mutedTokens} />

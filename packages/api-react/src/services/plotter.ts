@@ -1,4 +1,4 @@
-import { PlotterService } from '@chia-network/api';
+import { PlotterService } from '@cactus-network/api';
 
 import api, { baseQuery } from '../api';
 import onCacheEntryAddedInvalidate from '../utils/onCacheEntryAddedInvalidate';

@@ -1,7 +1,7 @@
-import { WalletType } from '@chia-network/api';
-import type { Wallet } from '@chia-network/api';
-import { useGetWalletsQuery, useGetCatListQuery } from '@chia-network/api-react';
-import { useCurrencyCode } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import type { Wallet } from '@cactus-network/api';
+import { useGetWalletsQuery, useGetCatListQuery } from '@cactus-network/api-react';
+import { useCurrencyCode } from '@cactus-network/core';
 import { useMemo } from 'react';
 
 export default function useWallet(walletId?: number | string): {

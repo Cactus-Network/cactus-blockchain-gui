@@ -1,4 +1,4 @@
-import { type ServiceClassWithoutClient, type ServiceClassWithoutClientMethods } from '@chia-network/api';
+import { type ServiceClassWithoutClient, type ServiceClassWithoutClientMethods } from '@cactus-network/api';
 
 import { baseQuery } from '../api';
 

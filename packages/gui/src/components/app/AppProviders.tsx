@@ -1,4 +1,4 @@
-import { store, api } from '@chia-network/api-react';
+import { store, api } from '@cactus-network/api-react';
 import {
   useDarkMode,
   sleep,
@@ -12,7 +12,7 @@ import {
   light,
   ErrorBoundary,
   AuthProvider,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { nativeTheme } from '@electron/remote';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
@@ -28,7 +28,7 @@ import LRUsProvider from '../lrus/LRUsProvider';
 import NFTProvider from '../nfts/provider/NFTProvider';
 import NotificationsProvider from '../notification/NotificationsProvider';
 import OffersProvider from '../offers2/OffersProvider';
-import WalletConnectProvider, { WalletConnectChiaProjectId } from '../walletConnect/WalletConnectProvider';
+import WalletConnectProvider, { WalletConnectCactusProjectId } from '../walletConnect/WalletConnectProvider';
 import AppState from './AppState';
 
 async function waitForConfig() {
@@ -108,7 +108,7 @@ export default function App(props: AppProps) {
                         <AddressBookProvider>
                           <OffersProvider>
                             <NotificationsProvider>
-                              <WalletConnectProvider projectId={WalletConnectChiaProjectId}>
+                              <WalletConnectProvider projectId={WalletConnectCactusProjectId}>
                                 <AppState>{outlet ? <Outlet /> : children}</AppState>
                                 <ModalDialogs />
                               </WalletConnectProvider>

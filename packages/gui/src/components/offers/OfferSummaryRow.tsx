@@ -1,4 +1,4 @@
-import { WalletType } from '@chia-network/api';
+import { WalletType } from '@cactus-network/api';
 import {
   Color,
   CopyToClipboard,
@@ -7,7 +7,7 @@ import {
   FormatLargeNumber,
   TooltipIcon,
   mojoToCATLocaleString,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Plural, t, Trans } from '@lingui/macro';
 import { alpha, Box, Typography } from '@mui/material';
 import React from 'react';

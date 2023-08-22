@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import { useShowSaveDialog } from '@chia-network/core';
+import { useShowSaveDialog } from '@cactus-network/core';
 import { useCallback } from 'react';
 
 export type SaveFileParams = {

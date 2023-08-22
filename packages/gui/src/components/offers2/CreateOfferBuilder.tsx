@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import { useGetWalletsQuery, useCreateOfferForIdsMutation } from '@chia-network/api-react';
-import { Flex, ButtonLoading, useOpenDialog, Loading } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import { useGetWalletsQuery, useCreateOfferForIdsMutation } from '@cactus-network/api-react';
+import { Flex, ButtonLoading, useOpenDialog, Loading } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import React, { useRef, useMemo, useCallback } from 'react';

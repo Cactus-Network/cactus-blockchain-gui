@@ -1,4 +1,4 @@
-import { LayoutDashboardSub } from '@chia-network/core';
+import { LayoutDashboardSub } from '@cactus-network/core';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 

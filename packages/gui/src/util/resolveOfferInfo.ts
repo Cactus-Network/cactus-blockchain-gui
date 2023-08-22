@@ -1,6 +1,6 @@
 import { AssetStatusForOffer } from 'util/offerBuilderDataToOffer';
 
-import { OfferSummaryRecord, WalletType } from '@chia-network/api';
+import { OfferSummaryRecord, WalletType } from '@cactus-network/api';
 import { t } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import { OfferTradeRecordFormatted } from 'hooks/useWalletOffers';
@@ -26,8 +26,8 @@ export function resolvePendingAssets(offer: OfferTradeRecordFormatted): PendingA
     const assetId = pendingAssetIds[m];
     const amount = new BigNumber(offer.pending[assetId]);
     let type: AssetStatusForOffer['type'] | undefined;
-    if (assetId.toUpperCase() === 'XCH' || assetId.toUpperCase() === 'UNKNOWN') {
-      type = 'XCH';
+    if (assetId.toUpperCase() === 'CAC' || assetId.toUpperCase() === 'UNKNOWN') {
+      type = 'CAC';
     } else {
       const info = offer.summary.infos[assetId];
       type = info.type.toUpperCase() as 'CAT' | 'SINGLETON';
@@ -47,7 +47,7 @@ export default function resolveOfferInfo(
     const assetType = offerAssetTypeForAssetId(assetId, summary);
 
     switch (assetType) {
-      case OfferAsset.CHIA:
+      case OfferAsset.CACTUS:
         return {
           displayAmount: formatAmountForWalletType(amount, WalletType.STANDARD_WALLET),
           displayName: lookupByAssetId(assetId)?.displayName ?? assetId.toUpperCase(),
@@ -90,7 +90,7 @@ export function resolveOfferInfoWithPendingAmounts(
     let pendingAmount = new BigNumber(0);
     for (let i = 0; i < pendingAssets.length; i++) {
       const pa = pendingAssets[i];
-      if (pa.type === 'XCH' && ['XCH', 'UNKNOWN'].includes(assetId.toUpperCase())) {
+      if (pa.type === 'CAC' && ['CAC', 'UNKNOWN'].includes(assetId.toUpperCase())) {
         // assetId: unknown likely to be fee
         pendingAmount = pendingAmount.plus(pa.amount);
       } else if (pa.assetId === assetId) {

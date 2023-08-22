@@ -1,5 +1,5 @@
-import { useGetWalletBalanceQuery, useGetCurrentDerivationIndexQuery } from '@chia-network/api-react';
-import { CardSimple, Flex, TooltipIcon } from '@chia-network/core';
+import { useGetWalletBalanceQuery, useGetCurrentDerivationIndexQuery } from '@cactus-network/api-react';
+import { CardSimple, Flex, TooltipIcon } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React, { ReactElement } from 'react';
@@ -69,7 +69,7 @@ export default function WalletCardTotalBalance(props: Props) {
               <TooltipIcon>
                 <Trans>
                   The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This
-                  number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or
+                  number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or
                   NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the
                   derivation index could help the wallet include the missing coins in the balance total.
                 </Trans>

@@ -1,5 +1,5 @@
-import { DropdownBase, Tooltip } from '@chia-network/core';
-import { WalletConnect } from '@chia-network/icons';
+import { DropdownBase, Tooltip } from '@cactus-network/core';
+import { WalletConnect } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Box, Button } from '@mui/material';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { Address, Color, Flex, TooltipIcon } from '@chia-network/core';
+import { Address, Color, Flex, TooltipIcon } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { alpha, Box, Typography } from '@mui/material';
 import React from 'react';

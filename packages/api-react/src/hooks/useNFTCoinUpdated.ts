@@ -1,4 +1,4 @@
-import { WalletService } from '@chia-network/api';
+import { WalletService } from '@cactus-network/api';
 
 import useSubscribeToEvent from './useSubscribeToEvent';
 

@@ -1,5 +1,5 @@
-import { usePrefs } from '@chia-network/api-react';
-import { ButtonLoading, Flex, Form, TextField, Tooltip } from '@chia-network/core';
+import { usePrefs } from '@cactus-network/api-react';
+import { ButtonLoading, Flex, Form, TextField, Tooltip } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { ButtonGroup, Chip, InputAdornment } from '@mui/material';
 import React from 'react';

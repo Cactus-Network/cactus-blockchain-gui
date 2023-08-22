@@ -1,12 +1,12 @@
-import { useGetFarmedAmountQuery } from '@chia-network/api-react';
+import { useGetFarmedAmountQuery } from '@cactus-network/api-react';
 import {
   useCurrencyCode,
-  mojoToChiaLocaleString,
+  mojoToCactusLocaleString,
   useLocale,
   CardSimple,
   FormatLargeNumber,
   Tooltip,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography, Box } from '@mui/material';
 import moment from 'moment';
@@ -26,9 +26,9 @@ function FarmingRewardsHistoryCards() {
   const [locale] = useLocale();
   const { data, isLoading, error } = useGetFarmedAmountQuery();
 
-  const totalChiaFarmedCard = useMemo(() => {
+  const totalCactusFarmedCard = useMemo(() => {
     if (!data || isLoading) {
-      return <CardSimple title={<Trans>Total XCH Farmed</Trans>} value="-" loading={isLoading} error={error} />;
+      return <CardSimple title={<Trans>Total CAC Farmed</Trans>} value="-" loading={isLoading} error={error} />;
     }
 
     let cardValue: React.ReactElement | string = '-';
@@ -41,7 +41,7 @@ function FarmingRewardsHistoryCards() {
                 <Trans>Pool Reward</Trans>
               </td>
               <td>
-                {mojoToChiaLocaleString(data.poolRewardAmount, locale)}
+                {mojoToCactusLocaleString(data.poolRewardAmount, locale)}
                 &nbsp;
                 {currencyCode}
               </td>
@@ -51,7 +51,7 @@ function FarmingRewardsHistoryCards() {
                 <Trans>Farmer Reward</Trans>
               </td>
               <td>
-                {mojoToChiaLocaleString(data.farmerRewardAmount, locale)}
+                {mojoToCactusLocaleString(data.farmerRewardAmount, locale)}
                 &nbsp;
                 {currencyCode}
               </td>
@@ -61,7 +61,7 @@ function FarmingRewardsHistoryCards() {
                 <Trans>Block Fee</Trans>
               </td>
               <td>
-                {mojoToChiaLocaleString(data.feeAmount, locale)}
+                {mojoToCactusLocaleString(data.feeAmount, locale)}
                 &nbsp;
                 {currencyCode}
               </td>
@@ -72,14 +72,14 @@ function FarmingRewardsHistoryCards() {
 
       cardValue = (
         <Tooltip title={title}>
-          {mojoToChiaLocaleString(data.farmedAmount, locale)}
+          {mojoToCactusLocaleString(data.farmedAmount, locale)}
           &nbsp;
           {currencyCode}
         </Tooltip>
       );
     }
 
-    return <CardSimple title={<Trans>Total XCH Farmed</Trans>} value={cardValue} loading={isLoading} error={error} />;
+    return <CardSimple title={<Trans>Total CAC Farmed</Trans>} value={cardValue} loading={isLoading} error={error} />;
   }, [data, locale, currencyCode, isLoading, error]);
 
   const blocksWonCard = useMemo(() => {
@@ -114,7 +114,7 @@ function FarmingRewardsHistoryCards() {
       </Typography>
       <Grid spacing={2} alignItems="stretch" container>
         <Grid xs={12} sm={6} md={4} item>
-          {totalChiaFarmedCard}
+          {totalCactusFarmedCard}
         </Grid>
         <Grid xs={12} sm={6} md={4} item>
           {blocksWonCard}

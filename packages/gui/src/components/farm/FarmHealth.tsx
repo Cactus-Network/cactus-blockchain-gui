@@ -5,8 +5,8 @@ import {
   useResetMissingSignagePointsMutation,
   useResetFilterChallengeStatMutation,
   useGetPartialStatsOffsetQuery,
-} from '@chia-network/api-react';
-import { Flex, StateIndicator, State, Tooltip } from '@chia-network/core';
+} from '@cactus-network/api-react';
+import { Flex, StateIndicator, State, Tooltip } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Button, Paper, Typography, CircularProgress } from '@mui/material';
 import React from 'react';

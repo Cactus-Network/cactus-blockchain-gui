@@ -253,7 +253,7 @@ const Color = {
     '800': '#1E353B',
     '900': '#0F252A',
   },
-  Chia: {
+  Cactus: {
     Primary: '#5ECE71',
     Secondary: {
       '100': '#FFFAE3',

@@ -18,8 +18,8 @@ test.afterAll(async () => {
 
 test('Verify that an NFT can be Transfer to another account', async () => {
   //Pre-requisites
-  let receive_nft_wallet = 'txch15zuw5285d075w8ge99sz23tdcf9kyq2pzez9x3x82z22l5u8g68qs5gec8';
-  let send_wallet = 'txch1z23pn6l698hxygxrrdz0sz3j87dnuylp52d53h96tl4g5p09qtes5r5r2f';
+  let receive_nft_wallet = 'tcac15zuw5285d075w8ge99sz23tdcf9kyq2pzez9x3x82z22l5u8g68qs5gec8';
+  let send_wallet = 'tcac1z23pn6l698hxygxrrdz0sz3j87dnuylp52d53h96tl4g5p09qtes5r5r2f';
 
   //Pre-requisites to get user back to Wallet selection page
   await new CloseDialog(page).closeIt();
@@ -35,7 +35,7 @@ test('Verify that an NFT can be Transfer to another account', async () => {
   //Then I should be able to transfer the NFT to another account
   await page.getByRole('menuitem', { name: 'Transfer NFT' }).click();
   await page.getByLabel('Send to Address *').type(send_wallet);
-  await page.getByRole('button', { name: '0 (>5 min) TXCH' }).click();
+  await page.getByRole('button', { name: '0 (>5 min) TCAC' }).click();
   await page.getByRole('option', { name: 'Enter a custom fee...' }).click();
   await page.getByLabel('Fee').fill('0.00003');
   await page.getByRole('button', { name: 'Transfer' }).click();
@@ -56,7 +56,7 @@ test('Verify that an NFT can be Transfer to another account', async () => {
   await page.getByRole('button', { name: 'Bobble #3' }).getByRole('button').click();
   await page.getByRole('menuitem', { name: 'Transfer NFT' }).click();
   await page.getByLabel('Send to Address *').type(receive_nft_wallet);
-  await page.getByRole('button', { name: '0 (>5 min) TXCH' }).click();
+  await page.getByRole('button', { name: '0 (>5 min) TCAC' }).click();
   await page.getByRole('option', { name: 'Enter a custom fee...' }).click();
   await page.getByLabel('Fee').fill('0.00003');
   await page.getByRole('button', { name: 'Transfer' }).click();

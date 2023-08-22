@@ -1,12 +1,12 @@
-import type { KeyData } from '@chia-network/api';
+import type { KeyData } from '@cactus-network/api';
 import {
   usePrefs,
   useGetKeyringStatusQuery,
   useDeleteAllKeysMutation,
   useGetKeysQuery,
   type Serializable,
-} from '@chia-network/api-react';
-import { ChiaBlack, Coins } from '@chia-network/icons';
+} from '@cactus-network/api-react';
+import { CactusBlack, Coins } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Alert, Typography, Container, ListItemIcon } from '@mui/material';
@@ -217,7 +217,7 @@ export default function SelectKey() {
         sx={{ borderBottom: `1px solid ${Color.Neutral[level]}`, paddingBottom: '30px' }}
       >
         <Flex alignItems="left">
-          <ChiaBlack color="secondary" />
+          <CactusBlack color="secondary" />
           <Typography variant="h4" component="h1" sx={{ position: 'relative', left: '15px', top: '5px' }}>
             <Trans>Wallet Keys</Trans>
           </Typography>
@@ -262,7 +262,7 @@ export default function SelectKey() {
                 color="textSecondary"
                 sx={{ fontWeight: 400, fontSize: '18px' }}
               >
-                <Trans>Create a new wallet key to get started with Chia.</Trans>
+                <Trans>Create a new wallet key to get started with Cactus.</Trans>
               </Typography>
               <Button
                 onClick={() => handleNavigationIfKeyringIsMutable('/wallet/add')}

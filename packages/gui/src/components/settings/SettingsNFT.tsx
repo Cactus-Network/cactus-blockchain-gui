@@ -1,4 +1,4 @@
-// import { usePrefs } from '@chia-network/api-react';
+// import { usePrefs } from '@cactus-network/api-react';
 import {
   Flex,
   SettingsHR,
@@ -9,7 +9,7 @@ import {
   useOpenDialog,
   FormatBytes,
   ConfirmDialog,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Button, Switch, FormControlLabel, Typography } from '@mui/material';
 import React from 'react';

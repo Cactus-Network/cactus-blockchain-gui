@@ -1,4 +1,4 @@
-import { AlertDialog, useOpenDialog } from '@chia-network/core';
+import { AlertDialog, useOpenDialog } from '@cactus-network/core';
 import { dialog } from '@electron/remote';
 import { Trans } from '@lingui/macro';
 import isElectron from 'is-electron';

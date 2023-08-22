@@ -15,14 +15,14 @@ msgstr ""
 "X-Crowdin-Project: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "X-Crowdin-Project-ID: 1\n"
 "X-Crowdin-Language: it\n"
-"X-Crowdin-File: /[Chia-Network.chia-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
+"X-Crowdin-File: /[Cactus-Network.cactus-blockchain-gui] main/packages/core/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 1304\n"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(>5 min)"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:61
+#: src/components/EstimatedFee/EstimatedFee.tsx:62
 msgid "(~{selectedTime} min)"
 msgstr ""
 
@@ -35,14 +35,14 @@ msgid "{minPassphraseLength, plural, one {Passphrases must be at least # charact
 msgstr "{minPassphraseLength, plural, one {Passphrases must be at least # character in length} other {Passphrases must be at least # characters in length}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
-msgid "A new version of Chia is available!"
+msgid "A new version of Cactus is available!"
 msgstr ""
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:258
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:268
 msgid "Add Icon"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:172
+#: src/screens/SelectKey/SelectKey.tsx:173
 msgid "Add wallet"
 msgstr ""
 
@@ -59,10 +59,18 @@ msgid "Are you sure you want to continue? Type in the fingerprint of this wallet
 msgstr ""
 
 #: src/components/FormBackButton/FormBackButton.tsx:15
-#: src/screens/SelectKey/SelectKey.tsx:127
+#: src/screens/SelectKey/SelectKey.tsx:128
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:156
 msgid "Back"
 msgstr "Indietro"
+
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Cactus {latestVersion} is currently the latest version available."
+msgstr ""
+
+#: src/components/Settings/SettingsApp.tsx:125
+msgid "Cactus Application Version:"
+msgstr ""
 
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:17
@@ -76,14 +84,6 @@ msgstr ""
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:93
 msgid "Checking for updates..."
-msgstr ""
-
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Chia {latestVersion} is currently the latest version available."
-msgstr ""
-
-#: src/components/Settings/SettingsApp.tsx:125
-msgid "Chia Application Version:"
 msgstr ""
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:110
@@ -106,17 +106,17 @@ msgstr "Copia negli appunti"
 
 #: src/screens/SelectKey/SelectKey.tsx:170
 #~ msgid "Create a new private key"
-#~ msgstr "Crea una nuova chiave privata"
+#~ msgstr "Crea una nuova cactusve privata"
 
-#: src/screens/SelectKey/SelectKey.tsx:270
+#: src/screens/SelectKey/SelectKey.tsx:273
 msgid "Create a new wallet key"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:262
-msgid "Create a new wallet key to get started with Chia."
+#: src/screens/SelectKey/SelectKey.tsx:265
+msgid "Create a new wallet key to get started with Cactus."
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:175
+#: src/screens/SelectKey/SelectKey.tsx:176
 msgid "Create New"
 msgstr ""
 
@@ -124,27 +124,27 @@ msgstr ""
 msgid "Dark"
 msgstr "Scuro"
 
-#: src/screens/SelectKey/SelectKey.tsx:126
+#: src/screens/SelectKey/SelectKey.tsx:127
 #: src/screens/SelectKey/SelectKeyItem.tsx:113
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:166
 msgid "Delete"
 msgstr "Elimina"
 
-#: src/screens/SelectKey/SelectKey.tsx:125
+#: src/screens/SelectKey/SelectKey.tsx:126
 msgid "Delete all keys"
-msgstr "Elimina tutte le chiavi"
+msgstr "Elimina tutte le cactusvi"
 
-#: src/screens/SelectKey/SelectKey.tsx:200
+#: src/screens/SelectKey/SelectKey.tsx:201
 msgid "Delete All Keys"
 msgstr ""
 
 #: src/screens/SelectKey/WalletDeleteDialog.tsx:96
 msgid "Delete key {fingerprint}"
-msgstr "Elimina chiave {fingerprint}"
+msgstr "Elimina cactusve {fingerprint}"
 
-#: src/screens/SelectKey/SelectKey.tsx:131
+#: src/screens/SelectKey/SelectKey.tsx:132
 msgid "Deleting all keys will permanently remove the keys from your computer, make sure you have backups. Are you sure you want to continue?"
-msgstr "Eliminando tutte le chiavi queste saranno rimosse definitivamente dal tuo computer, assicurati di avere un backup. Sei sicuro di voler continuare?"
+msgstr "Eliminando tutte le cactusvi queste saranno rimosse definitivamente dal tuo computer, assicurati di avere un backup. Sei sicuro di voler continuare?"
 
 #: src/screens/SelectKey/SelectKeyItem.tsx:105
 msgid "Details"
@@ -163,7 +163,7 @@ msgstr "Disabilita protezione con password"
 msgid "Discard"
 msgstr "Annulla"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:183
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:147
 msgid "Download"
 msgstr ""
 
@@ -180,7 +180,7 @@ msgstr "Errore:"
 msgid "Esc"
 msgstr ""
 
-#: src/components/LayoutMain/LayoutFooter.tsx:48
+#: src/components/LayoutMain/LayoutFooter.tsx:49
 msgid "FAQ"
 msgstr ""
 
@@ -190,14 +190,14 @@ msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDeleteKeyDialog.tsx:58
 msgid "Farmer public key:"
-msgstr "Chiave pubblica del farmer:"
+msgstr "Cactusve pubblica del farmer:"
 
 #: src/components/Settings/SettingsApp.tsx:78
 msgid "Farming"
 msgstr "Coltivando"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:333
-#: src/components/EstimatedFee/EstimatedFee.tsx:367
+#: src/components/EstimatedFee/EstimatedFee.tsx:334
+#: src/components/EstimatedFee/EstimatedFee.tsx:368
 #: src/components/Fee/Fee.tsx:44
 msgid "Fee"
 msgstr "Costo della commissione"
@@ -231,7 +231,7 @@ msgstr ""
 msgid "Hide Advanced Options"
 msgstr "Nascondi Opzioni Avanzate"
 
-#: src/screens/SelectKey/SelectKey.tsx:180
+#: src/screens/SelectKey/SelectKey.tsx:181
 msgid "Import Existing"
 msgstr ""
 
@@ -253,17 +253,17 @@ msgstr ""
 
 #: src/components/Settings/SettingsApp.tsx:102
 msgid "Light"
-msgstr "Chiaro"
+msgstr "Cactusro"
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:222
+#: src/components/EstimatedFee/EstimatedFee.tsx:223
 msgid "Likely in {0} seconds"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:219
+#: src/components/EstimatedFee/EstimatedFee.tsx:220
 msgid "Likely in {minutes} minutes"
 msgstr ""
 
-#: src/components/EstimatedFee/EstimatedFee.tsx:221
+#: src/components/EstimatedFee/EstimatedFee.tsx:222
 msgid "Likely in >5 minutes"
 msgstr ""
 
@@ -271,22 +271,22 @@ msgstr ""
 msgid "Loading details"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:232
+#: src/screens/SelectKey/SelectKey.tsx:235
 msgid "Loading keys"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:117
 #~ msgid "Loading list of the keys"
-#~ msgstr "Caricamento lista delle chiavi"
+#~ msgstr "Caricamento lista delle cactusvi"
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:317
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:336
-msgid "Log Out"
-msgstr "Disconnetti"
+#~ msgid "Log Out"
+#~ msgstr "Disconnetti"
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:335
-msgid "Logout"
-msgstr "Disconnettiti"
+#~ msgid "Logout"
+#~ msgstr "Disconnettiti"
 
 #: src/hooks/useKeyringMigrationPrompt.tsx:16
 msgid "Migrate"
@@ -308,14 +308,14 @@ msgstr ""
 msgid "New passphrase is the same as your current passphrase"
 msgstr "La nuova passphrase è la stessa della tua passphrase attuale"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:168
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:132
 msgid "New version {latestVersion} available"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDeleteKeyDialog.tsx:84
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:138
 msgid "No 24 word seed, since this key is imported."
-msgstr "Nessun seed di 24 parole, dato che la chiave è importata."
+msgstr "Nessun seed di 24 parole, dato che la cactusve è importata."
 
 #: src/components/FormatConnectionStatus/FormatConnectionStatus.tsx:33
 msgid "Not connected"
@@ -330,7 +330,7 @@ msgstr "Non connesso"
 msgid "OK"
 msgstr "OK"
 
-#: src/screens/SelectKey/SelectKey.tsx:254
+#: src/screens/SelectKey/SelectKey.tsx:257
 msgid "Open a world of possibilities."
 msgstr ""
 
@@ -340,16 +340,16 @@ msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDeleteKeyDialog.tsx:66
 msgid "Pool public key:"
-msgstr "Chiave Pubblica Pool:"
+msgstr "Cactusve Pubblica Pool:"
 
 #: src/screens/SelectKey/SelectKeyDeleteKeyDialog.tsx:27
 #: src/screens/SelectKey/SelectKeyDeleteKeyDialog.tsx:34
 msgid "Private key {fingerprint}"
-msgstr "Chiave privata {fingerprint}"
+msgstr "Cactusve privata {fingerprint}"
 
 #: src/screens/SelectKey/SelectKeyDeleteKeyDialog.tsx:42
 msgid "Private key:"
-msgstr "Chiave privata:"
+msgstr "Cactusve privata:"
 
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:82
 msgid "Public Key"
@@ -357,9 +357,9 @@ msgstr ""
 
 #: src/screens/SelectKey/SelectKeyDeleteKeyDialog.tsx:50
 msgid "Public key:"
-msgstr "Chiave pubblica:"
+msgstr "Cactusve pubblica:"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:277
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:287
 msgid "Random"
 msgstr ""
 
@@ -375,7 +375,7 @@ msgstr ""
 msgid "Reload Application"
 msgstr "Ricarica Applicazione"
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:258
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:268
 msgid "Remove Icon"
 msgstr ""
 
@@ -396,7 +396,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/screens/SelectKey/EmojiAndColorPicker.tsx:170
+#: src/screens/SelectKey/EmojiAndColorPicker.tsx:180
 #: src/screens/SelectKey/Search.tsx:34
 msgid "Search"
 msgstr ""
@@ -415,20 +415,20 @@ msgstr "Seed:"
 
 #: src/screens/SelectKey/SelectKey.tsx:134
 #~ msgid "Select Key"
-#~ msgstr "Selezione Chiave"
+#~ msgstr "Selezione Cactusve"
 
 #: src/components/Dropdown/Dropdown.tsx:28
 msgid "Select..."
 msgstr "Seleziona..."
 
-#: src/components/LayoutMain/LayoutFooter.tsx:51
+#: src/components/LayoutMain/LayoutFooter.tsx:52
 #: src/components/Settings/SettingsApp.tsx:154
 msgid "Send Feedback"
 msgstr "Invia Feedback"
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:52
 msgid "Setting a passphrase is strongly recommended to protect your keys. Are you sure you want to skip setting a passphrase?"
-msgstr "Impostare una passphrase è fortemente raccomandato per proteggere le chiavi. Sei sicuro di voler saltare l'impostazione di una passphrase?"
+msgstr "Impostare una passphrase è fortemente raccomandato per proteggere le cactusvi. Sei sicuro di voler saltare l'impostazione di una passphrase?"
 
 #: src/components/Settings/Settings.tsx:49
 #: src/components/Settings/Settings.tsx:59
@@ -443,7 +443,7 @@ msgstr "Mostra Opzioni Avanzate"
 #~ msgid "Sign In"
 #~ msgstr "Registrati"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:171
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:135
 #: src/hooks/useValidateChangePassphraseParams.tsx:50
 msgid "Skip"
 msgstr "Salta"
@@ -496,17 +496,17 @@ msgstr "La transazione è stata inviata ad un nodo completo ed è in attesa di i
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "La transazione é stata inviata con successo ad un nodo completo ed inclusa nella mempol."
 
-#: src/screens/SelectKey/SelectKey.tsx:239
+#: src/screens/SelectKey/SelectKey.tsx:242
 msgid "Try Again"
 msgstr "Riprova"
 
-#: src/screens/SelectKey/SelectKey.tsx:243
+#: src/screens/SelectKey/SelectKey.tsx:246
 msgid "Unable to load keys"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:128
 #~ msgid "Unable to load the list of the keys"
-#~ msgstr "Impossibile caricare la lista delle chiavi"
+#~ msgstr "Impossibile caricare la lista delle cactusvi"
 
 #: src/components/LocaleToggle/LocaleToggle.tsx:44
 msgid "Unknown"
@@ -519,13 +519,13 @@ msgstr "Modifiche non salvate"
 
 #: src/hooks/useValidateChangePassphraseParams.tsx:61
 msgid "Using a passphrase is strongly recommended to protect your keys. Are you sure you want to disable passphrase protection?"
-msgstr "Utilizzare una passphrase è fortemente raccomandato per proteggere le chiavi. Sei sicuro di voler disabilitare la protezione delle passphrase ?"
+msgstr "Utilizzare una passphrase è fortemente raccomandato per proteggere le cactusvi. Sei sicuro di voler disabilitare la protezione delle passphrase ?"
 
 #: src/components/Fee/Fee.tsx:24
 msgid "Value seems high"
 msgstr "Il valore sembra alto"
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:270
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:232
 #: src/components/Settings/SettingsApp.tsx:86
 msgid "Wallet"
 msgstr "Wallet"
@@ -539,15 +539,15 @@ msgstr ""
 msgid "Wallet Fingerprint"
 msgstr ""
 
-#: src/screens/SelectKey/SelectKey.tsx:219
+#: src/screens/SelectKey/SelectKey.tsx:222
 msgid "Wallet Keys"
 msgstr ""
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Benvenuto da Chia. Per favore accedi con una chiave esistente, o crea una nuova chiave."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Benvenuto da Cactus. Per favore accedi con una cactusve esistente, o crea una nuova cactusve."
 
-#: src/components/LayoutDashboard/LayoutDashboard.tsx:177
+#: src/components/LayoutDashboard/LayoutDashboard.tsx:141
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66
 msgid "What's New"
 msgstr ""
@@ -567,4 +567,4 @@ msgstr ""
 
 #: src/hooks/useKeyringMigrationPrompt.tsx:20
 msgid "Your keys have not been migrated to a new keyring. You will be unable to create new keys or delete existing keys until migration completes. Would you like to migrate your keys now?"
-msgstr "Le chiavi non sono state migrate ad un nuovo keyring. Non sarà possibile creare nuove chiavi o eliminare le chiavi esistenti fino al completamento della migrazione. Vuoi migrare le tue chiavi ora?"
+msgstr "Le cactusvi non sono state migrate ad un nuovo keyring. Non sarà possibile creare nuove cactusvi o eliminare le cactusvi esistenti fino al completamento della migrazione. Vuoi migrare le tue cactusvi ora?"

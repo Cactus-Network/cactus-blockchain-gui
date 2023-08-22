@@ -1,6 +1,6 @@
-import type { Wallet } from '@chia-network/api';
-import { WalletType } from '@chia-network/api';
-import { mojoToCATLocaleString, mojoToChiaLocaleString, useLocale } from '@chia-network/core';
+import type { Wallet } from '@cactus-network/api';
+import { WalletType } from '@cactus-network/api';
+import { mojoToCATLocaleString, mojoToCactusLocaleString, useLocale } from '@cactus-network/core';
 import BigNumber from 'bignumber.js';
 import { useMemo } from 'react';
 
@@ -14,7 +14,7 @@ export default function useWalletHumanValue(
   return useMemo(() => {
     if (wallet && value !== undefined) {
       const localisedValue =
-        wallet.type === WalletType.CAT ? mojoToCATLocaleString(value, locale) : mojoToChiaLocaleString(value, locale);
+        wallet.type === WalletType.CAT ? mojoToCATLocaleString(value, locale) : mojoToCactusLocaleString(value, locale);
 
       return `${localisedValue} ${unit}`;
     }

@@ -1,5 +1,5 @@
-import { useCreateNewPoolWalletMutation } from '@chia-network/api-react';
-import { Flex, Suspender } from '@chia-network/core';
+import { useCreateNewPoolWalletMutation } from '@cactus-network/api-react';
+import { Flex, Suspender } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
 import React, { ReactNode } from 'react';
@@ -60,7 +60,7 @@ export default function PlotNFTAdd(props: Props) {
         title={<Trans>Want to Join a Pool? Create a Plot NFT</Trans>}
         description={
           <Trans>
-            Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less
+            Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less
             volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot.
           </Trans>
         }

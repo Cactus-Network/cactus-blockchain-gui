@@ -1,4 +1,4 @@
-import { Tooltip, isValidURL } from '@chia-network/core';
+import { Tooltip, isValidURL } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';

@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import type { OfferSummaryAssetInfo, OfferSummaryRecord } from '@chia-network/api';
-import { mojoToCAT, mojoToChia, mojoToCATLocaleString, mojoToChiaLocaleString } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import type { OfferSummaryAssetInfo, OfferSummaryRecord } from '@cactus-network/api';
+import { mojoToCAT, mojoToCactus, mojoToCATLocaleString, mojoToCactusLocaleString } from '@cactus-network/core';
 import { t } from '@lingui/macro';
 import type { ChipProps } from '@mui/material';
 
@@ -40,7 +40,7 @@ export function summaryStringsForNFTOffer(
   builder: (filename: string, args: [assetInfo: AssetIdMapEntry | undefined, amount: string]) => string
 ): [makerString: string, takerString: string] {
   // const makerAssetType = offerAssetTypeForAssetId
-  // TODO: Remove 1:1 NFT <--> XCH assumption
+  // TODO: Remove 1:1 NFT <--> CAC assumption
   const makerEntry: [string, string] = Object.entries(summary.offered)[0] as [string, string];
   const takerEntry: [string, string] = Object.entries(summary.requested)[0] as [string, string];
   const makerAssetType = offerAssetTypeForAssetId(makerEntry[0], summary);
@@ -149,7 +149,7 @@ export function colorForOfferState(state: OfferState): ChipProps['color'] {
 
 export function formatAmountForWalletType(amount: string | number, walletType: WalletType, locale?: string): string {
   if (walletType === WalletType.STANDARD_WALLET) {
-    return mojoToChiaLocaleString(amount, locale);
+    return mojoToCactusLocaleString(amount, locale);
   }
   if (walletType === WalletType.CAT) {
     return mojoToCATLocaleString(amount, locale);
@@ -187,8 +187,8 @@ export function offerContainsAssetOfType(
 export function offerAssetTypeForAssetId(assetId: string, offerSummary: OfferSummaryRecord): OfferAsset | undefined {
   let assetType: OfferAsset | undefined;
 
-  if (['xch', 'txch'].includes(assetId)) {
-    assetType = OfferAsset.CHIA;
+  if (['cac', 'tcac'].includes(assetId)) {
+    assetType = OfferAsset.CACTUS;
   } else {
     const { infos } = offerSummary;
     const info: OfferSummaryAssetInfo = infos[assetId];
@@ -222,8 +222,8 @@ export function offerAssetIdForAssetType(
     keys = [...Object.keys(offerSummary.offered), ...Object.keys(offerSummary.requested)];
   }
 
-  if (assetType === OfferAsset.CHIA) {
-    return keys.includes('xch') ? 'xch' : undefined;
+  if (assetType === OfferAsset.CACTUS) {
+    return keys.includes('cac') ? 'cac' : undefined;
   }
 
   const assetId = Object.keys(offerSummary.infos).find(
@@ -271,12 +271,12 @@ export type GetNFTPriceWithoutRoyaltiesResult = {
 export function getNFTPriceWithoutRoyalties(
   summary: OfferSummaryRecord
 ): GetNFTPriceWithoutRoyaltiesResult | undefined {
-  for (const assetType of [OfferAsset.TOKEN, OfferAsset.CHIA]) {
+  for (const assetType of [OfferAsset.TOKEN, OfferAsset.CACTUS]) {
     const assetId = offerAssetIdForAssetType(assetType, summary);
     if (assetId) {
       const amountInMojos = offerAssetAmountForAssetId(assetId, summary);
       if (amountInMojos) {
-        const amountInTokens = assetType === OfferAsset.CHIA ? mojoToChia(amountInMojos) : mojoToCAT(amountInMojos);
+        const amountInTokens = assetType === OfferAsset.CACTUS ? mojoToCactus(amountInMojos) : mojoToCAT(amountInMojos);
         return { amount: amountInTokens.toNumber(), assetId, assetType };
       }
     }

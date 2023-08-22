@@ -1,5 +1,5 @@
-// import { useGetNFTInfoQuery } from '@chia-network/api-react';
-import { CardListItem, Flex } from '@chia-network/core';
+// import { useGetNFTInfoQuery } from '@cactus-network/api-react';
+import { CardListItem, Flex } from '@cactus-network/core';
 import { t } from '@lingui/macro';
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';

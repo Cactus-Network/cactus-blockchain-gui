@@ -1,4 +1,4 @@
-import { LatencyRecord } from '@chia-network/api';
+import { LatencyRecord } from '@cactus-network/api';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, BarController } from 'chart.js';
 import * as React from 'react';
 import { Bar } from 'react-chartjs-2';

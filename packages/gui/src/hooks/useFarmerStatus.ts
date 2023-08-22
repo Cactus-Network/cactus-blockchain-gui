@@ -1,5 +1,5 @@
-import { BlockchainState, ServiceName } from '@chia-network/api';
-import { useService } from '@chia-network/api-react';
+import { BlockchainState, ServiceName } from '@cactus-network/api';
+import { useService } from '@cactus-network/api-react';
 
 import FarmerStatus from '../constants/FarmerStatus';
 import FullNodeState from '../constants/FullNodeState';

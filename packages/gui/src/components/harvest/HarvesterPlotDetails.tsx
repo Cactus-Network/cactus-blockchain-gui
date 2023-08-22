@@ -1,5 +1,5 @@
-import { HarvesterInfo } from '@chia-network/api';
-import { Flex } from '@chia-network/core';
+import { HarvesterInfo } from '@cactus-network/api';
+import { Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Paper, Typography } from '@mui/material';
 import * as React from 'react';

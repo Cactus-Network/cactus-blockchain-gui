@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
-import icon from '../../assets/img/chia_circle.svg';
+import icon from '../../assets/img/cactus_circle.svg';
 
 const GlobalStyle = createGlobalStyle`
   body,
@@ -72,7 +72,7 @@ const Spacer = styled.div`
   margin-bottom: 1rem;
 `;
 
-const url = 'https://chia.net';
+const url = 'https://cactus-network.net';
 
 type Props = {
   version: string;
@@ -115,7 +115,7 @@ export default function About(props: Props) {
         </StyledLink>
         <StyledSubTitle>{description}</StyledSubTitle>
         <Spacer />
-        <div className="copyright">Copyright (c) {currentYear} Chia Network</div>
+        <div className="copyright">Copyright (c) {currentYear} Cactus Network</div>
         <Spacer />
         <VersionsTable>
           {versions?.electron && (
@@ -144,7 +144,7 @@ export default function About(props: Props) {
           )}
         </VersionsTable>
 
-        <BugReport href="https://github.com/Chia-Network/chia-blockchain/issues" target="_blank">
+        <BugReport href="https://github.com/Cactus-Network/cactus-blockchain/issues" target="_blank">
           Report an issue
         </BugReport>
         {'{{CSS}}'}

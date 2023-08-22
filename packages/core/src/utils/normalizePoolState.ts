@@ -1,4 +1,4 @@
-import type { PoolState } from '@chia-network/api';
+import type { PoolState } from '@cactus-network/api';
 
 import removeOldPoints from './removeOldPoints';
 

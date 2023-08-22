@@ -57,7 +57,7 @@ export * from './MenuItem';
 export { ModeProvider } from './Mode';
 export { default as ModalDialogs, ModalDialogsProvider } from './ModalDialogs';
 export { default as MojoToCAT } from './MojoToCAT';
-export { default as MojoToChia } from './MojoToChia';
+export { default as MojoToCactus } from './MojoToCactus';
 export { default as More } from './More';
 export { default as Mute } from './Mute';
 export { default as Persist } from './Persist';

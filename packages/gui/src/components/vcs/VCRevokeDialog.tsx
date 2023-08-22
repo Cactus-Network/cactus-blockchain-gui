@@ -1,4 +1,4 @@
-import { EstimatedFee, FeeTxType, Form, ButtonLoading, DialogActions, Flex, Button } from '@chia-network/core';
+import { EstimatedFee, FeeTxType, Form, ButtonLoading, DialogActions, Flex, Button } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Dialog, DialogTitle, DialogContent, DialogContentText, Typography } from '@mui/material';
 import React, { useCallback } from 'react';
@@ -79,7 +79,7 @@ export default function VCRevokeDialog(props: ConfirmDialogProps) {
                   disabled={isSubmitting}
                   label={<Trans>Fee</Trans>}
                   fullWidth
-                  txType={FeeTxType.walletSendXCH}
+                  txType={FeeTxType.walletSendCAC}
                 />
               </Form>
             )}
