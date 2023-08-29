@@ -6,14 +6,14 @@ import {
   ServiceName,
   ServiceNameValue,
   PassphrasePromptReason,
-} from '@cactus-network/api';
+} from '@cactus-network.net/api';
 import {
   useCloseMutation,
   useGetStateQuery,
   useGetKeyringStatusQuery,
   useServices,
   useGetVersionQuery,
-} from '@cactus-network/api-react';
+} from '@cactus-network.net/api-react';
 import {
   Flex,
   LayoutHero,
@@ -23,7 +23,7 @@ import {
   useIsSimulator,
   useAppVersion,
   useCurrencyCode,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Typography, Collapse } from '@mui/material';
 import isElectron from 'is-electron';

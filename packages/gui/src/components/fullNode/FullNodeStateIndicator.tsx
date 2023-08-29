@@ -1,4 +1,4 @@
-import { Loading, State, StateIndicator } from '@cactus-network/core';
+import { Loading, State, StateIndicator } from '@cactus-network.net/core';
 import React from 'react';
 
 import FullNodeState from '../../constants/FullNodeState';

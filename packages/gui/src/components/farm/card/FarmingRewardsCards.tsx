@@ -1,5 +1,5 @@
-import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network/api-react';
-import { State, CardSimple, useCurrencyCode, mojoToCactusLocaleString, useLocale } from '@cactus-network/core';
+import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network.net/api-react';
+import { State, CardSimple, useCurrencyCode, mojoToCactusLocaleString, useLocale } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography, Box } from '@mui/material';
 import BigNumber from 'bignumber.js';

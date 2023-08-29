@@ -1,4 +1,4 @@
-import { type ServiceNameValue } from '@cactus-network/api';
+import { type ServiceNameValue } from '@cactus-network.net/api';
 import { ReactNode } from 'react';
 
 import type WalletConnectCommandParam from './WalletConnectCommandParam';

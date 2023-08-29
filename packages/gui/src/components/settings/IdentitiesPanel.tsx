@@ -1,6 +1,6 @@
-import { WalletType } from '@cactus-network/api';
-import { useGetDIDQuery, useGetWalletsQuery } from '@cactus-network/api-react';
-import { CardListItem, Flex, Truncate } from '@cactus-network/core';
+import { WalletType } from '@cactus-network.net/api';
+import { useGetDIDQuery, useGetWalletsQuery } from '@cactus-network.net/api-react';
+import { CardListItem, Flex, Truncate } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Add } from '@mui/icons-material';
 import { Box, Typography } from '@mui/material';

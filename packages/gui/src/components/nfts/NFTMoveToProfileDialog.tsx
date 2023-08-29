@@ -1,6 +1,6 @@
-import { NFTInfo } from '@cactus-network/api';
-import type { Wallet } from '@cactus-network/api';
-import { useGetDIDsQuery, useGetNFTWallets, useSetNFTDIDMutation, useLocalStorage } from '@cactus-network/api-react';
+import { NFTInfo } from '@cactus-network.net/api';
+import type { Wallet } from '@cactus-network.net/api';
+import { useGetDIDsQuery, useGetNFTWallets, useSetNFTDIDMutation, useLocalStorage } from '@cactus-network.net/api-react';
 import {
   AlertDialog,
   Button,
@@ -16,7 +16,7 @@ import {
   truncateValue,
   useOpenDialog,
   useShowError,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { Box, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import React, { useMemo } from 'react';

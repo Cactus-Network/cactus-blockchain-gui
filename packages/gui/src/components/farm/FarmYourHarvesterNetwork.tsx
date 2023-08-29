@@ -1,7 +1,7 @@
-import type { Connection } from '@cactus-network/api';
-import { ServiceName } from '@cactus-network/api';
-import { useService, useGetHarvesterConnectionsQuery } from '@cactus-network/api-react';
-import { Table, FormatBytes, FormatConnectionStatus, Card } from '@cactus-network/core';
+import type { Connection } from '@cactus-network.net/api';
+import { ServiceName } from '@cactus-network.net/api';
+import { useService, useGetHarvesterConnectionsQuery } from '@cactus-network.net/api-react';
+import { Table, FormatBytes, FormatConnectionStatus, Card } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Typography, Tooltip, IconButton } from '@mui/material';

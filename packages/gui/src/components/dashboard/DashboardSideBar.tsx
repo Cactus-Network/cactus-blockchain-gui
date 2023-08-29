@@ -1,5 +1,5 @@
-import { useLocalStorage } from '@cactus-network/api-react';
-import { Color, Flex, SideBarItem } from '@cactus-network/core';
+import { useLocalStorage } from '@cactus-network.net/api-react';
+import { Color, Flex, SideBarItem } from '@cactus-network.net/core';
 import {
   Farm as FarmIcon,
   FullNode as FullNodeIcon,
@@ -12,7 +12,7 @@ import {
   Settings as SettingsIcon,
   Contacts as AddressBookIcon,
   VC as VCIcon,
-} from '@cactus-network/icons';
+} from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Box } from '@mui/material';
 import React from 'react';

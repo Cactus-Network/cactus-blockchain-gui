@@ -1,5 +1,5 @@
-import { OfferCoinOfInterest, OfferSummaryRecord } from '@cactus-network/api';
-import { useGetOffersCountQuery, useGetAllOffersQuery } from '@cactus-network/api-react';
+import { OfferCoinOfInterest, OfferSummaryRecord } from '@cactus-network.net/api';
+import { useGetOffersCountQuery, useGetAllOffersQuery } from '@cactus-network.net/api-react';
 import { useState, useCallback } from 'react';
 
 export type OfferTradeRecordFormatted = {

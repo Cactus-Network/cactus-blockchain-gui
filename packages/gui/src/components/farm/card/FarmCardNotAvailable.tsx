@@ -1,4 +1,4 @@
-import { State, StateIndicator, CardSimple } from '@cactus-network/core';
+import { State, StateIndicator, CardSimple } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import React, { type ReactNode } from 'react';
 

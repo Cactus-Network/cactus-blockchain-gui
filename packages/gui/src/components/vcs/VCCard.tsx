@@ -5,9 +5,9 @@ import {
   useGetLoggedInFingerprintQuery,
   useGetTransactionAsyncMutation,
   usePrefs,
-} from '@cactus-network/api-react';
-import { Truncate, Button, Color, useOpenDialog, AlertDialog, Flex, More, MenuItem } from '@cactus-network/core';
-import { Burn as BurnIcon } from '@cactus-network/icons';
+} from '@cactus-network.net/api-react';
+import { Truncate, Button, Color, useOpenDialog, AlertDialog, Flex, More, MenuItem } from '@cactus-network.net/core';
+import { Burn as BurnIcon } from '@cactus-network.net/icons';
 import { Trans, t } from '@lingui/macro';
 import { Delete as DeleteIcon, Edit as EditIcon } from '@mui/icons-material';
 import { alpha, Box, Card, Typography, Table, TableRow, TableCell, ListItemIcon, IconButton } from '@mui/material';

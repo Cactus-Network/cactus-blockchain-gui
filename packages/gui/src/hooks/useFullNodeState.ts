@@ -1,5 +1,5 @@
-import { BlockchainState } from '@cactus-network/api';
-import { useGetBlockchainStateQuery } from '@cactus-network/api-react';
+import { BlockchainState } from '@cactus-network.net/api';
+import { useGetBlockchainStateQuery } from '@cactus-network.net/api-react';
 
 import FullNodeState from '../constants/FullNodeState';
 

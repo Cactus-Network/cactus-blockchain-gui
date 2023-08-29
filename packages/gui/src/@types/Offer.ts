@@ -1,4 +1,4 @@
-import { type OfferSummaryRecord } from '@cactus-network/api';
+import { type OfferSummaryRecord } from '@cactus-network.net/api';
 
 type Offer = {
   id: string;

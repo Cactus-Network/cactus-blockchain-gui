@@ -1,5 +1,5 @@
-import { Color, Flex } from '@cactus-network/core';
-import { WalletGraphTooltip } from '@cactus-network/wallets';
+import { Color, Flex } from '@cactus-network.net/core';
+import { WalletGraphTooltip } from '@cactus-network.net/wallets';
 import { t } from '@lingui/macro';
 import { alpha, Box, Typography } from '@mui/material';
 import React, { ReactNode } from 'react';

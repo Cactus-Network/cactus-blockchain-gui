@@ -1,6 +1,6 @@
-import type { Wallet } from '@cactus-network/api';
-import { useGetWalletsQuery } from '@cactus-network/api-react';
-import { Flex } from '@cactus-network/core';
+import type { Wallet } from '@cactus-network.net/api';
+import { useGetWalletsQuery } from '@cactus-network.net/api-react';
+import { Flex } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import React from 'react';

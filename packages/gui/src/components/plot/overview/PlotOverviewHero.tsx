@@ -1,6 +1,6 @@
-import { useRefreshPlotsMutation } from '@cactus-network/api-react';
-import { Button, CardHero, Flex, Link, useOpenDialog } from '@cactus-network/core';
-import { Plots } from '@cactus-network/icons';
+import { useRefreshPlotsMutation } from '@cactus-network.net/api-react';
+import { Button, CardHero, Flex, Link, useOpenDialog } from '@cactus-network.net/core';
+import { Plots } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography, Divider } from '@mui/material';
 import React from 'react';

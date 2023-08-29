@@ -1,7 +1,7 @@
-import type { Connection } from '@cactus-network/api';
-import { ServiceName } from '@cactus-network/api';
-import { useGetFarmerFullNodeConnectionsQuery, useService } from '@cactus-network/api-react';
-import { Table, Card, FormatBytes, FormatConnectionStatus } from '@cactus-network/core';
+import type { Connection } from '@cactus-network.net/api';
+import { ServiceName } from '@cactus-network.net/api';
+import { useGetFarmerFullNodeConnectionsQuery, useService } from '@cactus-network.net/api-react';
+import { Table, Card, FormatBytes, FormatConnectionStatus } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Link, Typography, Tooltip, IconButton } from '@mui/material';

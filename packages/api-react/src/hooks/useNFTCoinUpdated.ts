@@ -1,4 +1,4 @@
-import { WalletService } from '@cactus-network/api';
+import { WalletService } from '@cactus-network.net/api';
 
 import useSubscribeToEvent from './useSubscribeToEvent';
 

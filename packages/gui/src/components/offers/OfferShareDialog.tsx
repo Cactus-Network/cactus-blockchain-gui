@@ -1,4 +1,4 @@
-import { OfferTradeRecord } from '@cactus-network/api';
+import { OfferTradeRecord } from '@cactus-network.net/api';
 import {
   ButtonLoading,
   CopyToClipboard,
@@ -8,7 +8,7 @@ import {
   useOpenDialog,
   useShowError,
   useOpenExternal,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import {
   Button,

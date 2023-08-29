@@ -1,4 +1,4 @@
-import { Button, CardStep, Select, Flex, Link, Loading } from '@cactus-network/core';
+import { Button, CardStep, Select, Flex, Link, Loading } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Box, Grid, FormControl, InputLabel, MenuItem, Typography } from '@mui/material';
 import React, { useState, forwardRef } from 'react';

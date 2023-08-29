@@ -3,7 +3,7 @@ import {
   useSetAutoClaimMutation,
   useSpendClawbackCoinsMutation,
   useGetSyncStatusQuery,
-} from '@cactus-network/api-react';
+} from '@cactus-network.net/api-react';
 import {
   AlertDialog,
   Button,
@@ -20,7 +20,7 @@ import {
   cactusToMojo,
   Checkbox,
   useOpenDialog,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Close as CloseIcon } from '@mui/icons-material';
 import {

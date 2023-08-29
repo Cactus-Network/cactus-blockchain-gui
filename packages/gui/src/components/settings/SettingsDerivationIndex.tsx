@@ -1,7 +1,7 @@
-import { SyncingStatus } from '@cactus-network/api';
-import { useExtendDerivationIndexMutation, useGetCurrentDerivationIndexQuery } from '@cactus-network/api-react';
-import { AlertDialog, ButtonLoading, Flex, Form, TextField, useOpenDialog } from '@cactus-network/core';
-import { useWalletState } from '@cactus-network/wallets';
+import { SyncingStatus } from '@cactus-network.net/api';
+import { useExtendDerivationIndexMutation, useGetCurrentDerivationIndexQuery } from '@cactus-network.net/api-react';
+import { AlertDialog, ButtonLoading, Flex, Form, TextField, useOpenDialog } from '@cactus-network.net/core';
+import { useWalletState } from '@cactus-network.net/wallets';
 import { Trans, t } from '@lingui/macro';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';

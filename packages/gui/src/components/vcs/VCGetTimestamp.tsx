@@ -1,4 +1,4 @@
-import { useGetTimestampForHeightQuery } from '@cactus-network/api-react';
+import { useGetTimestampForHeightQuery } from '@cactus-network.net/api-react';
 import React from 'react';
 
 export default function VCGetTimestamp(props: {

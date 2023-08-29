@@ -1,5 +1,5 @@
-import { useGetLoggedInFingerprintQuery, useGetPlottersQuery } from '@cactus-network/api-react';
-import { useCurrencyCode, Suspender } from '@cactus-network/core';
+import { useGetLoggedInFingerprintQuery, useGetPlottersQuery } from '@cactus-network.net/api-react';
+import { useCurrencyCode, Suspender } from '@cactus-network.net/core';
 import React from 'react';
 
 import useUnconfirmedPlotNFTs from '../../../hooks/useUnconfirmedPlotNFTs';

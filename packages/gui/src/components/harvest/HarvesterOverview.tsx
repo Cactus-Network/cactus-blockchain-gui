@@ -1,5 +1,5 @@
-import { useGetBlockchainStateQuery, useGetHarvestersQuery, useGetNewFarmingInfoQuery } from '@cactus-network/api-react';
-import { Flex, FormatBytes, FormatLargeNumber, CardSimple, useCurrencyCode } from '@cactus-network/core';
+import { useGetBlockchainStateQuery, useGetHarvestersQuery, useGetNewFarmingInfoQuery } from '@cactus-network.net/api-react';
+import { Flex, FormatBytes, FormatLargeNumber, CardSimple, useCurrencyCode } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import BigNumber from 'bignumber.js';

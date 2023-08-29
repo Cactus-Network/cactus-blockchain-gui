@@ -1,5 +1,5 @@
-import api, { store, useGetLoggedInFingerprintQuery } from '@cactus-network/api-react';
-import { useOpenDialog, useAuth } from '@cactus-network/core';
+import api, { store, useGetLoggedInFingerprintQuery } from '@cactus-network.net/api-react';
+import { useOpenDialog, useAuth } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import debug from 'debug';
 import React, { type ReactNode } from 'react';

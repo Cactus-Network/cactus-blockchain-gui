@@ -1,6 +1,6 @@
-import type { Wallet } from '@cactus-network/api';
-import { WalletType } from '@cactus-network/api';
-import { useGetWalletsQuery, useGetWalletBalanceQuery } from '@cactus-network/api-react';
+import type { Wallet } from '@cactus-network.net/api';
+import { WalletType } from '@cactus-network.net/api';
+import { useGetWalletsQuery, useGetWalletBalanceQuery } from '@cactus-network.net/api-react';
 import { useMemo } from 'react';
 
 export default function useStandardWallet(): {

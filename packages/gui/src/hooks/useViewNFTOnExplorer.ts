@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@cactus-network/api';
-import { useCurrencyCode } from '@cactus-network/core';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { useCurrencyCode } from '@cactus-network.net/core';
 
 import useOpenExternal from './useOpenExternal';
 

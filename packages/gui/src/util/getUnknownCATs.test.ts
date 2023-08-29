@@ -1,4 +1,4 @@
-import { WalletType } from '@cactus-network/api';
+import { WalletType } from '@cactus-network.net/api';
 
 import getUnknownCATs from './getUnknownCATs';
 

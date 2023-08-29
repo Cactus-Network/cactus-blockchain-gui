@@ -1,6 +1,6 @@
-import { WalletType } from '@cactus-network/api';
-import { Flex, MenuItem } from '@cactus-network/core';
-import { Offers as OffersIcon } from '@cactus-network/icons';
+import { WalletType } from '@cactus-network.net/api';
+import { Flex, MenuItem } from '@cactus-network.net/core';
+import { Offers as OffersIcon } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Typography, ListItemIcon } from '@mui/material';
 import React from 'react';

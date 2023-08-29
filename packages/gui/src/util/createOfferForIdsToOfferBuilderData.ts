@@ -1,5 +1,5 @@
-import { toBech32m, WalletType } from '@cactus-network/api';
-import { mojoToCactus, mojoToCAT } from '@cactus-network/core';
+import { toBech32m, WalletType } from '@cactus-network.net/api';
+import { mojoToCactus, mojoToCAT } from '@cactus-network.net/core';
 import BigNumber from 'bignumber.js';
 
 import OfferBuilderData from '../@types/OfferBuilderData';

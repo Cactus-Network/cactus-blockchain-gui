@@ -1,4 +1,4 @@
-import { useGetKeyringStatusQuery } from '@cactus-network/api-react';
+import { useGetKeyringStatusQuery } from '@cactus-network.net/api-react';
 import { t, plural, Trans } from '@lingui/macro';
 import React from 'react';
 

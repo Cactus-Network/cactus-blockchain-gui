@@ -1,5 +1,5 @@
-import { usePrefs } from '@cactus-network/api-react';
-import { ButtonSelected, CardStep, Flex, TextField } from '@cactus-network/core';
+import { usePrefs } from '@cactus-network.net/api-react';
+import { ButtonSelected, CardStep, Flex, TextField } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';

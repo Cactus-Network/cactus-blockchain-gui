@@ -1,4 +1,4 @@
-// import { useGetNFTInfoQuery } from '@cactus-network/api-react';
+// import { useGetNFTInfoQuery } from '@cactus-network.net/api-react';
 import {
   AddressBookContext,
   ConfirmDialog,
@@ -7,7 +7,7 @@ import {
   MenuItem,
   More,
   useOpenDialog,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Delete, Edit } from '@mui/icons-material';
 import { InputAdornment, ListItemIcon, TextField, Typography } from '@mui/material';

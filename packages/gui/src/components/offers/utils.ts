@@ -1,6 +1,6 @@
-import { WalletType } from '@cactus-network/api';
-import type { OfferSummaryAssetInfo, OfferSummaryRecord } from '@cactus-network/api';
-import { mojoToCAT, mojoToCactus, mojoToCATLocaleString, mojoToCactusLocaleString } from '@cactus-network/core';
+import { WalletType } from '@cactus-network.net/api';
+import type { OfferSummaryAssetInfo, OfferSummaryRecord } from '@cactus-network.net/api';
+import { mojoToCAT, mojoToCactus, mojoToCATLocaleString, mojoToCactusLocaleString } from '@cactus-network.net/core';
 import { t } from '@lingui/macro';
 import type { ChipProps } from '@mui/material';
 

@@ -1,4 +1,4 @@
-import { toBech32m } from '@cactus-network/api';
+import { toBech32m } from '@cactus-network.net/api';
 import {
   Card,
   Flex,
@@ -10,8 +10,8 @@ import {
   useCurrencyCode,
   useOpenDialog,
   ConfirmDialog,
-} from '@cactus-network/core';
-import { Offers as OffersIcon } from '@cactus-network/icons';
+} from '@cactus-network.net/core';
+import { Offers as OffersIcon } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React, { useMemo, type ReactNode } from 'react';

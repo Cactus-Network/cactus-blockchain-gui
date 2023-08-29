@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@cactus-network/api';
-import { Color } from '@cactus-network/core';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { Color } from '@cactus-network.net/core';
 import { t } from '@lingui/macro';
 import { alpha } from '@mui/material';
 import React from 'react';

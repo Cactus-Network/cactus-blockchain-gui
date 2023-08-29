@@ -1,7 +1,7 @@
-import { WalletType } from '@cactus-network/api';
-import { useGetWalletBalanceQuery } from '@cactus-network/api-react';
-import { mojoToCATLocaleString, mojoToCactusLocaleString, useLocale } from '@cactus-network/core';
-import { useWallet } from '@cactus-network/wallets';
+import { WalletType } from '@cactus-network.net/api';
+import { useGetWalletBalanceQuery } from '@cactus-network.net/api-react';
+import { mojoToCATLocaleString, mojoToCactusLocaleString, useLocale } from '@cactus-network.net/core';
+import { useWallet } from '@cactus-network.net/wallets';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 

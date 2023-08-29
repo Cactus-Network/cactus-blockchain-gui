@@ -1,5 +1,5 @@
-import { WalletType } from '@cactus-network/api';
-import { useCreateOfferForIdsMutation } from '@cactus-network/api-react';
+import { WalletType } from '@cactus-network.net/api';
+import { useCreateOfferForIdsMutation } from '@cactus-network.net/api-react';
 import {
   Back,
   Button,
@@ -11,7 +11,7 @@ import {
   useShowError,
   cactusToMojo,
   catToMojo,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import BigNumber from 'bignumber.js';

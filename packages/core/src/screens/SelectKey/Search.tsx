@@ -1,4 +1,4 @@
-import { Search as SearchIcon } from '@cactus-network/icons';
+import { Search as SearchIcon } from '@cactus-network.net/icons';
 import { t } from '@lingui/macro';
 import { InputBase /* , InputBaseProps */, Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

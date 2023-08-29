@@ -1,5 +1,5 @@
-import { ServiceName } from '@cactus-network/api';
-import { Mode } from '@cactus-network/core';
+import { ServiceName } from '@cactus-network.net/api';
+import { Mode } from '@cactus-network.net/core';
 
 export default {
   [Mode.WALLET]: [ServiceName.WALLET],

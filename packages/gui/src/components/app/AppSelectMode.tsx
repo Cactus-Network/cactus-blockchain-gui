@@ -1,5 +1,5 @@
-import { Button, Color, Flex, Logo, Card, useMode, Mode } from '@cactus-network/core';
-import { Farming as FarmingIcon } from '@cactus-network/icons';
+import { Button, Color, Flex, Logo, Card, useMode, Mode } from '@cactus-network.net/core';
+import { Farming as FarmingIcon } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import {
   AccountBalanceWallet as AccountBalanceWalletIcon,

@@ -1,7 +1,7 @@
 import fs, { Stats } from 'fs';
 
-import { type OfferSummaryRecord } from '@cactus-network/api';
-import { useGetOfferSummaryMutation } from '@cactus-network/api-react';
+import { type OfferSummaryRecord } from '@cactus-network.net/api';
+import { useGetOfferSummaryMutation } from '@cactus-network.net/api-react';
 import {
   Back,
   Card,
@@ -10,7 +10,7 @@ import {
   useOpenDialog,
   useSerializedNavigationState,
   useShowError,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Button, Grid, Typography } from '@mui/material';
 import React from 'react';

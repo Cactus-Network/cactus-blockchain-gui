@@ -1,4 +1,4 @@
-import { Flex, Loading } from '@cactus-network/core';
+import { Flex, Loading } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Button, Typography, Divider } from '@mui/material';
 import React from 'react';

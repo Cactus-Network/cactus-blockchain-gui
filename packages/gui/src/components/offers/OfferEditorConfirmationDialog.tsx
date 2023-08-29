@@ -1,4 +1,4 @@
-import { ConfirmDialog } from '@cactus-network/core';
+import { ConfirmDialog } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';

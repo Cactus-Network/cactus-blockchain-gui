@@ -1,4 +1,4 @@
-import { useGetLoggedInFingerprintQuery, usePrefs } from '@cactus-network/api-react';
+import { useGetLoggedInFingerprintQuery, usePrefs } from '@cactus-network.net/api-react';
 import { useCallback } from 'react';
 
 export default function useHiddenWallet(): {

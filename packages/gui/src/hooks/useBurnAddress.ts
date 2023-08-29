@@ -1,5 +1,5 @@
-import { toBech32m } from '@cactus-network/api';
-import { useCurrencyCode } from '@cactus-network/core';
+import { toBech32m } from '@cactus-network.net/api';
+import { useCurrencyCode } from '@cactus-network.net/core';
 import { useMemo } from 'react';
 
 export default function useBurnAddress(): string | undefined {

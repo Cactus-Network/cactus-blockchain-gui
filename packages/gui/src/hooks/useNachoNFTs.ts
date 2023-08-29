@@ -1,4 +1,4 @@
-import { useGetNFTsByNFTIDsQuery, useLocalStorage } from '@cactus-network/api-react';
+import { useGetNFTsByNFTIDsQuery, useLocalStorage } from '@cactus-network.net/api-react';
 
 export default function useNachoNFTs() {
   const [nachoNFTsString] = useLocalStorage('nachoNFTs', '');

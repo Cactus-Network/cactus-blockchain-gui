@@ -1,4 +1,4 @@
-import { usePrefs } from '@cactus-network/api-react';
+import { usePrefs } from '@cactus-network.net/api-react';
 
 export default function useNotificationSettings() {
   const [globalNotifications, setGlobalNotifications] = usePrefs<boolean>('globalNotifications', true);

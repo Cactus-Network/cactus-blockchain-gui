@@ -1,4 +1,4 @@
-import { useGetKeyringStatusQuery, useMigrateKeyringMutation } from '@cactus-network/api-react';
+import { useGetKeyringStatusQuery, useMigrateKeyringMutation } from '@cactus-network.net/api-react';
 import {
   Button,
   AlertDialog,
@@ -7,7 +7,7 @@ import {
   useOpenDialog,
   useValidateChangePassphraseParams,
   Suspender,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { t, Trans } from '@lingui/macro';
 import {
   Help as HelpIcon,

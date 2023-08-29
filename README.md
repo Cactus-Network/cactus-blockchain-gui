@@ -41,7 +41,7 @@ This monorepo consists of the following packages:
 To install an NPM package, please navigate to the **root directory** of this repo.
 
 - To install `lodash` for **all** packages: `npx lerna add lodash`
-- To install `lodash` for **single** package: `npx lerna add lodash --scope=@cactus-network/icons`
+- To install `lodash` for **single** package: `npx lerna add lodash --scope=@cactus-network.net/icons`
 - To install as a dev dependency, add `--dev`
 
 After adding a new NPM package, please **pin down the package version**. This is done to lower the possibility of supply chain attacks.

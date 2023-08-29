@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@cactus-network/api-react';
+import { useLocalStorage } from '@cactus-network.net/api-react';
 import { useState, useEffect } from 'react';
 
 export default function useAppVersion() {

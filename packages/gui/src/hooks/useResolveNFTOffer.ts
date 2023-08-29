@@ -1,5 +1,5 @@
-import { toBech32m, OfferSummaryRecord } from '@cactus-network/api';
-import { useSignMessageByIdMutation } from '@cactus-network/api-react';
+import { toBech32m, OfferSummaryRecord } from '@cactus-network.net/api';
+import { useSignMessageByIdMutation } from '@cactus-network.net/api-react';
 import { useCallback, useMemo, useState } from 'react';
 
 type NFTsByOfferSide = {

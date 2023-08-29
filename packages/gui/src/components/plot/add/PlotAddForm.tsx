@@ -1,6 +1,6 @@
-import { defaultPlotter, toBech32m, fromBech32m, WalletCreatePool } from '@cactus-network/api';
-import { useStartPlottingMutation, useCreateNewPoolWalletMutation } from '@cactus-network/api-react';
-import { Back, useShowError, ButtonLoading, Flex, Form } from '@cactus-network/core';
+import { defaultPlotter, toBech32m, fromBech32m, WalletCreatePool } from '@cactus-network.net/api';
+import { useStartPlottingMutation, useCreateNewPoolWalletMutation } from '@cactus-network.net/api-react';
+import { Back, useShowError, ButtonLoading, Flex, Form } from '@cactus-network.net/core';
 import { t, Trans } from '@lingui/macro';
 import React, { useState, useEffect, useRef } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';

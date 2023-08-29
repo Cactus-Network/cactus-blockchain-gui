@@ -1,10 +1,10 @@
-import { WalletType, TransactionType, TransactionTypeFilterMode, toBech32m } from '@cactus-network/api';
-import type { Transaction } from '@cactus-network/api';
+import { WalletType, TransactionType, TransactionTypeFilterMode, toBech32m } from '@cactus-network.net/api';
+import type { Transaction } from '@cactus-network.net/api';
 import {
   useGetOfferRecordMutation,
   useGetSyncStatusQuery,
   useGetTransactionMemoMutation,
-} from '@cactus-network/api-react';
+} from '@cactus-network.net/api-react';
 import {
   AddressBookContext,
   Card,
@@ -18,8 +18,8 @@ import {
   mojoToCAT,
   FormatLargeNumber,
   truncateValue,
-} from '@cactus-network/core';
-import type { Row } from '@cactus-network/core';
+} from '@cactus-network.net/core';
+import type { Row } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { ExpandLess as ExpandLessIcon, ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 import {

@@ -1,4 +1,4 @@
-import { useDeleteUnconfirmedTransactionsMutation } from '@cactus-network/api-react';
+import { useDeleteUnconfirmedTransactionsMutation } from '@cactus-network.net/api-react';
 import {
   Button,
   Color,
@@ -16,8 +16,8 @@ import {
   ConfirmDialog,
   useOpenDialog,
   mojoToCactusLocaleString,
-} from '@cactus-network/core';
-import { Plot as PlotIcon } from '@cactus-network/icons';
+} from '@cactus-network.net/core';
+import { Plot as PlotIcon } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon, Link as LinkIcon, Payment as PaymentIcon } from '@mui/icons-material';
 import { Box, Grid, Card, CardContent, Typography, ListItemIcon } from '@mui/material';

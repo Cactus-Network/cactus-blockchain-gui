@@ -1,6 +1,6 @@
-import { WalletType } from '@cactus-network/api';
-import { useGetWalletsQuery } from '@cactus-network/api-react';
-import { Flex, CardListItem } from '@cactus-network/core';
+import { WalletType } from '@cactus-network.net/api';
+import { useGetWalletsQuery } from '@cactus-network.net/api-react';
+import { Flex, CardListItem } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography, Theme } from '@mui/material';
 import { orderBy } from 'lodash';

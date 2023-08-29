@@ -1,6 +1,6 @@
-import { WalletType } from '@cactus-network/api';
-import type { NFTInfo } from '@cactus-network/api';
-import { useCreateOfferForIdsMutation, useGetWalletBalanceQuery } from '@cactus-network/api-react';
+import { WalletType } from '@cactus-network.net/api';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { useCreateOfferForIdsMutation, useGetWalletBalanceQuery } from '@cactus-network.net/api-react';
 import {
   Amount,
   AmountProps,
@@ -27,7 +27,7 @@ import {
   useLocale,
   useOpenDialog,
   useShowError,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { Warning as WarningIcon } from '@mui/icons-material';
 import { alpha, Box, Divider, Grid, Tabs, Tab, Typography, useTheme } from '@mui/material';

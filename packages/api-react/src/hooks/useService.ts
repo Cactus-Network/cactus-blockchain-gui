@@ -1,4 +1,4 @@
-import { ServiceNameValue } from '@cactus-network/api';
+import { ServiceNameValue } from '@cactus-network.net/api';
 import { useEffect, useState, useMemo, useCallback } from 'react';
 
 import { useClientStartServiceMutation } from '../services/client';

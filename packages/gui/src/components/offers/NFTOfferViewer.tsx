@@ -1,5 +1,5 @@
-import { OfferSummaryRecord, OfferTradeRecord } from '@cactus-network/api';
-import { useCheckOfferValidityMutation, useGetWalletsQuery } from '@cactus-network/api-react';
+import { OfferSummaryRecord, OfferTradeRecord } from '@cactus-network.net/api';
+import { useCheckOfferValidityMutation, useGetWalletsQuery } from '@cactus-network.net/api-react';
 import {
   Back,
   Button,
@@ -17,7 +17,7 @@ import {
   mojoToCactus,
   useColorModeValue,
   useShowError,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Plural, Trans, t } from '@lingui/macro';
 import { Warning as WarningIcon } from '@mui/icons-material';
 import { alpha, Box, Divider, Grid, Typography } from '@mui/material';

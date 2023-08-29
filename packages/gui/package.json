@@ -1,5 +1,5 @@
 {
-    "name": "@cactus-network/gui",
+    "name": "@cactus-network.net/gui",
     "author": "Cactus Network <hello@cactus-network.net> (https://cactus-network.net/)",
     "description": "GUI for Cactus Blockchain",
     "license": "Apache-2.0",
@@ -144,11 +144,11 @@
         "test": "jest"
     },
     "dependencies": {
-        "@cactus-network/api": "1.0.0",
-        "@cactus-network/api-react": "1.0.0",
-        "@cactus-network/core": "1.0.0",
-        "@cactus-network/icons": "1.0.0",
-        "@cactus-network/wallets": "1.0.0",
+        "@cactus-network.net/api": "1.0.0",
+        "@cactus-network.net/api-react": "1.0.0",
+        "@cactus-network.net/core": "1.0.0",
+        "@cactus-network.net/icons": "1.0.0",
+        "@cactus-network.net/wallets": "1.0.0",
         "@electron/remote": "2.0.1",
         "@lingui/core": "4.2.1",
         "@lingui/macro": "4.2.1",

@@ -1,11 +1,11 @@
-import { SyncingStatus } from '@cactus-network/api';
+import { SyncingStatus } from '@cactus-network.net/api';
 import {
   useGetNotificationsQuery,
   useDeleteNotificationsMutation,
   useLazyGetTimestampForHeightQuery,
-} from '@cactus-network/api-react';
-import { ConfirmDialog, useOpenDialog, useAuth } from '@cactus-network/core';
-import { useWalletState } from '@cactus-network/wallets';
+} from '@cactus-network.net/api-react';
+import { ConfirmDialog, useOpenDialog, useAuth } from '@cactus-network.net/core';
+import { useWalletState } from '@cactus-network.net/wallets';
 import { Trans } from '@lingui/macro';
 import debug from 'debug';
 import { orderBy } from 'lodash';

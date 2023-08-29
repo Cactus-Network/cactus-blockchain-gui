@@ -1,5 +1,5 @@
-import { usePrefs } from '@cactus-network/api-react';
-import { AdvancedOptions, ButtonSelected, Flex, TextField, Checkbox, TooltipIcon } from '@cactus-network/core';
+import { usePrefs } from '@cactus-network.net/api-react';
+import { AdvancedOptions, ButtonSelected, Flex, TextField, Checkbox, TooltipIcon } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { FormControl, FormControlLabel, Typography } from '@mui/material';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { useGetWalletsQuery, useCheckOfferValidityMutation } from '@cactus-network/api-react';
+import { useGetWalletsQuery, useCheckOfferValidityMutation } from '@cactus-network.net/api-react';
 import {
   AlertDialog,
   Flex,
@@ -8,8 +8,8 @@ import {
   Loading,
   useShowError,
   useOpenDialog,
-} from '@cactus-network/core';
-import { useIsWalletSynced } from '@cactus-network/wallets';
+} from '@cactus-network.net/core';
+import { useIsWalletSynced } from '@cactus-network.net/wallets';
 import { Trans } from '@lingui/macro';
 import { Alert, Grid } from '@mui/material';
 import React, { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, forwardRef } from 'react';

@@ -1,6 +1,6 @@
 import { type Shell } from 'electron';
 
-import { Farming } from '@cactus-network/icons';
+import { Farming } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import {
   WbSunny as WbSunnyIcon,

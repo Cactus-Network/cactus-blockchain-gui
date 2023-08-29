@@ -1,4 +1,4 @@
-import { WalletType } from '@cactus-network/api';
+import { WalletType } from '@cactus-network.net/api';
 
 type OfferRowData = {
   amount: string;

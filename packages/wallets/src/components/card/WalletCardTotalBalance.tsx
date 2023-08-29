@@ -1,5 +1,5 @@
-import { useGetWalletBalanceQuery, useGetCurrentDerivationIndexQuery } from '@cactus-network/api-react';
-import { CardSimple, Flex, TooltipIcon } from '@cactus-network/core';
+import { useGetWalletBalanceQuery, useGetCurrentDerivationIndexQuery } from '@cactus-network.net/api-react';
+import { CardSimple, Flex, TooltipIcon } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React, { ReactElement } from 'react';

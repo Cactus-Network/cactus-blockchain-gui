@@ -1,5 +1,5 @@
-import { Loading, cactusToMojo, mojoToCactusLocaleString, useCurrencyCode } from '@cactus-network/core';
-import { Farming } from '@cactus-network/icons';
+import { Loading, cactusToMojo, mojoToCactusLocaleString, useCurrencyCode } from '@cactus-network.net/core';
+import { Farming } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 import { useFieldArray, useWatch } from 'react-hook-form';

@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@cactus-network/api-react';
+import { useLocalStorage } from '@cactus-network.net/api-react';
 import { useCallback, useState, useEffect } from 'react';
 
 import compareAppVersions from '../utils/compareAppVersion';

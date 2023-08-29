@@ -1,5 +1,5 @@
-import type { PlotNFT } from '@cactus-network/api';
-import { useGetPlotNFTsQuery } from '@cactus-network/api-react';
+import type { PlotNFT } from '@cactus-network.net/api';
+import { useGetPlotNFTsQuery } from '@cactus-network.net/api-react';
 import PlotNFTExternal from 'types/PlotNFTExternal';
 
 import useUnconfirmedPlotNFTs from './useUnconfirmedPlotNFTs';

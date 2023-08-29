@@ -1,4 +1,4 @@
-import { store, api } from '@cactus-network/api-react';
+import { store, api } from '@cactus-network.net/api-react';
 import {
   useDarkMode,
   sleep,
@@ -12,7 +12,7 @@ import {
   light,
   ErrorBoundary,
   AuthProvider,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { nativeTheme } from '@electron/remote';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';

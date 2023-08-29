@@ -1,5 +1,5 @@
-import { SyncingStatus } from '@cactus-network/api';
-import { useWalletState } from '@cactus-network/wallets';
+import { SyncingStatus } from '@cactus-network.net/api';
+import { useWalletState } from '@cactus-network.net/wallets';
 import { useCallback, useState, useRef, useEffect } from 'react';
 
 export default function useWaitForWalletSync() {

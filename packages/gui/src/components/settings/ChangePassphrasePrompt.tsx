@@ -2,7 +2,7 @@ import {
   useGetKeyringStatusQuery,
   useRemoveKeyringPassphraseMutation,
   useSetKeyringPassphraseMutation,
-} from '@cactus-network/api-react';
+} from '@cactus-network.net/api-react';
 import {
   AlertDialog,
   Button,
@@ -15,7 +15,7 @@ import {
   Form,
   TextField,
   Checkbox,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { t, Trans } from '@lingui/macro';
 import {
   Help as HelpIcon,

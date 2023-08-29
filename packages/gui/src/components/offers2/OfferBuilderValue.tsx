@@ -11,7 +11,7 @@ import {
   StateColor,
   Tooltip,
   TooltipIcon,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Remove } from '@mui/icons-material';
 import { Box, Typography, IconButton } from '@mui/material';

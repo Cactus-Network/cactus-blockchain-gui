@@ -1,5 +1,5 @@
-import { useGetThrottlePlotQueueQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network/api-react';
-import { Loading, Flex } from '@cactus-network/core';
+import { useGetThrottlePlotQueueQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network.net/api-react';
+import { Loading, Flex } from '@cactus-network.net/core';
 import { Grid } from '@mui/material';
 import React from 'react';
 

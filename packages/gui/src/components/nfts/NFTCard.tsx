@@ -1,4 +1,4 @@
-import { IconButton, Flex } from '@cactus-network/core';
+import { IconButton, Flex } from '@cactus-network.net/core';
 import { MoreVert } from '@mui/icons-material';
 import { Card, CardActionArea, CardContent, Checkbox, Typography } from '@mui/material';
 import React, { useMemo, memo } from 'react';

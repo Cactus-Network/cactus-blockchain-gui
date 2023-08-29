@@ -1,5 +1,5 @@
-import { RoyaltyCalculationFungibleAssetPayout } from '@cactus-network/api';
-import { Color, CopyToClipboard, Flex } from '@cactus-network/core';
+import { RoyaltyCalculationFungibleAssetPayout } from '@cactus-network.net/api';
+import { Color, CopyToClipboard, Flex } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { alpha, Box, Divider } from '@mui/material';
 import React from 'react';

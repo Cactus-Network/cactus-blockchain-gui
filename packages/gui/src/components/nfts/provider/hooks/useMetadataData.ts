@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import { type NFTInfo } from '@cactus-network/api';
+import { type NFTInfo } from '@cactus-network.net/api';
 import debug from 'debug';
 import { useState, useCallback, useMemo } from 'react';
 

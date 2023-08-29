@@ -1,4 +1,4 @@
-import { usePrefs } from '@cactus-network/api-react';
+import { usePrefs } from '@cactus-network.net/api-react';
 import { useMediaQuery } from '@mui/material';
 
 const COLOR_SCHEME_QUERY = '(prefers-color-scheme: dark)';

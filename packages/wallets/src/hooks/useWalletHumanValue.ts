@@ -1,6 +1,6 @@
-import type { Wallet } from '@cactus-network/api';
-import { WalletType } from '@cactus-network/api';
-import { mojoToCATLocaleString, mojoToCactusLocaleString, useLocale } from '@cactus-network/core';
+import type { Wallet } from '@cactus-network.net/api';
+import { WalletType } from '@cactus-network.net/api';
+import { mojoToCATLocaleString, mojoToCactusLocaleString, useLocale } from '@cactus-network.net/core';
 import BigNumber from 'bignumber.js';
 import { useMemo } from 'react';
 

@@ -1,5 +1,5 @@
-import { BlockchainState, ServiceName } from '@cactus-network/api';
-import { useService } from '@cactus-network/api-react';
+import { BlockchainState, ServiceName } from '@cactus-network.net/api';
+import { useService } from '@cactus-network.net/api-react';
 
 import FarmerStatus from '../constants/FarmerStatus';
 import FullNodeState from '../constants/FullNodeState';

@@ -1,5 +1,5 @@
-import { type NFTInfo } from '@cactus-network/api';
-import { Flex } from '@cactus-network/core';
+import { type NFTInfo } from '@cactus-network.net/api';
+import { Flex } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Autocomplete, Box, Typography, TextField, TextFieldProps } from '@mui/material';
 import { get } from 'lodash';

@@ -1,7 +1,7 @@
 import fs, { Stats } from 'fs';
 
-import { useGetOfferSummaryMutation } from '@cactus-network/api-react';
-import { Color, Dropzone, Flex, useSerializedNavigationState, useShowError } from '@cactus-network/core';
+import { useGetOfferSummaryMutation } from '@cactus-network.net/api-react';
+import { Color, Dropzone, Flex, useSerializedNavigationState, useShowError } from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { Box, Card, Typography } from '@mui/material';
 import React from 'react';

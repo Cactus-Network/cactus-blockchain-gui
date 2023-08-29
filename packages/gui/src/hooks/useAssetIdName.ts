@@ -1,7 +1,7 @@
-import { WalletType } from '@cactus-network/api';
-import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network/api-react';
-import type { CATToken, Wallet } from '@cactus-network/core';
-import { useCurrencyCode } from '@cactus-network/core';
+import { WalletType } from '@cactus-network.net/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network.net/api-react';
+import type { CATToken, Wallet } from '@cactus-network.net/core';
+import { useCurrencyCode } from '@cactus-network.net/core';
 import { useMemo, useRef, useCallback } from 'react';
 
 export type AssetIdMapEntry = {

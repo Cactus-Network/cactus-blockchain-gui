@@ -1,5 +1,5 @@
-import { useCreateNewPoolWalletMutation } from '@cactus-network/api-react';
-import { Flex, Suspender } from '@cactus-network/core';
+import { useCreateNewPoolWalletMutation } from '@cactus-network.net/api-react';
+import { Flex, Suspender } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
 import React, { ReactNode } from 'react';

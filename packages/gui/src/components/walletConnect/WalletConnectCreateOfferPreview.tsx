@@ -1,4 +1,4 @@
-import { Button, Flex, Loading, useOpenDialog } from '@cactus-network/core';
+import { Button, Flex, Loading, useOpenDialog } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 

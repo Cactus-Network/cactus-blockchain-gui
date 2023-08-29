@@ -1,6 +1,6 @@
-import { WalletType, type Wallet } from '@cactus-network/api';
-import { useGetWalletsQuery } from '@cactus-network/api-react';
-import { Dropdown, Flex, Loading, useTrans } from '@cactus-network/core';
+import { WalletType, type Wallet } from '@cactus-network.net/api';
+import { useGetWalletsQuery } from '@cactus-network.net/api-react';
+import { Dropdown, Flex, Loading, useTrans } from '@cactus-network.net/core';
 import { ListItemIcon, ListItemText, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
 import { useNavigate } from 'react-router';

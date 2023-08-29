@@ -1,14 +1,14 @@
 /* eslint-disable no-bitwise -- enable bitwise operators for this file */
 
-import type { NFTInfo } from '@cactus-network/api';
-import { useSetNFTStatusMutation, useLocalStorage } from '@cactus-network/api-react';
-import { AlertDialog, DropdownActions, MenuItem, useOpenDialog, isValidURL } from '@cactus-network/core';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { useSetNFTStatusMutation, useLocalStorage } from '@cactus-network.net/api-react';
+import { AlertDialog, DropdownActions, MenuItem, useOpenDialog, isValidURL } from '@cactus-network.net/core';
 import {
   Burn as BurnIcon,
   LinkSmall as LinkSmallIcon,
   NFTsSmall as NFTsSmallIcon,
   OffersSmall as OffersSmallIcon,
-} from '@cactus-network/icons';
+} from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import {
   ArrowForward as TransferIcon,

@@ -1,5 +1,5 @@
-import { toBech32m, fromBech32m } from '@cactus-network/api';
-import { useGetCurrentAddressQuery, useSendNotificationMutation } from '@cactus-network/api-react';
+import { toBech32m, fromBech32m } from '@cactus-network.net/api';
+import { useGetCurrentAddressQuery, useSendNotificationMutation } from '@cactus-network.net/api-react';
 import {
   AlertDialog,
   Amount,
@@ -14,7 +14,7 @@ import {
   cactusToMojo,
   useCurrencyCode,
   useOpenDialog,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import {
   Box,

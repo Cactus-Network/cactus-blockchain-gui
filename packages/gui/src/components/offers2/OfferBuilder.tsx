@@ -1,4 +1,4 @@
-import { Form } from '@cactus-network/core';
+import { Form } from '@cactus-network.net/core';
 import { Grid } from '@mui/material';
 import React, { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 import { useForm } from 'react-hook-form';

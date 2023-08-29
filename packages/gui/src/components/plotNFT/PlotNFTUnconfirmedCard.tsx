@@ -1,6 +1,6 @@
-import type { UnconfirmedPlotNFT } from '@cactus-network/api';
-import { useGetTransactionQuery } from '@cactus-network/api-react';
-import { Flex, Link, Loading } from '@cactus-network/core';
+import type { UnconfirmedPlotNFT } from '@cactus-network.net/api';
+import { useGetTransactionQuery } from '@cactus-network.net/api-react';
+import { Flex, Link, Loading } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import React, { useEffect } from 'react';

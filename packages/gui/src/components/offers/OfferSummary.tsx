@@ -1,5 +1,5 @@
-import { type OfferSummaryRecord } from '@cactus-network/api';
-import { Flex, FormatLargeNumber, StateColor, TooltipIcon, mojoToCactus, mojoToCAT } from '@cactus-network/core';
+import { type OfferSummaryRecord } from '@cactus-network.net/api';
+import { Flex, FormatLargeNumber, StateColor, TooltipIcon, mojoToCactus, mojoToCAT } from '@cactus-network.net/core';
 import { Plural, Trans } from '@lingui/macro';
 import { Box, Divider, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

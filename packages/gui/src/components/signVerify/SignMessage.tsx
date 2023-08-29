@@ -1,6 +1,6 @@
-import { toBech32m, toSnakeCase } from '@cactus-network/api';
-import { useSignMessageByAddressMutation, useSignMessageByIdMutation } from '@cactus-network/api-react';
-import { Button, Card, Flex, Form, TextField, useOpenDialog, useShowError } from '@cactus-network/core';
+import { toBech32m, toSnakeCase } from '@cactus-network.net/api';
+import { useSignMessageByAddressMutation, useSignMessageByIdMutation } from '@cactus-network.net/api-react';
+import { Button, Card, Flex, Form, TextField, useOpenDialog, useShowError } from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { ButtonGroup, DialogActions, Typography } from '@mui/material';
 import React, { ReactNode } from 'react';

@@ -1,4 +1,4 @@
-import { Color } from '@cactus-network/core';
+import { Color } from '@cactus-network.net/core';
 import { Box } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';

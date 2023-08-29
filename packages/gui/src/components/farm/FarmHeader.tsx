@@ -1,4 +1,4 @@
-import { Flex, More, useOpenDialog, MenuItem } from '@cactus-network/core';
+import { Flex, More, useOpenDialog, MenuItem } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Settings as SettingsIcon } from '@mui/icons-material';
 import { ListItemIcon, Typography } from '@mui/material';

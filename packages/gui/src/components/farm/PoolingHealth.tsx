@@ -2,8 +2,8 @@ import {
   useGetPoolStateQuery,
   useGetPartialStatsOffsetQuery,
   useResetPartialStatsMutation,
-} from '@cactus-network/api-react';
-import { Flex, StateIndicator, State, Tooltip } from '@cactus-network/core';
+} from '@cactus-network.net/api-react';
+import { Flex, StateIndicator, State, Tooltip } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Box, Paper, Typography, CircularProgress, Button } from '@mui/material';
 import React from 'react';

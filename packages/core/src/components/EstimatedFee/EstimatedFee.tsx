@@ -1,4 +1,4 @@
-import { useGetFeeEstimateQuery } from '@cactus-network/api-react';
+import { useGetFeeEstimateQuery } from '@cactus-network.net/api-react';
 import { Trans, t } from '@lingui/macro';
 import {
   Box,

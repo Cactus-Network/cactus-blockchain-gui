@@ -1,5 +1,5 @@
-// import { useGetNFTInfoQuery } from '@cactus-network/api-react';
-import { CardListItem, Flex } from '@cactus-network/core';
+// import { useGetNFTInfoQuery } from '@cactus-network.net/api-react';
+import { CardListItem, Flex } from '@cactus-network.net/core';
 import { t } from '@lingui/macro';
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';

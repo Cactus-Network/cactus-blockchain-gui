@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unstable-nested-components -- These components are at the edges of the component tree, so no perf issues */
 
-import { useGetKeyringStatusQuery } from '@cactus-network/api-react';
+import { useGetKeyringStatusQuery } from '@cactus-network.net/api-react';
 import {
   AlertDialog,
   Button,
@@ -14,7 +14,7 @@ import {
   StateTypography,
   State,
   TooltipIcon,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Help as HelpIcon } from '@mui/icons-material';
 import { Tooltip } from '@mui/material';

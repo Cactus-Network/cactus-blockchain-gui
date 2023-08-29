@@ -1,4 +1,4 @@
-import { ButtonLoading, Loading, Flex, Form, Back, cactusToMojo, ConfirmDialog, useOpenDialog } from '@cactus-network/core';
+import { ButtonLoading, Loading, Flex, Form, Back, cactusToMojo, ConfirmDialog, useOpenDialog } from '@cactus-network.net/core';
 import { t, Trans } from '@lingui/macro';
 import { Alert } from '@mui/material';
 import React, { useState, ReactNode, forwardRef, useImperativeHandle } from 'react';

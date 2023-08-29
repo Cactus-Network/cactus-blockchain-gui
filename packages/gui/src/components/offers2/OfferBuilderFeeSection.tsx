@@ -1,6 +1,6 @@
-import { Loading } from '@cactus-network/core';
-import { Fees } from '@cactus-network/icons';
-import { useWallet } from '@cactus-network/wallets';
+import { Loading } from '@cactus-network.net/core';
+import { Fees } from '@cactus-network.net/icons';
+import { useWallet } from '@cactus-network.net/wallets';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 import { useFieldArray } from 'react-hook-form';

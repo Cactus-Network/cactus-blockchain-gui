@@ -1,5 +1,5 @@
-import { OfferSummaryRecord } from '@cactus-network/api';
-import { mojoToCAT, mojoToCactus } from '@cactus-network/core';
+import { OfferSummaryRecord } from '@cactus-network.net/api';
+import { mojoToCAT, mojoToCactus } from '@cactus-network.net/core';
 import BigNumber from 'bignumber.js';
 
 import type OfferBuilderData from '../@types/OfferBuilderData';
@@ -15,11 +15,11 @@ export default function offerToOfferBuilderData(
 
   const defaultFeeCAC = defaultFee ? mojoToCactus(defaultFee).toFixed() : '';
 
-  const offeredCac: OfferBuilderData['offered']['cac'] = [];
+  const offeredXch: OfferBuilderData['offered']['cac'] = [];
   const offeredTokens: OfferBuilderData['offered']['tokens'] = [];
   const offeredNfts: OfferBuilderData['offered']['nfts'] = [];
   const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeeCAC }] : [];
-  const requestedCac: OfferBuilderData['requested']['cac'] = [];
+  const requestedXch: OfferBuilderData['requested']['cac'] = [];
   const requestedTokens: OfferBuilderData['requested']['tokens'] = [];
   const requestedNfts: OfferBuilderData['requested']['nfts'] = [];
 
@@ -39,7 +39,7 @@ export default function offerToOfferBuilderData(
         nftId: launcherIdToNFTId(info.launcherId),
       });
     } else if (id === 'cac') {
-      offeredCac.push({
+      offeredXch.push({
         amount: mojoToCactus(amount).toFixed(),
       });
     }
@@ -59,7 +59,7 @@ export default function offerToOfferBuilderData(
         nftId: launcherIdToNFTId(info.launcherId),
       });
     } else if (id === 'cac') {
-      requestedCac.push({
+      requestedXch.push({
         amount: mojoToCactus(amount).toFixed(),
       });
     }
@@ -67,13 +67,13 @@ export default function offerToOfferBuilderData(
 
   return {
     offered: {
-      cac: offeredCac,
+      cac: offeredXch,
       tokens: offeredTokens,
       nfts: offeredNfts,
       fee: offeredFee,
     },
     requested: {
-      cac: requestedCac,
+      cac: requestedXch,
       tokens: requestedTokens,
       nfts: requestedNfts,
       fee: [

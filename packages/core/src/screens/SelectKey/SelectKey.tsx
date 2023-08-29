@@ -1,12 +1,12 @@
-import type { KeyData } from '@cactus-network/api';
+import type { KeyData } from '@cactus-network.net/api';
 import {
   usePrefs,
   useGetKeyringStatusQuery,
   useDeleteAllKeysMutation,
   useGetKeysQuery,
   type Serializable,
-} from '@cactus-network/api-react';
-import { CactusBlack, Coins } from '@cactus-network/icons';
+} from '@cactus-network.net/api-react';
+import { CactusBlack, Coins } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Alert, Typography, Container, ListItemIcon } from '@mui/material';

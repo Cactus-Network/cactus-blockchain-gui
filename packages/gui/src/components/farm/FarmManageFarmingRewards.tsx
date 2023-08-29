@@ -1,6 +1,6 @@
-import { fromBech32m } from '@cactus-network/api';
-import { useSetRewardTargetsMutation, useGetRewardTargetsQuery } from '@cactus-network/api-react';
-import { Button, Flex, Form, TextField, Loading } from '@cactus-network/core';
+import { fromBech32m } from '@cactus-network.net/api';
+import { useSetRewardTargetsMutation, useGetRewardTargetsQuery } from '@cactus-network.net/api-react';
+import { Button, Flex, Form, TextField, Loading } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Dialog, DialogActions, DialogTitle, DialogContent, Typography } from '@mui/material';
 import React, { useMemo, useState, useEffect } from 'react';

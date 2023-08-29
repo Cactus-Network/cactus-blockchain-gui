@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@cactus-network/api';
-import { useTransferNFTMutation } from '@cactus-network/api-react';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { useTransferNFTMutation } from '@cactus-network.net/api-react';
 import {
   Button,
   ButtonLoading,
@@ -12,8 +12,8 @@ import {
   useOpenDialog,
   validAddress,
   useShowError,
-} from '@cactus-network/core';
-import { AddressBookAutocomplete } from '@cactus-network/wallets';
+} from '@cactus-network.net/core';
+import { AddressBookAutocomplete } from '@cactus-network.net/wallets';
 import { Trans } from '@lingui/macro';
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import React from 'react';

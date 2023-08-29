@@ -1,7 +1,7 @@
-import { WalletType } from '@cactus-network/api';
-import { useSetCATNameMutation, useGetCatListQuery } from '@cactus-network/api-react';
-import { Flex, Loading, MenuItem, useOpenDialog } from '@cactus-network/core';
-import { Offers as OffersIcon } from '@cactus-network/icons';
+import { WalletType } from '@cactus-network.net/api';
+import { useSetCATNameMutation, useGetCatListQuery } from '@cactus-network.net/api-react';
+import { Flex, Loading, MenuItem, useOpenDialog } from '@cactus-network.net/core';
+import { Offers as OffersIcon } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Edit as RenameIcon, Fingerprint as FingerprintIcon } from '@mui/icons-material';
 import { ListItemIcon, Alert, Typography } from '@mui/material';

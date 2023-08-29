@@ -1,4 +1,4 @@
-import LRU from '@cactus-network/core';
+import LRU from '@cactus-network.net/core';
 import { useContext } from 'react';
 
 import { LRUsContext } from '../components/lrus/LRUsProvider';

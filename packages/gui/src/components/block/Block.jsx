@@ -1,5 +1,5 @@
-import { toBech32m } from '@cactus-network/api';
-import { useGetBlockQuery, useGetBlockRecordQuery } from '@cactus-network/api-react';
+import { toBech32m } from '@cactus-network.net/api';
+import { useGetBlockQuery, useGetBlockRecordQuery } from '@cactus-network.net/api-react';
 import {
   Back,
   Button,
@@ -14,7 +14,7 @@ import {
   useCurrencyCode,
   mojoToCactus,
   Suspender,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Paper, TableRow, Table, TableBody, TableCell, TableContainer } from '@mui/material';
 import moment from 'moment';

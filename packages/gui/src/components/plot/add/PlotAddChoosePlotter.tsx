@@ -1,7 +1,7 @@
-import { defaultPlotter, PlotterName } from '@cactus-network/api';
-import type { Plotter, PlotterMap } from '@cactus-network/api';
-import { useGetPlottersQuery } from '@cactus-network/api-react';
-import { CardStep, Select, StateColor } from '@cactus-network/core';
+import { defaultPlotter, PlotterName } from '@cactus-network.net/api';
+import type { Plotter, PlotterMap } from '@cactus-network.net/api';
+import { useGetPlottersQuery } from '@cactus-network.net/api-react';
+import { CardStep, Select, StateColor } from '@cactus-network.net/core';
 import { t, Trans } from '@lingui/macro';
 import { FormControl, FormHelperText, Grid, InputLabel, MenuItem, Typography } from '@mui/material';
 import React, { useMemo } from 'react';

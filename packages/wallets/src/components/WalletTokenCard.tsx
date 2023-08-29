@@ -1,6 +1,6 @@
-import { WalletType } from '@cactus-network/api';
-import { useSetCATNameMutation, useGetLocalCatName } from '@cactus-network/api-react';
-import { Tooltip, CardListItem, Flex, Link, useShowError, Form, TextField } from '@cactus-network/core';
+import { WalletType } from '@cactus-network.net/api';
+import { useSetCATNameMutation, useGetLocalCatName } from '@cactus-network.net/api-react';
+import { Tooltip, CardListItem, Flex, Link, useShowError, Form, TextField } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography, Switch, CircularProgress } from '@mui/material';
 import React, { useEffect, useMemo, useState, useRef } from 'react';

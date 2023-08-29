@@ -1,5 +1,5 @@
-import { useGetHarvestersSummaryQuery } from '@cactus-network/api-react';
-import { Loading, Flex } from '@cactus-network/core';
+import { useGetHarvestersSummaryQuery } from '@cactus-network.net/api-react';
+import { Loading, Flex } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import { orderBy } from 'lodash';

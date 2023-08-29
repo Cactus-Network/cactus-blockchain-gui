@@ -1,4 +1,4 @@
-import type { Daemon, Events, Farmer, FullNode, Harvester, PlotterService, WalletService } from '@cactus-network/api';
+import type { Daemon, Events, Farmer, FullNode, Harvester, PlotterService, WalletService } from '@cactus-network.net/api';
 
 type Service =
   | typeof Daemon

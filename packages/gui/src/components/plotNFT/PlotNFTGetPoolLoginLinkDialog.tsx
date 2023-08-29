@@ -1,6 +1,6 @@
-import type { PlotNFT, PlotNFTExternal } from '@cactus-network/api';
-import { useGetPoolLoginLinkQuery } from '@cactus-network/api-react';
-import { Button, CopyToClipboard, Flex, Link, Loading } from '@cactus-network/core';
+import type { PlotNFT, PlotNFTExternal } from '@cactus-network.net/api';
+import { useGetPoolLoginLinkQuery } from '@cactus-network.net/api-react';
+import { Button, CopyToClipboard, Flex, Link, Loading } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Dialog, DialogActions, DialogTitle, DialogContent, Typography } from '@mui/material';
 import React from 'react';

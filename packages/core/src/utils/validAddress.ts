@@ -1,4 +1,4 @@
-import { decodeBech32m } from '@cactus-network/api';
+import { decodeBech32m } from '@cactus-network.net/api';
 
 export default function validAddress(address: string, allowedPrefixes?: string[]) {
   const response = decodeBech32m(address);

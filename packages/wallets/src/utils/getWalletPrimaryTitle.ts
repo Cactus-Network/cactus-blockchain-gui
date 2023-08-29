@@ -1,5 +1,5 @@
-import { WalletType } from '@cactus-network/api';
-import type { Wallet } from '@cactus-network/api';
+import { WalletType } from '@cactus-network.net/api';
+import type { Wallet } from '@cactus-network.net/api';
 
 export default function getWalletPrimaryTitle(wallet: Wallet): string {
   switch (wallet.type) {

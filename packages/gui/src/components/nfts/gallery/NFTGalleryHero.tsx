@@ -1,4 +1,4 @@
-import { Flex, useDarkMode } from '@cactus-network/core';
+import { Flex, useDarkMode } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';

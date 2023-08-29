@@ -1,4 +1,4 @@
-import { Flex, Link, DialogActions } from '@cactus-network/core';
+import { Flex, Link, DialogActions } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Button, Dialog, DialogContent, DialogTitle, Typography } from '@mui/material';
 import React from 'react';

@@ -1,6 +1,6 @@
-import { PassphrasePromptReason } from '@cactus-network/api';
-import { useUnlockKeyringMutation, useGetKeyringStatusQuery } from '@cactus-network/api-react';
-import { Button, Flex, TooltipIcon, useShowError, Suspender, ButtonLoading, Form, TextField } from '@cactus-network/core';
+import { PassphrasePromptReason } from '@cactus-network.net/api';
+import { useUnlockKeyringMutation, useGetKeyringStatusQuery } from '@cactus-network.net/api-react';
+import { Button, Flex, TooltipIcon, useShowError, Suspender, ButtonLoading, Form, TextField } from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { KeyboardCapslock as KeyboardCapslockIcon, Visibility as VisibilityIcon } from '@mui/icons-material';
 import {

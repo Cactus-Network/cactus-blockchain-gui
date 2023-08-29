@@ -1,5 +1,5 @@
-import { toBech32m } from '@cactus-network/api';
-import { CopyToClipboard, Flex, useCurrencyCode } from '@cactus-network/core';
+import { toBech32m } from '@cactus-network.net/api';
+import { CopyToClipboard, Flex, useCurrencyCode } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { InputAdornment } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';

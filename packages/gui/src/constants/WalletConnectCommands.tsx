@@ -1,5 +1,5 @@
-import { ServiceName } from '@cactus-network/api';
-import { MojoToCactus } from '@cactus-network/core';
+import { ServiceName } from '@cactus-network.net/api';
+import { MojoToCactus } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

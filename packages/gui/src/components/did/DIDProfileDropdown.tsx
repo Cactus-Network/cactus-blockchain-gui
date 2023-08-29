@@ -1,6 +1,6 @@
-import type { Wallet } from '@cactus-network/api';
-import { useGetDIDsQuery } from '@cactus-network/api-react';
-import { DropdownActions, DropdownActionsProps, MenuItem } from '@cactus-network/core';
+import type { Wallet } from '@cactus-network.net/api';
+import { useGetDIDsQuery } from '@cactus-network.net/api-react';
+import { DropdownActions, DropdownActionsProps, MenuItem } from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { PermIdentity as PermIdentityIcon } from '@mui/icons-material';
 import { ListItemIcon } from '@mui/material';

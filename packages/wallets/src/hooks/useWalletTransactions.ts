@@ -1,5 +1,5 @@
-import type { Transaction } from '@cactus-network/api';
-import { useGetTransactionsQuery, useGetTransactionsCountQuery } from '@cactus-network/api-react';
+import type { Transaction } from '@cactus-network.net/api';
+import { useGetTransactionsQuery, useGetTransactionsCountQuery } from '@cactus-network.net/api-react';
 import { useState } from 'react';
 
 type UseWalletTransactionsArgs = {

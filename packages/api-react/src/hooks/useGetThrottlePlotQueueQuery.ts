@@ -1,4 +1,4 @@
-import { PlotQueueItem } from '@cactus-network/api';
+import { PlotQueueItem } from '@cactus-network.net/api';
 
 import { useGetPlotQueueQuery } from '../services/plotter';
 import useThrottleQuery from './useThrottleQuery';

@@ -1,4 +1,4 @@
-import { Button, Flex, Suspender } from '@cactus-network/core';
+import { Button, Flex, Suspender } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { useGetKeysQuery, useGetLoggedInFingerprintQuery } from '@cactus-network/api-react';
+import { useGetKeysQuery, useGetLoggedInFingerprintQuery } from '@cactus-network.net/api-react';
 import {
   ButtonLoading,
   DialogActions,
@@ -9,7 +9,7 @@ import {
   Loading,
   useCurrencyCode,
   CardListItem,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import CloseIcon from '@mui/icons-material/Close';
 import { Box, Divider, Dialog, DialogContent, DialogTitle, IconButton, Typography, Checkbox } from '@mui/material';

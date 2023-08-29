@@ -10,8 +10,8 @@ import {
   FormatLargeNumber,
   Link,
   useOpenDialog,
-} from '@cactus-network/core';
-import { Plot as PlotIcon } from '@cactus-network/icons';
+} from '@cactus-network.net/core';
+import { Plot as PlotIcon } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { /* Link as LinkIcon, */ Payment as PaymentIcon } from '@mui/icons-material';
 import { Box, Card, CardContent, Typography, ListItemIcon } from '@mui/material';

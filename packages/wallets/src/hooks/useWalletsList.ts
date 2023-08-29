@@ -1,12 +1,12 @@
-import { WalletType } from '@cactus-network/api';
-import type { Wallet } from '@cactus-network/api';
+import { WalletType } from '@cactus-network.net/api';
+import type { Wallet } from '@cactus-network.net/api';
 import {
   useGetWalletsQuery,
   useGetStrayCatsQuery,
   useGetCatListQuery,
   useAddCATTokenMutation,
-} from '@cactus-network/api-react';
-import { useShowError } from '@cactus-network/core';
+} from '@cactus-network.net/api-react';
+import { useShowError } from '@cactus-network.net/core';
 import { orderBy } from 'lodash';
 import { useMemo } from 'react';
 

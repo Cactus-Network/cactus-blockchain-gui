@@ -1,4 +1,4 @@
-import { usePrefs } from '@cactus-network/api-react';
+import { usePrefs } from '@cactus-network.net/api-react';
 
 export type NFTImageFittingMode = 'contain' | 'cover' | 'fill';
 

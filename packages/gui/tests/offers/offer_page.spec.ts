@@ -37,7 +37,7 @@
 
 //   // When I click Viewing offer back button
 //   await page
-//     .locator('text=Viewing offercreated August 26, 2022 6:16 PMYou created this offerSummaryIn ecac >> button')
+//     .locator('text=Viewing offercreated August 26, 2022 6:16 PMYou created this offerSummaryIn exch >> button')
 //     .click();
 
 //   // And I click miniMenu

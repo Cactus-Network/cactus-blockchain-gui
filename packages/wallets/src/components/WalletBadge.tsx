@@ -1,7 +1,7 @@
-import type { Wallet } from '@cactus-network/api';
-import { WalletType } from '@cactus-network/api';
-import { useGetCatListQuery } from '@cactus-network/api-react';
-import { Tooltip } from '@cactus-network/core';
+import type { Wallet } from '@cactus-network.net/api';
+import { WalletType } from '@cactus-network.net/api';
+import { useGetCatListQuery } from '@cactus-network.net/api-react';
+import { Tooltip } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { VerifiedUser as VerifiedUserIcon, VerifiedUserProps } from '@mui/icons-material';
 import React from 'react';

@@ -1,6 +1,6 @@
-import { fromBech32m } from '@cactus-network/api';
-import { useGetDIDQuery, useGetDIDNameQuery, useSetDIDNameMutation } from '@cactus-network/api-react';
-import { Color, CopyToClipboard, Flex, Suspender, Tooltip, truncateValue } from '@cactus-network/core';
+import { fromBech32m } from '@cactus-network.net/api';
+import { useGetDIDQuery, useGetDIDNameQuery, useSetDIDNameMutation } from '@cactus-network.net/api-react';
+import { Color, CopyToClipboard, Flex, Suspender, Tooltip, truncateValue } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { alpha, Box, Card, TextField, Typography } from '@mui/material';
 import React, { useState, useEffect } from 'react';

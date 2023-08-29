@@ -1,6 +1,6 @@
 // eslint-ignore-file - in progress
-import type { NFTInfo } from '@cactus-network/api';
-import { useLocalStorage } from '@cactus-network/api-react';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { useLocalStorage } from '@cactus-network.net/api-react';
 import {
   Button,
   Color,
@@ -10,7 +10,7 @@ import {
   Tooltip,
   usePersistState,
   Mute,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { t, Trans } from '@lingui/macro';
 import { FilterList as FilterListIcon, LibraryAddCheck as LibraryAddCheckIcon } from '@mui/icons-material';
 import {

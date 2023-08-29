@@ -4,15 +4,15 @@ import {
   useGetLoggedInFingerprintQuery,
   useLazyGetProofsForRootQuery,
   useVCCoinAdded,
-} from '@cactus-network/api-react';
-import { Flex, More, MenuItem, AlertDialog, Loading, useOpenDialog, useDarkMode } from '@cactus-network/core';
+} from '@cactus-network.net/api-react';
+import { Flex, More, MenuItem, AlertDialog, Loading, useOpenDialog, useDarkMode } from '@cactus-network.net/core';
 import {
   VCZeroStateBackground as VCZeroStateBackgroundIcon,
   VCZeroStateBackgroundDark as VCZeroStateBackgroundDarkIcon,
   VCZeroStateBadge as VCZeroStateBadgeIcon,
   VCZeroStateKYCBadge as VCZeroStateKYCBadgeIcon,
   VCZeroStateMembership as VCZeroStateMembershipIcon,
-} from '@cactus-network/icons';
+} from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

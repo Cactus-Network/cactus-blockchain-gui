@@ -1,5 +1,5 @@
-import { Flex } from '@cactus-network/core';
-import { Offering, Requesting } from '@cactus-network/icons';
+import { Flex } from '@cactus-network.net/core';
+import { Offering, Requesting } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 import { useWatch } from 'react-hook-form';

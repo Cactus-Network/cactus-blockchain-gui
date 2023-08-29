@@ -1,4 +1,4 @@
-import { useGetPrivateKeyQuery } from '@cactus-network/api-react';
+import { useGetPrivateKeyQuery } from '@cactus-network.net/api-react';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import React from 'react';

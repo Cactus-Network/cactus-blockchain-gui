@@ -1,5 +1,5 @@
-import { useRefreshPlotsMutation } from '@cactus-network/api-react';
-import { Button, Flex, useOpenDialog, MenuItem, More } from '@cactus-network/core';
+import { useRefreshPlotsMutation } from '@cactus-network.net/api-react';
+import { Button, Flex, useOpenDialog, MenuItem, More } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Add, Refresh } from '@mui/icons-material';
 import { ListItemIcon, Typography } from '@mui/material';

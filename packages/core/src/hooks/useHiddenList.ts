@@ -1,4 +1,4 @@
-import { usePrefs } from '@cactus-network/api-react';
+import { usePrefs } from '@cactus-network.net/api-react';
 import { useCallback, useMemo } from 'react';
 
 type List<Type> = {

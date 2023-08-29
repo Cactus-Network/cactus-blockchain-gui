@@ -1,4 +1,4 @@
-import { Flex } from '@cactus-network/core';
+import { Flex } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Share as ShareIcon, Speed as SpeedIcon, HomeWork as HomeWorkIcon } from '@mui/icons-material';
 import { Grid, Typography } from '@mui/material';

@@ -1,6 +1,6 @@
-import { toBech32m } from '@cactus-network/api';
-import { useGetKeysForPlottingQuery } from '@cactus-network/api-react';
-import { CardStep, TextField, Button, Checkbox } from '@cactus-network/core';
+import { toBech32m } from '@cactus-network.net/api';
+import { useGetKeysForPlottingQuery } from '@cactus-network.net/api-react';
+import { CardStep, TextField, Button, Checkbox } from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { Grid, FormControl, Typography, FormControlLabel, ButtonGroup } from '@mui/material';
 import React from 'react';

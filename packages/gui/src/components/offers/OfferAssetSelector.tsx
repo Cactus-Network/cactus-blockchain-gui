@@ -1,7 +1,7 @@
-import type { Wallet, CATToken } from '@cactus-network/api';
-import { WalletType } from '@cactus-network/api';
-import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network/api-react';
-import { Select, useCurrencyCode } from '@cactus-network/core';
+import type { Wallet, CATToken } from '@cactus-network.net/api';
+import { WalletType } from '@cactus-network.net/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network.net/api-react';
+import { Select, useCurrencyCode } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { FormControl, InputLabel, MenuItem } from '@mui/material';
 import React, { useMemo } from 'react';

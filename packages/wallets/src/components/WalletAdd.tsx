@@ -1,5 +1,5 @@
-import { useGenerateMnemonicMutation, useAddPrivateKeyMutation } from '@cactus-network/api-react';
-import { ButtonLoading, Form, TextField, Flex, Loading, Logo, useAuth, useShowError } from '@cactus-network/core';
+import { useGenerateMnemonicMutation, useAddPrivateKeyMutation } from '@cactus-network.net/api-react';
+import { ButtonLoading, Form, TextField, Flex, Loading, Logo, useAuth, useShowError } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { TextField as TextFieldMaterial, Typography, Grid, Container } from '@mui/material';
 import React from 'react';

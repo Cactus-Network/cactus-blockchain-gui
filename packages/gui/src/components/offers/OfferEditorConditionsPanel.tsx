@@ -1,6 +1,6 @@
-import type { Wallet } from '@cactus-network/api';
-import { WalletType } from '@cactus-network/api';
-import { useGetWalletBalanceQuery, useGetWalletsQuery } from '@cactus-network/api-react';
+import type { Wallet } from '@cactus-network.net/api';
+import { WalletType } from '@cactus-network.net/api';
+import { useGetWalletBalanceQuery, useGetWalletsQuery } from '@cactus-network.net/api-react';
 import {
   Amount,
   Fee,
@@ -11,7 +11,7 @@ import {
   mojoToCAT,
   mojoToCATLocaleString,
   useLocale,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Add, Remove } from '@mui/icons-material';
 import { Box, Divider, IconButton, Typography } from '@mui/material';

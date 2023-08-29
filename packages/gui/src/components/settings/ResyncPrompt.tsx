@@ -1,5 +1,5 @@
-import { useResyncWalletMutation } from '@cactus-network/api-react';
-import { AlertDialog, Button, DialogActions, useOpenDialog } from '@cactus-network/core';
+import { useResyncWalletMutation } from '@cactus-network.net/api-react';
+import { AlertDialog, Button, DialogActions, useOpenDialog } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Dialog, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import React from 'react';

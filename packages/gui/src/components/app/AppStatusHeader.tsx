@@ -1,5 +1,5 @@
-import { Color, Flex, useMode, Mode, useDarkMode, useAuth, Tooltip } from '@cactus-network/core';
-import { WalletConnections, WalletStatus, WalletReceiveAddressField } from '@cactus-network/wallets';
+import { Color, Flex, useMode, Mode, useDarkMode, useAuth, Tooltip } from '@cactus-network.net/core';
+import { WalletConnections, WalletStatus, WalletReceiveAddressField } from '@cactus-network.net/wallets';
 import { Trans } from '@lingui/macro';
 import { Logout as LogoutIcon } from '@mui/icons-material';
 import { Box, ButtonGroup, Button, Popover, PopoverProps, IconButton } from '@mui/material';

@@ -1,4 +1,4 @@
-import { Flex } from '@cactus-network/core';
+import { Flex } from '@cactus-network.net/core';
 import { Dialog, Paper } from '@mui/material';
 import { styled } from '@mui/styles';
 import React from 'react';

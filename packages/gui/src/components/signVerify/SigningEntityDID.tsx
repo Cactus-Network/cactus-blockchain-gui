@@ -1,6 +1,6 @@
-import type { Wallet } from '@cactus-network/api';
-import { useGetDIDInfoQuery, useGetDIDsQuery } from '@cactus-network/api-react';
-import { CopyToClipboard, Flex, TextField } from '@cactus-network/core';
+import type { Wallet } from '@cactus-network.net/api';
+import { useGetDIDInfoQuery, useGetDIDsQuery } from '@cactus-network.net/api-react';
+import { CopyToClipboard, Flex, TextField } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { InputAdornment } from '@mui/material';
 import React, { useEffect, useState } from 'react';

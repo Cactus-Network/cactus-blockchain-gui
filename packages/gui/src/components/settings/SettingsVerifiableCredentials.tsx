@@ -1,5 +1,5 @@
-import { useLocalStorage } from '@cactus-network/api-react';
-import { Flex, SettingsLabel } from '@cactus-network/core';
+import { useLocalStorage } from '@cactus-network.net/api-react';
+import { Flex, SettingsLabel } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { FormGroup, FormControlLabel, Grid, Switch } from '@mui/material';
 import React from 'react';

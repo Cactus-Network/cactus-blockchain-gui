@@ -1,12 +1,12 @@
-import { ServiceName, HarvesterConfig } from '@cactus-network/api';
+import { ServiceName, HarvesterConfig } from '@cactus-network.net/api';
 import {
   useGetHarvesterConfigQuery,
   useGetPlottersQuery,
   useUpdateHarvesterConfigMutation,
   useClientStartServiceMutation,
   useClientStopServiceMutation,
-} from '@cactus-network/api-react';
-import { ButtonLoading, Flex, SettingsSection, SettingsTitle, SettingsText } from '@cactus-network/core';
+} from '@cactus-network.net/api-react';
+import { ButtonLoading, Flex, SettingsSection, SettingsTitle, SettingsText } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Warning as WarningIcon } from '@mui/icons-material';
 import { Alert, Divider, FormControlLabel, Grid, Switch, TextField, Snackbar } from '@mui/material';

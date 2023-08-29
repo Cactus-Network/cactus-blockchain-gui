@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@cactus-network/api';
-import { useGetCatListQuery } from '@cactus-network/api-react';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { useGetCatListQuery } from '@cactus-network.net/api-react';
 import {
   Color,
   CopyToClipboard,
@@ -14,7 +14,7 @@ import {
   mojoToCactusLocaleString,
   mojoToCAT,
   mojoToCATLocaleString,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { alpha, Box, Typography } from '@mui/material';
 import React, { useMemo } from 'react';

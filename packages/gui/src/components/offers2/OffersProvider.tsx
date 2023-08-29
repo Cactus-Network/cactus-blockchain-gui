@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 
-import { useGetOfferSummaryMutation, useCheckOfferValidityMutation } from '@cactus-network/api-react';
-import { isValidURL } from '@cactus-network/core';
+import { useGetOfferSummaryMutation, useCheckOfferValidityMutation } from '@cactus-network.net/api-react';
+import { isValidURL } from '@cactus-network.net/core';
 import debug from 'debug';
 import React, { useState, createContext, useMemo, useCallback, type ReactNode } from 'react';
 

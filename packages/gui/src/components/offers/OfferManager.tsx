@@ -1,5 +1,5 @@
-import { OfferTradeRecord, toBech32m } from '@cactus-network/api';
-import { useCancelOfferMutation, useGetWalletsQuery } from '@cactus-network/api-react';
+import { OfferTradeRecord, toBech32m } from '@cactus-network.net/api';
+import { useCancelOfferMutation, useGetWalletsQuery } from '@cactus-network.net/api-react';
 import {
   Button,
   Card,
@@ -15,7 +15,7 @@ import {
   Tooltip,
   LayoutDashboardSub,
   MenuItem,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Cancel, GetApp as Download, Info, Reply as Share, Visibility } from '@mui/icons-material';
 import { Box, Chip, Grid, ListItemIcon, Typography } from '@mui/material';

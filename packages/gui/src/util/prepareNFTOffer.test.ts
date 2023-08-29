@@ -1,9 +1,9 @@
-import { store, walletApi } from '@cactus-network/api-react';
+import { store, walletApi } from '@cactus-network.net/api-react';
 import BigNumber from 'bignumber.js';
 
 import { prepareNFTOffer, prepareNFTOfferFromNFTId } from './prepareNFTOffer';
 
-jest.mock('@cactus-network/api-react', () => ({
+jest.mock('@cactus-network.net/api-react', () => ({
   store: {
     dispatch: jest.fn(),
   },

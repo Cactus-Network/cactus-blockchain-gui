@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@cactus-network/api';
-import { store, walletApi } from '@cactus-network/api-react';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { store, walletApi } from '@cactus-network.net/api-react';
 import BigNumber from 'bignumber.js';
 
 import type Driver from '../@types/Driver';

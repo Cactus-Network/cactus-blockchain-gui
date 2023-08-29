@@ -1,12 +1,12 @@
 import { EventEmitter } from 'events';
 
-import { type NFTInfo, type Wallet } from '@cactus-network/api';
+import { type NFTInfo, type Wallet } from '@cactus-network.net/api';
 import {
   useLazyGetNFTsCountQuery,
   useLazyGetNFTsQuery,
   useGetNFTWallets,
   useGetLoggedInFingerprintQuery,
-} from '@cactus-network/api-react';
+} from '@cactus-network.net/api-react';
 import debug from 'debug';
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 

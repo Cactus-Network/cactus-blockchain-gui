@@ -1,6 +1,6 @@
-import type { OfferSummaryRecord, Wallet } from '@cactus-network/api';
-import { useTakeOfferMutation } from '@cactus-network/api-react';
-import { AlertDialog, cactusToMojo, useOpenDialog, useShowError } from '@cactus-network/core';
+import type { OfferSummaryRecord, Wallet } from '@cactus-network.net/api';
+import { useTakeOfferMutation } from '@cactus-network.net/api-react';
+import { AlertDialog, cactusToMojo, useOpenDialog, useShowError } from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import React from 'react';

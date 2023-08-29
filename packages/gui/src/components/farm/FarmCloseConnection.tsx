@@ -1,4 +1,4 @@
-import { useCloseFarmerConnectionMutation } from '@cactus-network/api-react';
+import { useCloseFarmerConnectionMutation } from '@cactus-network.net/api-react';
 
 type Props = {
   nodeId: string;

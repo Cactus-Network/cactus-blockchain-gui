@@ -1,7 +1,7 @@
-import { TransactionType, WalletType } from '@cactus-network/api';
-import type { Transaction } from '@cactus-network/api';
-import { useGetWalletBalanceQuery } from '@cactus-network/api-react';
-import { Color, mojoToCactus, mojoToCAT, blockHeightToTimestamp } from '@cactus-network/core';
+import { TransactionType, WalletType } from '@cactus-network.net/api';
+import type { Transaction } from '@cactus-network.net/api';
+import { useGetWalletBalanceQuery } from '@cactus-network.net/api-react';
+import { Color, mojoToCactus, mojoToCAT, blockHeightToTimestamp } from '@cactus-network.net/core';
 import { alpha } from '@mui/material';
 import BigNumber from 'bignumber.js';
 import { orderBy, groupBy, map } from 'lodash';

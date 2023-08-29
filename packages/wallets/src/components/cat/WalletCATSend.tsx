@@ -1,5 +1,5 @@
-import { SyncingStatus, toBech32m } from '@cactus-network/api';
-import { useSpendCATMutation, useFarmBlockMutation } from '@cactus-network/api-react';
+import { SyncingStatus, toBech32m } from '@cactus-network.net/api';
+import { useSpendCATMutation, useFarmBlockMutation } from '@cactus-network.net/api-react';
 import {
   AdvancedOptions,
   Button,
@@ -18,7 +18,7 @@ import {
   useCurrencyCode,
   getTransactionResult,
   TooltipIcon,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import React, { useMemo } from 'react';

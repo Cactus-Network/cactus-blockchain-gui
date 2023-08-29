@@ -3,7 +3,7 @@ import {
   useSendTransactionMutation,
   useFarmBlockMutation,
   useLocalStorage,
-} from '@cactus-network/api-react';
+} from '@cactus-network.net/api-react';
 import {
   Amount,
   ButtonLoading,
@@ -19,7 +19,7 @@ import {
   useIsSimulator,
   TooltipIcon,
   Button,
-} from '@cactus-network/core';
+} from '@cactus-network.net/core';
 import { Trans, t } from '@lingui/macro';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ReportProblemOutlinedIcon from '@mui/icons-material/ReportProblemOutlined';

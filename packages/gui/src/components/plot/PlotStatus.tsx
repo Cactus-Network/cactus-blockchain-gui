@@ -1,4 +1,4 @@
-import { Flex, Indicator, StateColor, TooltipIcon } from '@cactus-network/core';
+import { Flex, Indicator, StateColor, TooltipIcon } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

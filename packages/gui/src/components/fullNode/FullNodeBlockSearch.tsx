@@ -1,4 +1,4 @@
-import { Flex, Form, InputBase } from '@cactus-network/core';
+import { Flex, Form, InputBase } from '@cactus-network.net/core';
 import { t } from '@lingui/macro';
 import { Search as SearchIcon } from '@mui/icons-material';
 import { Box, IconButton, Paper } from '@mui/material';

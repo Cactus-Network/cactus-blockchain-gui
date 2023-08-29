@@ -1,8 +1,8 @@
-import { WalletType } from '@cactus-network/api';
-import type { Wallet } from '@cactus-network/api';
-import { useGetWalletsQuery } from '@cactus-network/api-react';
-import { Flex, Loading, catToMojo, mojoToCATLocaleString } from '@cactus-network/core';
-import { Tokens } from '@cactus-network/icons';
+import { WalletType } from '@cactus-network.net/api';
+import type { Wallet } from '@cactus-network.net/api';
+import { useGetWalletsQuery } from '@cactus-network.net/api-react';
+import { Flex, Loading, catToMojo, mojoToCATLocaleString } from '@cactus-network.net/core';
+import { Tokens } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import React, { useMemo } from 'react';

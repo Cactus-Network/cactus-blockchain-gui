@@ -1,4 +1,4 @@
-import { Flex, Loading, TooltipIcon } from '@cactus-network/core';
+import { Flex, Loading, TooltipIcon } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React, { useMemo } from 'react';

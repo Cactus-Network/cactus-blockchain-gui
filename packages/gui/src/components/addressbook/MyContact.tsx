@@ -1,6 +1,6 @@
-// import { useGetNFTInfoQuery } from '@cactus-network/api-react';
-import { useGetKeysQuery, usePrefs, type Serializable } from '@cactus-network/api-react';
-import { CopyToClipboard, Flex } from '@cactus-network/core';
+// import { useGetNFTInfoQuery } from '@cactus-network.net/api-react';
+import { useGetKeysQuery, usePrefs, type Serializable } from '@cactus-network.net/api-react';
+import { CopyToClipboard, Flex } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { InputAdornment, TextField, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

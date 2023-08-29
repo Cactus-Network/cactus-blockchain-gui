@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@cactus-network/api';
-import { useHiddenList } from '@cactus-network/core';
+import type { NFTInfo } from '@cactus-network.net/api';
+import { useHiddenList } from '@cactus-network.net/core';
 import { useCallback } from 'react';
 
 export default function useHiddenNFTs() {

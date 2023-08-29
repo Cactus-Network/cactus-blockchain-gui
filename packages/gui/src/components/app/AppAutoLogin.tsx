@@ -1,5 +1,5 @@
-import { useGetKeysQuery, useGetLoggedInFingerprintQuery } from '@cactus-network/api-react';
-import { LayoutLoading } from '@cactus-network/core';
+import { useGetKeysQuery, useGetLoggedInFingerprintQuery } from '@cactus-network.net/api-react';
+import { LayoutLoading } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import React, { useCallback, useEffect, type ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';

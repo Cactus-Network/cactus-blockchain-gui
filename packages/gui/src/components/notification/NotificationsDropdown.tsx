@@ -1,5 +1,5 @@
-import { DropdownBase, Tooltip } from '@cactus-network/core';
-import { Notification as NotificationIcon } from '@cactus-network/icons';
+import { DropdownBase, Tooltip } from '@cactus-network.net/core';
+import { Notification as NotificationIcon } from '@cactus-network.net/icons';
 import { Trans } from '@lingui/macro';
 import { Badge, Box, Button } from '@mui/material';
 import React from 'react';

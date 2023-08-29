@@ -1,10 +1,10 @@
-import * as cactusCore from '@cactus-network/core';
+import * as cactusCore from '@cactus-network.net/core';
 import BigNumber from 'bignumber.js';
 
 import { AssetIdMapEntry } from '../hooks/useAssetIdName';
 import createOfferForIdsToOfferBuilderData from './createOfferForIdsToOfferBuilderData';
 
-jest.mock('@cactus-network/core', () => ({
+jest.mock('@cactus-network.net/core', () => ({
   mojoToCactus: jest.fn(),
   mojoToCAT: jest.fn(),
 }));
@@ -48,7 +48,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
         2: 600_000,
       };
 
-      jest.mock('@cactus-network/core', () => ({
+      jest.mock('@cactus-network.net/core', () => ({
         mojoToCactus: jest.fn(),
         mojoToCAT: jest.fn(),
       }));

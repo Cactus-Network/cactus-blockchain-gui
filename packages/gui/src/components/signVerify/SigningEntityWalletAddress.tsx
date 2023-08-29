@@ -1,5 +1,5 @@
-import { useGetCurrentAddressQuery } from '@cactus-network/api-react';
-import { CopyToClipboard, Flex, Loading, TextField } from '@cactus-network/core';
+import { useGetCurrentAddressQuery } from '@cactus-network.net/api-react';
+import { CopyToClipboard, Flex, Loading, TextField } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Box, Grid, InputAdornment } from '@mui/material';
 import React, { useEffect } from 'react';

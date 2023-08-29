@@ -1,6 +1,6 @@
-import { SyncingStatus } from '@cactus-network/api';
-import { useGetSyncStatusQuery } from '@cactus-network/api-react';
-import { Loading, State, StateIndicator } from '@cactus-network/core';
+import { SyncingStatus } from '@cactus-network.net/api';
+import { useGetSyncStatusQuery } from '@cactus-network.net/api-react';
+import { Loading, State, StateIndicator } from '@cactus-network.net/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React from 'react';
