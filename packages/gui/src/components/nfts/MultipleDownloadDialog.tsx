@@ -1,4 +1,4 @@
-import { FormatBytes } from '@cactus-network.net/core';
+import { FormatBytes } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Button, Dialog, DialogTitle, DialogActions, DialogContent, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

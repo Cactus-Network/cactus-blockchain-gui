@@ -1,7 +1,7 @@
-import type { CATToken } from '@cactus-network.net/api';
-import { SyncingStatus } from '@cactus-network.net/api';
-import { useGetWalletsQuery, useAddCATTokenMutation, useGetCatListQuery } from '@cactus-network.net/api-react';
-import { Back, Flex, Loading, useShowError } from '@cactus-network.net/core';
+import type { CATToken } from '@cactus-network/api';
+import { SyncingStatus } from '@cactus-network/api';
+import { useGetWalletsQuery, useAddCATTokenMutation, useGetCatListQuery } from '@cactus-network/api-react';
+import { Back, Flex, Loading, useShowError } from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Add as AddIcon } from '@mui/icons-material';
 import { Grid } from '@mui/material';

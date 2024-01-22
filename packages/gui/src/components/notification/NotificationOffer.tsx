@@ -1,5 +1,5 @@
-import { Flex } from '@cactus-network.net/core';
-import { Offers as OffersIcon } from '@cactus-network.net/icons';
+import { Flex } from '@cactus-network/core';
+import { Offers as OffersIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';
@@ -13,6 +13,7 @@ import NotificationType from '../../constants/NotificationType';
 import useOffer from '../../hooks/useOffer';
 import HumanTimestamp from '../helpers/HumanTimestamp';
 import OfferDetails from '../offers2/OfferDetails';
+
 import NotificationPreview from './NotificationPreview';
 import NotificationWrapper from './NotificationWrapper';
 

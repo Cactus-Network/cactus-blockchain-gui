@@ -1,12 +1,12 @@
 import { EventEmitter } from 'events';
 
-import { type NFTInfo, type Wallet } from '@cactus-network.net/api';
+import { type NFTInfo, type Wallet } from '@cactus-network/api';
 import {
   useLazyGetNFTsCountQuery,
   useLazyGetNFTsQuery,
   useGetNFTWallets,
   useGetLoggedInFingerprintQuery,
-} from '@cactus-network.net/api-react';
+} from '@cactus-network/api-react';
 import debug from 'debug';
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 
@@ -15,6 +15,7 @@ import useNFTCoinEvents from '../../../../hooks/useNFTCoinEvents';
 import useStateAbort from '../../../../hooks/useStateAbort';
 import getNFTId from '../../../../util/getNFTId';
 import limit from '../../../../util/limit';
+
 import { getChangedEventName } from './useNFTDataOnDemand';
 
 const log = debug('cactus-gui:useNFTData');

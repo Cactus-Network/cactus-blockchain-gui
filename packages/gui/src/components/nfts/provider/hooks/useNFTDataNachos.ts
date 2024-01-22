@@ -1,12 +1,13 @@
 import { EventEmitter } from 'events';
 
-import { type NFTInfo } from '@cactus-network.net/api';
+import { type NFTInfo } from '@cactus-network/api';
 import debug from 'debug';
 import { useState, useCallback, useMemo } from 'react';
 
 import type NFTState from '../../../../@types/NFTState';
 import useNachoNFTs from '../../../../hooks/useNachoNFTs';
 import getNFTId from '../../../../util/getNFTId';
+
 import { getChangedEventName } from './useNFTDataOnDemand';
 
 const log = debug('cactus-gui:NFTProvider:useMetadataData');

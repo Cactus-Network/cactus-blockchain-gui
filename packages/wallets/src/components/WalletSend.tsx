@@ -3,7 +3,7 @@ import {
   useSendTransactionMutation,
   useFarmBlockMutation,
   useLocalStorage,
-} from '@cactus-network.net/api-react';
+} from '@cactus-network/api-react';
 import {
   Amount,
   ButtonLoading,
@@ -19,7 +19,7 @@ import {
   useIsSimulator,
   TooltipIcon,
   Button,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ReportProblemOutlinedIcon from '@mui/icons-material/ReportProblemOutlined';
@@ -40,6 +40,7 @@ import isNumeric from 'validator/es/lib/isNumeric';
 
 import useClawbackDefaultTime, { getClawbackTimeInSeconds } from '../hooks/useClawbackDefaultTime';
 import useWallet from '../hooks/useWallet';
+
 import AddressBookAutocomplete from './AddressBookAutocomplete';
 import CreateWalletSendTransactionResultDialog from './WalletSendTransactionResultDialog';
 
@@ -93,12 +94,12 @@ export default function WalletSend(props: SendCardProps) {
     formState: { isSubmitting },
   } = methods;
 
-  const addressValue = useWatch<string>({
+  const addressValue = useWatch({
     control: methods.control,
     name: 'address',
   });
 
-  const clawbackValues = useWatch<(number | string)[]>({
+  const clawbackValues = useWatch({
     control: methods.control,
     name: ['days', 'hours', 'minutes'],
   });

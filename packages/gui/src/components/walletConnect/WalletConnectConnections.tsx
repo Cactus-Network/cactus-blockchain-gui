@@ -1,4 +1,4 @@
-import { Flex, Loading, useOpenDialog, More, MenuItem, useShowError } from '@cactus-network.net/core';
+import { Flex, Loading, useOpenDialog, More, MenuItem, useShowError } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import {
   CheckCircleTwoTone as CheckCircleTwoToneIcon,
@@ -10,6 +10,7 @@ import React, { useCallback } from 'react';
 
 import useWalletConnectContext from '../../hooks/useWalletConnectContext';
 import useWalletConnectPreferences from '../../hooks/useWalletConnectPreferences';
+
 import WalletConnectAddConnectionDialog from './WalletConnectAddConnectionDialog';
 import WalletConnectConnectedDialog from './WalletConnectConnectedDialog';
 import WalletConnectPairInfoDialog from './WalletConnectPairInfoDialog';

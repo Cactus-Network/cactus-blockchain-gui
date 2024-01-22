@@ -2,7 +2,7 @@ import {
   useCreateNewWalletMutation,
   useGetCurrentAddressQuery,
   useGetWalletBalanceQuery,
-} from '@cactus-network.net/api-react';
+} from '@cactus-network/api-react';
 import {
   ButtonLoading,
   EstimatedFee,
@@ -14,7 +14,7 @@ import {
   cactusToMojo,
   mojoToCactusLocaleString,
   useCurrencyCode,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Card, Typography } from '@mui/material';
 import React from 'react';
@@ -108,7 +108,7 @@ export default function ProfileAdd() {
 
   return (
     <Form methods={methods} onSubmit={handleSubmit}>
-      <Flex flexDirection="column" flexGrow={1} marginTop={-0.5}>
+      <Flex flexDirection="column" flexGrow={1}>
         <Typography variant="h6">
           <Trans>Create a new profile</Trans>
         </Typography>

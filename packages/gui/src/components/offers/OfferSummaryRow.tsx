@@ -1,4 +1,4 @@
-import { WalletType } from '@cactus-network.net/api';
+import { WalletType } from '@cactus-network/api';
 import {
   Color,
   CopyToClipboard,
@@ -7,7 +7,7 @@ import {
   FormatLargeNumber,
   TooltipIcon,
   mojoToCATLocaleString,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Plural, t, Trans } from '@lingui/macro';
 import { alpha, Box, Typography } from '@mui/material';
 import React from 'react';
@@ -17,6 +17,7 @@ import useAssetIdName from '../../hooks/useAssetIdName';
 import useNFTMinterDID from '../../hooks/useNFTMinterDID';
 import { launcherIdToNFTId } from '../../util/nfts';
 import NFTSummary from '../nfts/NFTSummary';
+
 import { formatAmountForWalletType } from './utils';
 
 /* ========================================================================== */
@@ -174,7 +175,7 @@ export function OfferSummaryTokenRow(props: OfferSummaryTokenRowProps): React.Re
               <Box flexGrow={1}>
                 <StyledTitle>Name</StyledTitle>
               </Box>
-              {(!assetIdInfo || assetIdInfo?.walletType === WalletType.CAT) && (
+              {(!assetIdInfo || [WalletType.CAT, WalletType.CRCAT].includes(assetIdInfo?.walletType)) && (
                 <Link href={`https://www.taildatabase.com/tail/${assetId.toLowerCase()}`} target="_blank">
                   <Trans>Search on Tail Database</Trans>
                 </Link>
@@ -183,7 +184,7 @@ export function OfferSummaryTokenRow(props: OfferSummaryTokenRowProps): React.Re
 
             <StyledValue>{tooltipDisplayName}</StyledValue>
           </Flex>
-          {(!assetIdInfo || assetIdInfo?.walletType === WalletType.CAT) && (
+          {(!assetIdInfo || [WalletType.CAT, WalletType.CRCAT].includes(assetIdInfo?.walletType)) && (
             <Flex flexDirection="column" gap={0}>
               <StyledTitle>Asset ID</StyledTitle>
               <Flex alignItems="center" gap={1}>

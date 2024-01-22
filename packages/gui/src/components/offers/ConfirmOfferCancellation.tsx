@@ -7,7 +7,7 @@ import {
   Form,
   TooltipIcon,
   cactusToMojo,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import {
   Checkbox,

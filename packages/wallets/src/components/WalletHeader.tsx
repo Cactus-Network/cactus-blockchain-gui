@@ -1,5 +1,5 @@
-import { useDeleteUnconfirmedTransactionsMutation } from '@cactus-network.net/api-react';
-import { Flex, ConfirmDialog, useOpenDialog, DropdownActions, MenuItem } from '@cactus-network.net/core';
+import { useDeleteUnconfirmedTransactionsMutation } from '@cactus-network/api-react';
+import { Flex, ConfirmDialog, useOpenDialog, DropdownActions, MenuItem } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Typography, ListItemIcon, Tab, Tabs } from '@mui/material';

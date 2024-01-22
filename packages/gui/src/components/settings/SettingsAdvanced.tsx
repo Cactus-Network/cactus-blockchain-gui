@@ -6,13 +6,14 @@ import {
   SettingsTitle,
   SettingsText,
   useOpenDialog,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { RateReview as SignIcon, Verified as VerifyIcon } from '@mui/icons-material';
 import { Grid } from '@mui/material';
 import React from 'react';
 
 import SignVerifyDialog, { SignVerifyDialogMode } from '../signVerify/SignVerifyDialog';
+
 import ResyncPrompt from './ResyncPrompt';
 
 export default function SettingsAdvanced() {

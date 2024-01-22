@@ -1,6 +1,6 @@
-import type { OfferSummaryRecord, Wallet } from '@cactus-network.net/api';
-import { useTakeOfferMutation } from '@cactus-network.net/api-react';
-import { AlertDialog, cactusToMojo, useOpenDialog, useShowError } from '@cactus-network.net/core';
+import type { OfferSummaryRecord, Wallet } from '@cactus-network/api';
+import { useTakeOfferMutation } from '@cactus-network/api-react';
+import { AlertDialog, cactusToMojo, useOpenDialog, useShowError } from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import React from 'react';
@@ -11,6 +11,7 @@ import { offerAssetTypeForAssetId } from '../components/offers/utils';
 import OfferEditorConflictAlertDialog from '../components/offers2/OfferEditorCancelConflictingOffersDialog';
 import offerBuilderDataToOffer from '../util/offerBuilderDataToOffer';
 import offerToOfferBuilderData from '../util/offerToOfferBuilderData';
+
 import useAssetIdName from './useAssetIdName';
 import { OfferTradeRecordFormatted } from './useWalletOffers';
 

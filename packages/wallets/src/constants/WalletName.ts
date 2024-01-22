@@ -1,4 +1,4 @@
-import { WalletType } from '@cactus-network.net/api';
+import { WalletType } from '@cactus-network/api';
 import { defineMessage } from '@lingui/macro';
 
 const WalletName = {

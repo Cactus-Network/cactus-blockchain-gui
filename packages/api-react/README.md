@@ -4,7 +4,7 @@
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Cactus-Network/cactus-blockchain-gui?logo=GitHub)
 
-This library provides react hooks on the top of @cactus-network.net/api and uses [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) under the hood.
+This library provides react hooks on the top of @cactus-network/api and uses [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) under the hood.
 It is designed to simplify common cases for loading data in a web application, eliminating the need to hand-write data fetching & caching logic yourself. Benefits include:
 
 - Automatically refresh queries when data changed (using events from Cactus Blockchain).
@@ -21,14 +21,15 @@ It is designed to simplify common cases for loading data in a web application, e
 
 ```tsx
 import React from 'react';
-import { useGetPublicKeysQuery } from '@cactus-network.net/api-react';
+import { useGetPublicKeysQuery } from '@cactus-network/api-react';
+import { Loading } from '@cactus-network/core';
 import Suspender from 'react-suspender';
 
 export default function PublicKeys() {
   const { data: publicKeys, isLoading, error } = useGetPublicKeysQuery();
 
   if (isLoading) {
-    return <Suspender />;
+    return <Loading center />;
   }
 
   if (error) {
@@ -50,7 +51,7 @@ export default function PublicKeys() {
 ```tsx
 import React, { Suspense } from 'react';
 import Websocket from 'ws'; // or read this value from electron main application
-import { store, api } from '@cactus-network.net/api-react';
+import { store, api } from '@cactus-network/api-react';
 import PublicKeys from './PublicKeys';
 
 // prepare api

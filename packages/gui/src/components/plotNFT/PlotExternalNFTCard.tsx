@@ -10,8 +10,8 @@ import {
   FormatLargeNumber,
   Link,
   useOpenDialog,
-} from '@cactus-network.net/core';
-import { Plot as PlotIcon } from '@cactus-network.net/icons';
+} from '@cactus-network/core';
+import { Plot as PlotIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { /* Link as LinkIcon, */ Payment as PaymentIcon } from '@mui/icons-material';
 import { Box, Card, CardContent, Typography, ListItemIcon } from '@mui/material';
@@ -23,6 +23,7 @@ import usePlotNFTExternalDetails from '../../hooks/usePlotNFTExternalDetails';
 import PlotNFTExternal from '../../types/PlotNFTExternal';
 // import PlotNFTGetPoolLoginLinkDialog from './PlotNFTGetPoolLoginLinkDialog';
 import getPercentPointsSuccessfull from '../../util/getPercentPointsSuccessfull';
+
 import PlotNFTExternalState from './PlotNFTExternalState';
 import PlotNFTGraph from './PlotNFTGraph';
 import PlotNFTName from './PlotNFTName';
@@ -33,7 +34,6 @@ const StyledCard = styled(Card)`
   flex-direction: column;
   height: 100%;
   overflow: visible;
-  filter: grayscale(100%);
 `;
 
 const StyledCardContent = styled(CardContent)`

@@ -1,4 +1,4 @@
-import { AlertDialog, Flex, Tooltip, useCurrencyCode, useOpenDialog } from '@cactus-network.net/core';
+import { AlertDialog, Flex, Tooltip, useCurrencyCode, useOpenDialog } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Button, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -53,6 +53,7 @@ export default function AppTestnetIndicator() {
         sx={{
           ...BorderStyle,
           backgroundColor: theme.palette.background.default,
+          minHeight: '42px',
           '&:hover': { backgroundColor: theme.palette.background.default, border: `1px solid ${borderColor}` },
         }}
         disableRipple

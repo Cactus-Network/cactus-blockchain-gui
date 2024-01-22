@@ -1,5 +1,5 @@
-import type { Wallet } from '@cactus-network.net/api';
-import { WalletType } from '@cactus-network.net/api';
+import type { Wallet } from '@cactus-network/api';
+import { WalletType } from '@cactus-network/api';
 import { useMemo } from 'react';
 
 import { useGetWalletsQuery } from '../services';

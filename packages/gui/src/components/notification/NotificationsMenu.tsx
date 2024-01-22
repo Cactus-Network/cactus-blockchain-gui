@@ -1,10 +1,11 @@
-import { Flex, Loading } from '@cactus-network.net/core';
+import { Flex, Loading } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Button, Typography, Divider } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router';
 
 import useValidNotifications from '../../hooks/useValidNotifications';
+
 import Notification from './Notification';
 
 export type NotificationsMenuProps = {

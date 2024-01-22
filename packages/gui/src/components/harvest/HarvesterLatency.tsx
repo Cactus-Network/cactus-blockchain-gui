@@ -1,5 +1,5 @@
-import { LatencyInfo } from '@cactus-network.net/api';
-import { Flex } from '@cactus-network.net/core';
+import { LatencyInfo } from '@cactus-network/api';
+import { Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Paper, Typography, Select, MenuItem, FormControl, SelectChangeEvent } from '@mui/material';
 import * as React from 'react';

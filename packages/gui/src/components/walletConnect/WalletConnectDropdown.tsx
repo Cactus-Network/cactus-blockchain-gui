@@ -1,10 +1,11 @@
-import { DropdownBase, Tooltip } from '@cactus-network.net/core';
-import { WalletConnect } from '@cactus-network.net/icons';
+import { DropdownBase, Tooltip } from '@cactus-network/core';
+import { WalletConnect } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Box, Button } from '@mui/material';
 import React from 'react';
 
 import useWalletConnectContext from '../../hooks/useWalletConnectContext';
+
 import WalletConnectConnections from './WalletConnectConnections';
 
 export default function WalletConnectDropdown() {
@@ -12,8 +13,9 @@ export default function WalletConnectDropdown() {
 
   const ButtonStyle = {
     minWidth: 0,
-    height: '42px',
-    borderRadius: 2,
+    width: '40px',
+    minHeight: '40px',
+    borderRadius: '8px',
   };
 
   const color = enabled && !isLoading && pairs.get().length > 0 ? 'primary' : 'info';

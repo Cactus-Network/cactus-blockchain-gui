@@ -1,6 +1,6 @@
-import { WalletType } from '@cactus-network.net/api';
-import type { NFTInfo } from '@cactus-network.net/api';
-import { useCreateOfferForIdsMutation, useGetWalletBalanceQuery } from '@cactus-network.net/api-react';
+import { WalletType } from '@cactus-network/api';
+import type { NFTInfo } from '@cactus-network/api';
+import { useCreateOfferForIdsMutation, useGetWalletBalanceQuery } from '@cactus-network/api-react';
 import {
   Amount,
   AmountProps,
@@ -27,7 +27,7 @@ import {
   useLocale,
   useOpenDialog,
   useShowError,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Warning as WarningIcon } from '@mui/icons-material';
 import { alpha, Box, Divider, Grid, Tabs, Tab, Typography, useTheme } from '@mui/material';
@@ -41,6 +41,7 @@ import useNFT from '../../hooks/useNFT';
 import useNFTs from '../../hooks/useNFTs';
 import useSuppressShareOnCreate from '../../hooks/useSuppressShareOnCreate';
 import { convertRoyaltyToPercentage, isValidNFTId, launcherIdFromNFTId } from '../../util/nfts';
+
 import NFTOfferExchangeType from './NFTOfferExchangeType';
 import NFTOfferPreview from './NFTOfferPreview';
 import NFTOfferTokenSelector from './NFTOfferTokenSelector';
@@ -490,8 +491,9 @@ type NFTBuildOfferRequestParams = {
 
 function buildOfferRequest(params: NFTBuildOfferRequestParams) {
   const { exchangeType, nft, nftLauncherId, tokenWalletInfo, tokenAmount, fee } = params;
-  const baseMojoAmount: BigNumber =
-    tokenWalletInfo.walletType === WalletType.CAT ? catToMojo(tokenAmount) : cactusToMojo(tokenAmount);
+  const baseMojoAmount: BigNumber = [WalletType.CAT, WalletType.CRCAT].includes(tokenWalletInfo.walletType)
+    ? catToMojo(tokenAmount)
+    : cactusToMojo(tokenAmount);
   const mojoAmount = exchangeType === NFTOfferExchangeType.NFTForToken ? baseMojoAmount : baseMojoAmount.negated();
   const feeMojoAmount = cactusToMojo(fee);
   const nftAmount = exchangeType === NFTOfferExchangeType.NFTForToken ? -1 : 1;

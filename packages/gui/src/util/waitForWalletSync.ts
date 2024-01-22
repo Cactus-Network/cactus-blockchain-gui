@@ -1,5 +1,5 @@
-import api, { store } from '@cactus-network.net/api-react';
-import { getWalletSyncingStatus } from '@cactus-network.net/wallets';
+import api, { store } from '@cactus-network/api-react';
+import { getWalletSyncingStatus } from '@cactus-network/wallets';
 
 import SyncingStatus from '../constants/SyncingStatus';
 

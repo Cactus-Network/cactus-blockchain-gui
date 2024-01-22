@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@cactus-network.net/api-react';
+import { useLocalStorage } from '@cactus-network/api-react';
 import { useCallback } from 'react';
 
 export type WalletConnectPreferences = {

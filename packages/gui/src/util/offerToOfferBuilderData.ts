@@ -1,9 +1,10 @@
-import { OfferSummaryRecord } from '@cactus-network.net/api';
-import { mojoToCAT, mojoToCactus } from '@cactus-network.net/core';
+import { OfferSummaryRecord, type OfferSummaryCATInfo } from '@cactus-network/api';
+import { mojoToCAT, mojoToCactus } from '@cactus-network/core';
 import BigNumber from 'bignumber.js';
 
 import type OfferBuilderData from '../@types/OfferBuilderData';
 import type OfferSummary from '../@types/OfferSummary';
+
 import { launcherIdToNFTId } from './nfts';
 
 export default function offerToOfferBuilderData(
@@ -15,11 +16,11 @@ export default function offerToOfferBuilderData(
 
   const defaultFeeCAC = defaultFee ? mojoToCactus(defaultFee).toFixed() : '';
 
-  const offeredXch: OfferBuilderData['offered']['cac'] = [];
+  const offeredCac: OfferBuilderData['offered']['cac'] = [];
   const offeredTokens: OfferBuilderData['offered']['tokens'] = [];
   const offeredNfts: OfferBuilderData['offered']['nfts'] = [];
   const offeredFee: OfferBuilderData['offered']['fee'] = setDefaultOfferedFee ? [{ amount: defaultFeeCAC }] : [];
-  const requestedXch: OfferBuilderData['requested']['cac'] = [];
+  const requestedCac: OfferBuilderData['requested']['cac'] = [];
   const requestedTokens: OfferBuilderData['requested']['tokens'] = [];
   const requestedNfts: OfferBuilderData['requested']['nfts'] = [];
 
@@ -30,16 +31,18 @@ export default function offerToOfferBuilderData(
     const info = infos[id];
 
     if (info?.type === 'CAT') {
+      const crCat = extractCrCatData(info);
       offeredTokens.push({
         amount: mojoToCAT(amount).toFixed(),
         assetId: id,
+        crCat,
       });
     } else if (info?.type === 'singleton') {
       offeredNfts.push({
         nftId: launcherIdToNFTId(info.launcherId),
       });
     } else if (id === 'cac') {
-      offeredXch.push({
+      offeredCac.push({
         amount: mojoToCactus(amount).toFixed(),
       });
     }
@@ -50,16 +53,18 @@ export default function offerToOfferBuilderData(
     const info = infos[id];
 
     if (info?.type === 'CAT') {
+      const crCat = extractCrCatData(info);
       requestedTokens.push({
         amount: mojoToCAT(amount).toFixed(),
         assetId: id,
+        crCat,
       });
     } else if (info?.type === 'singleton') {
       requestedNfts.push({
         nftId: launcherIdToNFTId(info.launcherId),
       });
     } else if (id === 'cac') {
-      requestedXch.push({
+      requestedCac.push({
         amount: mojoToCactus(amount).toFixed(),
       });
     }
@@ -67,13 +72,13 @@ export default function offerToOfferBuilderData(
 
   return {
     offered: {
-      cac: offeredXch,
+      cac: offeredCac,
       tokens: offeredTokens,
       nfts: offeredNfts,
       fee: offeredFee,
     },
     requested: {
-      cac: requestedXch,
+      cac: requestedCac,
       tokens: requestedTokens,
       nfts: requestedNfts,
       fee: [
@@ -82,5 +87,15 @@ export default function offerToOfferBuilderData(
         },
       ],
     },
+  };
+}
+
+function extractCrCatData(info: OfferSummaryCATInfo) {
+  if (!info.also) return undefined;
+  if (info.also.type !== 'credential restricted') return undefined;
+  const { flags, authorizedProviders } = info.also;
+  return {
+    flags,
+    authorizedProviders,
   };
 }

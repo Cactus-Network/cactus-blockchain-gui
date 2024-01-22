@@ -1,5 +1,5 @@
-import { useGetHeightInfoQuery } from '@cactus-network.net/api-react';
-import { FormatLargeNumber } from '@cactus-network.net/core';
+import { useGetHeightInfoQuery } from '@cactus-network/api-react';
+import { FormatLargeNumber } from '@cactus-network/core';
 import React from 'react';
 
 export default function WalletStatusHeight() {

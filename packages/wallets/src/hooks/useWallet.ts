@@ -1,7 +1,7 @@
-import { WalletType } from '@cactus-network.net/api';
-import type { Wallet } from '@cactus-network.net/api';
-import { useGetWalletsQuery, useGetCatListQuery } from '@cactus-network.net/api-react';
-import { useCurrencyCode } from '@cactus-network.net/core';
+import { WalletType } from '@cactus-network/api';
+import type { Wallet } from '@cactus-network/api';
+import { useGetWalletsQuery, useGetCatListQuery } from '@cactus-network/api-react';
+import { useCurrencyCode } from '@cactus-network/core';
 import { useMemo } from 'react';
 
 export default function useWallet(walletId?: number | string): {
@@ -20,7 +20,7 @@ export default function useWallet(walletId?: number | string): {
 
   const unit = useMemo(() => {
     if (wallet) {
-      if (!isCatListLoading && wallet.type === WalletType.CAT) {
+      if (!isCatListLoading && [WalletType.CAT, WalletType.CRCAT].includes(wallet.type)) {
         const token = catList.find((item) => item.assetId === wallet.meta?.assetId);
         if (token) {
           return token.symbol;

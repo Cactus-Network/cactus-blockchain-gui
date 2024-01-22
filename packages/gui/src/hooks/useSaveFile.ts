@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import { useShowSaveDialog } from '@cactus-network.net/core';
+import { useShowSaveDialog } from '@cactus-network/core';
 import { useCallback } from 'react';
 
 export type SaveFileParams = {

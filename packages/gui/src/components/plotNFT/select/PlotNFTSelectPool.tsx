@@ -1,4 +1,4 @@
-import { ButtonLoading, Loading, Flex, Form, Back, cactusToMojo, ConfirmDialog, useOpenDialog } from '@cactus-network.net/core';
+import { ButtonLoading, Loading, Flex, Form, Back, cactusToMojo, ConfirmDialog, useOpenDialog } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { Alert } from '@mui/material';
 import React, { useState, ReactNode, forwardRef, useImperativeHandle } from 'react';
@@ -9,6 +9,7 @@ import useStandardWallet from '../../../hooks/useStandardWallet';
 import InitialTargetState from '../../../types/InitialTargetState';
 import getPoolInfo from '../../../util/getPoolInfo';
 import normalizeUrl from '../../../util/normalizeUrl';
+
 import PlotNFTSelectBase from './PlotNFTSelectBase';
 import PlotNFTSelectFaucet from './PlotNFTSelectFaucet';
 

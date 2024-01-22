@@ -1,4 +1,4 @@
-import { ConnectCheckmark, ConnectCancel, ConnectReload } from '@cactus-network.net/icons';
+import { ConnectCheckmark, ConnectCancel, ConnectReload } from '@cactus-network/icons';
 import React from 'react';
 import styled from 'styled-components';
 

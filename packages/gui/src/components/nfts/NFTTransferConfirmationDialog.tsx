@@ -6,7 +6,7 @@ import {
   Flex,
   TooltipIcon,
   FormatLargeNumber,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans, Plural } from '@lingui/macro';
 import { alpha, Box, Divider, Typography } from '@mui/material';
 import React, { type ReactNode } from 'react';

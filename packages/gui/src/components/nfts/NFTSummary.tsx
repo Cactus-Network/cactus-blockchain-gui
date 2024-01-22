@@ -1,5 +1,5 @@
-import type { NFTAttribute } from '@cactus-network.net/api';
-import { Color, CopyToClipboard, Flex, Loading, TooltipIcon, truncateValue } from '@cactus-network.net/core';
+import type { NFTAttribute } from '@cactus-network/api';
+import { Color, CopyToClipboard, Flex, Loading, TooltipIcon, truncateValue } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { alpha, Box, Card, CardContent, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -10,6 +10,7 @@ import useNFT from '../../hooks/useNFT';
 import useNFTMetadata from '../../hooks/useNFTMetadata';
 import isRankingAttribute from '../../util/isRankingAttribute';
 import { launcherIdToNFTId } from '../../util/nfts';
+
 import NFTPreview from './NFTPreview';
 import { NFTProperty } from './NFTProperties';
 import { NFTRanking } from './NFTRankings';

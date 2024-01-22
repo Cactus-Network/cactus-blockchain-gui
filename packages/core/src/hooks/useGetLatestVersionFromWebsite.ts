@@ -1,7 +1,8 @@
-import { useLocalStorage } from '@cactus-network.net/api-react';
+import { useLocalStorage } from '@cactus-network/api-react';
 import { useCallback, useState, useEffect } from 'react';
 
 import compareAppVersions from '../utils/compareAppVersion';
+
 import useAppVersion from './useAppVersion';
 
 type UseGetLatestVersionFromWebsiteResult = {

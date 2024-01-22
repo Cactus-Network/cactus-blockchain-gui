@@ -2,7 +2,7 @@ import {
   useGetLoggedInFingerprintQuery,
   useCurrentFingerprintSettings,
   useLocalStorage,
-} from '@cactus-network.net/api-react';
+} from '@cactus-network/api-react';
 import { orderBy } from 'lodash';
 import React, { useMemo, useEffect, useCallback, createContext, type ReactNode } from 'react';
 
@@ -10,6 +10,7 @@ import type Notification from '../../@types/Notification';
 import useBlockchainNotifications from '../../hooks/useBlockchainNotifications';
 import useNotificationSettings from '../../hooks/useNotificationSettings';
 import useShowNotification from '../../hooks/useShowNotification';
+
 import { pushNotificationStringsForNotificationType } from './utils';
 
 const MAX_NOTIFICATIONS = 500;

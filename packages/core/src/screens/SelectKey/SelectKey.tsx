@@ -1,12 +1,12 @@
-import type { KeyData } from '@cactus-network.net/api';
+import type { KeyData } from '@cactus-network/api';
 import {
   usePrefs,
   useGetKeyringStatusQuery,
   useDeleteAllKeysMutation,
   useGetKeysQuery,
   type Serializable,
-} from '@cactus-network.net/api-react';
-import { CactusBlack, Coins } from '@cactus-network.net/icons';
+} from '@cactus-network/api-react';
+import { CactusBlack, Coins } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Alert, Typography, Container, ListItemIcon } from '@mui/material';
@@ -30,6 +30,7 @@ import useKeyringMigrationPrompt from '../../hooks/useKeyringMigrationPrompt';
 import useOpenDialog from '../../hooks/useOpenDialog';
 import useShowError from '../../hooks/useShowError';
 import useSkipMigration from '../../hooks/useSkipMigration';
+
 import { randomEmoji } from './EmojiAndColorPicker';
 // import Search from './Search';
 import SelectKeyItem from './SelectKeyItem';
@@ -286,7 +287,6 @@ export default function SelectKey() {
                 flexWrap: 'wrap',
                 rowGap: '22px',
                 columnGap: '22px',
-                paddingBottom: '230px',
                 '> div': {
                   '@media (min-width: 983px)': {
                     flexBasis: '292px',

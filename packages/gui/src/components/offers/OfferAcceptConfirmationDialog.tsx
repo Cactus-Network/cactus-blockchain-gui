@@ -1,4 +1,4 @@
-import { ConfirmDialog, CopyToClipboard, Flex } from '@cactus-network.net/core';
+import { ConfirmDialog, CopyToClipboard, Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Divider, Typography } from '@mui/material';
 import React from 'react';

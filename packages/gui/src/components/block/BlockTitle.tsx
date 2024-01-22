@@ -1,4 +1,4 @@
-import { Flex } from '@cactus-network.net/core';
+import { Flex } from '@cactus-network/core';
 import { ArrowBackIos as ArrowBackIosIcon } from '@mui/icons-material';
 import React, { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';

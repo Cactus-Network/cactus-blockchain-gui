@@ -1,10 +1,11 @@
 import fs from 'fs';
 
-import { OfferTradeRecord } from '@cactus-network.net/api';
-import { useGetOfferDataMutation } from '@cactus-network.net/api-react';
-import { useShowSaveDialog } from '@cactus-network.net/core';
+import { OfferTradeRecord } from '@cactus-network/api';
+import { useGetOfferDataMutation } from '@cactus-network/api-react';
+import { useShowSaveDialog } from '@cactus-network/core';
 
 import { suggestedFilenameForOffer } from '../components/offers/utils';
+
 import useAssetIdName from './useAssetIdName';
 
 export type SaveOfferFileHook = (tradeId: string) => Promise<void>;

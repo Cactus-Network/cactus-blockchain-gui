@@ -1,4 +1,4 @@
-import { Flex, MenuItem, SettingsHR, SettingsSection, SettingsTitle, SettingsText } from '@cactus-network.net/core';
+import { Flex, MenuItem, SettingsHR, SettingsSection, SettingsTitle, SettingsText } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import {
   Autocomplete,

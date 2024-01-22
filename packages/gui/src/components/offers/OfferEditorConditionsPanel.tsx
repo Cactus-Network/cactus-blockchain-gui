@@ -1,6 +1,6 @@
-import type { Wallet } from '@cactus-network.net/api';
-import { WalletType } from '@cactus-network.net/api';
-import { useGetWalletBalanceQuery, useGetWalletsQuery } from '@cactus-network.net/api-react';
+import type { Wallet } from '@cactus-network/api';
+import { WalletType } from '@cactus-network/api';
+import { useGetWalletBalanceQuery, useGetWalletsQuery } from '@cactus-network/api-react';
 import {
   Amount,
   Fee,
@@ -11,7 +11,7 @@ import {
   mojoToCAT,
   mojoToCATLocaleString,
   useLocale,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Add, Remove } from '@mui/icons-material';
 import { Box, Divider, IconButton, Typography } from '@mui/material';
@@ -20,6 +20,7 @@ import React, { useMemo } from 'react';
 import { useFormContext, useFieldArray } from 'react-hook-form';
 
 import useAssetIdName, { AssetIdMapEntry } from '../../hooks/useAssetIdName';
+
 import OfferAssetSelector from './OfferAssetSelector';
 import type OfferEditorRowData from './OfferEditorRowData';
 import OfferExchangeRate from './OfferExchangeRate';

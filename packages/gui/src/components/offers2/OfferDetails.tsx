@@ -1,4 +1,4 @@
-import { Flex } from '@cactus-network.net/core';
+import { Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography, type TypographyProps } from '@mui/material';
 import React, { useMemo } from 'react';

@@ -1,12 +1,12 @@
-import { WalletType } from '@cactus-network.net/api';
-import type { Wallet } from '@cactus-network.net/api';
+import { WalletType } from '@cactus-network/api';
+import type { Wallet } from '@cactus-network/api';
 import {
   useGetWalletsQuery,
   useGetStrayCatsQuery,
   useGetCatListQuery,
   useAddCATTokenMutation,
-} from '@cactus-network.net/api-react';
-import { useShowError } from '@cactus-network.net/core';
+} from '@cactus-network/api-react';
+import { useShowError } from '@cactus-network/core';
 import { orderBy } from 'lodash';
 import { useMemo } from 'react';
 
@@ -74,7 +74,7 @@ export default function useWalletsList(
     const ids = new Map<string, number>();
     if (wallets) {
       wallets.forEach((wallet) => {
-        if (wallet.type === WalletType.CAT) {
+        if ([WalletType.CAT, WalletType.CRCAT].includes(wallet.type)) {
           ids.set(wallet.meta?.assetId, wallet.id);
         }
       });
@@ -125,7 +125,8 @@ export default function useWalletsList(
 
     const baseWallets =
       wallets?.filter((wallet: Wallet) => ![WalletType.CAT, WalletType.POOLING_WALLET].includes(wallet.type)) ?? [];
-    const catBaseWallets = wallets?.filter((wallet: Wallet) => wallet.type === WalletType.CAT) ?? [];
+    const catBaseWallets =
+      wallets?.filter((wallet: Wallet) => [WalletType.CAT, WalletType.CRCAT].includes(wallet.type)) ?? [];
 
     // hidden by default because they are not known
     const nonAddedKnownCats = catList?.filter((cat) => !hasCatAssignedWallet(cat.assetId)) ?? [];

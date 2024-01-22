@@ -1,4 +1,4 @@
-import { Flex, Link, useColorModeValue } from '@cactus-network.net/core';
+import { Flex, Link, useColorModeValue } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';

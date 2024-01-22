@@ -1,7 +1,7 @@
-import { WalletType } from '@cactus-network.net/api';
-import { useSetCATNameMutation, useGetCatListQuery } from '@cactus-network.net/api-react';
-import { Flex, Loading, MenuItem, useOpenDialog } from '@cactus-network.net/core';
-import { Offers as OffersIcon } from '@cactus-network.net/icons';
+import { WalletType } from '@cactus-network/api';
+import { useSetCATNameMutation, useGetCatListQuery } from '@cactus-network/api-react';
+import { Flex, Loading, MenuItem, useOpenDialog } from '@cactus-network/core';
+import { Offers as OffersIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Edit as RenameIcon, Fingerprint as FingerprintIcon } from '@mui/icons-material';
 import { ListItemIcon, Alert, Typography } from '@mui/material';
@@ -10,10 +10,12 @@ import { useNavigate } from 'react-router-dom';
 
 import useWallet from '../../hooks/useWallet';
 import WalletCards from '../WalletCards';
+import WalletCardsCRCat from '../WalletCardsCRCat';
 import WalletHeader from '../WalletHeader';
 import WalletHistory from '../WalletHistory';
 import WalletReceiveAddress from '../WalletReceiveAddress';
 import WalletRenameDialog from '../WalletRenameDialog';
+
 import WalletCATSend from './WalletCATSend';
 import WalletCATTAILDialog from './WalletCATTAILDialog';
 
@@ -109,7 +111,7 @@ export default function WalletCAT(props: Props) {
 
       <Flex flexDirection="column" gap={4}>
         <WalletCards walletId={walletId} />
-
+        {wallet?.type === WalletType.CRCAT && <WalletCardsCRCat walletId={walletId} />}
         {(() => {
           switch (selectedTab) {
             case 'summary':

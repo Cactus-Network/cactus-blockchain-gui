@@ -1,17 +1,18 @@
-import { fungibleAssetFromAssetIdAndAmount, royaltyAssetFromNFTInfo } from '@cactus-network.net/api';
-import type { CalculateRoyaltiesRequest, NFTInfo } from '@cactus-network.net/api';
+import { fungibleAssetFromAssetIdAndAmount, royaltyAssetFromNFTInfo } from '@cactus-network/api';
+import type { CalculateRoyaltiesRequest, NFTInfo } from '@cactus-network/api';
 import {
   useCalculateRoyaltiesForNFTsQuery,
   useGetNFTsByNFTIDsQuery,
   useGetWalletsQuery,
-} from '@cactus-network.net/api-react';
-import { catToMojo, cactusToMojo } from '@cactus-network.net/core';
+} from '@cactus-network/api-react';
+import { catToMojo, cactusToMojo } from '@cactus-network/core';
 import { uniq } from 'lodash';
 import React, { ReactNode, useMemo } from 'react';
 import { useWatch } from 'react-hook-form';
 
 import getUnknownCATs from '../../util/getUnknownCATs';
 import OfferState from '../offers/OfferState';
+
 import OfferBuilderContext from './OfferBuilderContext';
 
 export type OfferBuilderProviderProps = {

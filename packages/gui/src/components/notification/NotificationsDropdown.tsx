@@ -1,17 +1,19 @@
-import { DropdownBase, Tooltip } from '@cactus-network.net/core';
-import { Notification as NotificationIcon } from '@cactus-network.net/icons';
+import { DropdownBase, Tooltip } from '@cactus-network/core';
+import { Notification as NotificationIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Badge, Box, Button } from '@mui/material';
 import React from 'react';
 
 import useNotifications from '../../hooks/useNotifications';
+
 import NotificationsMenu from './NotificationsMenu';
 
 const buttonStyle = (theme) => ({
   minWidth: 0,
-  borderRadius: 2,
+  borderRadius: '8px',
   borderColor: theme.palette.mode === 'dark' ? 'border.dark' : 'border.main',
-  height: '42px',
+  width: '40px',
+  minHeight: '40px',
   '&:hover': {
     borderColor: theme.palette.mode === 'dark' ? 'border.dark' : 'border.main',
   },

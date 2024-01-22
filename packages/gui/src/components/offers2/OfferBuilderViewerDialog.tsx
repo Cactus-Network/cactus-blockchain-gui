@@ -1,11 +1,12 @@
-import { useGetOfferSummaryMutation } from '@cactus-network.net/api-react';
-import { DialogActions, Loading, Button } from '@cactus-network.net/core';
+import { useGetOfferSummaryMutation } from '@cactus-network/api-react';
+import { DialogActions, Loading, Button } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import CloseIcon from '@mui/icons-material/Close';
 import { Alert, Divider, Dialog, DialogContent, DialogTitle, IconButton } from '@mui/material';
 import React, { useEffect, useRef } from 'react';
 
 import type OfferBuilderData from '../../@types/OfferBuilderData';
+
 import OfferBuilderViewer from './OfferBuilderViewer';
 
 export type OfferBuilderViewerDialogProps = {

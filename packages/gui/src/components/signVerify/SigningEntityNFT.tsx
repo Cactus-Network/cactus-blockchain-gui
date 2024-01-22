@@ -1,5 +1,5 @@
-import { toBech32m } from '@cactus-network.net/api';
-import { CopyToClipboard, Flex, useCurrencyCode } from '@cactus-network.net/core';
+import { toBech32m } from '@cactus-network/api';
+import { CopyToClipboard, Flex, useCurrencyCode } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { InputAdornment } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
@@ -9,6 +9,7 @@ import useNFT from '../../hooks/useNFT';
 import { launcherIdFromNFTId } from '../../util/nfts';
 import NFTAutocomplete from '../nfts/NFTAutocomplete';
 import NFTSummary from '../nfts/NFTSummary';
+
 import { SignMessageEntityType, SignMessageNFTEntity } from './SignMessageEntities';
 
 export type SigningEntityNFTProps = {

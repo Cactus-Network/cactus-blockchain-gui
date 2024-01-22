@@ -1,10 +1,11 @@
-import { Loading } from '@cactus-network.net/core';
+import { Loading } from '@cactus-network/core';
 import React, { useMemo } from 'react';
 
 import Notification from '../../@types/Notification';
 import NotificationType from '../../constants/NotificationType';
 import useOffer from '../../hooks/useOffer';
 import offerToOfferBuilderData from '../../util/offerToOfferBuilderData';
+
 import NotificationPreviewNFT from './NotificationPreviewNFT';
 
 type NotificationPreviewOfferProps = {

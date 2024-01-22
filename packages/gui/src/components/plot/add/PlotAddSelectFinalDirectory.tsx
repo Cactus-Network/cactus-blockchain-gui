@@ -1,5 +1,5 @@
-import { usePrefs } from '@cactus-network.net/api-react';
-import { ButtonSelected, CardStep, Flex, TextField } from '@cactus-network.net/core';
+import { usePrefs } from '@cactus-network/api-react';
+import { ButtonSelected, CardStep, Flex, TextField } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';
@@ -8,6 +8,7 @@ import { useFormContext } from 'react-hook-form';
 import PlotLocalStorageKeys from '../../../constants/plotLocalStorage';
 import useSelectDirectory from '../../../hooks/useSelectDirectory';
 import Plotter from '../../../types/Plotter';
+
 import PlotAddSelectTemporaryDirectory from './PlotAddSelectTemporaryDirectory';
 
 type Props = {

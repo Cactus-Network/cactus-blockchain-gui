@@ -1,5 +1,5 @@
-import type { Plot, PlotNFTExternal } from '@cactus-network.net/api';
-import { useIsWalletSynced } from '@cactus-network.net/wallets';
+import type { Plot, PlotNFTExternal } from '@cactus-network/api';
+import { useIsWalletSynced } from '@cactus-network/wallets';
 import { useMemo } from 'react';
 
 import usePlotNFTName from './usePlotNFTName';

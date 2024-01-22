@@ -1,4 +1,4 @@
-import { toBech32m } from '@cactus-network.net/api';
+import { toBech32m } from '@cactus-network/api';
 import {
   Color,
   Flex,
@@ -9,7 +9,7 @@ import {
   truncateValue,
   Link,
   useCurrencyCode,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { alpha, Box, Typography } from '@mui/material';
 import React, { useMemo } from 'react';

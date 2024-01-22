@@ -1,7 +1,7 @@
-import { TransactionType } from '@cactus-network.net/api';
-import type { Transaction } from '@cactus-network.net/api';
-import { useGetAutoClaimQuery, useGetTimestampForHeightQuery, useGetHeightInfoQuery } from '@cactus-network.net/api-react';
-import { useTrans, Button } from '@cactus-network.net/core';
+import { TransactionType } from '@cactus-network/api';
+import type { Transaction } from '@cactus-network/api';
+import { useGetAutoClaimQuery, useGetTimestampForHeightQuery, useGetHeightInfoQuery } from '@cactus-network/api-react';
+import { useTrans, Button } from '@cactus-network/core';
 import { defineMessage } from '@lingui/macro';
 import { AccessTime as AccessTimeIcon } from '@mui/icons-material';
 import { Chip } from '@mui/material';
@@ -124,7 +124,7 @@ export default function WalletHistoryClawbackChip(props: Props) {
     <Chip
       size="small"
       variant="outlined"
-      color={onClick ? 'primary' : 'default'}
+      color={onClick ? 'primary' : 'info'}
       onClick={onClick}
       icon={Icon}
       label={<>{text}</>}

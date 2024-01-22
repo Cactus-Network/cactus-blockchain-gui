@@ -1,6 +1,6 @@
-import type { Plot } from '@cactus-network.net/api';
-import { useDeletePlotMutation } from '@cactus-network.net/api-react';
-import { ConfirmDialog, More, MenuItem, useOpenDialog } from '@cactus-network.net/core';
+import type { Plot } from '@cactus-network/api';
+import { useDeletePlotMutation } from '@cactus-network/api-react';
+import { ConfirmDialog, More, MenuItem, useOpenDialog } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { DeleteForever as DeleteForeverIcon } from '@mui/icons-material';
 import { ListItemIcon, Typography } from '@mui/material';

@@ -1,10 +1,10 @@
-import { WalletType, TransactionType, TransactionTypeFilterMode, toBech32m } from '@cactus-network.net/api';
-import type { Transaction } from '@cactus-network.net/api';
+import { WalletType, TransactionType, TransactionTypeFilterMode, toBech32m } from '@cactus-network/api';
+import type { Transaction } from '@cactus-network/api';
 import {
   useGetOfferRecordMutation,
   useGetSyncStatusQuery,
   useGetTransactionMemoMutation,
-} from '@cactus-network.net/api-react';
+} from '@cactus-network/api-react';
 import {
   AddressBookContext,
   Card,
@@ -18,8 +18,8 @@ import {
   mojoToCAT,
   FormatLargeNumber,
   truncateValue,
-} from '@cactus-network.net/core';
-import type { Row } from '@cactus-network.net/core';
+} from '@cactus-network/core';
+import type { Row } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { ExpandLess as ExpandLessIcon, ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 import {
@@ -39,6 +39,7 @@ import styled from 'styled-components';
 
 import useWallet from '../hooks/useWallet';
 import useWalletTransactions from '../hooks/useWalletTransactions';
+
 import ClawbackClaimTransactionDialog from './ClawbackClaimTransactionDialog';
 import WalletHistoryClawbackChip from './WalletHistoryClawbackChip';
 import WalletHistoryPending from './WalletHistoryPending';
@@ -118,7 +119,9 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
           </Box>
           &nbsp;
           <strong>
-            <FormatLargeNumber value={type === WalletType.CAT ? mojoToCAT(row.amount) : mojoToCactus(row.amount)} />
+            <FormatLargeNumber
+              value={[WalletType.CAT, WalletType.CRCAT].includes(type) ? mojoToCAT(row.amount) : mojoToCactus(row.amount)}
+            />
           </strong>
           &nbsp;
           {metadata.unit}
@@ -279,6 +282,7 @@ export default function WalletHistory(props: Props) {
       values: [TransactionType.INCOMING_CLAWBACK_RECEIVE, TransactionType.INCOMING_CLAWBACK_SEND],
     },
   });
+  // console.log(transactions);
 
   const feeUnit = useCurrencyCode();
   const [getOfferRecord] = useGetOfferRecordMutation();

@@ -1,6 +1,6 @@
 import { type Shell } from 'electron';
 
-import { Farming } from '@cactus-network.net/icons';
+import { Farming } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import {
   WbSunny as WbSunnyIcon,
@@ -21,6 +21,7 @@ import Flex from '../Flex';
 import NewerAppVersionAvailable from '../LayoutDashboard/NewerAppVersionAvailable';
 import Link from '../Link';
 import LocaleToggle from '../LocaleToggle';
+
 import SettingsLabel from './SettingsLabel';
 
 export type SettingsAppProps = {

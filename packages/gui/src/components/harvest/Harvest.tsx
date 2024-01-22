@@ -1,8 +1,9 @@
-import { Flex, LayoutDashboardSub } from '@cactus-network.net/core';
+import { Flex, LayoutDashboardSub } from '@cactus-network/core';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import PlotAdd from '../plot/add/PlotAdd';
+
 import HarvesterOverview from './HarvesterOverview';
 
 export default function Harvester() {

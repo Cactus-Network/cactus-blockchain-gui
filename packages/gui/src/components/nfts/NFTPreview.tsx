@@ -1,4 +1,4 @@
-import { Color, IconMessage, Loading, Flex, SandboxedIframe, usePersistState, useDarkMode } from '@cactus-network.net/core';
+import { Color, IconMessage, Loading, Flex, SandboxedIframe, usePersistState, useDarkMode } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { NotInterested /* , Error as ErrorIcon */ } from '@mui/icons-material';
 import { alpha, Box } from '@mui/material';
@@ -36,6 +36,7 @@ import getFileExtension from '../../util/getFileExtension';
 import getNFTId from '../../util/getNFTId';
 import hasSensitiveContent from '../../util/hasSensitiveContent';
 import parseFileContent from '../../util/parseFileContent';
+
 import NFTHashStatus from './NFTHashStatus';
 
 const StyledCardPreview = styled(Box)`

@@ -3,7 +3,7 @@ import {
   useGetProofsForRootQuery,
   useLocalStorage,
   useGetLoggedInFingerprintQuery,
-} from '@cactus-network.net/api-react';
+} from '@cactus-network/api-react';
 import { ArrowBackIosNew } from '@mui/icons-material';
 import { Box, IconButton } from '@mui/material';
 import React from 'react';
@@ -11,7 +11,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 import VCCard from './VCCard';
 
-export default function VCDetail() {
+export default function VCDetail({ coinId }: { coinId: string }) {
   const { vcId } = useParams();
   const { isLoading, data } = useGetVCQuery({ vcId: vcId as string });
   const { data: proofsData } = useGetProofsForRootQuery(
@@ -41,7 +41,7 @@ export default function VCDetail() {
       proofs = localData.proof?.values;
     }
     if (isLoading || (!data && !localData)) return null;
-    return <VCCard isDetail vcRecord={data || localData} proofs={proofs} isLocal={!!localData} />;
+    return <VCCard isDetail vcRecord={data || localData} proofs={proofs} isLocal={!!localData} coinId={coinId} />;
   }
   return (
     <Box sx={{ padding: '25px' }}>

@@ -1,5 +1,5 @@
-import { Button, CardHero } from '@cactus-network.net/core';
-import { Pooling } from '@cactus-network.net/icons';
+import { Button, CardHero } from '@cactus-network/core';
+import { Pooling } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import React from 'react';

@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign -- This file use Immer */
-import { CAT, DID, Farmer, NFT, Pool, WalletService, WalletType, toBech32m, VC } from '@cactus-network.net/api';
-import type { NFTInfo, Transaction, Wallet, WalletBalance } from '@cactus-network.net/api';
+import { CAT, DID, Farmer, NFT, Pool, WalletService, WalletType, toBech32m, VC } from '@cactus-network/api';
+import type { NFTInfo, Transaction, Wallet, WalletBalance } from '@cactus-network/api';
 import BigNumber from 'bignumber.js';
 
 import api, { baseQuery } from '../api';
@@ -79,7 +79,7 @@ export const walletApi = apiWithTag.injectEndpoints({
               wallets.map(async (wallet: Wallet) => {
                 const { type } = wallet;
                 const meta: any = {};
-                if (type === WalletType.CAT) {
+                if ([WalletType.CAT, WalletType.CRCAT].includes(type)) {
                   // get CAT asset
                   const { data: assetData, error: assetError } = await fetchWithBQ({
                     command: 'getAssetId',
@@ -1516,6 +1516,7 @@ export const {
   useSpendCATMutation,
   useAddCATTokenMutation,
   useGetStrayCatsQuery,
+  useCrCatApprovePendingMutation,
 
   // PlotNFTS
   useGetPlotNFTsQuery,

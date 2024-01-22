@@ -1,4 +1,4 @@
-import { useGetFarmedAmountQuery } from '@cactus-network.net/api-react';
+import { useGetFarmedAmountQuery } from '@cactus-network/api-react';
 import {
   useCurrencyCode,
   mojoToCactusLocaleString,
@@ -6,7 +6,7 @@ import {
   CardSimple,
   FormatLargeNumber,
   Tooltip,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography, Box } from '@mui/material';
 import moment from 'moment';

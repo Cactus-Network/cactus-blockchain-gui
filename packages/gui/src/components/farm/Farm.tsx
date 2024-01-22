@@ -1,5 +1,5 @@
-import { useGetHarvesterConnectionsQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network.net/api-react';
-import { AdvancedOptions, Flex, LayoutDashboardSub, Loading } from '@cactus-network.net/core';
+import { useGetHarvesterConnectionsQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network/api-react';
+import { AdvancedOptions, Flex, LayoutDashboardSub, Loading } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

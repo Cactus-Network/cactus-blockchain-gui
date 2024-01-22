@@ -1,5 +1,5 @@
-import { Button, CardHero, Link, useOpenDialog } from '@cactus-network.net/core';
-import { Farming } from '@cactus-network.net/icons';
+import { Button, CardHero, Link, useOpenDialog } from '@cactus-network/core';
+import { Farming } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Divider, Grid, Typography } from '@mui/material';
 import React from 'react';

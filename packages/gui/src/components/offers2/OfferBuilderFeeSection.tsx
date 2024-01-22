@@ -1,12 +1,13 @@
-import { Loading } from '@cactus-network.net/core';
-import { Fees } from '@cactus-network.net/icons';
-import { useWallet } from '@cactus-network.net/wallets';
+import { Loading } from '@cactus-network/core';
+import { Fees } from '@cactus-network/icons';
+import { useWallet } from '@cactus-network/wallets';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 import { useFieldArray } from 'react-hook-form';
 
 import useOfferBuilderContext from '../../hooks/useOfferBuilderContext';
 import useStandardWallet from '../../hooks/useStandardWallet';
+
 import OfferBuilderSection from './OfferBuilderSection';
 import OfferBuilderValue from './OfferBuilderValue';
 import OfferBuilderWalletBalance from './OfferBuilderWalletBalance';

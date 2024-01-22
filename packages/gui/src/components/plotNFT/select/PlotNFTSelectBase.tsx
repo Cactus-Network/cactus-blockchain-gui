@@ -1,4 +1,4 @@
-import { Button, Flex, Loading, CardStep, RadioGroup, EstimatedFee, FeeTxType, TextField } from '@cactus-network.net/core';
+import { Button, Flex, Loading, CardStep, RadioGroup, EstimatedFee, FeeTxType, TextField } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Grid, FormControl, FormControlLabel, Typography, Radio, Collapse } from '@mui/material';
 import React, { ReactNode } from 'react';
@@ -28,11 +28,11 @@ export default function PlotNFTSelectBase(props: Props) {
   const { step, onCancel, title, description, hideFee = false, feeDescription, setShowingPoolDetails } = props;
   // const { nfts } = usePlotNFTs();
   const { setValue } = useFormContext();
-  const self = useWatch<boolean>({
+  const self: boolean = useWatch({
     name: 'self',
   });
 
-  const poolUrl = useWatch<string>({
+  const poolUrl: string = useWatch({
     name: 'poolUrl',
   });
 

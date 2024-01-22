@@ -1,4 +1,4 @@
-import { type ServiceNameValue } from '@cactus-network.net/api';
+import { type ServiceNameValue } from '@cactus-network/api';
 import { ReactNode } from 'react';
 
 import type WalletConnectCommandParam from './WalletConnectCommandParam';
@@ -18,11 +18,11 @@ export type WalletConnectCommandNotification = Omit<WalletConnectCommandBase, 's
   service: 'NOTIFICATION';
 };
 
-export type WalletConnectCommandTest = Omit<WalletConnectCommandBase, 'service'> & {
-  service: 'TEST';
-  response: Object | ((params: Record<string, any>) => Object);
+export type WalletConnectCommandExecute = Omit<WalletConnectCommandBase, 'service'> & {
+  service: 'EXECUTE';
+  execute: Object | ((params: Record<string, any>) => Object);
 };
 
-type WalletConnectCommand = WalletConnectCommandBase | WalletConnectCommandNotification | WalletConnectCommandTest;
+type WalletConnectCommand = WalletConnectCommandBase | WalletConnectCommandNotification | WalletConnectCommandExecute;
 
 export default WalletConnectCommand;

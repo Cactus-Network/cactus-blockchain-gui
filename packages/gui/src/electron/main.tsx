@@ -34,6 +34,7 @@ import cactusEnvironment from '../util/cactusEnvironment';
 import loadConfig from '../util/loadConfig';
 import manageDaemonLifetime from '../util/manageDaemonLifetime';
 import { setUserDataDir } from '../util/userData';
+
 import CacheManager from './CacheManager';
 import { readAddressBook, saveAddressBook } from './addressBook';
 import installDevTools from './installDevTools.dev';
@@ -749,7 +750,7 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'Chat on Discord' }),
           click: () => {
-            openExternal('https://discord.gg/YEj6hZUcRn');
+            openExternal('https://discord.gg/y6KDZzEa6N');
           },
         },
         {
@@ -776,7 +777,7 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'Check for Updates...' }),
           click: () => {
-            mainWindow?.webContents.send('checkForUpdates');
+            openExternal('https://github.com/Cactus-Network/cactus-blockchain/releases');
           },
         },
         {
@@ -869,7 +870,7 @@ function getMenuTemplate() {
       {
         label: i18n._(/* i18n */ { id: 'Check for updates...' }),
         click: () => {
-          mainWindow?.webContents.send('checkForUpdates');
+          openExternal('https://github.com/Cactus-Network/cactus-blockchain/releases');
         },
       }
     );

@@ -1,6 +1,6 @@
-import { Connection } from '@cactus-network.net/api';
-import { useGetFullNodeConnectionsQuery } from '@cactus-network.net/api-react';
-import { Card, FormatBytes, FormatLargeNumber, IconButton, Loading, Table, useOpenDialog } from '@cactus-network.net/core';
+import { Connection } from '@cactus-network/api';
+import { useGetFullNodeConnectionsQuery } from '@cactus-network/api-react';
+import { Card, FormatBytes, FormatLargeNumber, IconButton, Loading, Table, useOpenDialog } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Button, Tooltip } from '@mui/material';
@@ -8,6 +8,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { serviceConnectionTypes } from '../../util/service_names';
+
 import FullNodeAddConnection from './FullNodeAddConnection';
 import FullNodeCloseConnection from './FullNodeCloseConnection';
 

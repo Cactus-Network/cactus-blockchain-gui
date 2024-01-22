@@ -1,4 +1,4 @@
-import { Button, CopyToClipboard, Flex, Link, Loading, TextField, Form } from '@cactus-network.net/core';
+import { Button, CopyToClipboard, Flex, Link, Loading, TextField, Form } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Dialog, DialogActions, DialogTitle, DialogContent, Typography, InputAdornment } from '@mui/material';
 import React, { useState } from 'react';
@@ -31,7 +31,7 @@ export default function PlotNFTPayoutInstructionsDialog(props: Props) {
     },
   });
 
-  const currentPayoutAddress = useWatch<string>({
+  const currentPayoutAddress = useWatch({
     name: 'payoutAddress',
     control: methods.control,
   });

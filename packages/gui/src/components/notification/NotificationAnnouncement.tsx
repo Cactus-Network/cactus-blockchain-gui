@@ -1,4 +1,4 @@
-import { Flex, useOpenDialog, Mute } from '@cactus-network.net/core';
+import { Flex, useOpenDialog, Mute } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { InsertComment as InsertCommentIcon, Link as LinkIcon } from '@mui/icons-material';
 import { Typography } from '@mui/material';
@@ -7,6 +7,7 @@ import React from 'react';
 import { type NotificationAnnouncement as NotificationAnnouncementType } from '../../@types/Notification';
 import NotificationType from '../../constants/NotificationType';
 import HumanTimestamp from '../helpers/HumanTimestamp';
+
 import NotificationAnnouncementDialog from './NotificationAnnouncementDialog';
 import NotificationPreview from './NotificationPreview';
 import NotificationWrapper from './NotificationWrapper';

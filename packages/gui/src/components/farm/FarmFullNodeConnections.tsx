@@ -1,12 +1,14 @@
-import type { Connection } from '@cactus-network.net/api';
-import { ServiceName } from '@cactus-network.net/api';
-import { useGetFarmerFullNodeConnectionsQuery, useService } from '@cactus-network.net/api-react';
-import { Table, Card, FormatBytes, FormatConnectionStatus } from '@cactus-network.net/core';
+import type { Connection } from '@cactus-network/api';
+import { ServiceName } from '@cactus-network/api';
+import { useGetFarmerFullNodeConnectionsQuery } from '@cactus-network/api-react';
+import { Table, Card, FormatBytes, FormatConnectionStatus } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon } from '@mui/icons-material';
 import { Link, Typography, Tooltip, IconButton } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
+
+import useIsServiceRunning from '../../hooks/useIsServiceRunning';
 
 import FarmCloseConnection from './FarmCloseConnection';
 
@@ -66,7 +68,7 @@ const cols = [
 
 export default function FarmFullNodeConnections() {
   const { data: connections = [] } = useGetFarmerFullNodeConnectionsQuery();
-  const { isRunning, isLoading } = useService(ServiceName.FARMER);
+  const { isRunning, isLoading } = useIsServiceRunning(ServiceName.FARMER);
 
   return (
     <Card

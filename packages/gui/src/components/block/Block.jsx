@@ -1,5 +1,5 @@
-import { toBech32m } from '@cactus-network.net/api';
-import { useGetBlockQuery, useGetBlockRecordQuery } from '@cactus-network.net/api-react';
+import { toBech32m } from '@cactus-network/api';
+import { useGetBlockQuery, useGetBlockRecordQuery } from '@cactus-network/api-react';
 import {
   Back,
   Button,
@@ -13,8 +13,8 @@ import {
   calculateBaseFarmerReward,
   useCurrencyCode,
   mojoToCactus,
-  Suspender,
-} from '@cactus-network.net/core';
+  Loading,
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Paper, TableRow, Table, TableBody, TableCell, TableContainer } from '@mui/material';
 import moment from 'moment';
@@ -22,6 +22,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import { hexToArray, arrToHex, sha256 } from '../../util/utils';
+
 import BlockTitle from './BlockTitle';
 
 async function computeNewPlotId(block) {
@@ -109,7 +110,7 @@ export default function Block() {
   }
 
   if (isLoading) {
-    return <Suspender />;
+    return <Loading center />;
   }
 
   if (error) {

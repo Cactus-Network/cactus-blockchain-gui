@@ -1,4 +1,4 @@
-import { useGetLoggedInFingerprintQuery } from '@cactus-network.net/api-react';
+import { useGetLoggedInFingerprintQuery } from '@cactus-network/api-react';
 import { useLocalStorage, writeStorage } from '@rehooks/local-storage';
 import { useMemo } from 'react';
 

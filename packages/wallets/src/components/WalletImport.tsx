@@ -1,5 +1,5 @@
-import { english } from '@cactus-network.net/api';
-import { useAddPrivateKeyMutation } from '@cactus-network.net/api-react';
+import { english } from '@cactus-network/api';
+import { useAddPrivateKeyMutation } from '@cactus-network/api-react';
 import {
   AlertDialog,
   Autocomplete,
@@ -12,7 +12,7 @@ import {
   useTrans,
   TextField,
   useAuth,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography, Container, Grid } from '@mui/material';
 import React from 'react';

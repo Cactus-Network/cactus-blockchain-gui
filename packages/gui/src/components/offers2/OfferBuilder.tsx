@@ -1,10 +1,11 @@
-import { Form } from '@cactus-network.net/core';
+import { Form } from '@cactus-network/core';
 import { Grid } from '@mui/material';
 import React, { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 
 import type OfferBuilderData from '../../@types/OfferBuilderData';
 import OfferState from '../offers/OfferState';
+
 import OfferBuilderProvider from './OfferBuilderProvider';
 import OfferBuilderTradeColumn from './OfferBuilderTradeColumn';
 import { emptyDefaultValues } from './utils/defaultValues';

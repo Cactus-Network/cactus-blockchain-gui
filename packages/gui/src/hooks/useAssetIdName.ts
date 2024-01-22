@@ -1,7 +1,7 @@
-import { WalletType } from '@cactus-network.net/api';
-import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network.net/api-react';
-import type { CATToken, Wallet } from '@cactus-network.net/core';
-import { useCurrencyCode } from '@cactus-network.net/core';
+import { WalletType } from '@cactus-network/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network/api-react';
+import type { CATToken, Wallet } from '@cactus-network/core';
+import { useCurrencyCode } from '@cactus-network/core';
 import { useMemo, useRef, useCallback } from 'react';
 
 export type AssetIdMapEntry = {
@@ -43,7 +43,7 @@ export default function useAssetIdName() {
         name = 'Cactus';
         symbol = currencyCode;
         isVerified = true;
-      } else if (walletType === WalletType.CAT) {
+      } else if ([WalletType.CAT, WalletType.CRCAT].includes(walletType)) {
         const lowercaseTail = wallet.meta.assetId.toLowerCase();
         const cat = catList.find((catItem: CATToken) => catItem.assetId.toLowerCase() === lowercaseTail);
 

@@ -1,6 +1,6 @@
-import { defaultPlotter, toBech32m, fromBech32m, WalletCreatePool } from '@cactus-network.net/api';
-import { useStartPlottingMutation, useCreateNewPoolWalletMutation } from '@cactus-network.net/api-react';
-import { Back, useShowError, ButtonLoading, Flex, Form } from '@cactus-network.net/core';
+import { defaultPlotter, toBech32m, fromBech32m, WalletCreatePool } from '@cactus-network/api';
+import { useStartPlottingMutation, useCreateNewPoolWalletMutation } from '@cactus-network/api-react';
+import { Back, useShowError, ButtonLoading, Flex, Form } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import React, { useState, useEffect, useRef } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
@@ -12,12 +12,14 @@ import { plottingInfo } from '../../../constants/plotSizes';
 import useUnconfirmedPlotNFTs from '../../../hooks/useUnconfirmedPlotNFTs';
 import PlotAddConfig from '../../../types/PlotAdd';
 import { PlotterDefaults, PlotterOptions } from '../../../types/Plotter';
+
 import PlotAddChooseKeys from './PlotAddChooseKeys';
 import PlotAddChoosePlotter from './PlotAddChoosePlotter';
 import PlotAddChooseSize from './PlotAddChooseSize';
 import PlotAddNFT from './PlotAddNFT';
 import PlotAddNumberOfPlots from './PlotAddNumberOfPlots';
 import PlotAddSelectFinalDirectory from './PlotAddSelectFinalDirectory';
+import PlotAddSelectHybridDiskMode from './PlotAddSelectHybridDiskMode';
 
 type FormData = PlotAddConfig & {
   p2SingletonPuzzleHash?: string;
@@ -83,6 +85,15 @@ export default function PlotAddForm(props: Props) {
       maxRam,
     };
 
+    if (
+      (plotterName === PlotterName.BLADEBIT_RAM ||
+        plotterName === PlotterName.BLADEBIT_DISK ||
+        plotterName === PlotterName.BLADEBIT_CUDA) &&
+      +plotters[plotterName].version.split('.')[0] < 3 // Bladebit < 3.0.0 does not support plot compression
+    ) {
+      defaults.bladebitCompressionLevel = undefined;
+    }
+
     return defaults;
   };
 
@@ -127,6 +138,7 @@ export default function PlotAddForm(props: Props) {
         plotterName: formPlotterName,
         workspaceLocation,
         workspaceLocation2,
+        bladebitEnableHybridDiskMode,
         useManualKeySetup,
         farmerPublicKey,
         poolPublicKey,
@@ -167,12 +179,18 @@ export default function PlotAddForm(props: Props) {
         selectedP2SingletonPuzzleHash = p2SingletonPuzzleHashLocal;
       }
 
+      if (bladebitEnableHybridDiskMode && !workspaceLocation) {
+        throw new Error(t`Temp folder location is required for hybrid disk plotting with 16/128G RAM`);
+      }
+
       const plotAddConfig = {
         ...rest,
         delay: delay * 60,
         plotterName: formPlotterName,
         workspaceLocation,
         workspaceLocation2: formPlotterName === 'madmax' ? workspaceLocation2 || workspaceLocation : workspaceLocation2,
+        bladebitEnableDisk128Mode: bladebitEnableHybridDiskMode === '128' ? true : undefined,
+        bladebitEnableDisk16Mode: bladebitEnableHybridDiskMode === '16' ? true : undefined,
         farmerPublicKey: undefined as string | undefined,
         poolPublicKey: undefined as string | undefined,
       };
@@ -233,6 +251,7 @@ export default function PlotAddForm(props: Props) {
         <PlotAddChoosePlotter step={adjustStepCount()} onChange={handlePlotterChanged} />
         <PlotAddChooseKeys step={step++} currencyCode={currencyCode} fingerprint={fingerprint} />
         <PlotAddChooseSize step={step++} plotter={plotter} />
+        {plotterName === PlotterName.BLADEBIT_CUDA && <PlotAddSelectHybridDiskMode step={step++} plotter={plotter} />}
         <PlotAddSelectFinalDirectory step={step++} plotter={plotter} />
         <PlotAddNumberOfPlots step={step++} plotter={plotter} />
         <Flex justifyContent="flex-end">

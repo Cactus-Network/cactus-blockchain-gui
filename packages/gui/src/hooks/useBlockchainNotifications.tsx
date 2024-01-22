@@ -1,11 +1,11 @@
-import { SyncingStatus } from '@cactus-network.net/api';
+import { SyncingStatus } from '@cactus-network/api';
 import {
   useGetNotificationsQuery,
   useDeleteNotificationsMutation,
   useLazyGetTimestampForHeightQuery,
-} from '@cactus-network.net/api-react';
-import { ConfirmDialog, useOpenDialog, useAuth } from '@cactus-network.net/core';
-import { useWalletState } from '@cactus-network.net/wallets';
+} from '@cactus-network/api-react';
+import { ConfirmDialog, useOpenDialog, useAuth } from '@cactus-network/core';
+import { useWalletState } from '@cactus-network/wallets';
 import { Trans } from '@lingui/macro';
 import debug from 'debug';
 import { orderBy } from 'lodash';
@@ -13,6 +13,7 @@ import React, { useEffect, useCallback, useRef } from 'react';
 
 import type Notification from '../@types/Notification';
 import NotificationType from '../constants/NotificationType';
+
 import useStateAbort from './useStateAbort';
 
 const log = debug('cactus-gui:useNotifications');

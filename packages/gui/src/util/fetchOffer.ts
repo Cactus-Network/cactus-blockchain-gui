@@ -1,7 +1,8 @@
-import { store, walletApi } from '@cactus-network.net/api-react';
-import { isValidURL } from '@cactus-network.net/core';
+import { store, walletApi } from '@cactus-network/api-react';
+import { isValidURL } from '@cactus-network/core';
 
 import OfferServices from '../constants/OfferServices';
+
 import offerToOfferBuilderData from './offerToOfferBuilderData';
 import parseFileContent from './parseFileContent';
 

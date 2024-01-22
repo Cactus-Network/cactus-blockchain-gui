@@ -1,4 +1,4 @@
-import { useDeleteUnconfirmedTransactionsMutation } from '@cactus-network.net/api-react';
+import { useDeleteUnconfirmedTransactionsMutation } from '@cactus-network/api-react';
 import {
   Button,
   Color,
@@ -16,8 +16,8 @@ import {
   ConfirmDialog,
   useOpenDialog,
   mojoToCactusLocaleString,
-} from '@cactus-network.net/core';
-import { Plot as PlotIcon } from '@cactus-network.net/icons';
+} from '@cactus-network/core';
+import { Plot as PlotIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon, Link as LinkIcon, Payment as PaymentIcon } from '@mui/icons-material';
 import { Box, Grid, Card, CardContent, Typography, ListItemIcon } from '@mui/material';
@@ -31,6 +31,7 @@ import type PlotNFT from '../../types/PlotNFT';
 import getPercentPointsSuccessfull from '../../util/getPercentPointsSuccessfull';
 import PoolAbsorbRewards from '../pool/PoolAbsorbRewards';
 import PoolJoin from '../pool/PoolJoin';
+
 import PlotNFTGetPoolLoginLinkDialog from './PlotNFTGetPoolLoginLinkDialog';
 import PlotNFTGraph from './PlotNFTGraph';
 import PlotNFTName from './PlotNFTName';

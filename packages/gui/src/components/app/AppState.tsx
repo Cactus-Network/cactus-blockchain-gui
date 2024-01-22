@@ -6,14 +6,14 @@ import {
   ServiceName,
   ServiceNameValue,
   PassphrasePromptReason,
-} from '@cactus-network.net/api';
+} from '@cactus-network/api';
 import {
   useCloseMutation,
   useGetStateQuery,
   useGetKeyringStatusQuery,
   useServices,
   useGetVersionQuery,
-} from '@cactus-network.net/api-react';
+} from '@cactus-network/api-react';
 import {
   Flex,
   LayoutHero,
@@ -23,7 +23,7 @@ import {
   useIsSimulator,
   useAppVersion,
   useCurrencyCode,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography, Collapse } from '@mui/material';
 import isElectron from 'is-electron';
@@ -33,6 +33,7 @@ import ModeServices, { SimulatorServices } from '../../constants/ModeServices';
 import useEnableDataLayerService from '../../hooks/useEnableDataLayerService';
 import useEnableFilePropagationServer from '../../hooks/useEnableFilePropagationServer';
 import useNFTMetadataLRU from '../../hooks/useNFTMetadataLRU';
+
 import AppAutoLogin from './AppAutoLogin';
 import AppKeyringMigrator from './AppKeyringMigrator';
 import AppPassPrompt from './AppPassPrompt';
@@ -170,7 +171,7 @@ export default function AppState(props: Props) {
             <Trans>Closing down services</Trans>
           </Typography>
           <Flex flexDirection="column" gap={0.5}>
-            {ALL_SERVICES.filter((service) => !!clientState?.startedServices.includes(service)).map((service) => (
+            {servicesState.running.map((service) => (
               <Collapse key={service} in timeout={{ enter: 0, exit: 1000 }}>
                 <Typography variant="body1" color="textSecondary" align="center">
                   {ServiceHumanName[service]}

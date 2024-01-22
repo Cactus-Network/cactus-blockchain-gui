@@ -1,11 +1,12 @@
-import { useGetKeysQuery } from '@cactus-network.net/api-react';
-import { ConfirmDialog, Flex, LoadingOverlay } from '@cactus-network.net/core';
+import { useGetKeysQuery } from '@cactus-network/api-react';
+import { ConfirmDialog, Flex, LoadingOverlay } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography, Divider, Switch } from '@mui/material';
 import React, { type ReactNode, useState, useMemo } from 'react';
 
 import type WalletConnectCommandParam from '../../@types/WalletConnectCommandParam';
 import useWalletConnectPairs from '../../hooks/useWalletConnectPairs';
+
 import WalletConnectMetadata from './WalletConnectMetadata';
 
 export type WalletConnectConfirmDialogProps = {

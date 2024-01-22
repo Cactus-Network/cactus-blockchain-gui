@@ -1,4 +1,4 @@
-import { type NFTInfo } from '@cactus-network.net/api';
+import { type NFTInfo } from '@cactus-network/api';
 import { throttle } from 'lodash';
 import { useMemo, useEffect, useState, useCallback } from 'react';
 
@@ -9,6 +9,7 @@ import NFTsDataStatistics from '../@types/NFTsDataStatistics';
 import FileType from '../constants/FileType';
 import getNFTFileType from '../util/getNFTFileType';
 import hasSensitiveContent from '../util/hasSensitiveContent';
+
 import useHiddenNFTs from './useHiddenNFTs';
 import useNFTProvider from './useNFTProvider';
 

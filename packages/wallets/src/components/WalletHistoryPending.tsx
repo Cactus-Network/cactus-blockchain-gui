@@ -1,5 +1,5 @@
-import { TransactionType, TransactionTypeFilterMode } from '@cactus-network.net/api';
-import { Color, TableControlledRow, useDarkMode } from '@cactus-network.net/core';
+import { TransactionType, TransactionTypeFilterMode } from '@cactus-network/api';
+import { Color, TableControlledRow, useDarkMode } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { AccessTime as AccessTimeIcon } from '@mui/icons-material';
 import { TableCell, TableRow, Chip } from '@mui/material';

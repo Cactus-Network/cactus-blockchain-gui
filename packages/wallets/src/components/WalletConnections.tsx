@@ -1,6 +1,6 @@
-import { Connection, ServiceConnectionName } from '@cactus-network.net/api';
-import { useGetWalletConnectionsQuery } from '@cactus-network.net/api-react';
-import { Card, FormatBytes, Loading, Table } from '@cactus-network.net/core';
+import { Connection, ServiceConnectionName } from '@cactus-network/api';
+import { useGetWalletConnectionsQuery } from '@cactus-network/api-react';
+import { Card, FormatBytes, Loading, Table } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Tooltip } from '@mui/material';
 import React from 'react';

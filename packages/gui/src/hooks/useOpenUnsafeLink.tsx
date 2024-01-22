@@ -1,5 +1,5 @@
-import { usePrefs } from '@cactus-network.net/api-react';
-import { ConfirmDialog, CopyToClipboard, Flex, useOpenDialog, useOpenExternal } from '@cactus-network.net/core';
+import { usePrefs } from '@cactus-network/api-react';
+import { ConfirmDialog, CopyToClipboard, Flex, useOpenDialog, useOpenExternal } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Checkbox, FormControlLabel, InputAdornment, TextField, Typography } from '@mui/material';
 import React from 'react';

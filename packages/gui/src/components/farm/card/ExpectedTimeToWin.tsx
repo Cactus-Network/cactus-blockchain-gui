@@ -1,5 +1,5 @@
-import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network.net/api-react';
-import { State, CardSimple } from '@cactus-network.net/core';
+import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network/api-react';
+import { State, CardSimple } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import moment from 'moment';
@@ -7,6 +7,7 @@ import React, { useMemo } from 'react';
 
 import FullNodeState from '../../../constants/FullNodeState';
 import useFullNodeState from '../../../hooks/useFullNodeState';
+
 import FarmCardNotAvailable from './FarmCardNotAvailable';
 
 export default React.memo(ExpectedTimeToWin);

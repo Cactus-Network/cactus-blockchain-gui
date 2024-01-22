@@ -1,4 +1,4 @@
-import { usePwAbsorbRewardsMutation, useGetPlotNFTsQuery, useGetCurrentAddressQuery } from '@cactus-network.net/api-react';
+import { usePwAbsorbRewardsMutation, useGetPlotNFTsQuery, useGetCurrentAddressQuery } from '@cactus-network/api-react';
 import {
   UnitFormat,
   CardStep,
@@ -12,7 +12,7 @@ import {
   mojoToCactusLocaleString,
   cactusToMojo,
   Back,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
 import { Grid, Typography } from '@mui/material';
@@ -21,6 +21,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router';
 
 import useStandardWallet from '../../hooks/useStandardWallet';
+
 import PlotNFTName from './PlotNFTName';
 import { SubmitData } from './select/PlotNFTSelectPool';
 

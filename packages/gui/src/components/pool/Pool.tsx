@@ -1,10 +1,11 @@
-import { Flex, LayoutDashboardSub } from '@cactus-network.net/core';
+import { Flex, LayoutDashboardSub } from '@cactus-network/core';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import PlotNFTAbsorbRewards from '../plotNFT/PlotNFTAbsorbRewards';
 import PlotNFTAdd from '../plotNFT/PlotNFTAdd';
 import PlotNFTChangePool from '../plotNFT/PlotNFTChangePool';
+
 import { PoolHeaderSource } from './PoolHeader';
 import PoolOverview from './PoolOverview';
 

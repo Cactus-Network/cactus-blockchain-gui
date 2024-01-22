@@ -1,6 +1,7 @@
-import { type NFTInfo } from '@cactus-network.net/api';
+import { type NFTInfo } from '@cactus-network/api';
 
 import type FileType from '../constants/FileType';
+
 import type Metadata from './Metadata';
 
 type NFTData = {

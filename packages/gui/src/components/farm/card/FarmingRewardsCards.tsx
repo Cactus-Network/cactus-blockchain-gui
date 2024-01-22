@@ -1,5 +1,5 @@
-import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network.net/api-react';
-import { State, CardSimple, useCurrencyCode, mojoToCactusLocaleString, useLocale } from '@cactus-network.net/core';
+import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network/api-react';
+import { State, CardSimple, useCurrencyCode, mojoToCactusLocaleString, useLocale } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography, Box } from '@mui/material';
 import BigNumber from 'bignumber.js';
@@ -8,6 +8,7 @@ import React, { useMemo } from 'react';
 
 import FullNodeState from '../../../constants/FullNodeState';
 import useFullNodeState from '../../../hooks/useFullNodeState';
+
 import FarmCardNotAvailable from './FarmCardNotAvailable';
 
 const MOJO_PER_CACTUS = 1_000_000_000_000;

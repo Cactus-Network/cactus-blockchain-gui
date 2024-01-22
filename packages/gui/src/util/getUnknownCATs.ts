@@ -1,4 +1,4 @@
-import type { Wallet } from '@cactus-network.net/api';
+import type { Wallet } from '@cactus-network/api';
 
 import findCATWalletByAssetId from './findCATWalletByAssetId';
 

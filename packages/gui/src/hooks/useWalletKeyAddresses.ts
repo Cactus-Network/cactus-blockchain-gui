@@ -1,4 +1,4 @@
-import { useGetWalletAddressesQuery } from '@cactus-network.net/api-react';
+import { useGetWalletAddressesQuery } from '@cactus-network/api-react';
 import { useMemo } from 'react';
 
 export default function useWalletKeyAddresses() {

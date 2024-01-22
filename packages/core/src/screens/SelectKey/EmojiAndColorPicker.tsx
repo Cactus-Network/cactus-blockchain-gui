@@ -1,4 +1,4 @@
-import { Search as SearchIcon } from '@cactus-network.net/icons';
+import { Search as SearchIcon } from '@cactus-network/icons';
 import data from '@emoji-mart/data';
 import { t, Trans } from '@lingui/macro';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
@@ -59,7 +59,9 @@ export default function EmojiAndColorPicker(props: EmojiAndColorPickerType) {
   const pickerStyle: any = {
     backgroundColor: isDark ? Color.Neutral[800] : Color.Neutral[50],
     border: `1px solid ${isDark ? theme.palette.border.dark : theme.palette.border.main}`,
-    boxShadow: `0px 6px 19px ${alpha(Color.Neutral[800], 0.28)}, 0px 27px 65px ${alpha(Color.Neutral[500], 0.39)}`,
+    boxShadow: isDark
+      ? 'none'
+      : `0px 6px 19px ${alpha(Color.Neutral[800], 0.28)}, 0px 27px 65px ${alpha(Color.Neutral[500], 0.39)}`,
     borderRadius: '8px',
     padding: '0px',
     position: 'absolute',

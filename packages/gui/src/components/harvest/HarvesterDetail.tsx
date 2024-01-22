@@ -1,11 +1,12 @@
-import { HarvesterInfo, LatencyData } from '@cactus-network.net/api';
-import { Flex, FormatBytes, Tooltip, TooltipIcon } from '@cactus-network.net/core';
+import { HarvesterInfo, LatencyData } from '@cactus-network/api';
+import { Flex, FormatBytes, Tooltip, TooltipIcon } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Paper, Typography, LinearProgress, Chip } from '@mui/material';
 import BigNumber from 'bignumber.js';
 import * as React from 'react';
 
 import isLocalhost from '../../util/isLocalhost';
+
 import HarvesterLatency from './HarvesterLatency';
 import HarvesterPlotDetails from './HarvesterPlotDetails';
 

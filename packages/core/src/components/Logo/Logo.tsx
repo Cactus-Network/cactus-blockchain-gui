@@ -1,4 +1,4 @@
-import { Cactus } from '@cactus-network.net/icons';
+import { Cactus } from '@cactus-network/icons';
 import { Box, BoxProps } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';

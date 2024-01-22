@@ -1,11 +1,12 @@
-import { useGetPlotNFTsQuery, usePwSelfPoolMutation, usePwJoinPoolMutation } from '@cactus-network.net/api-react';
-import { Flex, State, Loading, StateTypography } from '@cactus-network.net/core';
+import { useGetPlotNFTsQuery, usePwSelfPoolMutation, usePwJoinPoolMutation } from '@cactus-network/api-react';
+import { Flex, State, Loading, StateTypography } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
 import React, { useMemo, ReactNode } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
 import PlotNFTStateEnum from '../../constants/PlotNFTState';
+
 import PlotNFTName from './PlotNFTName';
 import PlotNFTSelectPool, { SubmitData } from './select/PlotNFTSelectPool';
 

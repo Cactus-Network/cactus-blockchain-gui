@@ -1,4 +1,4 @@
-import { ModeProvider, Persist } from '@cactus-network.net/core';
+import { ModeProvider, Persist } from '@cactus-network/core';
 import React from 'react';
 
 import AppRouter from './AppRouter';

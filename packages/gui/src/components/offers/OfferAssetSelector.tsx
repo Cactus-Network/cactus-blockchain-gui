@@ -1,7 +1,7 @@
-import type { Wallet, CATToken } from '@cactus-network.net/api';
-import { WalletType } from '@cactus-network.net/api';
-import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network.net/api-react';
-import { Select, useCurrencyCode } from '@cactus-network.net/core';
+import type { Wallet, CATToken } from '@cactus-network/api';
+import { WalletType } from '@cactus-network/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network/api-react';
+import { Select, useCurrencyCode } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { FormControl, InputLabel, MenuItem } from '@mui/material';
 import React, { useMemo } from 'react';
@@ -66,7 +66,7 @@ function buildAssetSelectorList(params: BuildAssetSelectorListParams): WalletOff
     if (wallet.type === WalletType.STANDARD_WALLET) {
       name = 'Cactus';
       symbol = cactusCurrencyCode;
-    } else if (wallet.type === WalletType.CAT) {
+    } else if ([WalletType.CAT, WalletType.CRCAT].includes(wallet.type)) {
       name = wallet.name;
       tail = wallet.meta.assetId;
       const cat = catList.find((catItem) => catItem.assetId.toLowerCase() === tail?.toLowerCase());

@@ -1,4 +1,4 @@
-import { Color } from '@cactus-network.net/core';
+import { Color } from '@cactus-network/core';
 import { Box, Paper, Popper, Typography } from '@mui/material';
 import React, { ReactNode, useRef } from 'react';
 

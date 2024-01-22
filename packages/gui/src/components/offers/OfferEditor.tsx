@@ -1,5 +1,5 @@
-import { WalletType } from '@cactus-network.net/api';
-import { useCreateOfferForIdsMutation } from '@cactus-network.net/api-react';
+import { WalletType } from '@cactus-network/api';
+import { useCreateOfferForIdsMutation } from '@cactus-network/api-react';
 import {
   Back,
   Button,
@@ -11,7 +11,7 @@ import {
   useShowError,
   cactusToMojo,
   catToMojo,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import BigNumber from 'bignumber.js';
@@ -20,6 +20,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
 import useSuppressShareOnCreate from '../../hooks/useSuppressShareOnCreate';
+
 import OfferEditorConditionsPanel from './OfferEditorConditionsPanel';
 import OfferEditorConfirmationDialog from './OfferEditorConfirmationDialog';
 import type OfferEditorRowData from './OfferEditorRowData';
@@ -215,7 +216,7 @@ function getUpdatedOffer(offerParam: { [key: string]: BigNumber }, row: OfferEdi
     let mojoAmount = new BigNumber(0);
     if (walletTypeLocal === WalletType.STANDARD_WALLET) {
       mojoAmount = cactusToMojo(amount);
-    } else if (walletTypeLocal === WalletType.CAT) {
+    } else if ([WalletType.CAT, WalletType.CRCAT].includes(walletTypeLocal)) {
       mojoAmount = catToMojo(amount);
     }
 

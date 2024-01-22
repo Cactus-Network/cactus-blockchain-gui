@@ -1,14 +1,14 @@
 /* eslint-disable no-bitwise -- enable bitwise operators for this file */
 
-import type { NFTInfo } from '@cactus-network.net/api';
-import { useSetNFTStatusMutation, useLocalStorage } from '@cactus-network.net/api-react';
-import { AlertDialog, DropdownActions, MenuItem, useOpenDialog, isValidURL } from '@cactus-network.net/core';
+import type { NFTInfo } from '@cactus-network/api';
+import { useSetNFTStatusMutation, useLocalStorage } from '@cactus-network/api-react';
+import { AlertDialog, DropdownActions, MenuItem, useOpenDialog, isValidURL } from '@cactus-network/core';
 import {
   Burn as BurnIcon,
   LinkSmall as LinkSmallIcon,
   NFTsSmall as NFTsSmallIcon,
   OffersSmall as OffersSmallIcon,
-} from '@cactus-network.net/icons';
+} from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import {
   ArrowForward as TransferIcon,
@@ -33,6 +33,7 @@ import useViewNFTOnExplorer, { NFTExplorer } from '../../hooks/useViewNFTOnExplo
 import NFTSelection from '../../types/NFTSelection';
 import download from '../../util/download';
 import removeHexPrefix from '../../util/removeHexPrefix';
+
 import MultipleDownloadDialog from './MultipleDownloadDialog';
 import NFTBurnDialog from './NFTBurnDialog';
 import NFTMoveToProfileDialog from './NFTMoveToProfileDialog';

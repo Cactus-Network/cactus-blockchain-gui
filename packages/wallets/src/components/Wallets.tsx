@@ -1,4 +1,4 @@
-import { LayoutDashboardSub } from '@cactus-network.net/core';
+import { LayoutDashboardSub } from '@cactus-network/core';
 import React from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
 

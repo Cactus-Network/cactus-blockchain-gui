@@ -1,11 +1,12 @@
-import { useGetHarvestersSummaryQuery } from '@cactus-network.net/api-react';
-import { Loading, Flex } from '@cactus-network.net/core';
+import { useGetHarvestersSummaryQuery } from '@cactus-network/api-react';
+import { Loading, Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import { orderBy } from 'lodash';
 import React, { useMemo } from 'react';
 
 import isLocalhost from '../../util/isLocalhost';
+
 import PlotHarvester from './PlotHarvester';
 
 function getIpAddress(harvester) {

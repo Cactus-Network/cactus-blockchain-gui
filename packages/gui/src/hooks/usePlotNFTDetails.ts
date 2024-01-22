@@ -1,8 +1,9 @@
-import type { PlotNFT, Plot } from '@cactus-network.net/api';
-import { useIsWalletSynced } from '@cactus-network.net/wallets';
+import type { PlotNFT, Plot } from '@cactus-network/api';
+import { useIsWalletSynced } from '@cactus-network/wallets';
 import { useMemo } from 'react';
 
 import PlotNFTState from '../constants/PlotNFTState';
+
 import usePlotNFTName from './usePlotNFTName';
 
 export default function usePlotNFTDetails(nft: PlotNFT): {

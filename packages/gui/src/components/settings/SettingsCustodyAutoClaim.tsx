@@ -1,6 +1,6 @@
-import { useGetAutoClaimQuery, useSetAutoClaimMutation } from '@cactus-network.net/api-react';
-import { Flex, SettingsText, Form, ButtonLoading, Fee, cactusToMojo, mojoToCactus } from '@cactus-network.net/core';
-import { ConnectCheckmark } from '@cactus-network.net/icons';
+import { useGetAutoClaimQuery, useSetAutoClaimMutation } from '@cactus-network/api-react';
+import { Flex, SettingsText, Form, ButtonLoading, Fee, cactusToMojo, mojoToCactus } from '@cactus-network/core';
+import { ConnectCheckmark } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React from 'react';

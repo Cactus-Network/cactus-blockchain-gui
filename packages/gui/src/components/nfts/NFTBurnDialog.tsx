@@ -1,5 +1,5 @@
-import { type NFTInfo } from '@cactus-network.net/api';
-import { useTransferNFTMutation, useLocalStorage } from '@cactus-network.net/api-react';
+import { type NFTInfo } from '@cactus-network/api';
+import { useTransferNFTMutation, useLocalStorage } from '@cactus-network/api-react';
 import {
   Button,
   ButtonLoading,
@@ -11,13 +11,14 @@ import {
   cactusToMojo,
   useOpenDialog,
   useShowError,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 import useBurnAddress from '../../hooks/useBurnAddress';
+
 import NFTSummary from './NFTSummary';
 import NFTTransferConfirmationDialog from './NFTTransferConfirmationDialog';
 

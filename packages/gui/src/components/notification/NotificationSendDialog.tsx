@@ -1,5 +1,5 @@
-import { toBech32m, fromBech32m } from '@cactus-network.net/api';
-import { useGetCurrentAddressQuery, useSendNotificationMutation } from '@cactus-network.net/api-react';
+import { toBech32m, fromBech32m } from '@cactus-network/api';
+import { useGetCurrentAddressQuery, useSendNotificationMutation } from '@cactus-network/api-react';
 import {
   AlertDialog,
   Amount,
@@ -14,7 +14,7 @@ import {
   cactusToMojo,
   useCurrencyCode,
   useOpenDialog,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import {
   Box,
@@ -36,6 +36,7 @@ import { useForm } from 'react-hook-form';
 import useNFT from '../../hooks/useNFT';
 import { launcherIdFromNFTId } from '../../util/nfts';
 import NFTPreview from '../nfts/NFTPreview';
+
 import { createOfferNotificationPayload } from './utils';
 
 // const DEFAULT_MESSAGE_COST = '0.00001';

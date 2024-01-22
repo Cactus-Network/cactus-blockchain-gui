@@ -1,5 +1,5 @@
-import { fromBech32m } from '@cactus-network.net/api';
-import { AddressBookContext, Color, EmojiAndColorPicker, Form, TextField, TooltipIcon, Flex } from '@cactus-network.net/core';
+import { fromBech32m } from '@cactus-network/api';
+import { AddressBookContext, Color, EmojiAndColorPicker, Form, TextField, TooltipIcon, Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Add, Remove } from '@mui/icons-material';
 import { Button, IconButton, Typography, Box } from '@mui/material';

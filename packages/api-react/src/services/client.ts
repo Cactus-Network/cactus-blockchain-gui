@@ -1,4 +1,4 @@
-import Client from '@cactus-network.net/api';
+import Client from '@cactus-network/api';
 
 import api, { baseQuery } from '../api';
 import { query, mutation } from '../utils/reduxToolkitEndpointAbstractions';
@@ -42,12 +42,7 @@ export const clientApi = apiWithTag.injectEndpoints({
         }
       },
     }),
-
-    clientStartService: mutation(build, Client, 'startService'),
-
-    clientStopService: mutation(build, Client, 'stopService'),
   }),
 });
 
-export const { useCloseMutation, useGetStateQuery, useClientStartServiceMutation, useClientStopServiceMutation } =
-  clientApi;
+export const { useCloseMutation, useGetStateQuery } = clientApi;

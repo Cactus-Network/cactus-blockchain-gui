@@ -1,6 +1,6 @@
-// import { useGetNFTInfoQuery } from '@cactus-network.net/api-react';
-import { fromBech32m } from '@cactus-network.net/api';
-import { AddressBookContext, Color, EmojiAndColorPicker, Flex, Form, TextField } from '@cactus-network.net/core';
+// import { useGetNFTInfoQuery } from '@cactus-network/api-react';
+import { fromBech32m } from '@cactus-network/api';
+import { AddressBookContext, Color, EmojiAndColorPicker, Flex, Form, TextField } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Add, Remove } from '@mui/icons-material';
 import { Box, Button, IconButton, Typography } from '@mui/material';

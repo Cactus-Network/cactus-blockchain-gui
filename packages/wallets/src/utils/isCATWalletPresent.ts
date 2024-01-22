@@ -1,9 +1,9 @@
-import type { Wallet, CATToken } from '@cactus-network.net/api';
-import { WalletType } from '@cactus-network.net/api';
+import type { Wallet, CATToken } from '@cactus-network/api';
+import { WalletType } from '@cactus-network/api';
 
 export default function isCATWalletPresent(wallets: Wallet[], token: CATToken): boolean {
   return !!wallets?.find((wallet) => {
-    if (wallet.type === WalletType.CAT && wallet.meta?.assetId === token.assetId) {
+    if ([WalletType.CAT, WalletType.CRCAT].includes(wallet.type) && wallet.meta?.assetId === token.assetId) {
       return true;
     }
 

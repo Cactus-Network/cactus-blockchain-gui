@@ -1,9 +1,10 @@
-import { useGetKeyringStatusQuery } from '@cactus-network.net/api-react';
+import { useGetKeyringStatusQuery } from '@cactus-network/api-react';
 import { t, plural, Trans } from '@lingui/macro';
 import React from 'react';
 
 import AlertDialog from '../components/AlertDialog';
 import ConfirmDialog from '../components/ConfirmDialog';
+
 import useOpenDialog from './useOpenDialog';
 
 export default function useValidateChangePassphraseParams() {

@@ -3,12 +3,13 @@ import {
   useSetAutoClaimMutation,
   useSpendClawbackCoinsMutation,
   useGetSyncStatusQuery,
-} from '@cactus-network.net/api-react';
+} from '@cactus-network/api-react';
 import {
   AlertDialog,
   Button,
   Form,
   ButtonLoading,
+  Color,
   EstimatedFee,
   FeeTxType,
   useCurrencyCode,
@@ -20,7 +21,7 @@ import {
   cactusToMojo,
   Checkbox,
   useOpenDialog,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Close as CloseIcon } from '@mui/icons-material';
 import {
@@ -142,7 +143,7 @@ export default function ClawbackClaimTransactionDialog(props: Props) {
             position: 'absolute',
             right: 8,
             top: 8,
-            color: (theme) => theme.palette.grey[500],
+            color: (theme) => (theme.palette.mode === 'dark' ? Color.Neutral[400] : Color.Neutral[500]),
           }}
         >
           <CloseIcon />
@@ -167,12 +168,18 @@ export default function ClawbackClaimTransactionDialog(props: Props) {
               <Box sx={{ mb: 3 }}>
                 <Typography variant="h5">
                   <FormatLargeNumber value={mojoToCactus(amountInMojo)} />{' '}
-                  <Box component="span" sx={{ color: (theme) => theme.palette.grey[600] }}>
+                  <Box
+                    component="span"
+                    sx={{ color: (theme) => (theme.palette.mode === 'dark' ? Color.Neutral[400] : Color.Neutral[500]) }}
+                  >
                     {currencyCode}
                   </Box>
                 </Typography>
                 <Typography variant="subtitle1" sx={{ mt: 1 }}>
-                  <Box component="span" sx={{ color: (theme) => theme.palette.grey[600] }}>
+                  <Box
+                    component="span"
+                    sx={{ color: (theme) => (theme.palette.mode === 'dark' ? Color.Neutral[400] : Color.Neutral[500]) }}
+                  >
                     {fromOrTo === 'from' ? <Trans>From:</Trans> : <Trans>To:</Trans>}{' '}
                   </Box>
                   <Tooltip

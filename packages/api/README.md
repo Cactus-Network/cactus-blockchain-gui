@@ -18,7 +18,7 @@ This library provides support for TypeScript/JavaScript [Cactus](https://www.cac
 
 ```ts
 import { readFileSync } from "fs";
-import Client, { Wallet } from '@cactus-network.net/api'; // or from "../cactus-blockchain/cactus-blockchain-gui/packages/api";
+import Client, { Wallet } from '@cactus-network/api'; // or from "../cactus-blockchain/cactus-blockchain-gui/packages/api";
 import Websocket from 'ws';
 import sleep from 'sleep-promise';
 

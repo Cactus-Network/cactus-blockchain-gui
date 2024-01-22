@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 
-import { type NFTInfo } from '@cactus-network.net/api';
-import { useLazyGetNFTInfoQuery } from '@cactus-network.net/api-react';
+import { type NFTInfo } from '@cactus-network/api';
+import { useLazyGetNFTInfoQuery } from '@cactus-network/api-react';
 import debug from 'debug';
 import { useState, useCallback, useMemo } from 'react';
 

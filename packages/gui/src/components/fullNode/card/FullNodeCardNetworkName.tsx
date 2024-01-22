@@ -1,5 +1,5 @@
-import { useGetNetworkInfoQuery } from '@cactus-network.net/api-react';
-import { CardSimple } from '@cactus-network.net/core';
+import { useGetNetworkInfoQuery } from '@cactus-network/api-react';
+import { CardSimple } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

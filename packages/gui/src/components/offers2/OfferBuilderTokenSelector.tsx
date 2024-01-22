@@ -1,6 +1,6 @@
-import { WalletType } from '@cactus-network.net/api';
-import type { CATToken, Wallet } from '@cactus-network.net/api';
-import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network.net/api-react';
+import { WalletType } from '@cactus-network/api';
+import type { CATToken, Wallet } from '@cactus-network/api';
+import { useGetCatListQuery, useGetWalletsQuery } from '@cactus-network/api-react';
 import { Trans, t } from '@lingui/macro';
 import { FormControl, InputLabel, MenuItem, Select, Typography } from '@mui/material';
 import { orderBy } from 'lodash';
@@ -30,13 +30,13 @@ export default function OfferBuilderTokenSelector(props: OfferBuilderTokenSelect
     }
 
     const allOptions = wallets
-      .filter((wallet: Wallet) => wallet.type === WalletType.CAT)
+      .filter((wallet: Wallet) => [WalletType.CAT, WalletType.CRCAT].includes(wallet.type))
       .map((wallet: Wallet) => {
-        const cat: CATToken | undefined = catList.find(
-          (catItem: CATToken) => catItem.assetId.toLowerCase() === wallet.meta?.assetId?.toLowerCase()
-        );
+        const assetId = wallet.meta?.assetId ? wallet.meta.assetId.toLowerCase() : '';
 
-        const assetId = wallet.meta?.assetId.toLowerCase();
+        const cat: CATToken | undefined = catList.find(
+          (catItem: CATToken) => catItem.assetId.toLowerCase() === assetId
+        );
 
         if (assetId && assetId !== currentValue && usedAssetIds.includes(assetId)) {
           return undefined;

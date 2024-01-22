@@ -1,5 +1,5 @@
-import { useGetNewFarmingInfoQuery } from '@cactus-network.net/api-react';
-import { Link, Table, Card } from '@cactus-network.net/core';
+import { useGetNewFarmingInfoQuery } from '@cactus-network/api-react';
+import { Link, Table, Card } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import moment from 'moment';
 import React from 'react';

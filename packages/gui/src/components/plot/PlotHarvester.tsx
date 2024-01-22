@@ -1,5 +1,5 @@
-import { useGetHarvesterQuery } from '@cactus-network.net/api-react';
-import { Accordion, Flex, FormatBytes, Tooltip, FormatLargeNumber } from '@cactus-network.net/core';
+import { useGetHarvesterQuery } from '@cactus-network/api-react';
+import { Accordion, Flex, FormatBytes, Tooltip, FormatLargeNumber } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { ExpandMore, ExpandLess } from '@mui/icons-material';
 import { Typography, Chip, Box, Tab, Tabs } from '@mui/material';
@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { useToggle } from 'react-use';
 
 import isLocalhost from '../../util/isLocalhost';
+
 import PlotHarvesterPlots from './PlotHarvesterPlots';
 import PlotHarvesterPlotsDuplicate from './PlotHarvesterPlotsDuplicate';
 import PlotHarvesterPlotsFailed from './PlotHarvesterPlotsFailed';

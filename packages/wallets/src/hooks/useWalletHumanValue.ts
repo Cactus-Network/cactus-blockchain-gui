@@ -1,6 +1,6 @@
-import type { Wallet } from '@cactus-network.net/api';
-import { WalletType } from '@cactus-network.net/api';
-import { mojoToCATLocaleString, mojoToCactusLocaleString, useLocale } from '@cactus-network.net/core';
+import type { Wallet } from '@cactus-network/api';
+import { WalletType } from '@cactus-network/api';
+import { mojoToCATLocaleString, mojoToCactusLocaleString, useLocale } from '@cactus-network/core';
 import BigNumber from 'bignumber.js';
 import { useMemo } from 'react';
 
@@ -13,8 +13,9 @@ export default function useWalletHumanValue(
 
   return useMemo(() => {
     if (wallet && value !== undefined) {
-      const localisedValue =
-        wallet.type === WalletType.CAT ? mojoToCATLocaleString(value, locale) : mojoToCactusLocaleString(value, locale);
+      const localisedValue = [WalletType.CAT, WalletType.CRCAT].includes(wallet.type)
+        ? mojoToCATLocaleString(value, locale)
+        : mojoToCactusLocaleString(value, locale);
 
       return `${localisedValue} ${unit}`;
     }

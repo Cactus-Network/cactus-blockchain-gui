@@ -1,5 +1,5 @@
-import type { KeyData } from '@cactus-network.net/api';
-import { useDeleteLabelMutation, useSetLabelMutation } from '@cactus-network.net/api-react';
+import type { KeyData } from '@cactus-network/api';
+import { useDeleteLabelMutation, useSetLabelMutation } from '@cactus-network/api-react';
 import { Trans } from '@lingui/macro';
 import { ButtonGroup, Chip, InputAdornment } from '@mui/material';
 import React from 'react';

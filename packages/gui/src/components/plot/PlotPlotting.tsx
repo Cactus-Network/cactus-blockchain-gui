@@ -1,5 +1,5 @@
-import { useGetThrottlePlotQueueQuery } from '@cactus-network.net/api-react';
-import { Card, Table } from '@cactus-network.net/core';
+import { useGetThrottlePlotQueueQuery } from '@cactus-network/api-react';
+import { Card, Table } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { TableRow } from '@mui/material';
 import React, { useMemo } from 'react';

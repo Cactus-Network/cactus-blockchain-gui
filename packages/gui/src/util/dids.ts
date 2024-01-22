@@ -1,4 +1,4 @@
-import { toBech32m, fromBech32m } from '@cactus-network.net/api';
+import { toBech32m, fromBech32m } from '@cactus-network/api';
 
 import removeHexPrefix from './removeHexPrefix';
 

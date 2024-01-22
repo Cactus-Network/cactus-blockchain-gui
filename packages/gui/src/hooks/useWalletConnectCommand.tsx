@@ -1,5 +1,5 @@
-import api, { store, useGetLoggedInFingerprintQuery } from '@cactus-network.net/api-react';
-import { useOpenDialog, useAuth } from '@cactus-network.net/core';
+import api, { store, useGetLoggedInFingerprintQuery } from '@cactus-network/api-react';
+import { useOpenDialog, useAuth } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import debug from 'debug';
 import React, { type ReactNode } from 'react';
@@ -12,6 +12,7 @@ import NotificationType from '../constants/NotificationType';
 import walletConnectCommands from '../constants/WalletConnectCommands';
 import prepareWalletConnectCommand from '../util/prepareWalletConnectCommand';
 import waitForWalletSync from '../util/waitForWalletSync';
+
 import useWalletConnectPairs from './useWalletConnectPairs';
 import useWalletConnectPreferences from './useWalletConnectPreferences';
 
@@ -207,14 +208,13 @@ export default function useWalletConnectCommand(options: UseWalletConnectCommand
       await waitForWalletSync();
     }
 
-    if (service === 'TEST' && 'response' in definition) {
-      const { response } = definition;
-
-      const responseValue = typeof response === 'function' ? response(values) : response;
+    if (service === 'EXECUTE') {
+      const { execute } = definition;
+      const result = typeof execute === 'function' ? await execute(values) : execute;
 
       return {
         success: true,
-        ...responseValue,
+        ...result,
       };
     }
 

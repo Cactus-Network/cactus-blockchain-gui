@@ -1,4 +1,4 @@
-// import { usePrefs } from '@cactus-network.net/api-react';
+// import { usePrefs } from '@cactus-network/api-react';
 import {
   Flex,
   SettingsHR,
@@ -9,7 +9,7 @@ import {
   useOpenDialog,
   FormatBytes,
   ConfirmDialog,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Button, Switch, FormControlLabel, Typography } from '@mui/material';
 import React from 'react';
@@ -18,6 +18,7 @@ import useCache from '../../hooks/useCache';
 import useHideObjectionableContent from '../../hooks/useHideObjectionableContent';
 import useNFTImageFittingMode from '../../hooks/useNFTImageFittingMode';
 import useSelectDirectory from '../../hooks/useSelectDirectory';
+
 import LimitCacheSize from './LimitCacheSize';
 
 /* todo it is deprecated we should remove it from users local storage

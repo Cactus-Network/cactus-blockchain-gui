@@ -1,5 +1,5 @@
-import { SyncingStatus, toBech32m } from '@cactus-network.net/api';
-import { useSpendCATMutation, useFarmBlockMutation } from '@cactus-network.net/api-react';
+import { SyncingStatus, toBech32m, WalletType } from '@cactus-network/api';
+import { useSpendCATMutation, useFarmBlockMutation } from '@cactus-network/api-react';
 import {
   AdvancedOptions,
   Button,
@@ -18,7 +18,7 @@ import {
   useCurrencyCode,
   getTransactionResult,
   TooltipIcon,
-} from '@cactus-network.net/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
@@ -71,13 +71,12 @@ export default function WalletCATSend(props: Props) {
     formState: { isSubmitting },
   } = methods;
 
-  const addressValue = useWatch<string>({
+  const addressValue = useWatch({
     control: methods.control,
     name: 'address',
   });
 
   const { wallet, unit, loading } = useWallet(walletId);
-
   async function farm() {
     if (addressValue) {
       await farmBlock({
@@ -196,6 +195,14 @@ export default function WalletCATSend(props: Props) {
                 required
                 disabled={isSubmitting}
               />
+              {wallet?.type === WalletType.CRCAT && (
+                <Typography variant="caption">
+                  <Trans>
+                    The recipient of this transaction will need to have valid credentials in order to claim the sent
+                    assets. See the CR CAT restrictions above.
+                  </Trans>
+                </Typography>
+              )}
             </Grid>
             <Grid xs={12} md={6} item>
               <TextFieldNumber

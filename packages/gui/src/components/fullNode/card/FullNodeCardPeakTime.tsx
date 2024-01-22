@@ -1,5 +1,5 @@
-import { useGetLatestPeakTimestampQuery } from '@cactus-network.net/api-react';
-import { CardSimple } from '@cactus-network.net/core';
+import { useGetLatestPeakTimestampQuery } from '@cactus-network/api-react';
+import { CardSimple } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import moment from 'moment';
 import React from 'react';

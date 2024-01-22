@@ -1,4 +1,4 @@
-import { VC } from '@cactus-network.net/api';
+import { VC } from '@cactus-network/api';
 
 import useSubscribeToEvent from './useSubscribeToEvent';
 

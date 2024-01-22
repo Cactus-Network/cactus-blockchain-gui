@@ -1,4 +1,4 @@
-import { useGetKeyringStatusQuery, useMigrateKeyringMutation } from '@cactus-network.net/api-react';
+import { useGetKeyringStatusQuery, useMigrateKeyringMutation } from '@cactus-network/api-react';
 import {
   Button,
   AlertDialog,
@@ -6,8 +6,8 @@ import {
   Flex,
   useOpenDialog,
   useValidateChangePassphraseParams,
-  Suspender,
-} from '@cactus-network.net/core';
+  Loading,
+} from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import {
   Help as HelpIcon,
@@ -42,7 +42,7 @@ export default function AppKeyringMigrator() {
   const [showCapsLock, setShowCapsLock] = useState(false);
 
   if (isLoading) {
-    return <Suspender />;
+    return <Loading center />;
   }
 
   const {
