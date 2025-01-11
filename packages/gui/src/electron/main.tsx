@@ -793,13 +793,13 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'Chat on Discord' }),
           click: () => {
-            openExternal('https://discord.gg/cactus');
+            openExternal('https://discord.gg/y6KDZzEa6N');
           },
         },
         {
-          label: i18n._(/* i18n */ { id: 'Follow on Twitter' }),
+          label: i18n._(/* i18n */ { id: 'Follow on X' }),
           click: () => {
-            openExternal('https://twitter.com/cactus_project');
+            openExternal('https://x.com/network_cactus');
           },
         },
       ],
@@ -820,7 +820,7 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'Check for Updates...' }),
           click: () => {
-            mainWindow?.webContents.send('checkForUpdates');
+            openExternal('https://github.com/Cactus-Network/cactus-blockchain/releases');
           },
         },
         {
