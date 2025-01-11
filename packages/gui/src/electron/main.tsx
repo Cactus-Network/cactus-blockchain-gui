@@ -913,7 +913,7 @@ function getMenuTemplate() {
       {
         label: i18n._(/* i18n */ { id: 'Check for updates...' }),
         click: () => {
-          mainWindow?.webContents.send('checkForUpdates');
+          openExternal('https://github.com/Cactus-Network/cactus-blockchain/releases');
         },
       },
     );
