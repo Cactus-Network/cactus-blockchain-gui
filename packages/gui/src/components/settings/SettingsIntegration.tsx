@@ -1,4 +1,4 @@
-import { Flex, MenuItem, SettingsHR, SettingsSection, SettingsTitle, SettingsText } from '@chia-network/core';
+import { Flex, MenuItem, SettingsHR, SettingsSection, SettingsTitle, SettingsText } from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import {
   Autocomplete,
@@ -140,8 +140,8 @@ export default function SettingsIntegration() {
           </SettingsSection>
           <SettingsText>
             <Trans>
-              WalletConnect enables a decentralized app on the Chia blockchain to communicate and make requests directly
-              to a Chia wallet.
+              WalletConnect enables a decentralized app on the Cactus blockchain to communicate and make requests directly
+              to a Cactus wallet.
             </Trans>
           </SettingsText>
         </Flex>
@@ -358,7 +358,7 @@ export default function SettingsIntegration() {
                   <SettingsText>
                     <Trans>
                       This will restore the selected Dapp's permissions back to their default values. By default, every
-                      command issued by the Dapp will require confirmation in the Chia wallet.
+                      command issued by the Dapp will require confirmation in the Cactus wallet.
                     </Trans>
                   </SettingsText>
                 </Grid>

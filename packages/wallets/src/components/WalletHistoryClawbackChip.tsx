@@ -1,7 +1,7 @@
-import { TransactionType } from '@chia-network/api';
-import type { Transaction } from '@chia-network/api';
-import { useGetAutoClaimQuery, useGetTimestampForHeightQuery, useGetHeightInfoQuery } from '@chia-network/api-react';
-import { useTrans, Button } from '@chia-network/core';
+import { TransactionType } from '@cactus-network/api';
+import type { Transaction } from '@cactus-network/api';
+import { useGetAutoClaimQuery, useGetTimestampForHeightQuery, useGetHeightInfoQuery } from '@cactus-network/api-react';
+import { useTrans, Button } from '@cactus-network/core';
 import { defineMessage } from '@lingui/macro';
 import { AccessTime as AccessTimeIcon } from '@mui/icons-material';
 import { Chip } from '@mui/material';

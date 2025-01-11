@@ -1,6 +1,6 @@
-import { useGetAutoClaimQuery, useSetAutoClaimMutation } from '@chia-network/api-react';
-import { Flex, SettingsText, Form, ButtonLoading, Fee, chiaToMojo, mojoToChia } from '@chia-network/core';
-import { ConnectCheckmark } from '@chia-network/icons';
+import { useGetAutoClaimQuery, useSetAutoClaimMutation } from '@cactus-network/api-react';
+import { Flex, SettingsText, Form, ButtonLoading, Fee, cactusToMojo, mojoToCactus } from '@cactus-network/core';
+import { ConnectCheckmark } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React from 'react';
@@ -11,7 +11,7 @@ export default function SettingsCustodyAutoClaim(props) {
   const { data: autoClaimData, isLoading } = useGetAutoClaimQuery();
 
   const isAutoClaimEnabled = autoClaimData?.enabled;
-  const autoClaimFee = autoClaimData?.txFee ? mojoToChia(autoClaimData.txFee).toNumber() : 0;
+  const autoClaimFee = autoClaimData?.txFee ? mojoToCactus(autoClaimData.txFee).toNumber() : 0;
 
   const methods = useForm({
     defaultValues: {
@@ -20,7 +20,7 @@ export default function SettingsCustodyAutoClaim(props) {
   });
 
   async function handleSubmit({ fee }: { fee: number }) {
-    const feeInMojos = chiaToMojo(fee);
+    const feeInMojos = cactusToMojo(fee);
     await setAutoClaim({
       enabled: fee > 0,
       txFee: feeInMojos,

@@ -1,4 +1,4 @@
-import { Color, Flex } from '@chia-network/core';
+import { Color, Flex } from '@cactus-network/core';
 import { Search as SearchIcon } from '@mui/icons-material';
 import { InputBase, InputBaseProps } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

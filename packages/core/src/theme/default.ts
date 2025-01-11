@@ -25,7 +25,7 @@ export default {
       contrastText: Color.Neutral[50],
     },
     highlight: {
-      main: Color.Chia.Primary,
+      main: Color.Cactus.Primary,
     },
     border: {
       main: Color.Neutral[300],

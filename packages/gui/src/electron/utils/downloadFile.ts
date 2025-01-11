@@ -5,7 +5,7 @@ import debug from 'debug';
 
 import type Headers from '../../@types/Headers';
 
-const log = debug('chia-gui:downloadFile');
+const log = debug('cactus-gui:downloadFile');
 
 class WriteStreamPromise {
   private stream: WriteStream;

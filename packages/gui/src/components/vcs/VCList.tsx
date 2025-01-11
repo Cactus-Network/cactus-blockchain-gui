@@ -4,7 +4,7 @@ import {
   useGetLoggedInFingerprintQuery,
   useLazyGetProofsForRootQuery,
   useVCCoinAdded,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import {
   Flex,
   More,
@@ -15,14 +15,14 @@ import {
   useDarkMode,
   LayoutDashboardSub,
   ScrollbarVirtuoso,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import {
   VCZeroStateBackground as VCZeroStateBackgroundIcon,
   VCZeroStateBackgroundDark as VCZeroStateBackgroundDarkIcon,
   VCZeroStateBadge as VCZeroStateBadgeIcon,
   VCZeroStateKYCBadge as VCZeroStateKYCBadgeIcon,
   VCZeroStateMembership as VCZeroStateMembershipIcon,
-} from '@chia-network/icons';
+} from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

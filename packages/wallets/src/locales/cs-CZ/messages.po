@@ -124,6 +124,12 @@ msgstr ""
 msgid "Before sending this transaction, you should ensure that the recipient has a wallet that can claim it manually after the timer has expired."
 msgstr ""
 
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus Asset Token"
+
 #: src/components/WalletHistoryClawbackChip.tsx:61
 msgid "Can be claimed in "
 msgstr ""
@@ -135,8 +141,8 @@ msgstr "Zrušit"
 
 #: src/components/cat/WalletCATSend.tsx:117
 #: src/components/WalletSend.tsx:153
-msgid "Cannot send chia to coloured address. Please enter a chia address."
-msgstr "Chia nelze odeslat na barevnou adresu. Zadejte prosím běžnou Chia adresu."
+msgid "Cannot send cactus to coloured address. Please enter a cactus address."
+msgstr "Cactus nelze odeslat na barevnou adresu. Zadejte prosím běžnou Cactus adresu."
 
 #: src/components/card/WalletCardCRCatRestrictions.tsx:40
 msgid "CAT credential restrictions"
@@ -145,12 +151,6 @@ msgstr ""
 #: src/components/WalletsSidebar.tsx:130
 #~ msgid "Check my snapshot balance"
 #~ msgstr "Check my snapshot balance"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
-msgstr "Chia Asset Token"
 
 #: src/components/WalletHistoryClawbackChip.tsx:68
 msgid "Claim transaction"
@@ -298,7 +298,7 @@ msgid "Distributed Identity"
 msgstr "Distribuovaná identita"
 
 #: src/components/WalletImport.tsx:157
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:127
@@ -681,8 +681,8 @@ msgid "This is not a valid address for sending funds to"
 msgstr "Toto není platná adresa pro odesílání prostředků"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "Chia zůstatek využitelný pro transakce. Neobsahuje nezpracované odměny za farmaření, nezpracované příchozí transakce a ani převody, které ještě nebyly zaneseny do blockchainu."
+msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+msgstr "Cactus zůstatek využitelný pro transakce. Neobsahuje nezpracované odměny za farmaření, nezpracované příchozí transakce a ani převody, které ještě nebyly zaneseny do blockchainu."
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -693,8 +693,8 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "Souhrn příchozích a odchozích nezpracovaných změn (zatím nejsou obsaženy v blockchainu). Neobsahuje odměny za farmaření."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "Toto je celkový počet Chia v blockchainu na aktuálním bloku kontrolovaných vaším privátním klíčem. Zahrnuje zmrazené odměny z farmaření ale nezahrnuje čekající příchozí ani odchozí transakce."
+msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "Toto je celkový počet Cactus v blockchainu na aktuálním bloku kontrolovaných vaším privátním klíčem. Zahrnuje zmrazené odměny z farmaření ale nezahrnuje čekající příchozí ani odchozí transakce."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."

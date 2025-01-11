@@ -1,4 +1,4 @@
-import { OfferTradeRecord } from '@chia-network/api';
+import { OfferTradeRecord } from '@cactus-network/api';
 import {
   ButtonLoading,
   CopyToClipboard,
@@ -8,7 +8,7 @@ import {
   useOpenDialog,
   useShowError,
   useOpenExternal,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import {
   Button,
@@ -32,7 +32,7 @@ import { NFTOfferSummary } from './NFTOfferViewer';
 import OfferSummary from './OfferSummary';
 import { offerContainsAssetOfType } from './utils';
 
-const log = debug('chia-gui:offers');
+const log = debug('cactus-gui:offers');
 
 /* ========================================================================== */
 
@@ -81,7 +81,7 @@ type CommonShareServiceDialogProps = CommonDialogProps & {
 
 type OfferShareServiceDialogProps = CommonOfferProps & CommonShareServiceDialogProps;
 
-const testnetDummyHost = 'offers-api-sim.chia.net';
+const testnetDummyHost = 'offers-api-sim.cactus.net';
 
 const OfferSharingProviders: {
   [key in OfferSharingService]: OfferSharingProvider;

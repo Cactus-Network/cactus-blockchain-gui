@@ -29,8 +29,8 @@ test('Confirm can Create and Delete a Plot. ', async () => {
   await page.getByRole('button', { name: '+ Add a Plot' }).click();
 
   //When I add a Plot to a Plot NFT
-  await page.getByRole('button', { name: 'Chia Proof of Space 1.0.11' }).click();
-  await page.getByRole('option', { name: 'Chia Proof of Space 1.0.11' }).click();
+  await page.getByRole('button', { name: 'Cactus Proof of Space 1.0.11' }).click();
+  await page.getByRole('option', { name: 'Cactus Proof of Space 1.0.11' }).click();
   await page.getByRole('button', { name: '101.4GiB (k=32, temporary space: 239GiB)' }).click();
   await page.getByRole('option', { name: '208.8GiB (k=33, temporary space: 521GiB)' }).click();
 

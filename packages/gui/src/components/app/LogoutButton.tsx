@@ -1,4 +1,4 @@
-import { Tooltip, useAuth } from '@chia-network/core';
+import { Tooltip, useAuth } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Logout as LogoutIcon } from '@mui/icons-material';
 import { Button } from '@mui/material';

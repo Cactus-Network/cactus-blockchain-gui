@@ -1,5 +1,5 @@
-import { Loading, chiaToMojo, mojoToChiaLocaleString, useCurrencyCode } from '@chia-network/core';
-import { Farming } from '@chia-network/icons';
+import { Loading, cactusToMojo, mojoToCactusLocaleString, useCurrencyCode } from '@cactus-network/core';
+import { Farming } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 import { useFieldArray, useWatch } from 'react-hook-form';
@@ -39,7 +39,7 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
       return [];
     }
 
-    let amountWithRoyaltiesLocal = chiaToMojo(amount);
+    let amountWithRoyaltiesLocal = cactusToMojo(amount);
     const rows: Record<string, any>[] = [];
     Object.entries(allRoyalties).forEach(([nftId, royaltyPaymentsLocal]) => {
       const matchingPayment = royaltyPaymentsLocal?.find((payment) => payment.asset === 'xch');
@@ -49,13 +49,13 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
           nftId,
           payment: {
             ...matchingPayment,
-            displayAmount: mojoToChiaLocaleString(matchingPayment.amount),
+            displayAmount: mojoToCactusLocaleString(matchingPayment.amount),
           },
         });
       }
     });
 
-    return [mojoToChiaLocaleString(amountWithRoyaltiesLocal), rows];
+    return [mojoToCactusLocaleString(amountWithRoyaltiesLocal), rows];
   }, [allRoyalties, amount]);
 
   function handleAdd() {
@@ -74,7 +74,7 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
     <OfferBuilderSection
       icon={<Farming color="info" />}
       title={currencyCode}
-      subtitle={<Trans>Chia ({currencyCode}) is a digital currency that is secure and sustainable</Trans>}
+      subtitle={<Trans>Cactus ({currencyCode}) is a digital currency that is secure and sustainable</Trans>}
       onAdd={!fields.length ? handleAdd : undefined}
       expanded={!!fields.length}
       muted={muted}

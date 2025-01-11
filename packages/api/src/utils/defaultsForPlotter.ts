@@ -5,7 +5,7 @@ import {
   bladebitDiskDefaults,
   bladebitCudaDefaults,
   madmaxDefaults,
-  chiaposDefaults,
+  cactusposDefaults,
 } from '../constants/Plotters';
 
 export default function defaultsForPlotter(plotterName: PlotterName): PlotterDefaults {
@@ -18,8 +18,8 @@ export default function defaultsForPlotter(plotterName: PlotterName): PlotterDef
       return bladebitCudaDefaults;
     case PlotterName.MADMAX:
       return madmaxDefaults;
-    case PlotterName.CHIAPOS: // fallthrough
+    case PlotterName.CACTUSPOS: // fallthrough
     default:
-      return chiaposDefaults;
+      return cactusposDefaults;
   }
 }

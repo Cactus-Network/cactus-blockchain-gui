@@ -1,12 +1,12 @@
-import { WalletType } from '@chia-network/api';
+import { WalletType } from '@cactus-network/api';
 import {
   useGetWalletsQuery,
   useCreateOfferForIdsMutation,
   useGetTimestampForHeightQuery,
   useGetHeightInfoQuery,
-} from '@chia-network/api-react';
-import { Flex, ButtonLoading, useOpenDialog, Loading } from '@chia-network/core';
-import { useIsWalletSynced } from '@chia-network/wallets';
+} from '@cactus-network/api-react';
+import { Flex, ButtonLoading, useOpenDialog, Loading } from '@cactus-network/core';
+import { useIsWalletSynced } from '@cactus-network/wallets';
 import { t, Trans } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import React, { useRef, useMemo, useCallback, useState } from 'react';

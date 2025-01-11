@@ -1,5 +1,5 @@
-import { WalletType } from '@chia-network/api';
-import { useCreateOfferForIdsMutation } from '@chia-network/api-react';
+import { WalletType } from '@cactus-network/api';
+import { useCreateOfferForIdsMutation } from '@cactus-network/api-react';
 import {
   Back,
   Button,
@@ -9,9 +9,9 @@ import {
   Form,
   useOpenDialog,
   useShowError,
-  chiaToMojo,
+  cactusToMojo,
   catToMojo,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import BigNumber from 'bignumber.js';
@@ -81,7 +81,7 @@ function OfferEditor(props: OfferEditorProps) {
     let missingAssetSelection = false;
     let missingAmount = false;
     let amountExceedsSpendableBalance = false;
-    const feeInMojos = chiaToMojo(formData.fee ?? 0);
+    const feeInMojos = cactusToMojo(formData.fee ?? 0);
 
     formData.makerRows.forEach((row: OfferEditorRowData) => {
       offer = getUpdatedOffer(offer, row, true);
@@ -215,7 +215,7 @@ function getUpdatedOffer(offerParam: { [key: string]: BigNumber }, row: OfferEdi
   if (assetWalletId > 0) {
     let mojoAmount = new BigNumber(0);
     if (walletTypeLocal === WalletType.STANDARD_WALLET) {
-      mojoAmount = chiaToMojo(amount);
+      mojoAmount = cactusToMojo(amount);
     } else if ([WalletType.CAT, WalletType.CRCAT].includes(walletTypeLocal)) {
       mojoAmount = catToMojo(amount);
     }

@@ -1,4 +1,4 @@
-import { usePrefs } from '@chia-network/api-react';
+import { usePrefs } from '@cactus-network/api-react';
 import { useCallback, useMemo } from 'react';
 
 export type OfferExpirationDefaultTimeInput = {

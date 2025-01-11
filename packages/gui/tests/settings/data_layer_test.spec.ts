@@ -1,7 +1,7 @@
 import { ElectronApplication, Page, _electron as electron } from 'playwright';
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../data_object_model/passphrase_login';
-import { stopAllChia } from '../utils/wallet';
+import { stopAllCactus } from '../utils/wallet';
 
 let electronApp: ElectronApplication;
 let page: Page;
@@ -52,7 +52,7 @@ test('Confirm user can navigate and interact with the Settings page in user acce
   //And the File Propagation checkbox is now Visible
   await expect(page.locator('text=Enable File Propagation Server')).toBeVisible();
 
-  //Stop Chia
+  //Stop Cactus
   await page.close();
-  stopAllChia();
+  stopAllCactus();
 });

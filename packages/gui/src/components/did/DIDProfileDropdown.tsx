@@ -1,7 +1,7 @@
-import type { Wallet } from '@chia-network/api';
-import { useGetDIDsQuery } from '@chia-network/api-react';
-import { DropdownActions, DropdownActionsProps, MenuItem, truncateValue } from '@chia-network/core';
-import type { TruncateValueOptions } from '@chia-network/core/src/components/Truncate/Truncate';
+import type { Wallet } from '@cactus-network/api';
+import { useGetDIDsQuery } from '@cactus-network/api-react';
+import { DropdownActions, DropdownActionsProps, MenuItem, truncateValue } from '@cactus-network/core';
+import type { TruncateValueOptions } from '@cactus-network/core/src/components/Truncate/Truncate';
 import { Trans, t } from '@lingui/macro';
 import { PermIdentity as PermIdentityIcon } from '@mui/icons-material';
 import { ListItemIcon } from '@mui/material';

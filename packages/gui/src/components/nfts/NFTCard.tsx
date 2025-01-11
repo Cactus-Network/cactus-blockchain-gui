@@ -1,4 +1,4 @@
-import { Color, IconButton, Flex } from '@chia-network/core';
+import { Color, IconButton, Flex } from '@cactus-network/core';
 import { MoreVert } from '@mui/icons-material';
 import { Card, CardActionArea, CardContent, Checkbox, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

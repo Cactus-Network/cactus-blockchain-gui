@@ -1,4 +1,4 @@
-import { PLOT_FILTER_CONSTANTS } from '@chia-network/api';
+import { PLOT_FILTER_CONSTANTS } from '@cactus-network/api';
 
 export function getPlotFilter(height: number = 0, isTestnet: boolean = false) {
   const constants = isTestnet ? PLOT_FILTER_CONSTANTS.testnet11 : PLOT_FILTER_CONSTANTS.mainnet;

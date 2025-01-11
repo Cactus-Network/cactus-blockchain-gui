@@ -1,5 +1,5 @@
-import { useGetWalletBalanceQuery } from '@chia-network/api-react';
-import { CardSimple, Button } from '@chia-network/core';
+import { useGetWalletBalanceQuery } from '@cactus-network/api-react';
+import { CardSimple, Button } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box } from '@mui/material';
 import React, { useCallback } from 'react';

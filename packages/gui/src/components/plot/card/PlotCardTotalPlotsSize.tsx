@@ -1,5 +1,5 @@
-import { useGetTotalHarvestersSummaryQuery } from '@chia-network/api-react';
-import { FormatBytes, CardSimple } from '@chia-network/core';
+import { useGetTotalHarvestersSummaryQuery } from '@cactus-network/api-react';
+import { FormatBytes, CardSimple } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

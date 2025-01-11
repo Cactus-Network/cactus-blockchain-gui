@@ -1,4 +1,4 @@
-import { Color, Flex } from '@chia-network/core';
+import { Color, Flex } from '@cactus-network/core';
 import { Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import React, { ReactNode } from 'react';

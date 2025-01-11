@@ -1,4 +1,4 @@
-import { Button, Flex } from '@chia-network/core';
+import { Button, Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Dialog, DialogActions, DialogContent, DialogTitle, Grid, TextField } from '@mui/material';
 import React from 'react';

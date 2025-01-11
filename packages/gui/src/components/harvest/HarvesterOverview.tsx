@@ -1,6 +1,6 @@
-import { NewFarmingInfo } from '@chia-network/api';
-import { useGetBlockchainStateQuery, useGetHarvestersQuery, useGetNewFarmingInfoQuery } from '@chia-network/api-react';
-import { Flex, FormatBytes, FormatLargeNumber, CardSimple, useCurrencyCode } from '@chia-network/core';
+import { NewFarmingInfo } from '@cactus-network/api';
+import { useGetBlockchainStateQuery, useGetHarvestersQuery, useGetNewFarmingInfoQuery } from '@cactus-network/api-react';
+import { Flex, FormatBytes, FormatLargeNumber, CardSimple, useCurrencyCode } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import BigNumber from 'bignumber.js';

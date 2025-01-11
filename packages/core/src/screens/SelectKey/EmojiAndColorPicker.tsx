@@ -1,4 +1,4 @@
-import { Search as SearchIcon } from '@chia-network/icons';
+import { Search as SearchIcon } from '@cactus-network/icons';
 import data from '@emoji-mart/data';
 import { t, Trans } from '@lingui/macro';
 import ShuffleIcon from '@mui/icons-material/Shuffle';

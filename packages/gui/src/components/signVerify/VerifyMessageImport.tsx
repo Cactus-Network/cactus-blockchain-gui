@@ -1,6 +1,6 @@
 import fs, { Stats } from 'fs';
 
-import { Color, Dropzone, Flex, useShowError } from '@chia-network/core';
+import { Color, Dropzone, Flex, useShowError } from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Box, Card, Typography } from '@mui/material';
 import React, { useState } from 'react';

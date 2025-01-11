@@ -1,4 +1,4 @@
-import { Flex, Link, useColorModeValue } from '@chia-network/core';
+import { Flex, Link, useColorModeValue } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';
@@ -47,7 +47,7 @@ export default function OfferHeader(props: OfferHeaderProps) {
           {'This offer is no longer valid because it was accepted or cancelled. Click '}
           <Link
             target="_blank"
-            href="https://docs.chia.net/getting-started/wallet-guide/#taker-attempts-to-accept-an-invalid-offer"
+            href="https://docs.cactus.net/getting-started/wallet-guide/#taker-attempts-to-accept-an-invalid-offer"
           >
             here
           </Link>{' '}

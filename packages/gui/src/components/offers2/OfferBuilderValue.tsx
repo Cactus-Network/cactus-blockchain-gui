@@ -10,7 +10,7 @@ import {
   Loading,
   StateColor,
   TooltipIcon,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Remove } from '@mui/icons-material';
 import { Box, Typography, IconButton } from '@mui/material';

@@ -5,7 +5,7 @@ import {
   CopyToClipboard,
   useOpenExternal,
   truncateValue,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Chip, Box, alpha, IconButton } from '@mui/material';

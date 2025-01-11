@@ -1,4 +1,4 @@
-import { useRemoveKeyringPassphraseMutation, useGetKeyringStatusQuery } from '@chia-network/api-react';
+import { useRemoveKeyringPassphraseMutation, useGetKeyringStatusQuery } from '@cactus-network/api-react';
 import {
   AlertDialog,
   Button,
@@ -9,7 +9,7 @@ import {
   Loading,
   TextField,
   Form,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { KeyboardCapslock as KeyboardCapslockIcon, Visibility as VisibilityIcon } from '@mui/icons-material';
 import {

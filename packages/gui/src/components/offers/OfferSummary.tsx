@@ -1,5 +1,5 @@
-import { type OfferSummaryRecord } from '@chia-network/api';
-import { Flex, FormatLargeNumber, StateColor, TooltipIcon, mojoToChia, mojoToCAT } from '@chia-network/core';
+import { type OfferSummaryRecord } from '@cactus-network/api';
+import { Flex, FormatLargeNumber, StateColor, TooltipIcon, mojoToCactus, mojoToCAT } from '@cactus-network/core';
 import { Plural, Trans } from '@lingui/macro';
 import { Box, Divider, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -46,13 +46,13 @@ export default function OfferSummary(props: Props) {
   const makerAmount =
     makerEntries.length > 0
       ? ['xch', 'txch'].includes(makerEntries[0][0].toLowerCase())
-        ? mojoToChia(makerEntries[0][1])
+        ? mojoToCactus(makerEntries[0][1])
         : mojoToCAT(makerEntries[0][1])
       : undefined;
   const takerAmount =
     takerEntries.length > 0
       ? ['xch', 'txch'].includes(takerEntries[0][0].toLowerCase())
-        ? mojoToChia(takerEntries[0][1])
+        ? mojoToCactus(takerEntries[0][1])
         : mojoToCAT(takerEntries[0][1])
       : undefined;
   const canSetExchangeRate = makerAssetInfo && takerAssetInfo && makerAmount && takerAmount;

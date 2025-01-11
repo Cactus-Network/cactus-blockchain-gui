@@ -1,6 +1,6 @@
 import { AssetStatusForOffer } from 'util/offerBuilderDataToOffer';
 
-import { OfferSummaryRecord, WalletType } from '@chia-network/api';
+import { OfferSummaryRecord, WalletType } from '@cactus-network/api';
 import { t } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import { OfferTradeRecordFormatted } from 'hooks/useWalletOffers';
@@ -48,7 +48,7 @@ export default function resolveOfferInfo(
     const assetType = offerAssetTypeForAssetId(assetId, summary);
 
     switch (assetType) {
-      case OfferAsset.CHIA:
+      case OfferAsset.CACTUS:
         return {
           displayAmount: formatAmountForWalletType(amount, WalletType.STANDARD_WALLET),
           displayName: lookupByAssetId(assetId)?.displayName ?? assetId.toUpperCase(),

@@ -1,7 +1,7 @@
-import type { Wallet } from '@chia-network/api';
-import { useGetWalletsQuery } from '@chia-network/api-react';
-import { Flex } from '@chia-network/core';
-import { CrCatFlags, CrCatAuthorizedProviders } from '@chia-network/wallets';
+import type { Wallet } from '@cactus-network/api';
+import { useGetWalletsQuery } from '@cactus-network/api-react';
+import { Flex } from '@cactus-network/core';
+import { CrCatFlags, CrCatAuthorizedProviders } from '@cactus-network/wallets';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import React from 'react';

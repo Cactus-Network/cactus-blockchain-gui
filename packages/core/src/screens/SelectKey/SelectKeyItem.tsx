@@ -1,5 +1,5 @@
-import type { KeyData } from '@chia-network/api';
-import { useFingerprintSettings, useGetLoggedInFingerprintQuery } from '@chia-network/api-react';
+import type { KeyData } from '@cactus-network/api';
+import { useFingerprintSettings, useGetLoggedInFingerprintQuery } from '@cactus-network/api-react';
 import { Trans } from '@lingui/macro';
 import { Delete as DeleteIcon, Visibility as VisibilityIcon, Edit as EditIcon } from '@mui/icons-material';
 import { Box, Typography, ListItemIcon, Chip } from '@mui/material';

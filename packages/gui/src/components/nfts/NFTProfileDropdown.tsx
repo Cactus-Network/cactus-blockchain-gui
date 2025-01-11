@@ -1,7 +1,7 @@
-import type { Wallet } from '@chia-network/api';
-import { useGetDIDsQuery, useGetNFTWallets, useGetNFTWalletsWithDIDsQuery } from '@chia-network/api-react';
-import { DropdownActions, MenuItem } from '@chia-network/core';
-import { NFTsSmall as NFTsSmallIcon } from '@chia-network/icons';
+import type { Wallet } from '@cactus-network/api';
+import { useGetDIDsQuery, useGetNFTWallets, useGetNFTWalletsWithDIDsQuery } from '@cactus-network/api-react';
+import { DropdownActions, MenuItem } from '@cactus-network/core';
+import { NFTsSmall as NFTsSmallIcon } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { AutoAwesome as AutoAwesomeIcon, PermIdentity as PermIdentityIcon } from '@mui/icons-material';
 import { ListItemIcon } from '@mui/material';

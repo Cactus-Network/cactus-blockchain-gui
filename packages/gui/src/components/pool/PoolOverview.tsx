@@ -1,4 +1,4 @@
-import { Button, Flex, Loading } from '@chia-network/core';
+import { Button, Flex, Loading } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography } from '@mui/material';
 import React from 'react';

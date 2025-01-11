@@ -1,8 +1,8 @@
 {
-  "name": "@chia-network/api-react",
-  "author": "Chia Network <hello@chia.net> (https://chia.net/)",
-  "description": "Chia API react store library",
-  "productName": "Chia Blockchain",
+  "name": "@cactus-network/api-react",
+  "author": "Cactus Network <hello@cactus.net> (https://cactus.net/)",
+  "description": "Cactus API react store library",
+  "productName": "Cactus Blockchain",
   "version": "1.0.0",
   "engines": {
     "node": ">=18.18.2"
@@ -32,7 +32,7 @@
     "@babel/plugin-transform-runtime": "7.25.4",
     "@babel/preset-env": "7.25.4",
     "@babel/preset-typescript": "7.24.7",
-    "@chia-network/api": "1.0.0",
+    "@cactus-network/api": "1.0.0",
     "@reduxjs/toolkit": "1.9.5",
     "@rollup/plugin-babel": "6.0.4",
     "@rollup/plugin-commonjs": "25.0.4",
@@ -51,7 +51,7 @@
     "typescript": "5.7.2"
   },
   "peerDependencies": {
-    "@chia-network/api": "^1.0.0",
+    "@cactus-network/api": "^1.0.0",
     "@reduxjs/toolkit": "^1.9.5",
     "react": "^18.2.0",
     "react-redux": "^8.1.2"

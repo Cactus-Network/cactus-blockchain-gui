@@ -1,6 +1,6 @@
-// import { useGetNFTInfoQuery } from '@chia-network/api-react';
-import { useGetKeysQuery, usePrefs, type Serializable } from '@chia-network/api-react';
-import { CopyToClipboard, Flex } from '@chia-network/core';
+// import { useGetNFTInfoQuery } from '@cactus-network/api-react';
+import { useGetKeysQuery, usePrefs, type Serializable } from '@cactus-network/api-react';
+import { CopyToClipboard, Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { InputAdornment, TextField, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

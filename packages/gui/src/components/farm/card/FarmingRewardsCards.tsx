@@ -1,5 +1,5 @@
-import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@chia-network/api-react';
-import { State, CardSimple, useCurrencyCode, mojoToChiaLocaleString, useLocale } from '@chia-network/core';
+import { useGetBlockchainStateQuery, useGetTotalHarvestersSummaryQuery } from '@cactus-network/api-react';
+import { State, CardSimple, useCurrencyCode, mojoToCactusLocaleString, useLocale } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Grid, Typography, Box } from '@mui/material';
 import BigNumber from 'bignumber.js';
@@ -11,26 +11,26 @@ import useFullNodeState from '../../../hooks/useFullNodeState';
 
 import FarmCardNotAvailable from './FarmCardNotAvailable';
 
-const MOJO_PER_CHIA = 1_000_000_000_000;
+const MOJO_PER_CACTUS = 1_000_000_000_000;
 const BLOCKS_PER_YEAR = 1_681_920; // 32 * 6 * 24 * 365
 function getBlockRewardByHeight(height: number) {
   if (height === 0) {
-    return 21_000_000 * MOJO_PER_CHIA;
+    return 21_000_000 * MOJO_PER_CACTUS;
   }
   if (height < 3 * BLOCKS_PER_YEAR) {
-    return 2 * MOJO_PER_CHIA;
+    return 2 * MOJO_PER_CACTUS;
   }
   if (height < 6 * BLOCKS_PER_YEAR) {
-    return 1 * MOJO_PER_CHIA;
+    return 1 * MOJO_PER_CACTUS;
   }
   if (height < 9 * BLOCKS_PER_YEAR) {
-    return 0.5 * MOJO_PER_CHIA;
+    return 0.5 * MOJO_PER_CACTUS;
   }
   if (height < 12 * BLOCKS_PER_YEAR) {
-    return 0.25 * MOJO_PER_CHIA;
+    return 0.25 * MOJO_PER_CACTUS;
   }
 
-  return 0.125 * MOJO_PER_CHIA;
+  return 0.125 * MOJO_PER_CACTUS;
 }
 
 export default React.memo(FarmingRewardsCards);
@@ -115,7 +115,7 @@ function FarmingRewardsCards() {
         title={<Trans>Estimated daily XCH</Trans>}
         value={
           <>
-            {mojoToChiaLocaleString(estimatedDailyXCH, locale)}
+            {mojoToCactusLocaleString(estimatedDailyXCH, locale)}
             &nbsp;
             {currencyCode}
           </>
@@ -143,7 +143,7 @@ function FarmingRewardsCards() {
         title={<Trans>Estimated monthly XCH</Trans>}
         value={
           <>
-            {mojoToChiaLocaleString(estimatedMonthlyXCH, locale)}
+            {mojoToCactusLocaleString(estimatedMonthlyXCH, locale)}
             &nbsp;
             {currencyCode}
           </>

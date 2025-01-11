@@ -1,10 +1,10 @@
-import { OfferSummaryValidTimes } from '@chia-network/api';
+import { OfferSummaryValidTimes } from '@cactus-network/api';
 import {
   useGetWalletsQuery,
   useCheckOfferValidityMutation,
   useGetTimestampForHeightQuery,
   useGetHeightInfoQuery,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import {
   AlertDialog,
   Flex,
@@ -14,8 +14,8 @@ import {
   Loading,
   useShowError,
   useOpenDialog,
-} from '@chia-network/core';
-import { useIsWalletSynced } from '@chia-network/wallets';
+} from '@cactus-network/core';
+import { useIsWalletSynced } from '@cactus-network/wallets';
 import { Trans } from '@lingui/macro';
 import { Alert, Grid } from '@mui/material';
 import React, { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, forwardRef } from 'react';
@@ -263,7 +263,7 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
               {'This offer is no longer valid because it was accepted or cancelled. Click '}
               <Link
                 target="_blank"
-                href="https://docs.chia.net/getting-started/wallet-guide/#taker-attempts-to-accept-an-invalid-offer"
+                href="https://docs.cactus.net/getting-started/wallet-guide/#taker-attempts-to-accept-an-invalid-offer"
               >
                 here
               </Link>{' '}

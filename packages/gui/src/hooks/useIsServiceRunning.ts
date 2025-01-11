@@ -1,5 +1,5 @@
-import { ServiceNameValue } from '@chia-network/api';
-import { useRunningServicesQuery } from '@chia-network/api-react';
+import { ServiceNameValue } from '@cactus-network/api';
+import { useRunningServicesQuery } from '@cactus-network/api-react';
 import { useMemo } from 'react';
 
 export default function useIsServiceRunning(service: ServiceNameValue, pollingInterval: number = 10_000) {

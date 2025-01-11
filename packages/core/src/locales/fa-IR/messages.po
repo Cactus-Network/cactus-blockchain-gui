@@ -35,7 +35,7 @@ msgid "{minPassphraseLength, plural, one {Passphrases must be at least # charact
 msgstr "{minPassphraseLength, plural,one {طول کارکتر رمز ورود باید حداقل # باشد} other {طول کارکترهای رمز ورود باید حداقل # باشند}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
-msgid "A new version of Chia is available!"
+msgid "A new version of Cactus is available!"
 msgstr "نسخه جدید چیا در دسترس است"
 
 #: src/screens/SelectKey/EmojiAndColorPicker.tsx:270
@@ -64,6 +64,14 @@ msgstr "آیا مطمئن هستید که میخواهید ادامه دهید؟
 msgid "Back"
 msgstr "بازگشت"
 
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Cactus {latestVersion} is currently the latest version available."
+msgstr ".در حال حاضر آخرین نسخه موجود است {latestVersion} چیا"
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Cactus Application Version:"
+msgstr "نسخه برنامه چیا:"
+
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:18
 #: src/screens/SelectKey/SelectKeyRenameForm.tsx:90
@@ -77,14 +85,6 @@ msgstr "بروز رسانی را بررسی کنید"
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:93
 msgid "Checking for updates..."
 msgstr "بروز رسانی را بررسی کنید..."
-
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Chia {latestVersion} is currently the latest version available."
-msgstr ".در حال حاضر آخرین نسخه موجود است {latestVersion} چیا"
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Chia Application Version:"
-msgstr "نسخه برنامه چیا:"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:110
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:47
@@ -113,7 +113,7 @@ msgid "Create a new wallet key"
 msgstr "ایجاد یک کلید کیف پول جدید"
 
 #: src/screens/SelectKey/SelectKey.tsx:266
-msgid "Create a new wallet key to get started with Chia."
+msgid "Create a new wallet key to get started with Cactus."
 msgstr "برای شروع کار با چیا یک کلید کیف پول جدید ایجاد کنید."
 
 #: src/screens/SelectKey/SelectKey.tsx:177
@@ -550,8 +550,8 @@ msgid "Wallet Keys"
 msgstr "کلیدهای کیف پول"
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Welcome to Chia. Please log in with an existing key, or create a new key."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Welcome to Cactus. Please log in with an existing key, or create a new key."
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:142
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66

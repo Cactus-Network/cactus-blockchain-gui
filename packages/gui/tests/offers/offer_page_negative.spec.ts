@@ -35,7 +35,7 @@
 //   // await page.getByLabel('Amount *').click();
 //   // await page.getByLabel('Amount *').fill('0.05');
 //   // await page.locator('.sc-AjmGg').click();
-//   // await page.getByRole('option', { name: 'Chia Holiday 2021 Token (CH21)' }).click();
+//   // await page.getByRole('option', { name: 'Cactus Holiday 2021 Token (CH21)' }).click();
 //   // await page.getByRole('button', { name: 'Create Offer' }).click();
 //   // await page.getByRole('button', { name: 'OK' }).click();
 

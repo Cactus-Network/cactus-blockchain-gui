@@ -1,7 +1,7 @@
 import { ElectronApplication, Page, _electron as electron } from 'playwright';
 import { test } from '@playwright/test';
 import { LoginPage } from '../data_object_model/passphrase_login';
-import { stopAllChia } from '../utils/wallet';
+import { stopAllCactus } from '../utils/wallet';
 
 let electronApp: ElectronApplication;
 let page: Page;
@@ -36,10 +36,10 @@ test('Confirm user can add and remove passphrase ', async () => {
   await page.getByTestId('SetPassphrasePrompt-set-passphrase').click();
   await page.getByRole('button', { name: 'OK' }).click();
 
-  //When I close and reopen Chia
+  //When I close and reopen Cactus
   await page.locator('[data-testid="LayoutDashboard-log-out"]').click();
   await page.close();
-  stopAllChia();
+  stopAllCactus();
 
   await page.pause();
   electronApp = await electron.launch({ args: ['./build/electron/main.js'] });
@@ -59,14 +59,14 @@ test('Confirm user can add and remove passphrase ', async () => {
   await new LoginPage(page).getPlayWrightWallet();
   await page.locator('div[role="button"]:has-text("Settings")').click();
 
-  //And I remove passphrase and close chia
+  //And I remove passphrase and close cactus
   await page.locator('[data-testid="SettingsPanel-remove-passphrase"]').click();
   await page.locator('input[type="password"]').click();
   await page.locator('input[type="password"]').fill('password2023!@');
   await page.locator('div[role="dialog"] button:has-text("Remove Passphrase")').click();
   await page.locator('button:has-text("OK")').click();
 
-  //When I close and reopen Chia
+  //When I close and reopen Cactus
   await page.locator('[data-testid="LayoutDashboard-log-out"]').click();
   await page.close();
   electronApp = await electron.launch({ args: ['./build/electron/main.js'] });

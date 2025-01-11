@@ -1,5 +1,5 @@
-import { ButtonLoading, Flex, Form, SettingsLabel, TextField } from '@chia-network/core';
-import { ConnectCheckmark } from '@chia-network/icons';
+import { ButtonLoading, Flex, Form, SettingsLabel, TextField } from '@cactus-network/core';
+import { ConnectCheckmark } from '@cactus-network/icons';
 import { Trans, t } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React from 'react';

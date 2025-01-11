@@ -35,8 +35,8 @@ msgid "{minPassphraseLength, plural, one {Passphrases must be at least # charact
 msgstr "{minPassphraseLength, plural, other {密码长度必须至少为 # 个字符}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
-msgid "A new version of Chia is available!"
-msgstr "新版Chia可用！"
+msgid "A new version of Cactus is available!"
+msgstr "新版Cactus可用！"
 
 #: src/screens/SelectKey/EmojiAndColorPicker.tsx:270
 msgid "Add Icon"
@@ -64,6 +64,14 @@ msgstr "确定要继续吗？输入钱包密钥的指纹以确认删除。"
 msgid "Back"
 msgstr "后退"
 
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Cactus {latestVersion} is currently the latest version available."
+msgstr "Cactus {latestVersion} 已经是最新版本。"
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Cactus Application Version:"
+msgstr "Cactus程序版本："
+
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:18
 #: src/screens/SelectKey/SelectKeyRenameForm.tsx:90
@@ -77,14 +85,6 @@ msgstr "检查更新"
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:93
 msgid "Checking for updates..."
 msgstr "正在检查更新..."
-
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Chia {latestVersion} is currently the latest version available."
-msgstr "Chia {latestVersion} 已经是最新版本。"
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Chia Application Version:"
-msgstr "Chia程序版本："
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:110
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:47
@@ -113,8 +113,8 @@ msgid "Create a new wallet key"
 msgstr "新建钱包"
 
 #: src/screens/SelectKey/SelectKey.tsx:266
-msgid "Create a new wallet key to get started with Chia."
-msgstr "使用Chia，从新建一个钱包开始。"
+msgid "Create a new wallet key to get started with Cactus."
+msgstr "使用Cactus，从新建一个钱包开始。"
 
 #: src/screens/SelectKey/SelectKey.tsx:177
 msgid "Create New"
@@ -548,8 +548,8 @@ msgid "Wallet Keys"
 msgstr "钱包密钥"
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Welcome to Chia. Please log in with an existing key, or create a new key."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Welcome to Cactus. Please log in with an existing key, or create a new key."
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:142
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66

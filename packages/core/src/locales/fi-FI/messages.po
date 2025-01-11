@@ -35,8 +35,8 @@ msgid "{minPassphraseLength, plural, one {Passphrases must be at least # charact
 msgstr "{minPassphraseLength, plural, one {Salasanojen on oltava vähintään # merkki pituudeltaan} other {Salasanojen on oltava vähintään # merkkiä pituudeltaan}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
-msgid "A new version of Chia is available!"
-msgstr "Uusi versio Chiasta on saatavilla!"
+msgid "A new version of Cactus is available!"
+msgstr "Uusi versio Cactussta on saatavilla!"
 
 #: src/screens/SelectKey/EmojiAndColorPicker.tsx:270
 msgid "Add Icon"
@@ -64,6 +64,14 @@ msgstr "Oletko varma, että haluat jatkaa? Kirjoita tämän lompakon sormenjälk
 msgid "Back"
 msgstr "Takaisin"
 
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Cactus {latestVersion} is currently the latest version available."
+msgstr "Cactus {latestVersion} on tällä hetkellä uusin versio."
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Cactus Application Version:"
+msgstr "Cactus-sovelluksen Versio:"
+
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:18
 #: src/screens/SelectKey/SelectKeyRenameForm.tsx:90
@@ -77,14 +85,6 @@ msgstr "Tarkista päivitykset"
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:93
 msgid "Checking for updates..."
 msgstr "Tarkistetaan päivityksiä..."
-
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Chia {latestVersion} is currently the latest version available."
-msgstr "Chia {latestVersion} on tällä hetkellä uusin versio."
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Chia Application Version:"
-msgstr "Chia-sovelluksen Versio:"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:110
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:47
@@ -113,8 +113,8 @@ msgid "Create a new wallet key"
 msgstr "Luo uusi lompakon avain"
 
 #: src/screens/SelectKey/SelectKey.tsx:266
-msgid "Create a new wallet key to get started with Chia."
-msgstr "Luo uusi lompakon avain päästäksesi alkuun Chian kanssa."
+msgid "Create a new wallet key to get started with Cactus."
+msgstr "Luo uusi lompakon avain päästäksesi alkuun Cactusn kanssa."
 
 #: src/screens/SelectKey/SelectKey.tsx:177
 msgid "Create New"
@@ -548,8 +548,8 @@ msgid "Wallet Keys"
 msgstr "Lompakon Avaimet"
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Welcome to Chia. Please log in with an existing key, or create a new key."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Welcome to Cactus. Please log in with an existing key, or create a new key."
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:142
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66

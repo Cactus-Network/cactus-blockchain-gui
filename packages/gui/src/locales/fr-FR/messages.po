@@ -116,8 +116,8 @@ msgstr "Aide"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:761
-msgid "Chia Blockchain Wiki"
-msgstr "Wiki de la Blockchain Chia"
+msgid "Cactus Blockchain Wiki"
+msgstr "Wiki de la Blockchain Cactus"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:767
@@ -151,14 +151,14 @@ msgstr "Suivez-nous sur Twitter"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:812
-msgid "Chia"
-msgstr "Chia"
+msgid "Cactus"
+msgstr "Cactus"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:815
 #: src/electron/main.tsx:908
-msgid "About Chia Blockchain"
-msgstr "À propos de la blockchain Chia"
+msgid "About Cactus Blockchain"
+msgstr "À propos de la blockchain Cactus"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:821
@@ -348,8 +348,8 @@ msgstr "Une valeur de {0} est recommandée"
 
 #: src/electron/main.tsx:1101
 #: src/electron/main.tsx:1188
-#~ msgid "About Chia Blockchain"
-#~ msgstr "About Chia Blockchain"
+#~ msgid "About Cactus Blockchain"
+#~ msgstr "About Cactus Blockchain"
 
 #: src/components/offers/NFTOfferViewer.tsx:642
 #: src/components/offers/OfferAcceptConfirmationDialog.tsx:21
@@ -771,8 +771,8 @@ msgid "Block"
 msgstr "Bloc"
 
 #: src/components/block/Block.jsx:251
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "Bloc à la hauteur {0} dans la blockchain Chia"
+msgid "Block at height {0} in the Cactus blockchain"
+msgstr "Bloc à la hauteur {0} dans la blockchain Cactus"
 
 #: src/components/farm/card/FarmingRewardsHistoryCards.tsx:61
 msgid "Block Fee"
@@ -840,6 +840,22 @@ msgstr "Cache"
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:236
 msgid "Cache size (GB)"
 msgstr "Taille du cache (Go)"
+
+#: src/electron/main.tsx:1098
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/components/offers2/OfferBuilderXCHSection.tsx:77
+msgid "Cactus ({currencyCode}) is a digital currency that is secure and sustainable"
+msgstr "Cactus ({currencyCode}) est une monnaie numérique sécurisée et durable"
+
+#: src/components/offers2/OfferBuilderTokensSection.tsx:115
+msgid "Cactus Asset Tokens (CATs) are tokens built on top of XCH"
+msgstr "Les CATs (Cactus Asset Tokens) sont des jetons sur la blockchain Cactus"
+
+#: src/electron/main.tsx:1047
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
 
 #: src/components/addressbook/ContactAdd.tsx:286
 #: src/components/addressbook/ContactEdit.tsx:300
@@ -935,12 +951,12 @@ msgid "Changelist"
 msgstr ""
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Chia is started"
-msgstr "Les changements prendront effet lors du prochain démarrage de Chia"
+msgid "Changes will take effect the next time Cactus is started"
+msgstr "Les changements prendront effet lors du prochain démarrage de Cactus"
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Chia is started."
-msgstr "Les changements prendront effet lors du prochain démarrage de Chia."
+msgid "Changes will take effect the next time Cactus is started."
+msgstr "Les changements prendront effet lors du prochain démarrage de Cactus."
 
 #: src/electron/main.tsx:1080
 #~ msgid "Chat on KeyBase"
@@ -963,22 +979,6 @@ msgstr "Vérifier la Provenance sur MintGarden"
 #: src/components/offers2/OfferBuilderNFTProvenance.tsx:47
 msgid "Check Provenance on Spacescan.io"
 msgstr "Vérifier la provenance sur Spacescan.io"
-
-#: src/electron/main.tsx:1098
-#~ msgid "Chia"
-#~ msgstr "Chia"
-
-#: src/components/offers2/OfferBuilderXCHSection.tsx:77
-msgid "Chia ({currencyCode}) is a digital currency that is secure and sustainable"
-msgstr "Chia ({currencyCode}) est une monnaie numérique sécurisée et durable"
-
-#: src/components/offers2/OfferBuilderTokensSection.tsx:115
-msgid "Chia Asset Tokens (CATs) are tokens built on top of XCH"
-msgstr "Les CATs (Chia Asset Tokens) sont des jetons sur la blockchain Chia"
-
-#: src/electron/main.tsx:1047
-#~ msgid "Chia Blockchain Wiki"
-#~ msgstr "Chia Blockchain Wiki"
 
 #: src/components/app/AppSelectMode.tsx:145
 msgid "Choose Farming Mode"
@@ -1268,7 +1268,7 @@ msgid "Create & Manage plots"
 msgstr "Créer et gérer les parcelles"
 
 #: src/components/offers/OfferManager.tsx:416
-msgid "Create a file that you can use to trade XCH, Chia Asset Tokens, or NFTs with no counter-party risk."
+msgid "Create a file that you can use to trade XCH, Cactus Asset Tokens, or NFTs with no counter-party risk."
 msgstr "Créez un fichier qui permet d'échanger des jetons XCH, CAT ou NFT sans risque."
 
 #: src/components/settings/ProfileAdd.tsx:113
@@ -1423,8 +1423,8 @@ msgid "DataLayer"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:21
-msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Chia Blockchain."
-msgstr "DataLayer permet de stocker des bases de données avec redondance qui peuvent être vérifiées à l'aide de la Blockchain Chia."
+msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Cactus Blockchain."
+msgstr "DataLayer permet de stocker des bases de données avec redondance qui peuvent être vérifiées à l'aide de la Blockchain Cactus."
 
 #: src/components/settings/SettingsDataLayer.tsx:18
 msgid "DataLayer Services"
@@ -1513,8 +1513,8 @@ msgid "Deleting key"
 msgstr "Suppression de la clé"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:90
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "Selon la configuration de votre système, il se peut qu'un autre traceur produise des parcelles plus rapidement que celui par défaut. En cas de doute, utilisez le traceur \"Chia Proof of Space\"."
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
+msgstr "Selon la configuration de votre système, il se peut qu'un autre traceur produise des parcelles plus rapidement que celui par défaut. En cas de doute, utilisez le traceur \"Cactus Proof of Space\"."
 
 #: src/components/settings/SettingsPanel.tsx:167
 msgid "Derivation Index"
@@ -1967,8 +1967,8 @@ msgid "Expired"
 msgstr "Expiré"
 
 #: src/components/nfts/gallery/NFTGalleryHero.tsx:18
-msgid "Explore the Chia ecosystem; discover and trade great NFTs"
-msgstr "Explorez l'écosystème Chia ; découvrez et échangez de superbes NFT"
+msgid "Explore the Cactus ecosystem; discover and trade great NFTs"
+msgstr "Explorez l'écosystème Cactus ; découvrez et échangez de superbes NFT"
 
 #: src/components/offers/utils.ts:126
 #: src/components/plot/PlotHarvester.tsx:122
@@ -2324,8 +2324,8 @@ msgid "Get Mirrors"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:124
-msgid "Get Mojos from the Chia Faucet"
-msgstr "Obtenir des Mojos à Partir du Faucet Chia"
+msgid "Get Mojos from the Cactus Faucet"
+msgstr "Obtenir des Mojos à Partir du Faucet Cactus"
 
 #: src/constants/WalletConnectCommands.tsx:291
 msgid "Get Next Address"
@@ -4174,8 +4174,8 @@ msgid "Plots"
 msgstr "Parcelles"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:34
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.  <0>Learn more</0>"
-msgstr "Les parcelles sont de l'espace alloué sur votre disque dur, utilisé pour cultiver et gagner des Chias. <0>En savoir plus</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Cactus.  <0>Learn more</0>"
+msgstr "Les parcelles sont de l'espace alloué sur votre disque dur, utilisé pour cultiver et gagner des Cactuss. <0>En savoir plus</0>"
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:11
 msgid "Plots Failed To Open"
@@ -5346,8 +5346,8 @@ msgid "The average number of plots which passed filter over the last 64 signage 
 msgstr ""
 
 #: src/components/app/AppVersionWarning.tsx:35
-msgid "The Chia application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Chia services version: {backV}<2/>Chia application version: {guiV}<3/><4/>It is recommended that you quit the Chia application and stop all Chia services."
-msgstr "L'application Chia et ses services n'ont pas la même version. En conséquence, certaines fonctionnalités peuvent ne pas fonctionner correctement. <0/><1/>Version des services Chia : {backV}<2/>Version d'application Chia : {guiV}<3/><4/>Il est recommandé de quitter l'application Chia et d'arrêter tous les services Chia."
+msgid "The Cactus application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Cactus services version: {backV}<2/>Cactus application version: {guiV}<3/><4/>It is recommended that you quit the Cactus application and stop all Cactus services."
+msgstr "L'application Cactus et ses services n'ont pas la même version. En conséquence, certaines fonctionnalités peuvent ne pas fonctionner correctement. <0/><1/>Version des services Cactus : {backV}<2/>Version d'application Cactus : {guiV}<3/><4/>Il est recommandé de quitter l'application Cactus et d'arrêter tous les services Cactus."
 
 #: src/components/settings/SettingsCustody.tsx:49
 msgid "The claw back time can be manually adjusted per transaction."
@@ -5620,8 +5620,8 @@ msgid "This will reset all previously granted permissions across all Dapps that 
 msgstr "Cela réinitialisera toutes les autorisations précédemment accordées à toutes les Dapps qui ont été connectés. Après la réinitialisation, il vous sera demandé d'autoriser à nouveau."
 
 #: src/components/settings/SettingsIntegration.tsx:359
-msgid "This will restore the selected Dapp's permissions back to their default values. By default, every command issued by the Dapp will require confirmation in the Chia wallet."
-msgstr "Cela restaurera les permissions de Dapp sélectionnées à leurs valeurs par défaut. Par défaut, chaque commande émise par une Dapp nécessitera une confirmation dans le portefeuille Chia."
+msgid "This will restore the selected Dapp's permissions back to their default values. By default, every command issued by the Dapp will require confirmation in the Cactus wallet."
+msgstr "Cela restaurera les permissions de Dapp sélectionnées à leurs valeurs par défaut. Par défaut, chaque commande émise par une Dapp nécessitera une confirmation dans le portefeuille Cactus."
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:151
 msgid "Thread Multiplier for Phase 2"
@@ -5644,8 +5644,8 @@ msgid "Title Not Available"
 msgstr "Titre non disponible"
 
 #: src/components/settings/ResyncPrompt.tsx:41
-msgid "To initiate a wallet resync, all Chia services must first be shut down. After shutting down, you will be required to restart Chia to begin the resyncing process. Are you sure you want to shut down and resync?"
-msgstr "Pour lancer une resynchronisation du portefeuille, tous les services de Chia doivent d'abord être arrêtés. Après l'arrêt, vous devrez redémarrer Chia pour commencer le processus de resynchronisation. Êtes-vous sûr de vouloir fermer l'application et de resynchroniser ?"
+msgid "To initiate a wallet resync, all Cactus services must first be shut down. After shutting down, you will be required to restart Cactus to begin the resyncing process. Are you sure you want to shut down and resync?"
+msgstr "Pour lancer une resynchronisation du portefeuille, tous les services de Cactus doivent d'abord être arrêtés. Après l'arrêt, vous devrez redémarrer Cactus pour commencer le processus de resynchronisation. Êtes-vous sûr de vouloir fermer l'application et de resynchroniser ?"
 
 #: src/components/settings/ProfileView.tsx:132
 msgid "Token Standard"
@@ -5682,9 +5682,9 @@ msgstr "Montant total demandé"
 msgid "Total Amount with Royalties"
 msgstr "Montant Total avec Royalties"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-#~ msgid "Total Chia Farmed"
-#~ msgstr "Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
+#~ msgid "Total Cactus Farmed"
+#~ msgstr "Total Cactus Farmed"
 
 #: src/components/harvest/HarvesterOverview.tsx:172
 msgid "Total farm size effective"
@@ -6270,8 +6270,8 @@ msgid "WalletConnect"
 msgstr "WallletConnect"
 
 #: src/components/settings/SettingsIntegration.tsx:142
-msgid "WalletConnect enables a decentralized app on the Chia blockchain to communicate and make requests directly to a Chia wallet."
-msgstr "WalletConnect permet à une application décentralisée sur la blockchain de Chia de communiquer et de faire des demandes directement à un portefeuille Chia."
+msgid "WalletConnect enables a decentralized app on the Cactus blockchain to communicate and make requests directly to a Cactus wallet."
+msgstr "WalletConnect permet à une application décentralisée sur la blockchain de Cactus de communiquer et de faire des demandes directement à un portefeuille Cactus."
 
 #: src/components/walletConnect/WalletConnectAddConnectionDialog.tsx:241
 msgid "WalletConnect Integration"
@@ -6493,8 +6493,8 @@ msgid "You will recieve <0/> to {address}"
 msgstr "Vous recevrez <0/> à {address}"
 
 #: src/components/walletConnect/WalletConnectActiveSessions.tsx:56
-msgid "Your current version of the Chia application may not support some commands requested by the dApp. For the best experience, consider updating to the latest version."
-msgstr "Votre version actuelle de l'application Chia peut ne pas prendre en charge certaines commandes demandées par la dApp. Pour une meilleure expérience, mettez à jour vers la dernière version."
+msgid "Your current version of the Cactus application may not support some commands requested by the dApp. For the best experience, consider updating to the latest version."
+msgstr "Votre version actuelle de l'application Cactus peut ne pas prendre en charge certaines commandes demandées par la dApp. Pour une meilleure expérience, mettez à jour vers la dernière version."
 
 #: src/components/farm/FarmHeader.tsx:21
 #~ msgid "Your Farm Overview"
@@ -6519,8 +6519,8 @@ msgstr "Votre trousseau de clés est verrouillé"
 #: src/components/app/AppKeyringMigrator.tsx:230
 #: src/components/settings/ChangePassphrasePrompt.tsx:279
 #: src/components/settings/SetPassphrasePrompt.tsx:248
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
-msgstr "Votre phrase secrète peut être stockée dans le gestionnaire d'informations d'identification de votre système. L'application Chia pourrait ainsi accéder à vos clés sans demander votre phrase secrète."
+msgid "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
+msgstr "Votre phrase secrète peut être stockée dans le gestionnaire d'informations d'identification de votre système. L'application Cactus pourrait ainsi accéder à vos clés sans demander votre phrase secrète."
 
 #: src/components/settings/SettingsPanel.tsx:52
 msgid "Your passphrase has been set"

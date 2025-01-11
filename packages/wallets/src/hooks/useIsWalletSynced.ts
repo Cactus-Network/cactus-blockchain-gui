@@ -1,4 +1,4 @@
-import { SyncingStatus } from '@chia-network/api';
+import { SyncingStatus } from '@cactus-network/api';
 
 import useWalletState from './useWalletState';
 

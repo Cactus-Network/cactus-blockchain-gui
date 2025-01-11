@@ -1,5 +1,5 @@
-import { useGetKeysQuery } from '@chia-network/api-react';
-import { AlertDialog, ConfirmDialog, Flex, LoadingOverlay } from '@chia-network/core';
+import { useGetKeysQuery } from '@cactus-network/api-react';
+import { AlertDialog, ConfirmDialog, Flex, LoadingOverlay } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography, Divider, Switch } from '@mui/material';
 import { styled } from '@mui/styles';

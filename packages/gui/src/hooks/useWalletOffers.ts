@@ -1,5 +1,5 @@
-import { OfferCoinOfInterest, OfferSummaryRecord } from '@chia-network/api';
-import { useGetOffersCountQuery, useGetAllOffersQuery } from '@chia-network/api-react';
+import { OfferCoinOfInterest, OfferSummaryRecord } from '@cactus-network/api';
+import { useGetOffersCountQuery, useGetAllOffersQuery } from '@cactus-network/api-react';
 import { useState, useCallback } from 'react';
 
 export type OfferTradeRecordFormatted = {

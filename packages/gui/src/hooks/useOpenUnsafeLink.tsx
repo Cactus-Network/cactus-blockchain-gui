@@ -1,5 +1,5 @@
-import { usePrefs } from '@chia-network/api-react';
-import { AlertDialog, ConfirmDialog, CopyToClipboard, Flex, useOpenDialog, useOpenExternal } from '@chia-network/core';
+import { usePrefs } from '@cactus-network/api-react';
+import { AlertDialog, ConfirmDialog, CopyToClipboard, Flex, useOpenDialog, useOpenExternal } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Checkbox, FormControlLabel, InputAdornment, TextField, Typography } from '@mui/material';
 import React from 'react';

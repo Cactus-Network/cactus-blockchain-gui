@@ -14,7 +14,7 @@ import sleep from '../utils/sleep';
 import Service from './Service';
 import type { Options } from './Service';
 
-const log = debug('chia-api:daemon');
+const log = debug('cactus-api:daemon');
 
 export default class Daemon extends Service {
   static isDaemon = true;
@@ -365,7 +365,7 @@ export default class Daemon extends Service {
 
     return Promise.all(
       runningServices.map((service) => {
-        if (service.startsWith('chia_')) {
+        if (service.startsWith('cactus_')) {
           return this.stopService({ service });
         }
 

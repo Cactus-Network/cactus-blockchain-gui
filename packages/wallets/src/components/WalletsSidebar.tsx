@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import { useGetWalletsQuery } from '@chia-network/api-react';
-import { Flex, CardListItem, ScrollbarFlex } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import { useGetWalletsQuery } from '@cactus-network/api-react';
+import { Flex, CardListItem, ScrollbarFlex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography, Theme } from '@mui/material';
 import { orderBy } from 'lodash';

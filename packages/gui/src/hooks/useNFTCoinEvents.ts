@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import { useNFTCoinAdded, useNFTCoinRemoved, useNFTCoinUpdated, useNFTCoinDIDSet } from '@chia-network/api-react';
+import { useNFTCoinAdded, useNFTCoinRemoved, useNFTCoinUpdated, useNFTCoinDIDSet } from '@cactus-network/api-react';
 import { useCallback, useMemo } from 'react';
 
 type Event = {

@@ -1,6 +1,6 @@
-import { WalletType } from '@chia-network/api';
-import { useGetDIDQuery, useGetWalletsQuery } from '@chia-network/api-react';
-import { CardListItem, Flex, Truncate } from '@chia-network/core';
+import { WalletType } from '@cactus-network/api';
+import { useGetDIDQuery, useGetWalletsQuery } from '@cactus-network/api-react';
+import { CardListItem, Flex, Truncate } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Add } from '@mui/icons-material';
 import { Typography } from '@mui/material';

@@ -1,4 +1,4 @@
-import { DataLayer } from '@chia-network/api';
+import { DataLayer } from '@cactus-network/api';
 
 import api from '../api';
 import { query, mutation } from '../utils/reduxToolkitEndpointAbstractions';

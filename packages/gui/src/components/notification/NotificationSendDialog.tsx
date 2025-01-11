@@ -1,5 +1,5 @@
-import { toBech32m, fromBech32m } from '@chia-network/api';
-import { useGetCurrentAddressQuery, useSendNotificationMutation } from '@chia-network/api-react';
+import { toBech32m, fromBech32m } from '@cactus-network/api';
+import { useGetCurrentAddressQuery, useSendNotificationMutation } from '@cactus-network/api-react';
 import {
   AlertDialog,
   Amount,
@@ -11,10 +11,10 @@ import {
   Form,
   Loading,
   TextField,
-  chiaToMojo,
+  cactusToMojo,
   useCurrencyCode,
   useOpenDialog,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import {
   Box,
@@ -117,8 +117,8 @@ export default function NotificationSendDialog(props: NotificationSendDialogProp
     const { amount, fee } = values;
     const targetPuzzleHash = fromBech32m(address);
     const senderPuzzleHash = allowCounterOffer ? fromBech32m(currentAddress) : undefined;
-    const amountMojos = chiaToMojo(amount);
-    const feeMojos = chiaToMojo(fee);
+    const amountMojos = cactusToMojo(amount);
+    const feeMojos = cactusToMojo(fee);
     const payload = createOfferNotificationPayload({ offerURL, puzzleHash: senderPuzzleHash });
     let success = false;
     let error = '';

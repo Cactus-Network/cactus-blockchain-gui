@@ -1,7 +1,7 @@
-import { useLocalStorage } from '@chia-network/api-react';
-import { Button, Color, Flex, Form, Link, TextField } from '@chia-network/core';
-import { Hourglass as HourglassIcon } from '@chia-network/icons';
-import { useIsWalletSynced } from '@chia-network/wallets';
+import { useLocalStorage } from '@cactus-network/api-react';
+import { Button, Color, Flex, Form, Link, TextField } from '@cactus-network/core';
+import { Hourglass as HourglassIcon } from '@cactus-network/icons';
+import { useIsWalletSynced } from '@cactus-network/wallets';
 import { plural, Trans, t } from '@lingui/macro';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Accordion, AccordionDetails, AccordionSummary, Alert, Badge, Grid, Typography } from '@mui/material';

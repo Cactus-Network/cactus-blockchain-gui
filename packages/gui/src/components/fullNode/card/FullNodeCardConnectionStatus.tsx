@@ -1,5 +1,5 @@
-import { ServiceName } from '@chia-network/api';
-import { CardSimple } from '@chia-network/core';
+import { ServiceName } from '@cactus-network/api';
+import { CardSimple } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React from 'react';
 

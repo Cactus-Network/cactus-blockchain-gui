@@ -1,4 +1,4 @@
-import { FullNode } from '@chia-network/api';
+import { FullNode } from '@cactus-network/api';
 
 // import MethodReturnType from '../@types/MethodReturnType'
 // import MethodFirstParameter from '../@types/MethodFirstParameter'

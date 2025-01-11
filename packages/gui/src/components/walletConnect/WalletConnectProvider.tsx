@@ -4,7 +4,7 @@ import type Pair from '../../@types/Pair';
 import useNotifications from '../../hooks/useNotifications';
 import useWalletConnect from '../../hooks/useWalletConnect';
 
-export const WalletConnectChiaProjectId = 'f3f661fcfc24e2e6e6c6f926f02c9c6e';
+export const WalletConnectCactusProjectId = 'f3f661fcfc24e2e6e6c6f926f02c9c6e';
 
 export const WalletConnectContext = createContext<
   | {

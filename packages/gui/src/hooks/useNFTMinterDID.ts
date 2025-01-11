@@ -28,8 +28,8 @@ export default function useNFTMinterDID(nftId: string): UseNFTMinterDIDResult {
     const didIdLocal = didToDIDId(hexDIDIdLocal);
     let didNameLocal;
 
-    if (didIdLocal === 'did:chia:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2') {
-      didNameLocal = 'Chia Network';
+    if (didIdLocal === 'did:cactus:19qf3g9876t0rkq7tfdkc28cxfy424yzanea29rkzylq89kped9hq3q7wd2') {
+      didNameLocal = 'Cactus Network';
     }
 
     return [didIdLocal, hexDIDIdLocal, didNameLocal];

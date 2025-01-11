@@ -1,6 +1,6 @@
-import type { UnconfirmedPlotNFT } from '@chia-network/api';
-import { useGetTransactionQuery } from '@chia-network/api-react';
-import { Flex, Link, Loading } from '@chia-network/core';
+import type { UnconfirmedPlotNFT } from '@cactus-network/api';
+import { useGetTransactionQuery } from '@cactus-network/api-react';
+import { Flex, Link, Loading } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import React, { useEffect } from 'react';

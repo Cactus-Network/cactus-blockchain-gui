@@ -1,4 +1,4 @@
-import { Button, CardStep, Select, Flex, Link, Loading } from '@chia-network/core';
+import { Button, CardStep, Select, Flex, Link, Loading } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Grid, FormControl, InputLabel, MenuItem, Typography } from '@mui/material';
 import React, { useState, forwardRef } from 'react';
@@ -80,7 +80,7 @@ const PlotAddNFT = forwardRef((props: Props, ref) => {
               need to replot in order to join any of the standard pools.
             </Trans>
             &nbsp;
-            <Link target="_blank" href="https://docs.chia.net/pool-farming">
+            <Link target="_blank" href="https://docs.cactus.net/pool-farming">
               <Trans>Learn more</Trans>
             </Link>
           </Typography>

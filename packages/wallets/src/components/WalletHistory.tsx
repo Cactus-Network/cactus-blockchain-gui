@@ -1,10 +1,10 @@
-import { WalletType, TransactionType, TransactionTypeFilterMode, toBech32m } from '@chia-network/api';
-import type { Transaction } from '@chia-network/api';
+import { WalletType, TransactionType, TransactionTypeFilterMode, toBech32m } from '@cactus-network/api';
+import type { Transaction } from '@cactus-network/api';
 import {
   useGetOfferRecordMutation,
   useGetSyncStatusQuery,
   useGetTransactionMemoMutation,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import {
   AddressBookContext,
   Card,
@@ -13,12 +13,12 @@ import {
   TableControlled,
   useCurrencyCode,
   useSerializedNavigationState,
-  mojoToChia,
+  mojoToCactus,
   mojoToCAT,
   FormatLargeNumber,
   truncateValue,
-} from '@chia-network/core';
-import type { Row } from '@chia-network/core';
+} from '@cactus-network/core';
+import type { Row } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { ExpandLess as ExpandLessIcon, ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 import {
@@ -119,7 +119,7 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
           &nbsp;
           <strong>
             <FormatLargeNumber
-              value={[WalletType.CAT, WalletType.CRCAT].includes(type) ? mojoToCAT(row.amount) : mojoToChia(row.amount)}
+              value={[WalletType.CAT, WalletType.CRCAT].includes(type) ? mojoToCAT(row.amount) : mojoToCactus(row.amount)}
             />
           </strong>
           &nbsp;
@@ -227,7 +227,7 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
     field: (row: Row, metadata) => (
       <>
         <strong>
-          <FormatLargeNumber value={mojoToChia(row.feeAmount)} />
+          <FormatLargeNumber value={mojoToCactus(row.feeAmount)} />
         </strong>
         &nbsp;
         {metadata.feeUnit}

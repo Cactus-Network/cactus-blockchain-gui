@@ -2,7 +2,7 @@ import {
   useGetKeyringStatusQuery,
   useRemoveKeyringPassphraseMutation,
   useSetKeyringPassphraseMutation,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import {
   AlertDialog,
   Button,
@@ -15,7 +15,7 @@ import {
   Form,
   TextField,
   Checkbox,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import {
   Help as HelpIcon,
@@ -276,7 +276,7 @@ export default function ChangePassphrasePrompt(props: Props) {
                   style={{ marginRight: '8px' }}
                 />
                 <Tooltip
-                  title={t`Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase.`}
+                  title={t`Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase.`}
                 >
                   <HelpIcon style={{ color: Color.Neutral[300], fontSize: 12 }} />
                 </Tooltip>

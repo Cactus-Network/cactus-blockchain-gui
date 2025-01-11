@@ -1,5 +1,5 @@
-import { store, walletApi } from '@chia-network/api-react';
-import { isValidURL } from '@chia-network/core';
+import { store, walletApi } from '@cactus-network/api-react';
+import { isValidURL } from '@cactus-network/core';
 
 import OfferServices from '../constants/OfferServices';
 

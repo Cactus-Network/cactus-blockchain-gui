@@ -1,4 +1,4 @@
-import { DropdownBase } from '@chia-network/core';
+import { DropdownBase } from '@cactus-network/core';
 import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material';
 import { Button, Box } from '@mui/material';
 import React, { type ReactNode } from 'react';

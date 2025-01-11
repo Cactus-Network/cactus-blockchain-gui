@@ -1,4 +1,4 @@
-import { StateColor } from '@chia-network/core';
+import { StateColor } from '@cactus-network/core';
 import { t } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import React from 'react';

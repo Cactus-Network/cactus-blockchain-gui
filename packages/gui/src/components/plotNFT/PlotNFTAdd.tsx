@@ -1,5 +1,5 @@
-import { useCreateNewPoolWalletMutation } from '@chia-network/api-react';
-import { Flex, Loading } from '@chia-network/core';
+import { useCreateNewPoolWalletMutation } from '@cactus-network/api-react';
+import { Flex, Loading } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
 import React, { ReactNode } from 'react';

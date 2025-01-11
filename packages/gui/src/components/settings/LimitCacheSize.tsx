@@ -1,5 +1,5 @@
-import { usePrefs } from '@chia-network/api-react';
-import { AlertDialog, ButtonLoading, Flex, Form, TextField, useOpenDialog } from '@chia-network/core';
+import { usePrefs } from '@cactus-network/api-react';
+import { AlertDialog, ButtonLoading, Flex, Form, TextField, useOpenDialog } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';

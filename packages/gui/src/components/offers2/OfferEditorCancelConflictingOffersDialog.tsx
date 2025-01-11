@@ -1,4 +1,4 @@
-import { ConfirmDialog, Flex } from '@chia-network/core';
+import { ConfirmDialog, Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography, Divider } from '@mui/material';
 import BigNumber from 'bignumber.js';

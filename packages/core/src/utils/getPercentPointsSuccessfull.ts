@@ -1,4 +1,4 @@
-import type { Point } from '@chia-network/api';
+import type { Point } from '@cactus-network/api';
 import { sumBy } from 'lodash';
 
 function sumPoints(points: Point[]): number {

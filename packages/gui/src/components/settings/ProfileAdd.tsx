@@ -2,7 +2,7 @@ import {
   useCreateNewWalletMutation,
   useGetCurrentAddressQuery,
   useGetWalletBalanceQuery,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import {
   ButtonLoading,
   EstimatedFee,
@@ -11,10 +11,10 @@ import {
   Form,
   Link,
   TextField,
-  chiaToMojo,
-  mojoToChiaLocaleString,
+  cactusToMojo,
+  mojoToCactusLocaleString,
   useCurrencyCode,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Card, Typography } from '@mui/material';
 import React from 'react';
@@ -64,11 +64,11 @@ export default function ProfileAdd() {
   });
   const navigate = useNavigate();
   const openExternal = useOpenExternal();
-  const spendableBalance = mojoToChiaLocaleString(balance?.spendableBalance);
+  const spendableBalance = mojoToCactusLocaleString(balance?.spendableBalance);
   const canCreateProfile = (balance?.spendableBalance ?? 0) > 0;
 
   function handleClick() {
-    const url = `https://${isTestnet ? 'testnet11-faucet.chia.net' : 'faucet.chia.net'}/?address=${currentAddress}`;
+    const url = `https://${isTestnet ? 'testnet11-faucet.cactus.net' : 'faucet.cactus.net'}/?address=${currentAddress}`;
     openExternal(url);
   }
 
@@ -98,7 +98,7 @@ export default function ProfileAdd() {
         backup_dids: [],
         num_of_backup_ids_needed: '0',
         amount: 1,
-        fee: chiaToMojo(fee),
+        fee: cactusToMojo(fee),
         walletName,
       },
     }).unwrap();
@@ -121,7 +121,7 @@ export default function ProfileAdd() {
                     <Trans>Need some {currencyCode}?</Trans>
                   </Typography>
                   <Link onClick={handleClick}>
-                    <Trans>Get Mojos from the Chia Faucet</Trans>
+                    <Trans>Get Mojos from the Cactus Faucet</Trans>
                   </Link>
                 </Flex>
               )}

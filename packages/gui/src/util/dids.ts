@@ -1,9 +1,9 @@
-import { toBech32m, fromBech32m } from '@chia-network/api';
+import { toBech32m, fromBech32m } from '@cactus-network/api';
 
 import removeHexPrefix from './removeHexPrefix';
 
 export function didToDIDId(did: string): string {
-  return toBech32m(removeHexPrefix(did), 'did:chia:');
+  return toBech32m(removeHexPrefix(did), 'did:cactus:');
 }
 
 export function didFromDIDId(didId: string): string | undefined {

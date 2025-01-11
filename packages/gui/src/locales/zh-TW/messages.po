@@ -116,8 +116,8 @@ msgstr "幫助"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:761
-msgid "Chia Blockchain Wiki"
-msgstr "Chia 區塊鏈維基"
+msgid "Cactus Blockchain Wiki"
+msgstr "Cactus 區塊鏈維基"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:767
@@ -151,14 +151,14 @@ msgstr "Twitter 上追隨"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:812
-msgid "Chia"
+msgid "Cactus"
 msgstr "奇亞"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:815
 #: src/electron/main.tsx:908
-msgid "About Chia Blockchain"
-msgstr "關於 Chia 區塊鏈"
+msgid "About Cactus Blockchain"
+msgstr "關於 Cactus 區塊鏈"
 
 #. js-lingui-explicit-id
 #: src/electron/main.tsx:821
@@ -348,8 +348,8 @@ msgstr "推薦數值為{0}"
 
 #: src/electron/main.tsx:1101
 #: src/electron/main.tsx:1188
-#~ msgid "About Chia Blockchain"
-#~ msgstr "About Chia Blockchain"
+#~ msgid "About Cactus Blockchain"
+#~ msgstr "About Cactus Blockchain"
 
 #: src/components/offers/NFTOfferViewer.tsx:642
 #: src/components/offers/OfferAcceptConfirmationDialog.tsx:21
@@ -771,8 +771,8 @@ msgid "Block"
 msgstr "區塊"
 
 #: src/components/block/Block.jsx:251
-msgid "Block at height {0} in the Chia blockchain"
-msgstr "Chia 區塊鏈高度為 {0} 的區塊"
+msgid "Block at height {0} in the Cactus blockchain"
+msgstr "Cactus 區塊鏈高度為 {0} 的區塊"
 
 #: src/components/farm/card/FarmingRewardsHistoryCards.tsx:61
 msgid "Block Fee"
@@ -840,6 +840,22 @@ msgstr "快取"
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:236
 msgid "Cache size (GB)"
 msgstr "快取大小（GB）"
+
+#: src/electron/main.tsx:1098
+#~ msgid "Cactus"
+#~ msgstr "Cactus"
+
+#: src/components/offers2/OfferBuilderXCHSection.tsx:77
+msgid "Cactus ({currencyCode}) is a digital currency that is secure and sustainable"
+msgstr "Cactus ({currencyCode}) 是一種安全且可持續的數位貨幣"
+
+#: src/components/offers2/OfferBuilderTokensSection.tsx:115
+msgid "Cactus Asset Tokens (CATs) are tokens built on top of XCH"
+msgstr "Cactus 資產代幣 (CATs) 是建立在 XCH 之上的代幣"
+
+#: src/electron/main.tsx:1047
+#~ msgid "Cactus Blockchain Wiki"
+#~ msgstr "Cactus Blockchain Wiki"
 
 #: src/components/addressbook/ContactAdd.tsx:286
 #: src/components/addressbook/ContactEdit.tsx:300
@@ -935,12 +951,12 @@ msgid "Changelist"
 msgstr ""
 
 #: src/components/settings/SettingsStartup.tsx:32
-msgid "Changes will take effect the next time Chia is started"
-msgstr "更改將在下次啟動 Chia 時生效"
+msgid "Changes will take effect the next time Cactus is started"
+msgstr "更改將在下次啟動 Cactus 時生效"
 
 #: src/components/settings/SettingsDataLayer.tsx:54
-msgid "Changes will take effect the next time Chia is started."
-msgstr "更改將在下次啟動 Chia 時生效。"
+msgid "Changes will take effect the next time Cactus is started."
+msgstr "更改將在下次啟動 Cactus 時生效。"
 
 #: src/electron/main.tsx:1080
 #~ msgid "Chat on KeyBase"
@@ -963,22 +979,6 @@ msgstr "在MintGarden上面檢查出處"
 #: src/components/offers2/OfferBuilderNFTProvenance.tsx:47
 msgid "Check Provenance on Spacescan.io"
 msgstr "在Spacescan.io上面檢查出處"
-
-#: src/electron/main.tsx:1098
-#~ msgid "Chia"
-#~ msgstr "Chia"
-
-#: src/components/offers2/OfferBuilderXCHSection.tsx:77
-msgid "Chia ({currencyCode}) is a digital currency that is secure and sustainable"
-msgstr "Chia ({currencyCode}) 是一種安全且可持續的數位貨幣"
-
-#: src/components/offers2/OfferBuilderTokensSection.tsx:115
-msgid "Chia Asset Tokens (CATs) are tokens built on top of XCH"
-msgstr "Chia 資產代幣 (CATs) 是建立在 XCH 之上的代幣"
-
-#: src/electron/main.tsx:1047
-#~ msgid "Chia Blockchain Wiki"
-#~ msgstr "Chia Blockchain Wiki"
 
 #: src/components/app/AppSelectMode.tsx:145
 msgid "Choose Farming Mode"
@@ -1268,8 +1268,8 @@ msgid "Create & Manage plots"
 msgstr "建立與管理耕地"
 
 #: src/components/offers/OfferManager.tsx:416
-msgid "Create a file that you can use to trade XCH, Chia Asset Tokens, or NFTs with no counter-party risk."
-msgstr "創建一個文件，您可以使用它來進行XCH，Chia 資產代幣或NFT的交易，並且不會有交易對方的風險。"
+msgid "Create a file that you can use to trade XCH, Cactus Asset Tokens, or NFTs with no counter-party risk."
+msgstr "創建一個文件，您可以使用它來進行XCH，Cactus 資產代幣或NFT的交易，並且不會有交易對方的風險。"
 
 #: src/components/settings/ProfileAdd.tsx:113
 msgid "Create a new profile"
@@ -1423,8 +1423,8 @@ msgid "DataLayer"
 msgstr ""
 
 #: src/components/settings/SettingsDataLayer.tsx:21
-msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Chia Blockchain."
-msgstr "DataLayer 可以將豐富的數據存儲在可以使用 Chia 區塊鏈驗證的鏡像數據庫上。"
+msgid "DataLayer enables rich data to be stored on mirrored databases that can be verified using the Cactus Blockchain."
+msgstr "DataLayer 可以將豐富的數據存儲在可以使用 Cactus 區塊鏈驗證的鏡像數據庫上。"
 
 #: src/components/settings/SettingsDataLayer.tsx:18
 msgid "DataLayer Services"
@@ -1513,8 +1513,8 @@ msgid "Deleting key"
 msgstr "正在刪除私鑰"
 
 #: src/components/plot/add/PlotAddChoosePlotter.tsx:90
-msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Chia Proof of Space plotter. If unsure, use the default Chia Proof of Space plotter."
-msgstr "根據您系統的規格，您可能會發現替代耕地軟體產生耕地速度快於預設Chia空間證明耕地軟體。若不確定，請使用預設Chia空間證明耕地軟體。"
+msgid "Depending on your system configuration, you may find that an alternative plotter produces plots faster than the default Cactus Proof of Space plotter. If unsure, use the default Cactus Proof of Space plotter."
+msgstr "根據您系統的規格，您可能會發現替代耕地軟體產生耕地速度快於預設Cactus空間證明耕地軟體。若不確定，請使用預設Cactus空間證明耕地軟體。"
 
 #: src/components/settings/SettingsPanel.tsx:167
 msgid "Derivation Index"
@@ -1967,8 +1967,8 @@ msgid "Expired"
 msgstr "已過期"
 
 #: src/components/nfts/gallery/NFTGalleryHero.tsx:18
-msgid "Explore the Chia ecosystem; discover and trade great NFTs"
-msgstr "探索 Chia 生態系統；發現並交易精彩的 NFT"
+msgid "Explore the Cactus ecosystem; discover and trade great NFTs"
+msgstr "探索 Cactus 生態系統；發現並交易精彩的 NFT"
 
 #: src/components/offers/utils.ts:126
 #: src/components/plot/PlotHarvester.tsx:122
@@ -2324,8 +2324,8 @@ msgid "Get Mirrors"
 msgstr ""
 
 #: src/components/settings/ProfileAdd.tsx:124
-msgid "Get Mojos from the Chia Faucet"
-msgstr "從 Chia 水龍頭獲取 Mojos"
+msgid "Get Mojos from the Cactus Faucet"
+msgstr "從 Cactus 水龍頭獲取 Mojos"
 
 #: src/constants/WalletConnectCommands.tsx:291
 msgid "Get Next Address"
@@ -4170,8 +4170,8 @@ msgid "Plots"
 msgstr "耕地"
 
 #: src/components/plot/overview/PlotOverviewHero.tsx:34
-msgid "Plots are allocated space on your hard drive used to farm and earn Chia.  <0>Learn more</0>"
-msgstr "耕地是在你硬碟上劃出的空間，用於耕種來賺取 Chia。 <0>了解更多</0>"
+msgid "Plots are allocated space on your hard drive used to farm and earn Cactus.  <0>Learn more</0>"
+msgstr "耕地是在你硬碟上劃出的空間，用於耕種來賺取 Cactus。 <0>了解更多</0>"
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:11
 msgid "Plots Failed To Open"
@@ -5342,8 +5342,8 @@ msgid "The average number of plots which passed filter over the last 64 signage 
 msgstr ""
 
 #: src/components/app/AppVersionWarning.tsx:35
-msgid "The Chia application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Chia services version: {backV}<2/>Chia application version: {guiV}<3/><4/>It is recommended that you quit the Chia application and stop all Chia services."
-msgstr "Chia應用程序及其服務使用不同版本。由此可能導致某些功能無法正常運作。<0/><1/>Chia服務版本：{backV}<2/>Chia應用程序版本：{guiV}<3/><4/>建議您退出Chia應用程序並停止所有Chia服務。"
+msgid "The Cactus application and its services are using different versions. Some functionality may not be behave properly as a result.<0/><1/>Cactus services version: {backV}<2/>Cactus application version: {guiV}<3/><4/>It is recommended that you quit the Cactus application and stop all Cactus services."
+msgstr "Cactus應用程序及其服務使用不同版本。由此可能導致某些功能無法正常運作。<0/><1/>Cactus服務版本：{backV}<2/>Cactus應用程序版本：{guiV}<3/><4/>建議您退出Cactus應用程序並停止所有Cactus服務。"
 
 #: src/components/settings/SettingsCustody.tsx:49
 msgid "The claw back time can be manually adjusted per transaction."
@@ -5616,8 +5616,8 @@ msgid "This will reset all previously granted permissions across all Dapps that 
 msgstr "這將重置您之前在所有連接過的 Dapps 上授予的所有權限。重置後，您將被要求再次授予權限。"
 
 #: src/components/settings/SettingsIntegration.tsx:359
-msgid "This will restore the selected Dapp's permissions back to their default values. By default, every command issued by the Dapp will require confirmation in the Chia wallet."
-msgstr "這將將所選 Dapp 的權限恢復為其默認值。默認情況下，Dapp 發出的每個命令都需要在 Chia 錢包中確認。"
+msgid "This will restore the selected Dapp's permissions back to their default values. By default, every command issued by the Dapp will require confirmation in the Cactus wallet."
+msgstr "這將將所選 Dapp 的權限恢復為其默認值。默認情況下，Dapp 發出的每個命令都需要在 Cactus 錢包中確認。"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:151
 msgid "Thread Multiplier for Phase 2"
@@ -5640,8 +5640,8 @@ msgid "Title Not Available"
 msgstr "標題不可用"
 
 #: src/components/settings/ResyncPrompt.tsx:41
-msgid "To initiate a wallet resync, all Chia services must first be shut down. After shutting down, you will be required to restart Chia to begin the resyncing process. Are you sure you want to shut down and resync?"
-msgstr "要啟動錢包重新同步，必須先關閉所有Chia服務。關閉後，您將需要重新啟動Chia以開始重新同步過程。您確定要關閉並重新同步嗎？"
+msgid "To initiate a wallet resync, all Cactus services must first be shut down. After shutting down, you will be required to restart Cactus to begin the resyncing process. Are you sure you want to shut down and resync?"
+msgstr "要啟動錢包重新同步，必須先關閉所有Cactus服務。關閉後，您將需要重新啟動Cactus以開始重新同步過程。您確定要關閉並重新同步嗎？"
 
 #: src/components/settings/ProfileView.tsx:132
 msgid "Token Standard"
@@ -5678,9 +5678,9 @@ msgstr "總請求金額"
 msgid "Total Amount with Royalties"
 msgstr "總金額（包括版稅）"
 
-#: src/components/farm/card/FarmCardTotalChiaFarmed.tsx:27
-#~ msgid "Total Chia Farmed"
-#~ msgstr "Total Chia Farmed"
+#: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
+#~ msgid "Total Cactus Farmed"
+#~ msgstr "Total Cactus Farmed"
 
 #: src/components/harvest/HarvesterOverview.tsx:172
 msgid "Total farm size effective"
@@ -6266,8 +6266,8 @@ msgid "WalletConnect"
 msgstr "錢包連接"
 
 #: src/components/settings/SettingsIntegration.tsx:142
-msgid "WalletConnect enables a decentralized app on the Chia blockchain to communicate and make requests directly to a Chia wallet."
-msgstr "WalletConnect 可讓 Chia 區塊鏈上的去中心化應用程式直接與 Chia 錢包通訊並直接發出請求。"
+msgid "WalletConnect enables a decentralized app on the Cactus blockchain to communicate and make requests directly to a Cactus wallet."
+msgstr "WalletConnect 可讓 Cactus 區塊鏈上的去中心化應用程式直接與 Cactus 錢包通訊並直接發出請求。"
 
 #: src/components/walletConnect/WalletConnectAddConnectionDialog.tsx:241
 msgid "WalletConnect Integration"
@@ -6489,8 +6489,8 @@ msgid "You will recieve <0/> to {address}"
 msgstr "你將會收到 <0/> 到 {address}"
 
 #: src/components/walletConnect/WalletConnectActiveSessions.tsx:56
-msgid "Your current version of the Chia application may not support some commands requested by the dApp. For the best experience, consider updating to the latest version."
-msgstr "您目前使用的 Chia 應用程式版本可能不支持 dApp 要求的某些命令。為了獲得最佳體驗，請考慮更新到最新版本。"
+msgid "Your current version of the Cactus application may not support some commands requested by the dApp. For the best experience, consider updating to the latest version."
+msgstr "您目前使用的 Cactus 應用程式版本可能不支持 dApp 要求的某些命令。為了獲得最佳體驗，請考慮更新到最新版本。"
 
 #: src/components/farm/FarmHeader.tsx:21
 #~ msgid "Your Farm Overview"
@@ -6515,8 +6515,8 @@ msgstr "您的密鑰鏈已鎖定"
 #: src/components/app/AppKeyringMigrator.tsx:230
 #: src/components/settings/ChangePassphrasePrompt.tsx:279
 #: src/components/settings/SetPassphrasePrompt.tsx:248
-msgid "Your passphrase can be stored in your system's secure credential store. Chia will be able to access your keys without prompting for your passphrase."
-msgstr "您的密語可以儲存在系統的安全憑證存儲區。Chia將能夠在不提示您輸入密語的情況下訪問您的密鑰。"
+msgid "Your passphrase can be stored in your system's secure credential store. Cactus will be able to access your keys without prompting for your passphrase."
+msgstr "您的密語可以儲存在系統的安全憑證存儲區。Cactus將能夠在不提示您輸入密語的情況下訪問您的密鑰。"
 
 #: src/components/settings/SettingsPanel.tsx:52
 msgid "Your passphrase has been set"

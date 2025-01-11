@@ -1,4 +1,4 @@
-import { usePrefs } from '@chia-network/api-react';
+import { usePrefs } from '@cactus-network/api-react';
 import {
   AdvancedOptions,
   AlertDialog,
@@ -10,7 +10,7 @@ import {
   TooltipIcon,
   RadioGroup,
   useOpenDialog,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { FormControl, FormControlLabel, Typography, Radio } from '@mui/material';
 import React from 'react';

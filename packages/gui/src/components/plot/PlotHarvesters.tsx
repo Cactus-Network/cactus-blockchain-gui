@@ -1,5 +1,5 @@
-import { useGetHarvestersSummaryQuery } from '@chia-network/api-react';
-import { Loading, Flex } from '@chia-network/core';
+import { useGetHarvestersSummaryQuery } from '@cactus-network/api-react';
+import { Loading, Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Typography } from '@mui/material';
 import { orderBy } from 'lodash';

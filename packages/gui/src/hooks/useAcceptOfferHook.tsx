@@ -1,6 +1,6 @@
-import type { OfferSummaryRecord, Wallet } from '@chia-network/api';
-import { useTakeOfferMutation } from '@chia-network/api-react';
-import { AlertDialog, chiaToMojo, useOpenDialog, useShowError } from '@chia-network/core';
+import type { OfferSummaryRecord, Wallet } from '@cactus-network/api';
+import { useTakeOfferMutation } from '@cactus-network/api-react';
+import { AlertDialog, cactusToMojo, useOpenDialog, useShowError } from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 import React from 'react';
@@ -76,7 +76,7 @@ export default function useAcceptOfferHook(): [AcceptOfferHook] {
       }
     }
 
-    const feeInMojos: BigNumber = fee ? chiaToMojo(fee) : new BigNumber(0);
+    const feeInMojos: BigNumber = fee ? cactusToMojo(fee) : new BigNumber(0);
     const offeredUnknownCATs: string[] = Object.entries(offerSummary.offered)
       .filter(
         ([assetId]) =>

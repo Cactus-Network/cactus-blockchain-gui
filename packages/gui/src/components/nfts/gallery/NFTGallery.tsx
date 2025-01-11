@@ -1,6 +1,6 @@
 // eslint-ignore-file - in progress
-import type { NFTInfo } from '@chia-network/api';
-import { useLocalStorage } from '@chia-network/api-react';
+import type { NFTInfo } from '@cactus-network/api';
+import { useLocalStorage } from '@cactus-network/api-react';
 import {
   Button,
   Color,
@@ -11,7 +11,7 @@ import {
   usePersistState,
   Mute,
   ScrollbarVirtuoso,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { t, Trans } from '@lingui/macro';
 import { FilterList as FilterListIcon, LibraryAddCheck as LibraryAddCheckIcon } from '@mui/icons-material';
 import {

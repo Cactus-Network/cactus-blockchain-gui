@@ -1,5 +1,5 @@
-import type { NFTInfo } from '@chia-network/api';
-import { Flex, LayoutDashboardSub, useOpenDialog, Tooltip } from '@chia-network/core';
+import type { NFTInfo } from '@cactus-network/api';
+import { Flex, LayoutDashboardSub, useOpenDialog, Tooltip } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import {
   MoreVert,

@@ -1,4 +1,4 @@
-import { Flex, Loading, TooltipIcon } from '@chia-network/core';
+import { Flex, Loading, TooltipIcon } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
@@ -6,7 +6,7 @@ import React, { useMemo } from 'react';
 import WalletConnectCommands from '../../constants/WalletConnectCommands';
 import useWalletConnectContext from '../../hooks/useWalletConnectContext';
 
-const supportedCommands = WalletConnectCommands.map((item) => `chia_${item.command}`);
+const supportedCommands = WalletConnectCommands.map((item) => `cactus_${item.command}`);
 
 export type WalletConnectActiveSessionsProps = {
   topic: string;
@@ -39,7 +39,7 @@ export default function WalletConnectActiveSessions(props: WalletConnectActiveSe
             {pair.sessions.map((session) => {
               const { topic: sessionTopic, namespaces = {} } = session;
 
-              const methods = namespaces.chia?.methods ?? [];
+              const methods = namespaces.cactus?.methods ?? [];
 
               const unsupportedMethods = methods.filter((method) => !supportedCommands.includes(method));
 
@@ -54,7 +54,7 @@ export default function WalletConnectActiveSessions(props: WalletConnectActiveSe
                       <Trans>Unsupported commands</Trans>{' '}
                       <TooltipIcon>
                         <Trans>
-                          Your current version of the Chia application may not support some commands requested by the
+                          Your current version of the Cactus application may not support some commands requested by the
                           dApp. For the best experience, consider updating to the latest version.
                         </Trans>
                       </TooltipIcon>

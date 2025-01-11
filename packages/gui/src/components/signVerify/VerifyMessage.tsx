@@ -1,4 +1,4 @@
-import { useVerifySignatureMutation } from '@chia-network/api-react';
+import { useVerifySignatureMutation } from '@cactus-network/api-react';
 import {
   AlertDialog,
   Button,
@@ -10,7 +10,7 @@ import {
   Truncate,
   useOpenDialog,
   // useShowError,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import {

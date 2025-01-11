@@ -1,8 +1,8 @@
 import fs from 'fs';
 
-import { OfferTradeRecord } from '@chia-network/api';
-import { useGetOfferDataMutation } from '@chia-network/api-react';
-import { useShowSaveDialog } from '@chia-network/core';
+import { OfferTradeRecord } from '@cactus-network/api';
+import { useGetOfferDataMutation } from '@cactus-network/api-react';
+import { useShowSaveDialog } from '@cactus-network/core';
 
 import { suggestedFilenameForOffer } from '../components/offers/utils';
 

@@ -35,8 +35,8 @@ msgid "{minPassphraseLength, plural, one {Passphrases must be at least # charact
 msgstr "{minPassphraseLength, plural, one {Парольные фразы должны содержать не менее # символа длиной} other {Парольная фраза должна быть не менее # символов длиной}}"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:95
-msgid "A new version of Chia is available!"
-msgstr "Доступна новая версия Chia!"
+msgid "A new version of Cactus is available!"
+msgstr "Доступна новая версия Cactus!"
 
 #: src/screens/SelectKey/EmojiAndColorPicker.tsx:270
 msgid "Add Icon"
@@ -64,6 +64,14 @@ msgstr ""
 msgid "Back"
 msgstr "Назад"
 
+#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
+msgid "Cactus {latestVersion} is currently the latest version available."
+msgstr ""
+
+#: src/components/Settings/SettingsApp.tsx:126
+msgid "Cactus Application Version:"
+msgstr "Версия приложения Cactus:"
+
 #: src/components/ConfirmDialog/ConfirmDialog.tsx:29
 #: src/hooks/useKeyringMigrationPrompt.tsx:18
 #: src/screens/SelectKey/SelectKeyRenameForm.tsx:90
@@ -77,14 +85,6 @@ msgstr "Проверить обновления"
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:93
 msgid "Checking for updates..."
 msgstr "Проверка обновлений..."
-
-#: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:82
-msgid "Chia {latestVersion} is currently the latest version available."
-msgstr ""
-
-#: src/components/Settings/SettingsApp.tsx:126
-msgid "Chia Application Version:"
-msgstr "Версия приложения Chia:"
 
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:110
 #: src/screens/SelectKey/SelectKeyDetailDialog.tsx:47
@@ -113,8 +113,8 @@ msgid "Create a new wallet key"
 msgstr "Создать новый ключ кошелька"
 
 #: src/screens/SelectKey/SelectKey.tsx:266
-msgid "Create a new wallet key to get started with Chia."
-msgstr "Создайте новый ключ кошелька, чтобы начать с Chia."
+msgid "Create a new wallet key to get started with Cactus."
+msgstr "Создайте новый ключ кошелька, чтобы начать с Cactus."
 
 #: src/screens/SelectKey/SelectKey.tsx:177
 msgid "Create New"
@@ -548,8 +548,8 @@ msgid "Wallet Keys"
 msgstr "Ключи кошелька"
 
 #: src/screens/SelectKey/SelectKey.tsx:142
-#~ msgid "Welcome to Chia. Please log in with an existing key, or create a new key."
-#~ msgstr "Welcome to Chia. Please log in with an existing key, or create a new key."
+#~ msgid "Welcome to Cactus. Please log in with an existing key, or create a new key."
+#~ msgstr "Welcome to Cactus. Please log in with an existing key, or create a new key."
 
 #: src/components/LayoutDashboard/LayoutDashboard.tsx:142
 #: src/components/LayoutDashboard/NewerAppVersionAvailable.tsx:66

@@ -1,5 +1,5 @@
-import { Color, Flex, useMode, Mode, useDarkMode } from '@chia-network/core';
-import { WalletConnections, WalletStatus, WalletReceiveAddressField } from '@chia-network/wallets';
+import { Color, Flex, useMode, Mode, useDarkMode } from '@cactus-network/core';
+import { WalletConnections, WalletStatus, WalletReceiveAddressField } from '@cactus-network/wallets';
 import { Trans } from '@lingui/macro';
 import { Box, ButtonGroup, Button, Popover, PopoverProps } from '@mui/material';
 import { useTheme, styled, alpha } from '@mui/material/styles';

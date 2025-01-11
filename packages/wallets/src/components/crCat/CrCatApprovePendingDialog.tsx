@@ -1,4 +1,4 @@
-import { useGetSyncStatusQuery, useCrCatApprovePendingMutation } from '@chia-network/api-react';
+import { useGetSyncStatusQuery, useCrCatApprovePendingMutation } from '@cactus-network/api-react';
 import {
   AlertDialog,
   Button,
@@ -7,10 +7,10 @@ import {
   EstimatedFee,
   FeeTxType,
   Flex,
-  chiaToMojo,
+  cactusToMojo,
   useOpenDialog,
   sleep,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Close as CloseIcon } from '@mui/icons-material';
 import { Alert, Box, Dialog, DialogActions, DialogTitle, DialogContent, IconButton, Typography } from '@mui/material';
@@ -67,7 +67,7 @@ export default function CrCatApprovePendingDialog(props: Props) {
 
   async function handleSubmit(values: FormData) {
     const { fee } = values;
-    const feeInMojos = chiaToMojo(fee);
+    const feeInMojos = cactusToMojo(fee);
     const response = await crCatApprovePending({ walletId, minAmountToClaim: amount, fee: feeInMojos }).unwrap();
 
     if (!response.transactions || response.transactions.length === 0) {

@@ -32,10 +32,10 @@ jobs:
           node-version: "18.x"
 
       - name: Set up commit signing
-        uses: Chia-Network/actions/commit-sign/gpg@main
+        uses: Cactus-Network/actions/commit-sign/gpg@main
         with:
-          gpg_private_key: ${{ secrets.CHIA_AUTOMATION_PRIVATE_GPG_KEY }}
-          passphrase: ${{ secrets.CHIA_AUTOMATION_PRIVATE_GPG_PASSPHRASE }}
+          gpg_private_key: ${{ secrets.CACTUS_AUTOMATION_PRIVATE_GPG_KEY }}
+          passphrase: ${{ secrets.CACTUS_AUTOMATION_PRIVATE_GPG_PASSPHRASE }}
 
       - name: Extract Strings
         run: |

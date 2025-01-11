@@ -1,6 +1,6 @@
-import { useGetLatestBlocksQuery, useGetUnfinishedBlockHeadersQuery } from '@chia-network/api-react';
-import { FormatLargeNumber, Flex, Card, StateColor, Table, LayoutDashboardSub } from '@chia-network/core';
-import { Status } from '@chia-network/icons';
+import { useGetLatestBlocksQuery, useGetUnfinishedBlockHeadersQuery } from '@cactus-network/api-react';
+import { FormatLargeNumber, Flex, Card, StateColor, Table, LayoutDashboardSub } from '@cactus-network/core';
+import { Status } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { Box, Tooltip, Typography } from '@mui/material';
 import { get } from 'lodash';

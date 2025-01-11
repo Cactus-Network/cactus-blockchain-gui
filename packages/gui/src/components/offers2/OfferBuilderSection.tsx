@@ -1,4 +1,4 @@
-import { Color, Flex } from '@chia-network/core';
+import { Color, Flex } from '@cactus-network/core';
 import { Add } from '@mui/icons-material';
 import { Box, IconButton, Collapse, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';

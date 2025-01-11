@@ -16,7 +16,7 @@ test.afterAll(async () => {
 
 test('Verify that renaming work and canceling the renaming wallet flow works.', async () => {
   const orgName = 'playwright';
-  const newName = 'MyChiaMainWallet';
+  const newName = 'MyCactusMainWallet';
   const fingerprint = '314593068';
 
   //Pre-requisites to get user back to Wallet selection page

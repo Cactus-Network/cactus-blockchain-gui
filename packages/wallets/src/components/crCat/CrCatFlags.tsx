@@ -1,5 +1,5 @@
-import { useGetVCListQuery } from '@chia-network/api-react';
-import { Flex } from '@chia-network/core';
+import { useGetVCListQuery } from '@cactus-network/api-react';
+import { Flex } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import DoneIcon from '@mui/icons-material/Done';
 import ErrorIcon from '@mui/icons-material/Error';

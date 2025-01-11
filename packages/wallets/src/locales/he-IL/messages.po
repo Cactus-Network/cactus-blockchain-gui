@@ -135,8 +135,8 @@ msgstr "בטל"
 
 #: src/components/cat/WalletCATSend.tsx:117
 #: src/components/WalletSend.tsx:153
-msgid "Cannot send chia to coloured address. Please enter a chia address."
-msgstr "לא ניתן לשלוח Chia לכתובת הצבעונית. אנא הקש כתובת Chia."
+msgid "Cannot send cactus to coloured address. Please enter a cactus address."
+msgstr "לא ניתן לשלוח Cactus לכתובת הצבעונית. אנא הקש כתובת Cactus."
 
 #: src/components/card/WalletCardCRCatRestrictions.tsx:40
 msgid "CAT credential restrictions"
@@ -149,7 +149,7 @@ msgstr ""
 #: src/components/cat/WalletCATSelect.tsx:25
 #: src/components/create/WalletCreateList.tsx:32
 #: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
+msgid "Cactus Asset Token"
 msgstr ""
 
 #: src/components/WalletHistoryClawbackChip.tsx:68
@@ -298,7 +298,7 @@ msgid "Distributed Identity"
 msgstr "זהות מבוזרת"
 
 #: src/components/WalletImport.tsx:157
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:127
@@ -678,8 +678,8 @@ msgid "This is not a valid address for sending funds to"
 msgstr ""
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "זהו סכום ה-Chia שבהם תוכל להשתמש כעת לביצוע עסקאות. זה לא כולל תגמולים בהמתנה, עסקאות נכנסות בהמתנה ומטבעות Chia שכבר משכת אבל עוד לא הופיע ב-Blockchain."
+msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+msgstr "זהו סכום ה-Cactus שבהם תוכל להשתמש כעת לביצוע עסקאות. זה לא כולל תגמולים בהמתנה, עסקאות נכנסות בהמתנה ומטבעות Cactus שכבר משכת אבל עוד לא הופיע ב-Blockchain."
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -690,7 +690,7 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "זהו סכום העסקאות הנכנסות והיוצאות בהמתנה (שטרם נכללו ב-Blockchain). זה לא כולל תגמולי farming."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr ""
 
 #: src/components/standard/WalletStandardCards.tsx:30

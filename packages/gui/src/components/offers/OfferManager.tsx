@@ -1,10 +1,10 @@
-import { OfferTradeRecord, toBech32m } from '@chia-network/api';
+import { OfferTradeRecord, toBech32m } from '@cactus-network/api';
 import {
   useCancelOfferMutation,
   useGetTimestampForHeightQuery,
   useGetHeightInfoQuery,
   useGetWalletsQuery,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import {
   Button,
   Card,
@@ -20,8 +20,8 @@ import {
   Tooltip,
   LayoutDashboardSub,
   MenuItem,
-} from '@chia-network/core';
-import { useIsWalletSynced } from '@chia-network/wallets';
+} from '@cactus-network/core';
+import { useIsWalletSynced } from '@cactus-network/wallets';
 import { Trans, t } from '@lingui/macro';
 import { Cancel, GetApp as Download, Info, Loop, Reply as Share, Visibility } from '@mui/icons-material';
 import { Box, Chip, Grid, ListItemIcon, Typography } from '@mui/material';
@@ -414,7 +414,7 @@ export function OfferManager() {
                       </Typography>
                       <Typography variant="body1" color="textSecondary">
                         <Trans>
-                          Create a file that you can use to trade XCH, Chia Asset Tokens, or NFTs with no counter-party
+                          Create a file that you can use to trade XCH, Cactus Asset Tokens, or NFTs with no counter-party
                           risk.
                         </Trans>
                       </Typography>

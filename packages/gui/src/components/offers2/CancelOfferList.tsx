@@ -1,5 +1,5 @@
-import { useCancelOfferMutation } from '@chia-network/api-react';
-import { Card, Flex, Button, TableControlled, useOpenDialog } from '@chia-network/core';
+import { useCancelOfferMutation } from '@cactus-network/api-react';
+import { Card, Flex, Button, TableControlled, useOpenDialog } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import BigNumber from 'bignumber.js';

@@ -3,7 +3,7 @@ import {
   useSendTransactionMutation,
   useFarmBlockMutation,
   useLocalStorage,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import {
   Amount,
   ButtonLoading,
@@ -14,12 +14,12 @@ import {
   Flex,
   Card,
   useOpenDialog,
-  chiaToMojo,
+  cactusToMojo,
   getTransactionResult,
   useIsSimulator,
   TooltipIcon,
   Button,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ReportProblemOutlinedIcon from '@mui/icons-material/ReportProblemOutlined';
@@ -150,10 +150,10 @@ export default function WalletSend(props: SendCardProps) {
 
     let { address } = data;
     if (address.includes('colour')) {
-      throw new Error(t`Cannot send chia to coloured address. Please enter a chia address.`);
+      throw new Error(t`Cannot send cactus to coloured address. Please enter a cactus address.`);
     }
 
-    if (address.slice(0, 12) === 'chia_addr://') {
+    if (address.slice(0, 12) === 'cactus_addr://') {
       address = address.slice(12);
     }
     if (address.startsWith('0x') || address.startsWith('0X')) {
@@ -166,8 +166,8 @@ export default function WalletSend(props: SendCardProps) {
     const queryData = {
       walletId,
       address,
-      amount: chiaToMojo(amount),
-      fee: chiaToMojo(fee),
+      amount: cactusToMojo(amount),
+      fee: cactusToMojo(fee),
       waitForConfirmation: true,
     };
 

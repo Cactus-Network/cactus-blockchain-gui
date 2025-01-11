@@ -1,4 +1,4 @@
-import { Button, CopyToClipboard, Flex, Link, Loading, TextField, Form } from '@chia-network/core';
+import { Button, CopyToClipboard, Flex, Link, Loading, TextField, Form } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Dialog, DialogActions, DialogTitle, DialogContent, Typography, InputAdornment } from '@mui/material';
 import React, { useState } from 'react';
@@ -96,7 +96,7 @@ export default function PlotNFTPayoutInstructionsDialog(props: Props) {
                   </Trans>{' '}
                   <Link
                     target="_blank"
-                    href="https://github.com/Chia-Network/pool-reference/blob/main/SPECIFICATION.md#payloadpayout_instructions"
+                    href="https://github.com/Cactus-Network/pool-reference/blob/main/SPECIFICATION.md#payloadpayout_instructions"
                     noWrap
                   >
                     <Trans>Learn More</Trans>

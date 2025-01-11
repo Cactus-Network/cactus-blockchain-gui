@@ -1,4 +1,4 @@
-import { BlockchainState, ServiceName } from '@chia-network/api';
+import { BlockchainState, ServiceName } from '@cactus-network/api';
 
 import FarmerStatus from '../constants/FarmerStatus';
 import FullNodeState from '../constants/FullNodeState';

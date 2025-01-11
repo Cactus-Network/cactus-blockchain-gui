@@ -1,37 +1,37 @@
-# chia-blockchain-gui
+# cactus-blockchain-gui
 
-![Chia logo](https://www.chia.net/wp-content/uploads/2022/09/chia-logo.svg)
+![Cactus logo](https://www.cactus.net/wp-content/uploads/2022/09/cactus-logo.svg)
 
-![GitHub contributors](https://img.shields.io/github/contributors/Chia-Network/chia-blockchain-gui?logo=GitHub)
+![GitHub contributors](https://img.shields.io/github/contributors/Cactus-Network/cactus-blockchain-gui?logo=GitHub)
 
-Welcome to the Chia GUI repo!
+Welcome to the Cactus GUI repo!
 
-Chia GUI is written in TypeScript and uses Electron/React.
+Cactus GUI is written in TypeScript and uses Electron/React.
 
 This monorepo consists of the following packages:
 
 | Package name  | Description                                                                                                |
 | ------------- | ---------------------------------------------------------------------------------------------------------- |
-| **api**       | JS/TS library to access the Chia Blockchain RPC                                                            |
+| **api**       | JS/TS library to access the Cactus Blockchain RPC                                                            |
 | **api-react** | React library that wraps **api** in hooks                                                                  |
 | **core**      | Common React components and hooks                                                                          |
 | **gui**       | The actual GUI package. It uses our packages like **api-react** and **core** under the hood                |
-| **icons**     | Chia specific icons                                                                                        |
+| **icons**     | Cactus specific icons                                                                                        |
 | **wallets**   | Common React components and hooks. Do not use this in you project. Will be merged to **core** package soon |
 
 ## Development
 
-1. This repo (chia-blockchain-gui) must be under chia-blockchain repo. Please follow the [installation steps for the chia-blockchain](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#install-from-source). Make sure to install from source code (git clone...).
-2. Run the `sh install-gui.sh` as instructed in the previous step. This will clone the chia-blockchain-gui under chia-blockchain repo.
-3. Change directory into the chia-blockchain-gui subdirectory.
+1. This repo (cactus-blockchain-gui) must be under cactus-blockchain repo. Please follow the [installation steps for the cactus-blockchain](https://github.com/Cactus-Network/cactus-blockchain/wiki/INSTALL#install-from-source). Make sure to install from source code (git clone...).
+2. Run the `sh install-gui.sh` as instructed in the previous step. This will clone the cactus-blockchain-gui under cactus-blockchain repo.
+3. Change directory into the cactus-blockchain-gui subdirectory.
 4. Run `npm run dev:gui`
 
 **When developing, please:**
 
 - Only edit the code with the **Vscode editor**.
-- Always have **chia-blockchain-gui opened as a root folder in the Vscode** and not chia-blockchain, or chia-blockchain-gui/packages/... Failing to do so will result in incorrect auto linting and auto formatting which would not go through the CI quality checks.
+- Always have **cactus-blockchain-gui opened as a root folder in the Vscode** and not cactus-blockchain, or cactus-blockchain-gui/packages/... Failing to do so will result in incorrect auto linting and auto formatting which would not go through the CI quality checks.
 - When you open the repo in the vscode, click on "**Install recommended plugins**" pop-up.
-- To develop in testnet, please follow [these steps](https://github.com/Chia-Network/chia-blockchain/wiki/How-to-connect-to-the-Testnet).
+- To develop in testnet, please follow [these steps](https://github.com/Cactus-Network/cactus-blockchain/wiki/How-to-connect-to-the-Testnet).
 - Please write tests for your code
 - When disabling an eslint rule, please provide a reason after two dashes (--), example:
 
@@ -42,7 +42,7 @@ This monorepo consists of the following packages:
 To install an NPM package, please navigate to the **root directory** of this repo.
 
 - To install `lodash` for **all** packages: `npx lerna add lodash`
-- To install `lodash` for **single** package: `npx lerna add lodash --scope=@chia-network/icons`
+- To install `lodash` for **single** package: `npx lerna add lodash --scope=@cactus-network/icons`
 - To install as a dev dependency, add `--dev`
 
 After adding a new NPM package, please **pin down the package version**. This is done to lower the possibility of supply chain attacks.
@@ -76,7 +76,7 @@ After adding a new NPM package, please **pin down the package version**. This is
 ## Git workflow
 
 - Git branch from "**main**"
-- For Chia employees: **prefix your branch with your name**, like this: `yourName/what-is-the-code-about`. This helps when cleaning up old branches.
+- For Cactus employees: **prefix your branch with your name**, like this: `yourName/what-is-the-code-about`. This helps when cleaning up old branches.
 - All commits must be [signed](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits).
 
 ## Git commit messages
@@ -106,7 +106,7 @@ After adding a new NPM package, please **pin down the package version**. This is
 
 ## Localization
 
-Do not edit files directly in the repo, but instead please head over to our [Crowdin project](https://chia.crowdin.com/chia-blockchain-gui) and add/edit translations there.
+Do not edit files directly in the repo, but instead please head over to our [Crowdin project](https://cactus.crowdin.com/cactus-blockchain-gui) and add/edit translations there.
 
 ## Troubleshooting
 
@@ -116,11 +116,11 @@ Do not edit files directly in the repo, but instead please head over to our [Cro
 
 - **`npm run dev:gui` fails to start the app without providing a reason**
 
-  1. In your command line, please go to the `chia-blockchain` directory (one level up)
+  1. In your command line, please go to the `cactus-blockchain` directory (one level up)
   2. Run `. ./activate`
-  3. Run `cd chia-blockchain-gui`
+  3. Run `cd cactus-blockchain-gui`
   4. Run `npm run dev:gui` to start the app.
-  5. If still does not work, please open you process manager and kill all Chia / Python related processes.
+  5. If still does not work, please open you process manager and kill all Cactus / Python related processes.
 
 - **Why does my component keep rerendering?**
 
@@ -136,29 +136,29 @@ Do not edit files directly in the repo, but instead please head over to our [Cro
 
 ## Debugging
 
-1. In the Chia Electron app, click `View -> Developer -> Developer tools`.
+1. In the Cactus Electron app, click `View -> Developer -> Developer tools`.
 2. In the console tab of the developer tools, change the default console events to include `verbose` events. These are the events emitted from the `debug` package.
 
 ## Simulator / SimNet
 
-1. Please follow the [Install and configure the simulator](https://docs.chia.net/guides/simulator-user-guide/). Do this step only once.
-2. In the chia-blockchain directory, run this to setup the ENV variables. Use these instead of the ones mentioned in the above guide.
+1. Please follow the [Install and configure the simulator](https://docs.cactus.net/guides/simulator-user-guide/). Do this step only once.
+2. In the cactus-blockchain directory, run this to setup the ENV variables. Use these instead of the ones mentioned in the above guide.
 
 ```
-export CHIA_ROOT=~/.chia/simulator/main
-export CHIA_SIMULATOR_ROOT=~/.chia/simulator
-export CHIA_KEYS_ROOT=~/.chia_keys_simulator
+export CACTUS_ROOT=~/.cactus/simulator/main
+export CACTUS_SIMULATOR_ROOT=~/.cactus/simulator
+export CACTUS_KEYS_ROOT=~/.cactus_keys_simulator
 ```
 
 3. `. ./activate`
-4. `chia start simulator`
-5. `cd chia-blockchain-gui/packages/gui`
+4. `cactus start simulator`
+5. `cd cactus-blockchain-gui/packages/gui`
 6. `npm run dev:skipLocales`
 7. You should see your simulator wallets. You should not see your testNet / mainNet wallets.
-8. Run `chia dev sim farm` as many times you want to farm some coins.
+8. Run `cactus dev sim farm` as many times you want to farm some coins.
 
-## Chia FAQ/WIKI
+## Cactus FAQ/WIKI
 
-Please check out the [wiki](https://github.com/Chia-Network/chia-blockchain/wiki)
-and [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ) for
+Please check out the [wiki](https://github.com/Cactus-Network/cactus-blockchain/wiki)
+and [FAQ](https://github.com/Cactus-Network/cactus-blockchain/wiki/FAQ) for
 information on this project.

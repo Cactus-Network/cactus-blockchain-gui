@@ -124,6 +124,12 @@ msgstr ""
 msgid "Before sending this transaction, you should ensure that the recipient has a wallet that can claim it manually after the timer has expired."
 msgstr ""
 
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Cactus Asset Token"
+msgstr "Cactus tillgångstoken (CAT)"
+
 #: src/components/WalletHistoryClawbackChip.tsx:61
 msgid "Can be claimed in "
 msgstr ""
@@ -135,8 +141,8 @@ msgstr "Avbryt"
 
 #: src/components/cat/WalletCATSend.tsx:117
 #: src/components/WalletSend.tsx:153
-msgid "Cannot send chia to coloured address. Please enter a chia address."
-msgstr "Det går inte att skicka chia till färgad adress. Ange en chia-adress."
+msgid "Cannot send cactus to coloured address. Please enter a cactus address."
+msgstr "Det går inte att skicka cactus till färgad adress. Ange en cactus-adress."
 
 #: src/components/card/WalletCardCRCatRestrictions.tsx:40
 msgid "CAT credential restrictions"
@@ -145,12 +151,6 @@ msgstr "CAT-autentiseringsbegränsningar"
 #: src/components/WalletsSidebar.tsx:130
 #~ msgid "Check my snapshot balance"
 #~ msgstr "Check my snapshot balance"
-
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Chia Asset Token"
-msgstr "Chia tillgångstoken (CAT)"
 
 #: src/components/WalletHistoryClawbackChip.tsx:68
 msgid "Claim transaction"
@@ -298,8 +298,8 @@ msgid "Distributed Identity"
 msgstr "Distribuerad identitet"
 
 #: src/components/WalletImport.tsx:157
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
-msgstr "Skriv in din sparade minnesfras på {mnemonicWordCount} ord för att återställa din Chia-plånbok."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
+msgstr "Skriv in din sparade minnesfras på {mnemonicWordCount} ord för att återställa din Cactus-plånbok."
 
 #: src/components/cat/WalletCATSend.tsx:127
 msgid "Error the entered address appears to be for a different colour."
@@ -681,8 +681,8 @@ msgid "This is not a valid address for sending funds to"
 msgstr "Detta är inte en giltig adress för att skicka betalning till"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
-msgstr "Detta är den mängd Chia du för tillfället kan använda för transaktioner. Det innefattar inte väntande odlingsbelöningar, väntande inkommande transaktioner eller Chia som du just spenderat men som ännu inte finns i blockkedjan."
+msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+msgstr "Detta är den mängd Cactus du för tillfället kan använda för transaktioner. Det innefattar inte väntande odlingsbelöningar, väntande inkommande transaktioner eller Cactus som du just spenderat men som ännu inte finns i blockkedjan."
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -693,8 +693,8 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "Detta är summan av inkommande och utgående väntande transaktioner (som ännu inte inkluderats i blockkedjan). Den innefattar inte odlingsbelöningar."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "Detta är den sammanlagda mängden chia i blockkedjan vid det aktuella topp-blocket som kontrolleras av dina privata nycklar. Det innefattar frusna odlingsbelöningar, men inte väntande inkommande och utgående transaktioner."
+msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "Detta är den sammanlagda mängden cactus i blockkedjan vid det aktuella topp-blocket som kontrolleras av dina privata nycklar. Det innefattar frusna odlingsbelöningar, men inte väntande inkommande och utgående transaktioner."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."

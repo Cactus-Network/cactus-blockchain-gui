@@ -5,8 +5,8 @@ import {
   useResetMissingSignagePointsMutation,
   useResetFilterChallengeStatMutation,
   useGetPartialStatsOffsetQuery,
-} from '@chia-network/api-react';
-import { Flex, Link, StateIndicator, State, Tooltip, useCurrencyCode } from '@chia-network/core';
+} from '@cactus-network/api-react';
+import { Flex, Link, StateIndicator, State, Tooltip, useCurrencyCode } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Button, Paper, Typography, CircularProgress } from '@mui/material';
 import React from 'react';
@@ -337,7 +337,7 @@ function FarmHealth() {
               </td>
             </tr>
             <tr>
-              <Link target="_blank" href="https://docs.chia.net/faq/#why-does-my-chia-farm-say-missing-signage-points">
+              <Link target="_blank" href="https://docs.cactus.net/faq/#why-does-my-cactus-farm-say-missing-signage-points">
                 <Trans>Learn more</Trans>
               </Link>
             </tr>

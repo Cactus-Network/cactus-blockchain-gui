@@ -1,5 +1,5 @@
-import { useGetKeysQuery } from '@chia-network/api-react';
-import { ConfirmDialog, Flex, LoadingOverlay } from '@chia-network/core';
+import { useGetKeysQuery } from '@cactus-network/api-react';
+import { ConfirmDialog, Flex, LoadingOverlay } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Alert, Typography, Divider } from '@mui/material';
 import React from 'react';
@@ -47,7 +47,7 @@ export default function WalletConnectRequestPermissionsConfirmDialog(
       const p = params[i];
       if (p.name === 'commands') {
         return (values.commands as string[]).map((cmd) => {
-          const cmdWithoutPrefix = cmd.replace('chia_', '');
+          const cmdWithoutPrefix = cmd.replace('cactus_', '');
           const cmdDescription = walletConnectCommands.find((item) => item.command === cmdWithoutPrefix);
           return {
             command: cmdDescription?.command ?? cmdWithoutPrefix,

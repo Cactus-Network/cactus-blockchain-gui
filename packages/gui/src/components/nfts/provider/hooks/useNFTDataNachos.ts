@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import { type NFTInfo } from '@chia-network/api';
+import { type NFTInfo } from '@cactus-network/api';
 import debug from 'debug';
 import { useState, useCallback, useMemo } from 'react';
 
@@ -10,7 +10,7 @@ import getNFTId from '../../../../util/getNFTId';
 
 import { getChangedEventName } from './useNFTDataOnDemand';
 
-const log = debug('chia-gui:NFTProvider:useMetadataData');
+const log = debug('cactus-gui:NFTProvider:useMetadataData');
 
 // warning: only used by NFTProvider
 export default function useNFTDataNachos() {

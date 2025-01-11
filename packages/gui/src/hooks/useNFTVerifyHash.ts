@@ -1,4 +1,4 @@
-import type { NFTInfo } from '@chia-network/api';
+import type { NFTInfo } from '@cactus-network/api';
 import debug from 'debug';
 import { useEffect, useState, useCallback, useMemo } from 'react';
 
@@ -9,7 +9,7 @@ import useCache from './useCache';
 import useNFT from './useNFT';
 import useNFTMetadata from './useNFTMetadata';
 
-const log = debug('chia-gui:useNFTVerifyHash');
+const log = debug('cactus-gui:useNFTVerifyHash');
 
 type PreviewState = {
   isVerified: boolean;

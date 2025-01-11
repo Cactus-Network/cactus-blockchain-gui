@@ -28,8 +28,8 @@
 //   await page.getByRole('button', { name: '+ Add a Plot' }).click();
 
 //   //When I add a Plot Size
-//   await page.getByRole('button', { name: 'Chia Proof of Space 1.0.11' }).click();
-//   await page.getByRole('option', { name: 'Chia Proof of Space 1.0.11' }).click();
+//   await page.getByRole('button', { name: 'Cactus Proof of Space 1.0.11' }).click();
+//   await page.getByRole('option', { name: 'Cactus Proof of Space 1.0.11' }).click();
 
 //   //And I set the location
 //   await page.getByRole('button', { name: 'Browse' }).first().click();

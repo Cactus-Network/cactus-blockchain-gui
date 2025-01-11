@@ -4,7 +4,7 @@ import {
   useGetKeyringStatusQuery,
   usePrefs,
   type Serializable,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import { Trans, t } from '@lingui/macro';
 import { Button, Dialog, DialogTitle, DialogContent, Alert, Typography } from '@mui/material';
 import React, { useEffect } from 'react';

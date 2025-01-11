@@ -7,8 +7,8 @@ const path = require('path');
  ************************************************************ */
 
 const PY_DIST_FOLDER = path.join(__dirname, '../../../app.asar.unpacked/daemon');
-const PY_CHIA_EXEC = 'chia';
-const CHIA_START_ARGS = Object.freeze(['start', 'daemon', '--skip-keyring']);
+const PY_CACTUS_EXEC = 'cactus';
+const CACTUS_START_ARGS = Object.freeze(['start', 'daemon', '--skip-keyring']);
 
 let pyProc = null;
 let haveCert = null;
@@ -18,7 +18,7 @@ const EXEC_PATH_CACHE = {}; // {[execName]: execPath}
 
 const guessPackaged = () => {
   // This is very important. This means guessing whether it's packaged is checked only once in a process lifetime.
-  // This reduces the possibility that we change the guessing and run a different chia executable in a process lifetime.
+  // This reduces the possibility that we change the guessing and run a different cactus executable in a process lifetime.
   if (typeof IS_PACKAGED === 'boolean') {
     return IS_PACKAGED;
   }
@@ -56,28 +56,28 @@ const getExecutablePath = (execName) => {
       EXEC_PATH_CACHE[execName] = execPath;
       return execPath;
     }
-    throw new Error(`chia executable could not be found in: ${execDir}`);
+    throw new Error(`cactus executable could not be found in: ${execDir}`);
   }
 
   EXEC_PATH_CACHE[execName] = path.join(execDir, execName);
   return EXEC_PATH_CACHE[execName];
 };
 
-const getChiaVersion = () => {
-  const chiaExecPath = getExecutablePath(PY_CHIA_EXEC);
+const getCactusVersion = () => {
+  const cactusExecPath = getExecutablePath(PY_CACTUS_EXEC);
   return childProcess
-    .execFileSync(chiaExecPath, ['version'], {
+    .execFileSync(cactusExecPath, ['version'], {
       encoding: 'UTF-8',
     })
     .trim();
 };
 
-const chiaInit = () => {
-  const chiaExecPath = getExecutablePath(PY_CHIA_EXEC);
-  console.info(`Executing: ${chiaExecPath} init`);
+const cactusInit = () => {
+  const cactusExecPath = getExecutablePath(PY_CACTUS_EXEC);
+  console.info(`Executing: ${cactusExecPath} init`);
 
   try {
-    const output = childProcess.execFileSync(chiaExecPath, ['init']);
+    const output = childProcess.execFileSync(cactusExecPath, ['init']);
     console.info(output.toString());
     return true;
   } catch (e) {
@@ -87,7 +87,7 @@ const chiaInit = () => {
   }
 };
 
-const startChiaDaemon = () => {
+const startCactusDaemon = () => {
   pyProc = null;
 
   let procOption;
@@ -98,19 +98,19 @@ const startChiaDaemon = () => {
     };
   }
 
-  const chiaExec = getExecutablePath(PY_CHIA_EXEC);
+  const cactusExec = getExecutablePath(PY_CACTUS_EXEC);
   console.info('Running python executable: ');
-  console.info(`Script: ${chiaExec} ${CHIA_START_ARGS.join(' ')}`);
+  console.info(`Script: ${cactusExec} ${CACTUS_START_ARGS.join(' ')}`);
 
   try {
-    pyProc = childProcess.spawn(chiaExec, CHIA_START_ARGS, procOption);
+    pyProc = childProcess.spawn(cactusExec, CACTUS_START_ARGS, procOption);
   } catch (e) {
     console.error('Running python executable: Error: ');
     console.error(e);
   }
 
   if (!pyProc) {
-    throw new Error('Failed to start chia daemon');
+    throw new Error('Failed to start cactus daemon');
   }
 
   pyProc.stdout.setEncoding('utf8');
@@ -161,8 +161,8 @@ const startChiaDaemon = () => {
 };
 
 module.exports = {
-  chiaInit,
-  startChiaDaemon,
-  getChiaVersion,
+  cactusInit,
+  startCactusDaemon,
+  getCactusVersion,
   guessPackaged,
 };

@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 
-import { useGetOfferSummaryMutation, useCheckOfferValidityMutation } from '@chia-network/api-react';
-import { isValidURL } from '@chia-network/core';
+import { useGetOfferSummaryMutation, useCheckOfferValidityMutation } from '@cactus-network/api-react';
+import { isValidURL } from '@cactus-network/core';
 import debug from 'debug';
 import React, { useState, createContext, useMemo, useCallback, type ReactNode } from 'react';
 
@@ -23,7 +23,7 @@ export const OffersContext = createContext<
   | undefined
 >(undefined);
 
-const log = debug('chia-gui:OfferProvider');
+const log = debug('cactus-gui:OfferProvider');
 
 export function getChangedEventName(id: string) {
   return `offerChanged:${id}`;

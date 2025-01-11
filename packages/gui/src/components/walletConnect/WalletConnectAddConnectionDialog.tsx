@@ -1,4 +1,4 @@
-import { useGetKeysQuery, useGetLoggedInFingerprintQuery, usePrefs } from '@chia-network/api-react';
+import { useGetKeysQuery, useGetLoggedInFingerprintQuery, usePrefs } from '@cactus-network/api-react';
 import {
   ButtonLoading,
   DialogActions,
@@ -8,7 +8,7 @@ import {
   Form,
   Loading,
   useCurrencyCode,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import CloseIcon from '@mui/icons-material/Close';
 import {
@@ -30,7 +30,7 @@ import { useForm, useWatch } from 'react-hook-form';
 import useWalletConnectContext from '../../hooks/useWalletConnectContext';
 import useWalletConnectPreferences from '../../hooks/useWalletConnectPreferences';
 
-import HeroImage from './images/walletConnectToChia.svg';
+import HeroImage from './images/walletConnectToCactus.svg';
 
 enum Step {
   CONNECT,

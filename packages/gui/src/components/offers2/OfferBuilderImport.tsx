@@ -1,5 +1,5 @@
-import { useGetOfferSummaryMutation } from '@chia-network/api-react';
-import { Color, Dropzone, Flex, useSerializedNavigationState, useShowError } from '@chia-network/core';
+import { useGetOfferSummaryMutation } from '@cactus-network/api-react';
+import { Color, Dropzone, Flex, useSerializedNavigationState, useShowError } from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Box, Card, Typography } from '@mui/material';
 import React from 'react';

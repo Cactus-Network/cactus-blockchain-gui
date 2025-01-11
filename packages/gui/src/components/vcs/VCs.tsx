@@ -1,4 +1,4 @@
-import { useSerializedNavigationState } from '@chia-network/core';
+import { useSerializedNavigationState } from '@cactus-network/core';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 

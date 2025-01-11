@@ -1,5 +1,5 @@
-import { OfferSummaryRecord, type OfferSummaryCATInfo } from '@chia-network/api';
-import { mojoToCAT, mojoToChia } from '@chia-network/core';
+import { OfferSummaryRecord, type OfferSummaryCATInfo } from '@cactus-network/api';
+import { mojoToCAT, mojoToCactus } from '@cactus-network/core';
 import BigNumber from 'bignumber.js';
 
 import type OfferBuilderData from '../@types/OfferBuilderData';
@@ -14,7 +14,7 @@ export default function offerToOfferBuilderData(
 ): OfferBuilderData {
   const { fees, offered, requested, infos } = offerSummary;
 
-  const defaultFeeXCH = defaultFee ? mojoToChia(defaultFee).toFixed() : '';
+  const defaultFeeXCH = defaultFee ? mojoToCactus(defaultFee).toFixed() : '';
 
   const offeredXch: OfferBuilderData['offered']['xch'] = [];
   const offeredTokens: OfferBuilderData['offered']['tokens'] = [];
@@ -43,7 +43,7 @@ export default function offerToOfferBuilderData(
       });
     } else if (id === 'xch') {
       offeredXch.push({
-        amount: mojoToChia(amount).toFixed(),
+        amount: mojoToCactus(amount).toFixed(),
       });
     }
   });
@@ -65,7 +65,7 @@ export default function offerToOfferBuilderData(
       });
     } else if (id === 'xch') {
       requestedXch.push({
-        amount: mojoToChia(amount).toFixed(),
+        amount: mojoToCactus(amount).toFixed(),
       });
     }
   });
@@ -83,7 +83,7 @@ export default function offerToOfferBuilderData(
       nfts: requestedNfts,
       fee: [
         {
-          amount: mojoToChia(fees).toFixed(),
+          amount: mojoToCactus(fees).toFixed(),
         },
       ],
     },

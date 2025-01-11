@@ -1,17 +1,17 @@
-import type { Wallet } from '@chia-network/api';
-import { WalletType } from '@chia-network/api';
-import { useGetWalletBalanceQuery, useGetWalletsQuery } from '@chia-network/api-react';
+import type { Wallet } from '@cactus-network/api';
+import { WalletType } from '@cactus-network/api';
+import { useGetWalletBalanceQuery, useGetWalletsQuery } from '@cactus-network/api-react';
 import {
   Amount,
   Fee,
   Flex,
   TooltipIcon,
-  mojoToChia,
-  mojoToChiaLocaleString,
+  mojoToCactus,
+  mojoToCactusLocaleString,
   mojoToCAT,
   mojoToCATLocaleString,
   useLocale,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Add, Remove } from '@mui/icons-material';
 import { Box, Divider, IconButton, Typography } from '@mui/material';
@@ -62,8 +62,8 @@ function OfferEditorConditionRow(props: OfferEditorConditionsRowProps) {
     if (!isLoading && tradeSide === 'sell' && walletBalance && walletBalance.walletId === row.assetWalletId) {
       switch (item.walletType) {
         case WalletType.STANDARD_WALLET:
-          balanceString = mojoToChiaLocaleString(walletBalance.spendableBalance, locale);
-          balance = mojoToChia(walletBalance.spendableBalance);
+          balanceString = mojoToCactusLocaleString(walletBalance.spendableBalance, locale);
+          balance = mojoToCactus(walletBalance.spendableBalance);
           break;
         case WalletType.CAT:
           balanceString = mojoToCATLocaleString(walletBalance.spendableBalance, locale);

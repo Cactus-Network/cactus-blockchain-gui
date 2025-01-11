@@ -1,4 +1,4 @@
-import { type BlockRecord } from '@chia-network/api';
+import { type BlockRecord } from '@cactus-network/api';
 import { useRef, useMemo } from 'react';
 
 import useGetLatestBlocksQuery from './useGetLatestBlocksQuery';

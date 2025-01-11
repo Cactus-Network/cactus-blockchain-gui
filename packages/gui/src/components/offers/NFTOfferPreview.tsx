@@ -1,4 +1,4 @@
-import { Button, Flex, Loading, TooltipIcon, useColorModeValue } from '@chia-network/core';
+import { Button, Flex, Loading, TooltipIcon, useColorModeValue } from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Card, Grid, Typography } from '@mui/material';
 import React from 'react';

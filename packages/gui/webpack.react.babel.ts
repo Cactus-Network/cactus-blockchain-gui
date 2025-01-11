@@ -102,7 +102,7 @@ export default {
       stream: 'stream-browserify',
       // Use `ws` package for nodejs instead of `ws` package for browsers
       // Without this alias, webpack will bundle `ws` package for browsers
-      // See https://github.com/Chia-Network/chia-blockchain-gui/pull/2413#issuecomment-2181012908
+      // See https://github.com/Cactus-Network/cactus-blockchain-gui/pull/2413#issuecomment-2181012908
       ws: require.resolve('ws'),
     },
   },

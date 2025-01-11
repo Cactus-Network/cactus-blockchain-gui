@@ -1,7 +1,7 @@
-import { WalletType, type Wallet } from '@chia-network/api';
-import { useGetCatListQuery } from '@chia-network/api-react';
-import { Flex, TooltipIcon, useCurrencyCode } from '@chia-network/core';
-import { CrCat } from '@chia-network/icons';
+import { WalletType, type Wallet } from '@cactus-network/api';
+import { useGetCatListQuery } from '@cactus-network/api-react';
+import { Flex, TooltipIcon, useCurrencyCode } from '@cactus-network/core';
+import { CrCat } from '@cactus-network/icons';
 import { t, Trans } from '@lingui/macro';
 import { Typography, type TypographyProps } from '@mui/material';
 import React from 'react';

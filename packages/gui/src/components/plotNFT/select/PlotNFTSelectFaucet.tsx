@@ -1,4 +1,4 @@
-import { Button, Flex, CardStep, useCurrencyCode } from '@chia-network/core';
+import { Button, Flex, CardStep, useCurrencyCode } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React from 'react';
@@ -17,9 +17,9 @@ export default function PlotNFTSelectFaucet(props: Props) {
 
   const handleClick = React.useCallback(() => {
     if (currencyCode === 'TXCH') {
-      openExternal('https://testnet11-faucet.chia.net/');
+      openExternal('https://testnet11-faucet.cactus.net/');
     } else {
-      openExternal('https://faucet.chia.net/');
+      openExternal('https://faucet.cactus.net/');
     }
   }, [currencyCode, openExternal]);
 

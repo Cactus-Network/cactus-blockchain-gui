@@ -1,14 +1,14 @@
-import { TransactionType, WalletType } from '@chia-network/api';
-import type { Transaction } from '@chia-network/api';
-import { useGetWalletBalanceQuery } from '@chia-network/api-react';
+import { TransactionType, WalletType } from '@cactus-network/api';
+import type { Transaction } from '@cactus-network/api';
+import { useGetWalletBalanceQuery } from '@cactus-network/api-react';
 import {
   useLocale,
-  mojoToChia,
+  mojoToCactus,
   mojoToCAT,
   blockHeightToTimestamp,
   bigNumberToLocaleString,
   LineChart,
-} from '@chia-network/core';
+} from '@cactus-network/core';
 import BigNumber from 'bignumber.js';
 import { orderBy, groupBy, map, sortBy } from 'lodash';
 import moment from 'moment';
@@ -145,7 +145,7 @@ export default function WalletGraph(props: WalletGraphProps) {
 
   const yValueFormatter = useCallback(
     (value: number) => {
-      const formattedValue = isCAT ? mojoToCAT(value) : mojoToChia(value);
+      const formattedValue = isCAT ? mojoToCAT(value) : mojoToCactus(value);
 
       return `${bigNumberToLocaleString(formattedValue, locale)} ${unit}`;
     },

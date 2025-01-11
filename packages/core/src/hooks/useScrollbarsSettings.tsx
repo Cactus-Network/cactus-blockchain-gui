@@ -1,4 +1,4 @@
-import { usePrefs } from '@chia-network/api-react';
+import { usePrefs } from '@cactus-network/api-react';
 import { useCallback } from 'react';
 
 type AutoHide = false | 'leave' | 'scroll';

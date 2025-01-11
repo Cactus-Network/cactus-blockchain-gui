@@ -3,7 +3,7 @@ import {
   useGetProofsForRootQuery,
   useLocalStorage,
   useGetLoggedInFingerprintQuery,
-} from '@chia-network/api-react';
+} from '@cactus-network/api-react';
 import { ArrowBackIosNew } from '@mui/icons-material';
 import { Box, IconButton } from '@mui/material';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { ServiceNameValue } from '@chia-network/api';
+import { ServiceNameValue } from '@cactus-network/api';
 import { useEffect, useState, useCallback } from 'react';
 
 import { useStartServiceMutation, useStopServiceMutation } from '../services/daemon';

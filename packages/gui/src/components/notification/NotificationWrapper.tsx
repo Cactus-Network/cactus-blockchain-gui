@@ -1,4 +1,4 @@
-import { Flex } from '@chia-network/core';
+import { Flex } from '@cactus-network/core';
 import { Box, MenuItem, Typography } from '@mui/material';
 import React, { type ReactNode } from 'react';
 

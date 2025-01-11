@@ -1,7 +1,7 @@
 {
-  "name": "@chia-network/wallets",
-  "author": "Chia Network <hello@chia.net> (https://chia.net/)",
-  "description": "Chia wallets Library",
+  "name": "@cactus-network/wallets",
+  "author": "Cactus Network <hello@cactus.net> (https://cactus.net/)",
+  "description": "Cactus wallets Library",
   "version": "1.0.0",
   "engines": {
     "node": ">=18.18.2"
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.25.6",
-    "@chia-network/icons": "1.0.0",
+    "@cactus-network/icons": "1.0.0",
     "@lingui/macro": "4.11.4",
     "@rehooks/local-storage": "2.4.4",
     "bignumber.js": "9.1.1",
@@ -49,9 +49,9 @@
     "@babel/preset-env": "7.25.4",
     "@babel/preset-react": "7.24.7",
     "@babel/preset-typescript": "7.24.7",
-    "@chia-network/api": "1.0.0",
-    "@chia-network/api-react": "1.0.0",
-    "@chia-network/core": "1.0.0",
+    "@cactus-network/api": "1.0.0",
+    "@cactus-network/api-react": "1.0.0",
+    "@cactus-network/core": "1.0.0",
     "@lingui/cli": "4.11.4",
     "@lingui/core": "4.11.4",
     "@lingui/react": "4.11.4",
@@ -85,9 +85,9 @@
     "typescript": "5.7.2"
   },
   "peerDependencies": {
-    "@chia-network/api": "^1.0.0",
-    "@chia-network/api-react": "^1.0.0",
-    "@chia-network/core": "^1.0.0",
+    "@cactus-network/api": "^1.0.0",
+    "@cactus-network/api-react": "^1.0.0",
+    "@cactus-network/core": "^1.0.0",
     "@lingui/core": "^4.11.4",
     "@lingui/react": "^4.11.4",
     "@mui/icons-material": "^5.14.3",

@@ -5,7 +5,7 @@ import {
   bladebitDiskOptions,
   bladebitCudaOptions,
   madmaxOptions,
-  chiaposOptions,
+  cactusposOptions,
 } from '../constants/Plotters';
 
 export default function optionsForPlotter(plotterName: PlotterName): PlotterOptions {
@@ -18,8 +18,8 @@ export default function optionsForPlotter(plotterName: PlotterName): PlotterOpti
       return bladebitCudaOptions;
     case PlotterName.MADMAX:
       return madmaxOptions;
-    case PlotterName.CHIAPOS: // fallthrough
+    case PlotterName.CACTUSPOS: // fallthrough
     default:
-      return chiaposOptions;
+      return cactusposOptions;
   }
 }

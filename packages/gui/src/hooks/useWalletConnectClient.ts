@@ -4,10 +4,10 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import useWalletConnectPreferences from './useWalletConnectPreferences';
 
 const defaultMetadata = {
-  name: 'Chia Blockchain',
-  description: 'GUI for Chia Blockchain',
-  url: 'https://www.chia.net',
-  icons: ['https://www.chia.net/wp-content/uploads/2022/09/chia-logo.svg'],
+  name: 'Cactus Blockchain',
+  description: 'GUI for Cactus Blockchain',
+  url: 'https://www.cactus.net',
+  icons: ['https://www.cactus.net/wp-content/uploads/2022/09/cactus-logo.svg'],
 };
 
 export type UseWalletConnectConfig = {

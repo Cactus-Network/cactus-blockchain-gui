@@ -15,7 +15,7 @@ import fs from 'fs';
 import path from 'path';
 import url from 'url';
 
-import { NFTInfo } from '@chia-network/api';
+import { NFTInfo } from '@cactus-network/api';
 import { initialize, enable } from '@electron/remote/main';
 import axios from 'axios';
 import windowStateKeeper from 'electron-window-state';
@@ -28,10 +28,10 @@ import isURL from 'validator/es/lib/isURL';
 // handle setupevents as quickly as possible
 import '../config/env';
 import packageJson from '../../package.json';
-import AppIcon from '../assets/img/chia64x64.png';
+import AppIcon from '../assets/img/cactus64x64.png';
 import About from '../components/about/About';
 import { i18n } from '../config/locales';
-import chiaEnvironment, { chiaInit } from '../util/chiaEnvironment';
+import cactusEnvironment, { cactusInit } from '../util/cactusEnvironment';
 import loadConfig, { checkConfigFileExists } from '../util/loadConfig';
 import manageDaemonLifetime from '../util/manageDaemonLifetime';
 import { setUserDataDir } from '../util/userData';
@@ -84,12 +84,12 @@ let currentDownloadRequest: any;
 let abortDownloadingFiles: boolean = false;
 
 // When there is no config file, it is assumed to be the first run.
-// At that time, the config file is created here by `chia init`.
+// At that time, the config file is created here by `cactus init`.
 if (!checkConfigFileExists()) {
-  chiaInit();
+  cactusInit();
 }
 
-// Set the userData directory to its location within CHIA_ROOT/gui
+// Set the userData directory to its location within CACTUS_ROOT/gui
 setUserDataDir();
 
 function renderAbout(): string {
@@ -160,7 +160,7 @@ const ensureSingleInstance = () => {
 
 const ensureCorrectEnvironment = () => {
   // check that the app is either packaged or running in the python venv
-  if (!chiaEnvironment.guessPackaged() && !('VIRTUAL_ENV' in process.env)) {
+  if (!cactusEnvironment.guessPackaged() && !('VIRTUAL_ENV' in process.env)) {
     app.quit();
     return false;
   }
@@ -186,7 +186,7 @@ if (ensureSingleInstance() && ensureCorrectEnvironment()) {
 
   const createWindow = async () => {
     if (manageDaemonLifetime(NET)) {
-      chiaEnvironment.startChiaDaemon();
+      cactusEnvironment.startCactusDaemon();
     }
 
     ipcMain.handle('getConfig', () => loadConfig(NET));
@@ -758,27 +758,27 @@ function getMenuTemplate() {
       role: 'help',
       submenu: [
         {
-          label: i18n._(/* i18n */ { id: 'Chia Blockchain Wiki' }),
+          label: i18n._(/* i18n */ { id: 'Cactus Blockchain Wiki' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/wiki');
+            openExternal('https://github.com/Cactus-Network/cactus-blockchain/wiki');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Frequently Asked Questions' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/wiki/FAQ');
+            openExternal('https://github.com/Cactus-Network/cactus-blockchain/wiki/FAQ');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Release Notes' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/releases');
+            openExternal('https://github.com/Cactus-Network/cactus-blockchain/releases');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Contribute on GitHub' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/blob/main/CONTRIBUTING.md');
+            openExternal('https://github.com/Cactus-Network/cactus-blockchain/blob/main/CONTRIBUTING.md');
           },
         },
         {
@@ -787,19 +787,19 @@ function getMenuTemplate() {
         {
           label: i18n._(/* i18n */ { id: 'Report an Issue...' }),
           click: () => {
-            openExternal('https://github.com/Chia-Network/chia-blockchain/issues');
+            openExternal('https://github.com/Cactus-Network/cactus-blockchain/issues');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Chat on Discord' }),
           click: () => {
-            openExternal('https://discord.gg/chia');
+            openExternal('https://discord.gg/cactus');
           },
         },
         {
           label: i18n._(/* i18n */ { id: 'Follow on Twitter' }),
           click: () => {
-            openExternal('https://twitter.com/chia_project');
+            openExternal('https://twitter.com/cactus_project');
           },
         },
       ],
@@ -807,12 +807,12 @@ function getMenuTemplate() {
   ];
 
   if (process.platform === 'darwin') {
-    // Chia Blockchain menu (Mac)
+    // Cactus Blockchain menu (Mac)
     template.unshift({
-      label: i18n._(/* i18n */ { id: 'Chia' }),
+      label: i18n._(/* i18n */ { id: 'Cactus' }),
       submenu: [
         {
-          label: i18n._(/* i18n */ { id: 'About Chia Blockchain' }),
+          label: i18n._(/* i18n */ { id: 'About Cactus Blockchain' }),
           click: () => {
             openAbout();
           },
@@ -905,7 +905,7 @@ function getMenuTemplate() {
         type: 'separator',
       },
       {
-        label: i18n._(/* i18n */ { id: 'About Chia Blockchain' }),
+        label: i18n._(/* i18n */ { id: 'About Cactus Blockchain' }),
         click() {
           openAbout();
         },

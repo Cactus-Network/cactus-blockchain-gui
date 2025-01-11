@@ -4,8 +4,8 @@ import optionsForPlotter from '../utils/optionsForPlotter';
 import PlotterName from './PlotterName';
 
 export default {
-  displayName: 'Chia Proof of Space',
-  options: optionsForPlotter(PlotterName.CHIAPOS),
-  defaults: defaultsForPlotter(PlotterName.CHIAPOS),
+  displayName: 'Cactus Proof of Space',
+  options: optionsForPlotter(PlotterName.CACTUSPOS),
+  defaults: defaultsForPlotter(PlotterName.CACTUSPOS),
   installInfo: { installed: true },
 };

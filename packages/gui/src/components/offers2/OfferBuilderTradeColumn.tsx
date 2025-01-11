@@ -1,5 +1,5 @@
-import { Color, Flex } from '@chia-network/core';
-import { Offering, Requesting } from '@chia-network/icons';
+import { Color, Flex } from '@cactus-network/core';
+import { Offering, Requesting } from '@cactus-network/icons';
 import { Trans } from '@lingui/macro';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';

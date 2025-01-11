@@ -1,5 +1,5 @@
-import { SyncingStatus } from '@chia-network/api';
-import { useGetSyncStatusQuery } from '@chia-network/api-react';
+import { SyncingStatus } from '@cactus-network/api';
+import { useGetSyncStatusQuery } from '@cactus-network/api-react';
 
 import getWalletSyncingStatus from '../utils/getWalletSyncingStatus';
 

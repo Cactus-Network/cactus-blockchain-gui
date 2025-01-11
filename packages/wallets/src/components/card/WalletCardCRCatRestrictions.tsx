@@ -1,5 +1,5 @@
-import { useGetWalletsQuery } from '@chia-network/api-react';
-import { CardSimple } from '@chia-network/core';
+import { useGetWalletsQuery } from '@cactus-network/api-react';
+import { CardSimple } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Box, Typography } from '@mui/material';
 import React, { useMemo } from 'react';

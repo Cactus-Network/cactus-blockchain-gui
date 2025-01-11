@@ -10,7 +10,7 @@ import Daemon from './services/Daemon';
 import ErrorData from './utils/ErrorData';
 import sleep from './utils/sleep';
 
-const log = debug('chia-api:client');
+const log = debug('cactus-api:client');
 
 type Options = {
   url: string;

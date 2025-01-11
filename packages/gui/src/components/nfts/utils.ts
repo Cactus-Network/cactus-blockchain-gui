@@ -1,5 +1,5 @@
-import { WalletType } from '@chia-network/api';
-import type { Wallet } from '@chia-network/api';
+import { WalletType } from '@cactus-network/api';
+import type { Wallet } from '@cactus-network/api';
 
 /**
  * Locate the NFT "inbox" from a list of NFT wallets. The inbox is the NFT wallet

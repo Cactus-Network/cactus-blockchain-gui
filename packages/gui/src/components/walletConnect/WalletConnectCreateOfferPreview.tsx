@@ -1,4 +1,4 @@
-import { Button, Flex, Loading, useOpenDialog, chiaToMojo } from '@chia-network/core';
+import { Button, Flex, Loading, useOpenDialog, cactusToMojo } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import React, { useMemo } from 'react';
 
@@ -33,9 +33,9 @@ export default function WalletConnectCreateOfferPreview(props: WalletConnectOffe
     const offerBuilderDataResult = await openDialog(<OfferBuilderViewerDialog offerBuilderData={offerBuilderData} />);
     if (offerBuilderDataResult) {
       // use new fee value
-      const feeChia = offerBuilderDataResult.offered.fee?.[0]?.amount;
-      if (feeChia) {
-        const feeMojos = feeChia ? chiaToMojo(feeChia).toFixed() : '0';
+      const feeCactus = offerBuilderDataResult.offered.fee?.[0]?.amount;
+      if (feeCactus) {
+        const feeMojos = feeCactus ? cactusToMojo(feeCactus).toFixed() : '0';
         onChange({
           ...values,
           fee: feeMojos,

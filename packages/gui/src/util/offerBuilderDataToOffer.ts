@@ -1,6 +1,6 @@
-import type { Wallet } from '@chia-network/api';
-import { WalletType } from '@chia-network/api';
-import { chiaToMojo, catToMojo } from '@chia-network/core';
+import type { Wallet } from '@cactus-network/api';
+import { WalletType } from '@cactus-network/api';
+import { cactusToMojo, catToMojo } from '@cactus-network/core';
 import { t } from '@lingui/macro';
 import BigNumber from 'bignumber.js';
 
@@ -66,7 +66,7 @@ export default async function offerBuilderDataToOffer({
 
   const usedNFTs: string[] = [];
 
-  const feeInMojos = firstFee ? chiaToMojo(firstFee.amount) : new BigNumber(0);
+  const feeInMojos = firstFee ? cactusToMojo(firstFee.amount) : new BigNumber(0);
 
   const walletIdsAndAmounts: Record<string, BigNumber> = {};
   const driverDict: Record<string, Driver> = {};
@@ -165,7 +165,7 @@ export default async function offerBuilderDataToOffer({
       throw new Error(t`No standard wallet found`);
     }
 
-    const mojoAmount = chiaToMojo(amount);
+    const mojoAmount = cactusToMojo(amount);
     walletIdsAndAmounts[standardWallet.id] = mojoAmount.negated();
 
     const spendableBalance = new BigNumber(standardWalletBalance.spendableBalance);
@@ -307,7 +307,7 @@ export default async function offerBuilderDataToOffer({
       throw new Error(t`Cannot offer and request the same asset`);
     }
 
-    walletIdsAndAmounts[wallet.id] = chiaToMojo(amount);
+    walletIdsAndAmounts[wallet.id] = cactusToMojo(amount);
   });
 
   requestedTokens.forEach((token) => {

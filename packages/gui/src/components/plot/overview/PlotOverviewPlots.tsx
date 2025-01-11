@@ -1,5 +1,5 @@
-import { useRefreshPlotsMutation, useGetPlotDirectoriesQuery } from '@chia-network/api-react';
-import { Button, Flex, useOpenDialog, MenuItem, More } from '@chia-network/core';
+import { useRefreshPlotsMutation, useGetPlotDirectoriesQuery } from '@cactus-network/api-react';
+import { Button, Flex, useOpenDialog, MenuItem, More } from '@cactus-network/core';
 import { Trans } from '@lingui/macro';
 import { Folder, Refresh } from '@mui/icons-material';
 import { ListItemIcon, Typography } from '@mui/material';
