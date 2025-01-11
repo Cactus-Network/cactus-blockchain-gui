@@ -56,7 +56,7 @@ export default function WalletConnectAddConnectionDialog(props: WalletConnectAdd
   const [sortedWallets] = usePrefs('sortedWallets', []);
 
   const { data: fingerprint, isLoading: isLoadingLoggedInFingerprint } = useGetLoggedInFingerprintQuery();
-  const mainnet = useCurrencyCode() === 'XCH';
+  const mainnet = useCurrencyCode() === 'CAC';
   const methods = useForm<FormData>({
     defaultValues: {
       uri: '',

@@ -126,7 +126,7 @@ export default function CrCatApprovePendingDialog(props: Props) {
               color="secondary"
               fullWidth
               sx={{ width: '300px', textAlign: 'left' }}
-              txType={FeeTxType.walletSendXCH}
+              txType={FeeTxType.walletSendCAC}
             />
           </Flex>
         </DialogContent>

@@ -44,9 +44,9 @@ export function ConfirmOfferCancellation(props: ConfirmOfferCancellationProps) {
   }
 
   async function handleConfirm() {
-    const { fee: xchFee } = methods.getValues();
+    const { fee: cacFee } = methods.getValues();
 
-    const fee = cancelWithTransaction ? cactusToMojo(xchFee) : new BigNumber(0);
+    const fee = cancelWithTransaction ? cactusToMojo(cacFee) : new BigNumber(0);
 
     onClose([true, { cancelWithTransaction, cancellationFee: fee }]);
   }

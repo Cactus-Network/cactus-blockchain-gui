@@ -99,7 +99,7 @@ function FarmHealth() {
   const { data: missingSpsData, isLoading: isLoadingMissingSps } = useGetMissingSignagePointsQuery();
   const [resetMissingSps] = useResetMissingSignagePointsMutation();
   const { data: poolStateData, isLoading: isLoadingPoolStateData } = useGetPoolStateQuery();
-  const isTestnet = (useCurrencyCode() ?? 'XCH').toUpperCase() === 'TXCH';
+  const isTestnet = (useCurrencyCode() ?? 'CAC').toUpperCase() === 'TCAC';
   const { data: filterChallengeStat, isLoading: isLoadingFilterChallengeStat } = useGetFilterChallengeStatQuery({
     height: blockchainState?.peak?.height || 0,
     isTestnet,

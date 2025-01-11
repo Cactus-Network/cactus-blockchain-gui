@@ -259,7 +259,7 @@ export default function NotificationSendDialog(props: NotificationSendDialogProp
                       <EstimatedFee
                         name="fee"
                         label={<Trans>Transaction Fee</Trans>}
-                        txType={FeeTxType.walletSendXCH}
+                        txType={FeeTxType.walletSendCAC}
                         disabled={isSendNotificationLoading}
                         fullWidth
                       />

@@ -112,8 +112,8 @@ enum WalletConnectCommandParamName {
   WALLET_IDS = 'walletIds',
   WALLET_IDS_AND_AMOUNTS = 'walletIdsAndAmounts',
   WITH_RECOVERY_INFO = 'withRecoveryInfo',
-  XCH_COINS = 'xchCoins',
-  XCH_CHANGE_TARGET = 'xchChangeTarget',
+  CAC_COINS = 'cacCoins',
+  CAC_CHANGE_TARGET = 'cacChangeTarget',
   SAFE_MODE = 'safeMode',
 }
 

@@ -41,7 +41,7 @@ export function summaryStringsForNFTOffer(
   builder: (filename: string, args: [assetInfo: AssetIdMapEntry | undefined, amount: string]) => string,
 ): [makerString: string, takerString: string] {
   // const makerAssetType = offerAssetTypeForAssetId
-  // TODO: Remove 1:1 NFT <--> XCH assumption
+  // TODO: Remove 1:1 NFT <--> CAC assumption
   const makerEntry: [string, string] = Object.entries(summary.offered)[0] as [string, string];
   const takerEntry: [string, string] = Object.entries(summary.requested)[0] as [string, string];
   const makerAssetType = offerAssetTypeForAssetId(makerEntry[0], summary);
@@ -188,7 +188,7 @@ export function offerContainsAssetOfType(
 export function offerAssetTypeForAssetId(assetId: string, offerSummary: OfferSummaryRecord): OfferAsset | undefined {
   let assetType: OfferAsset | undefined;
 
-  if (['xch', 'txch'].includes(assetId)) {
+  if (['cac', 'tcac'].includes(assetId)) {
     assetType = OfferAsset.CACTUS;
   } else {
     const { infos } = offerSummary;
@@ -224,7 +224,7 @@ export function offerAssetIdForAssetType(
   }
 
   if (assetType === OfferAsset.CACTUS) {
-    return keys.includes('xch') ? 'xch' : undefined;
+    return keys.includes('cac') ? 'cac' : undefined;
   }
 
   const assetId = Object.keys(offerSummary.infos).find(

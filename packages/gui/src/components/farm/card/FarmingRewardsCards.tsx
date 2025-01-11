@@ -98,24 +98,24 @@ function FarmingRewardsCards() {
     );
   }, [proportion, expectedTimeToWinSeconds, fullNodeState, isLoading, error]);
 
-  const estimatedDailyXCHCard = React.useMemo(() => {
+  const estimatedDailyCACCard = React.useMemo(() => {
     if (fullNodeState !== FullNodeState.SYNCED || !expectedTimeToWinSeconds || !data) {
       const state = fullNodeState === FullNodeState.SYNCHING ? State.WARNING : undefined;
 
-      return <FarmCardNotAvailable title={<Trans>Estimated daily XCH</Trans>} state={state} />;
+      return <FarmCardNotAvailable title={<Trans>Estimated daily CAC</Trans>} state={state} />;
     }
 
-    const estimatedDailyXCH = new BigNumber(86_400)
+    const estimatedDailyCAC = new BigNumber(86_400)
       .div(expectedTimeToWinSeconds)
       .multipliedBy(getBlockRewardByHeight(data.peak.height))
       .dp(0);
 
     return (
       <CardSimple
-        title={<Trans>Estimated daily XCH</Trans>}
+        title={<Trans>Estimated daily CAC</Trans>}
         value={
           <>
-            {mojoToCactusLocaleString(estimatedDailyXCH, locale)}
+            {mojoToCactusLocaleString(estimatedDailyCAC, locale)}
             &nbsp;
             {currencyCode}
           </>
@@ -126,24 +126,24 @@ function FarmingRewardsCards() {
     );
   }, [data, expectedTimeToWinSeconds, fullNodeState, isLoading, error, currencyCode, locale]);
 
-  const estimatedMonthlyXCHCard = React.useMemo(() => {
+  const estimatedMonthlyCACCard = React.useMemo(() => {
     if (fullNodeState !== FullNodeState.SYNCED || !expectedTimeToWinSeconds || !data) {
       const state = fullNodeState === FullNodeState.SYNCHING ? State.WARNING : undefined;
 
-      return <FarmCardNotAvailable title={<Trans>Estimated monthly XCH</Trans>} state={state} />;
+      return <FarmCardNotAvailable title={<Trans>Estimated monthly CAC</Trans>} state={state} />;
     }
 
-    const estimatedMonthlyXCH = new BigNumber(86_400 * 31)
+    const estimatedMonthlyCAC = new BigNumber(86_400 * 31)
       .div(expectedTimeToWinSeconds)
       .multipliedBy(getBlockRewardByHeight(data.peak.height))
       .dp(0);
 
     return (
       <CardSimple
-        title={<Trans>Estimated monthly XCH</Trans>}
+        title={<Trans>Estimated monthly CAC</Trans>}
         value={
           <>
-            {mojoToCactusLocaleString(estimatedMonthlyXCH, locale)}
+            {mojoToCactusLocaleString(estimatedMonthlyCAC, locale)}
             &nbsp;
             {currencyCode}
           </>
@@ -164,10 +164,10 @@ function FarmingRewardsCards() {
           {expectedTimeToWinCard}
         </Grid>
         <Grid xs={12} sm={6} md={4} item>
-          {estimatedDailyXCHCard}
+          {estimatedDailyCACCard}
         </Grid>
         <Grid xs={12} sm={6} md={4} item>
-          {estimatedMonthlyXCHCard}
+          {estimatedMonthlyCACCard}
         </Grid>
       </Grid>
     </Box>

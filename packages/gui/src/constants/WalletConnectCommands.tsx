@@ -699,14 +699,14 @@ const walletConnectCommands: WalletConnectCommand[] = [
         isOptional: true,
       },
       {
-        name: WalletConnectCommandParamName.XCH_COINS,
-        label: <Trans>XCH Coins</Trans>,
+        name: WalletConnectCommandParamName.CAC_COINS,
+        label: <Trans>CAC Coins</Trans>,
         type: 'object',
         isOptional: true,
       },
       {
-        name: WalletConnectCommandParamName.XCH_CHANGE_TARGET,
-        label: <Trans>XCH Change Target</Trans>,
+        name: WalletConnectCommandParamName.CAC_CHANGE_TARGET,
+        label: <Trans>CAC Change Target</Trans>,
         type: 'string',
         isOptional: true,
       },

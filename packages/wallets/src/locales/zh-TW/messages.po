@@ -649,8 +649,8 @@ msgid "Syncing"
 msgstr "同步中"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "衍生索引設置錢包掃描區塊鏈的地址範圍。如果您有大量的交易或取消的 XCH、CATs 或 NFTs 的報價，則這個數字通常會較高。如果您認為您的餘額不正確，因為缺少硬幣，則增加衍生索引可能有助於將缺少的硬幣納入餘額總計。"
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "衍生索引設置錢包掃描區塊鏈的地址範圍。如果您有大量的交易或取消的 CAC、CATs 或 NFTs 的報價，則這個數字通常會較高。如果您認為您的餘額不正確，因為缺少硬幣，則增加衍生索引可能有助於將缺少的硬幣納入餘額總計。"
 
 #: src/components/cat/WalletCATSend.tsx:200
 msgid "The recipient of this transaction will need to have valid credentials in order to claim the sent assets. See the CR CAT restrictions above."

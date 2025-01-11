@@ -10,13 +10,13 @@ import useStandardWallet from '../../hooks/useStandardWallet';
 import OfferBuilderSection from './OfferBuilderSection';
 import OfferBuilderWalletAmount from './OfferBuilderWalletAmount';
 
-export type OfferBuilderXCHSectionProps = {
+export type OfferBuilderCACSectionProps = {
   name: string;
   offering?: boolean;
   muted?: boolean;
 };
 
-export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProps) {
+export default function OfferBuilderCACSection(props: OfferBuilderCACSectionProps) {
   const { name, offering, muted = false } = props;
   const { wallet, loading: isLoadingWallet } = useStandardWallet();
   const currencyCode = useCurrencyCode();
@@ -26,10 +26,10 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
   const amount =
     useWatch({
       name,
-    })?.[0]?.amount ?? 0; // Assume there's only 1 XCH field per trade side
+    })?.[0]?.amount ?? 0; // Assume there's only 1 CAC field per trade side
   const { requestedRoyalties, offeredRoyalties, isCalculatingRoyalties } = useOfferBuilderContext();
 
-  // Yes, this is correct. Fungible (XCH) assets used to pay royalties are from the opposite side of the trade.
+  // Yes, this is correct. Fungible (CAC) assets used to pay royalties are from the opposite side of the trade.
   const allRoyalties = offering ? requestedRoyalties : offeredRoyalties;
 
   const loading = isLoadingWallet || isCalculatingRoyalties;
@@ -42,7 +42,7 @@ export default function OfferBuilderXCHSection(props: OfferBuilderXCHSectionProp
     let amountWithRoyaltiesLocal = cactusToMojo(amount);
     const rows: Record<string, any>[] = [];
     Object.entries(allRoyalties).forEach(([nftId, royaltyPaymentsLocal]) => {
-      const matchingPayment = royaltyPaymentsLocal?.find((payment) => payment.asset === 'xch');
+      const matchingPayment = royaltyPaymentsLocal?.find((payment) => payment.asset === 'cac');
       if (matchingPayment) {
         amountWithRoyaltiesLocal = amountWithRoyaltiesLocal.plus(matchingPayment.amount);
         rows.push({

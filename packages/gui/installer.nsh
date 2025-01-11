@@ -14,9 +14,9 @@ Page custom checkIsCactusRunning checkIsCactusRunningLeave
 ;https://nsis.sourceforge.io/StrTok_function
 ;author bigmac666
 Function StrTok
-  Exch $R1
-  Exch 1
-  Exch $R0
+  Ecac $R1
+  Ecac 1
+  Ecac $R0
   Push $R2
   Push $R3
   Push $R4
@@ -71,9 +71,9 @@ Function StrTok
   Pop $R4
   Pop $R3
   Pop $R2
-  Exch $R0
-  Exch 1
-  Exch $R1
+  Ecac $R0
+  Ecac 1
+  Ecac $R1
  
 FunctionEnd
 
@@ -279,7 +279,7 @@ FunctionEnd
 
 Function UpdatePath
   ; Parameters: $0 - "all" for all users, "CurrentUser" for the current user
-  Exch $0
+  Ecac $0
   Push $1
   Push $2
   Push $3

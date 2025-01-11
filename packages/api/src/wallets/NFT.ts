@@ -55,8 +55,8 @@ export default class NFTWallet extends Wallet {
     targetList?: string[];
     mintNumberStart?: number;
     mintTotal?: number;
-    xchCoins?: Coin[];
-    xchChangeTarget?: string;
+    cacCoins?: Coin[];
+    cacChangeTarget?: string;
     newInnerpuzhash?: string;
     newP2Puzhash?: string;
     didCoin?: Coin;

@@ -44,7 +44,7 @@
 //   // await page.locator('#mui-component-select-p2SingletonPuzzleHash').click();
 //   // await page.getByRole('option', { name: 'Maroon Narwhal' }).click();
 //   // await page.getByRole('button', { name: 'Create' }).click();
-//   // await page.getByRole('row', { name: 'K-32, 101.348 GiB 0x8fa56b619e3b6d05c83412f839289dc1d90c4f92ab46ce98fd1b5b4309ab656bae6c92ab8b9769efbf1d31825c3eb647 txch17j7llengm98vtsdr03x0nz92l73hhszz58celd34vc68y69th5xsjg8f6d /Users/jahifaw/Downloads/plot-k32-2023-02-22-14-24-292325f6852d3b371917b32701e832fba2a333cedf73ce3b8845faff94b34983.plot Not Available more' }).getByRole('button', { name: 'more' }).click();
+//   // await page.getByRole('row', { name: 'K-32, 101.348 GiB 0x8fa56b619e3b6d05c83412f839289dc1d90c4f92ab46ce98fd1b5b4309ab656bae6c92ab8b9769efbf1d31825c3eb647 tcac17j7llengm98vtsdr03x0nz92l73hhszz58celd34vc68y69th5xsjg8f6d /Users/jahifaw/Downloads/plot-k32-2023-02-22-14-24-292325f6852d3b371917b32701e832fba2a333cedf73ce3b8845faff94b34983.plot Not Available more' }).getByRole('button', { name: 'more' }).click();
 //   // await page.getByRole('menuitem', { name: 'Delete' }).click();
 //   // await page.getByRole('button', { name: 'Delete' }).click();
 

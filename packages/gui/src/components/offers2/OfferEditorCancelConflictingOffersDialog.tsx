@@ -24,8 +24,8 @@ function getSpendableAmountUponUnlockingAssets(assetStatus: AssetStatusForOffer,
   let { spendableAmount } = assetStatus;
   for (let s = 0; s < assetsToBeUnlocked.length; s++) {
     const lockedAsset = assetsToBeUnlocked[s];
-    if (lockedAsset.type === 'XCH' && assetStatus.type === 'XCH') {
-      // assetId might be either 'XCH' or 'UNKNOWN'(maybe fee) but here both are treated as just a XCH spending
+    if (lockedAsset.type === 'CAC' && assetStatus.type === 'CAC') {
+      // assetId might be either 'CAC' or 'UNKNOWN'(maybe fee) but here both are treated as just a CAC spending
       spendableAmount = spendableAmount.plus(lockedAsset.amount);
     } else if (lockedAsset.type === assetStatus.type && lockedAsset.assetId === assetStatus.assetId) {
       if (assetStatus.type === 'CAT') {

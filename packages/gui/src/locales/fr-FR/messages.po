@@ -319,8 +319,8 @@ msgid "<0>Loading...</0> {0}%"
 msgstr "<0>Chargement...</0> {0}%"
 
 #: src/components/settings/ProfileAdd.tsx:80
-#~ msgid "<0>Need some XCH?</0>"
-#~ msgstr "<0>Need some XCH?</0>"
+#~ msgid "<0>Need some CAC?</0>"
+#~ msgstr "<0>Need some CAC?</0>"
 
 #: src/components/nfts/gallery/NFTGallery.tsx:296
 msgid "<0>Showing</0> {0} <1>of</1> {1}  <2>items</2>"
@@ -540,6 +540,14 @@ msgstr "Montant"
 msgid "Amount before adding royalties"
 msgstr "Montant sans royalties"
 
+#: src/util/offerBuilderDataToOffer.ts:59
+#~ msgid "Amount exceeds CAC spendable balance"
+#~ msgstr ""
+
+#: src/util/offerBuilderDataToOffer.ts:174
+msgid "Amount exceeds CAC total balance"
+msgstr "Le montant dépasse le solde de CAC dépensables"
+
 #: src/components/offers/NFTOfferEditor.tsx:593
 #: src/components/offers/OfferEditor.tsx:109
 msgid "Amount exceeds spendable balance"
@@ -552,14 +560,6 @@ msgstr "Le montant dépasse le solde disponible"
 #: src/util/offerBuilderDataToOffer.ts:242
 msgid "Amount exceeds total balance for {catName} token"
 msgstr "Le montant dépasse le solde dépensable pour le jeton {catName}"
-
-#: src/util/offerBuilderDataToOffer.ts:59
-#~ msgid "Amount exceeds XCH spendable balance"
-#~ msgstr ""
-
-#: src/util/offerBuilderDataToOffer.ts:174
-msgid "Amount exceeds XCH total balance"
-msgstr "Le montant dépasse le solde de XCH dépensables"
 
 #: src/components/walletConnect/WalletConnectRequestPermissionsConfirmDialog.tsx:98
 msgid "An app has requested permission to execute the following commands."
@@ -734,8 +734,8 @@ msgid "Badging"
 msgstr "Badges"
 
 #: src/components/settings/ProfileAdd.tsx:98
-#~ msgid "Balance: {standardBalance} XCH"
-#~ msgstr "Balance: {standardBalance} XCH"
+#~ msgid "Balance: {standardBalance} CAC"
+#~ msgstr "Balance: {standardBalance} CAC"
 
 #: src/components/block/Block.jsx:236
 msgid "Base Farmer Reward Amount"
@@ -833,6 +833,14 @@ msgstr "Acheter un NFT"
 msgid "By providing a signing address, the public key can be validated as being associated with the address used for signing."
 msgstr "En fournissant une adresse de signature, la clé publique peut être validée comme étant associée à l'adresse utilisée pour la signature."
 
+#: src/constants/WalletConnectCommands.tsx:709
+msgid "CAC Change Target"
+msgstr ""
+
+#: src/constants/WalletConnectCommands.tsx:703
+msgid "CAC Coins"
+msgstr ""
+
 #: src/components/settings/SettingsNFT.tsx:134
 msgid "Cache"
 msgstr "Cache"
@@ -845,12 +853,12 @@ msgstr "Taille du cache (Go)"
 #~ msgid "Cactus"
 #~ msgstr "Cactus"
 
-#: src/components/offers2/OfferBuilderXCHSection.tsx:77
+#: src/components/offers2/OfferBuilderCACSection.tsx:77
 msgid "Cactus ({currencyCode}) is a digital currency that is secure and sustainable"
 msgstr "Cactus ({currencyCode}) est une monnaie numérique sécurisée et durable"
 
 #: src/components/offers2/OfferBuilderTokensSection.tsx:115
-msgid "Cactus Asset Tokens (CATs) are tokens built on top of XCH"
+msgid "Cactus Asset Tokens (CATs) are tokens built on top of CAC"
 msgstr "Les CATs (Cactus Asset Tokens) sont des jetons sur la blockchain Cactus"
 
 #: src/electron/main.tsx:1047
@@ -1268,8 +1276,8 @@ msgid "Create & Manage plots"
 msgstr "Créer et gérer les parcelles"
 
 #: src/components/offers/OfferManager.tsx:416
-msgid "Create a file that you can use to trade XCH, Cactus Asset Tokens, or NFTs with no counter-party risk."
-msgstr "Créez un fichier qui permet d'échanger des jetons XCH, CAT ou NFT sans risque."
+msgid "Create a file that you can use to trade CAC, Cactus Asset Tokens, or NFTs with no counter-party risk."
+msgstr "Créez un fichier qui permet d'échanger des jetons CAC, CAT ou NFT sans risque."
 
 #: src/components/settings/ProfileAdd.tsx:113
 msgid "Create a new profile"
@@ -1444,8 +1452,8 @@ msgid "Decompressor Thread Count"
 msgstr "Nombre de processus pour la décompression"
 
 #: src/components/settings/SettingsCustody.tsx:41
-msgid "Default claw back time for outgoing XCH transactions"
-msgstr "Temps de récupération par défaut pour les transactions XCH sortantes"
+msgid "Default claw back time for outgoing CAC transactions"
+msgstr "Temps de récupération par défaut pour les transactions CAC sortantes"
 
 #: src/components/settings/SettingsCustodyClawbackOutgoing.tsx:114
 msgid "Default claw back time is disabled."
@@ -1920,13 +1928,13 @@ msgstr "Échap"
 #: src/components/farm/card/EstimatedEarning.tsx:65
 #: src/components/farm/card/FarmingRewardsCards.tsx:105
 #: src/components/farm/card/FarmingRewardsCards.tsx:115
-msgid "Estimated daily XCH"
+msgid "Estimated daily CAC"
 msgstr ""
 
 #: src/components/farm/card/EstimatedEarning.tsx:65
 #: src/components/farm/card/FarmingRewardsCards.tsx:133
 #: src/components/farm/card/FarmingRewardsCards.tsx:143
-msgid "Estimated monthly XCH"
+msgid "Estimated monthly CAC"
 msgstr ""
 
 #: src/components/fullNode/card/FullNodeEstimatedNetworkSpace.tsx:14
@@ -2143,8 +2151,8 @@ msgid "Fee (Optional)"
 msgstr "Frais (facultatif)"
 
 #: src/util/offerBuilderDataToOffer.ts:199
-msgid "Fee exceeds XCH total balance"
-msgstr "Les frais excèdent le solde total de XCH"
+msgid "Fee exceeds CAC total balance"
+msgstr "Les frais excèdent le solde total de CAC"
 
 #: src/components/plotNFT/PlotNFTChangePool.tsx:115
 msgid "Fee is used TWICE: once to leave pool, once to join."
@@ -2643,8 +2651,8 @@ msgstr "Inclure les métadonnées du portefeuille"
 
 #: src/components/offers/NFTOfferEditor.tsx:88
 #: src/components/offers/OfferEditorConditionsPanel.tsx:393
-msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 XCH (5,000,000 mojos)"
-msgstr "Inclure des frais dans l'offre peut accélérer la transaction lorsque celle-ci est acceptée. Les frais minimums recommandés sont de 0.000005 XCH (5 000 000 mojos)"
+msgid "Including a fee in the offer can help expedite the transaction when the offer is accepted. The recommended minimum fee is 0.000005 CAC (5,000,000 mojos)"
+msgstr "Inclure des frais dans l'offre peut accélérer la transaction lorsque celle-ci est acceptée. Les frais minimums recommandés sont de 0.000005 CAC (5 000 000 mojos)"
 
 #: src/components/offers2/OfferIncomingTable.tsx:121
 msgid "Incoming Offers"
@@ -2769,16 +2777,16 @@ msgid "Join a Pool"
 msgstr "Rejoindre un pool"
 
 #: src/components/plot/add/PlotAddNFT.tsx:49
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile."
-msgstr "Rejoignez un pool et obtenez des récompenses de culture XCH substantielles. Le rendement moyen est le même, mais il est beaucoup moins volatile."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile."
+msgstr "Rejoignez un pool et obtenez des récompenses de culture CAC substantielles. Le rendement moyen est le même, mais il est beaucoup moins volatile."
 
 #: src/components/plotNFT/PlotNFTAdd.tsx:62
-msgid "Join a pool and get consistent XCH farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
-msgstr "Rejoignez un pool et obtenez des récompenses de culture régulières en XCH. Le rendement moyen est le même, mais il est beaucoup moins volatil. Affectez des parcelles à un NFT de parcelles. Vous pourrez facilement changer de pool sans avoir à re-tracer vos parcelles."
+msgid "Join a pool and get consistent CAC farming rewards. The average returns are the same, but it is much less volatile. Assign plots to a plot NFT. You can easily switch pools without having to re-plot."
+msgstr "Rejoignez un pool et obtenez des récompenses de culture régulières en CAC. Le rendement moyen est le même, mais il est beaucoup moins volatil. Affectez des parcelles à un NFT de parcelles. Vous pourrez facilement changer de pool sans avoir à re-tracer vos parcelles."
 
 #: src/components/plot/add/PlotAddNFT.tsx:137
-msgid "Join a pool and get more consistent XCH farming rewards. Create a plot NFT and assign your new plots to a group."
-msgstr "Rejoignez un pool et obtenez des récompenses de culture régulières en XCH. Créez un NFT de parcelles et affectez vos nouvelles parcelles à un groupe."
+msgid "Join a pool and get more consistent CAC farming rewards. Create a plot NFT and assign your new plots to a group."
+msgstr "Rejoignez un pool et obtenez des récompenses de culture régulières en CAC. Créez un NFT de parcelles et affectez vos nouvelles parcelles à un groupe."
 
 #: src/components/app/AppSelectMode.tsx:133
 msgid "Join farming pools"
@@ -3540,7 +3548,7 @@ msgid "Not Synced"
 msgstr "Non Synchronisé"
 
 #: src/components/farm/FarmManageFarmingRewards.tsx:152
-msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.125XCH reward for pooling plots."
+msgid "Note that this does not change your pooling payout addresses. This only affects old format plots, and the 0.125CAC reward for pooling plots."
 msgstr ""
 
 #: src/components/plot/add/PlotAddChooseKeys.tsx:99
@@ -4031,14 +4039,14 @@ msgstr "Veuillez entrer un montant pour le jeton {catName}"
 msgid "Please enter an amount for each row"
 msgstr "Veuillez saisir un montant pour chaque ligne"
 
+#: src/util/offerBuilderDataToOffer.ts:162
+#: src/util/offerBuilderDataToOffer.ts:298
+msgid "Please enter an CAC amount"
+msgstr "Veuillez saisir un montant de CAC"
+
 #: src/components/offers/NFTOfferEditor.tsx:580
 msgid "Please enter an NFT identifier"
 msgstr "Veuillez saisir un identifiant NFT"
-
-#: src/util/offerBuilderDataToOffer.ts:162
-#: src/util/offerBuilderDataToOffer.ts:298
-msgid "Please enter an XCH amount"
-msgstr "Veuillez saisir un montant de XCH"
 
 #: src/components/settings/ChangePassphrasePrompt.tsx:86
 msgid "Please enter your current passphrase, and a new passphrase"
@@ -4485,8 +4493,8 @@ msgid "Recommended"
 msgstr "Recommandé"
 
 #: src/components/settings/ProfileAdd.tsx:114
-#~ msgid "Recommended: 0.000005 XCH"
-#~ msgstr "Recommended: 0.000005 XCH"
+#~ msgid "Recommended: 0.000005 CAC"
+#~ msgstr "Recommended: 0.000005 CAC"
 
 #: src/constants/WalletConnectCommands.tsx:1536
 msgid "Recovery List Hash"
@@ -4898,8 +4906,8 @@ msgid "Selected"
 msgstr "Sélectionné"
 
 #: src/components/plotNFT/select/PlotNFTSelectBase.tsx:93
-msgid "Self pool. When you win a block you will earn XCH rewards."
-msgstr "Pool solitaire. Vous gagnerez des récompenses XCH lorsque vous gagnez un bloc."
+msgid "Self pool. When you win a block you will earn CAC rewards."
+msgstr "Pool solitaire. Vous gagnerez des récompenses CAC lorsque vous gagnez un bloc."
 
 #: src/components/plotNFT/PlotNFTExternalState.tsx:24
 #: src/components/plotNFT/PlotNFTState.tsx:55
@@ -4933,8 +4941,8 @@ msgid "Send Transaction"
 msgstr "Envoyer la transaction"
 
 #: src/components/settings/SettingsCustody.tsx:45
-msgid "Set a default time frame for all outbound XCH transactions."
-msgstr "Définir une période par défaut pour toutes les transactions XCH sortantes."
+msgid "Set a default time frame for all outbound CAC transactions."
+msgstr "Définir une période par défaut pour toutes les transactions CAC sortantes."
 
 #: src/components/offers2/OfferBuilderExpirationSection.tsx:187
 msgid "Set a time after which this offer expires."
@@ -5108,8 +5116,8 @@ msgid "Skips adding a final directory to harvester for farming"
 msgstr "Ignorer l'ajout d'un répertoire final au moissonneur pour la culture"
 
 #: src/components/pool/PoolHero.tsx:21
-msgid "Smooth out your XCH farming rewards by joining a pool."
-msgstr "Aplanissez le rythme de vos récoltes XCH en rejoignant un pool."
+msgid "Smooth out your CAC farming rewards by joining a pool."
+msgstr "Aplanissez le rythme de vos récoltes CAC en rejoignant un pool."
 
 #: src/components/plot/add/PlotAddChooseKeys.tsx:179
 msgid "Solo Farming"
@@ -5220,8 +5228,8 @@ msgid "Status"
 msgstr "Statut"
 
 #: src/components/app/AppSelectMode.tsx:78
-msgid "Store and Send XCH"
-msgstr "Stocker et envoyer des XCH"
+msgid "Store and Send CAC"
+msgstr "Stocker et envoyer des CAC"
 
 #: src/constants/WalletConnectCommands.tsx:899
 #: src/constants/WalletConnectCommands.tsx:953
@@ -5354,8 +5362,8 @@ msgid "The claw back time can be manually adjusted per transaction."
 msgstr "Le temps de récupération peut être ajusté manuellement pour chaque transaction."
 
 #: src/components/settings/SettingsPanel.tsx:169
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "L'indice de dérivation définit le nombre d'adresses que le portefeuille va scanner sur la blockchain. Ce nombre est généralement plus élevé si vous avez beaucoup de transactions ou d'offres annulées pour XCH, CATs ou NFTs. Si vous pensez que votre solde est incorrect car il manque des pièces, alors augmenter l'indice de dérivation pourrait aider le portefeuille à inclure les pièces manquantes dans le total du solde."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "L'indice de dérivation définit le nombre d'adresses que le portefeuille va scanner sur la blockchain. Ce nombre est généralement plus élevé si vous avez beaucoup de transactions ou d'offres annulées pour CAC, CATs ou NFTs. Si vous pensez que votre solde est incorrect car il manque des pièces, alors augmenter l'indice de dérivation pourrait aider le portefeuille à inclure les pièces manquantes dans le total du solde."
 
 #: src/components/plot/add/PlotAddSelectHybridDiskMode.tsx:148
 #: src/components/plot/add/PlotAddSelectHybridDiskMode.tsx:197
@@ -5487,8 +5495,8 @@ msgid "There was a network issue and your Full Node or Farmer could not receive 
 msgstr ""
 
 #: src/components/plotNFT/PlotNFTPayoutInstructionsDialog.tsx:92
-msgid "These are the instructions for how the farmer wants to get paid. By default this will be an XCH address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
-msgstr "Ce sont les instructions du paiement du fermier. Par défaut, il s'agira d'une adresse XCH, mais toute chaîne de caractères d'une taille inférieure à 1024 caractères peut être saisie, de telle sorte qu'une autre blockchain ou qu'un autre identifiant de système de paiement puissent être représentés."
+msgid "These are the instructions for how the farmer wants to get paid. By default this will be an CAC address, but it can be set to any string with a size of less than 1024 characters, so it can represent another blockchain or payment system identifier."
+msgstr "Ce sont les instructions du paiement du fermier. Par défaut, il s'agira d'une adresse CAC, mais toute chaîne de caractères d'une taille inférieure à 1024 caractères peut être saisie, de telle sorte qu'une autre blockchain ou qu'un autre identifiant de système de paiement puissent être représentés."
 
 #: src/components/plot/card/PlotCardPlotsFailedToOpen.tsx:13
 msgid "These plots are invalid, you might want to delete them."
@@ -5682,6 +5690,11 @@ msgstr "Montant total demandé"
 msgid "Total Amount with Royalties"
 msgstr "Montant Total avec Royalties"
 
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
+#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
+msgid "Total CAC Farmed"
+msgstr "Total des CAC Cultivés"
+
 #: src/components/farm/card/FarmCardTotalCactusFarmed.tsx:27
 #~ msgid "Total Cactus Farmed"
 #~ msgstr "Total Cactus Farmed"
@@ -5757,11 +5770,6 @@ msgstr "Espace Total"
 #: src/components/block/Block.jsx:186
 msgid "Total VDF Iterations"
 msgstr "Itérations VDF totales"
-
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:31
-#: src/components/farm/card/FarmingRewardsHistoryCards.tsx:82
-msgid "Total XCH Farmed"
-msgstr "Total des XCH Cultivés"
 
 #: src/components/plot/add/PlotAddNumberOfPlots.tsx:362
 msgid "Touch all pages of buffer allocations before starting to plot."
@@ -6375,14 +6383,6 @@ msgstr "Voulez-vous transférer le NFT sélectionné vers un profil ?"
 #: src/components/nfts/NFTTransferAction.tsx:227
 msgid "Would you like to transfer the specified NFT to a new owner?"
 msgstr "Voulez-vous transférer le NFT spécifié à un nouveau propriétaire ?"
-
-#: src/constants/WalletConnectCommands.tsx:709
-msgid "XCH Change Target"
-msgstr ""
-
-#: src/constants/WalletConnectCommands.tsx:703
-msgid "XCH Coins"
-msgstr ""
 
 #: src/components/plot/add/PlotAddChooseSize.tsx:61
 #: src/components/vcs/VCCard.tsx:89

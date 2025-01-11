@@ -647,8 +647,8 @@ msgid "Syncing"
 msgstr "同期中"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "導出指数はウォレットがブロックチェーン上で検索するウォレットアドレスの範囲を定めます。XCH、 CAT、または NFT の取引や取り下げた取引依頼の総数が多い方では高めの値に設定されていることがあります。もしご自身の残高の値が誤っていて、全てのコインを反映できていないと考えられる場合、導出指数を上げることでウォレットが反映できていないコインを見つけられ、残高に反映できる場合があります。"
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "導出指数はウォレットがブロックチェーン上で検索するウォレットアドレスの範囲を定めます。CAC、 CAT、または NFT の取引や取り下げた取引依頼の総数が多い方では高めの値に設定されていることがあります。もしご自身の残高の値が誤っていて、全てのコインを反映できていないと考えられる場合、導出指数を上げることでウォレットが反映できていないコインを見つけられ、残高に反映できる場合があります。"
 
 #: src/components/cat/WalletCATSend.tsx:200
 msgid "The recipient of this transaction will need to have valid credentials in order to claim the sent assets. See the CR CAT restrictions above."

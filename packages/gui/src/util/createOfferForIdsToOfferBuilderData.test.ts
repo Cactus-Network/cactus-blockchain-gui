@@ -15,7 +15,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
     jest.clearAllMocks();
   });
 
-  describe('when offering XCH for CAT', () => {
+  describe('when offering CAC for CAT', () => {
     it('should return a valid offer builder data object', () => {
       const calledLookupByWalletIdWithIds: string[] = [];
       const assetIdMapEntriesByWalletId: Record<string, AssetIdMapEntry> = {
@@ -24,9 +24,9 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           walletType: 0, // STANDARD_WALLET
           isVerified: true,
           name: 'Cactus',
-          symbol: 'XCH',
-          displayName: 'XCH',
-          assetId: 'xch',
+          symbol: 'CAC',
+          displayName: 'CAC',
+          assetId: 'cac',
         },
         2: {
           walletId: 2,
@@ -63,13 +63,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [{ amount: '111.555' }],
+          cac: [{ amount: '111.555' }],
           tokens: [],
           nfts: [],
           fee: [],
         },
         requested: {
-          xch: [],
+          cac: [],
           tokens: [{ amount: '600', assetId: 'f17f88130c63522821f1a75466849354eee69c414c774bd9f3873ab643e9574d' }],
           nfts: [],
           fee: [],
@@ -78,7 +78,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
     });
   });
 
-  describe('when offering a CAT for XCH', () => {
+  describe('when offering a CAT for CAC', () => {
     it('should return a valid offer builder data object', () => {
       const calledLookupByWalletIdWithIds: string[] = [];
       const assetIdMapEntriesByWalletId: Record<string, AssetIdMapEntry> = {
@@ -87,9 +87,9 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           walletType: 0, // STANDARD_WALLET
           isVerified: true,
           name: 'Cactus',
-          symbol: 'XCH',
-          displayName: 'XCH',
-          assetId: 'xch',
+          symbol: 'CAC',
+          displayName: 'CAC',
+          assetId: 'cac',
         },
         2: {
           walletId: 2,
@@ -121,7 +121,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [],
+          cac: [],
           tokens: [
             {
               amount: '1.234',
@@ -132,7 +132,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           fee: [],
         },
         requested: {
-          xch: [
+          cac: [
             {
               amount: '2',
             },
@@ -144,7 +144,7 @@ describe('createOfferForIdsToOfferBuilderData', () => {
       });
     });
   });
-  describe('when offering XCH for an NFT', () => {
+  describe('when offering CAC for an NFT', () => {
     it('should return a valid offer builder data object', () => {
       const calledLookupByWalletIdWithIds: string[] = [];
       const assetIdMapEntriesByWalletId: Record<string, AssetIdMapEntry> = {
@@ -153,9 +153,9 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           walletType: 0, // STANDARD_WALLET
           isVerified: true,
           name: 'Cactus',
-          symbol: 'XCH',
-          displayName: 'XCH',
-          assetId: 'xch',
+          symbol: 'CAC',
+          displayName: 'CAC',
+          assetId: 'cac',
         },
       };
 
@@ -180,13 +180,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [{ amount: '3' }],
+          cac: [{ amount: '3' }],
           tokens: [],
           nfts: [],
           fee: [],
         },
         requested: {
-          xch: [],
+          cac: [],
           tokens: [],
           nfts: [
             {
@@ -233,9 +233,9 @@ describe('createOfferForIdsToOfferBuilderData', () => {
           walletType: 0, // STANDARD_WALLET
           isVerified: true,
           name: 'Cactus',
-          symbol: 'XCH',
-          displayName: 'XCH',
-          assetId: 'xch',
+          symbol: 'CAC',
+          displayName: 'CAC',
+          assetId: 'cac',
         },
         2: {
           walletId: 2,
@@ -266,13 +266,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [],
+          cac: [],
           tokens: [],
           nfts: [],
           fee: [],
         },
         requested: {
-          xch: [
+          cac: [
             {
               amount: '0.5',
             },
@@ -313,13 +313,13 @@ describe('createOfferForIdsToOfferBuilderData', () => {
 
       expect(result).toEqual({
         offered: {
-          xch: [],
+          cac: [],
           tokens: [],
           nfts: [],
           fee: [],
         },
         requested: {
-          xch: [],
+          cac: [],
           tokens: [],
           nfts: [],
           fee: [],

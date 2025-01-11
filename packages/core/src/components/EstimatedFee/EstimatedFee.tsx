@@ -158,7 +158,7 @@ function CountdownBar({ startTime, refreshSeconds }: { startTime: number; refres
 }
 
 export enum FeeTxType {
-  walletSendXCH = 'send_xch_transaction',
+  walletSendCAC = 'send_cac_transaction',
   spendCATtx = 'cat_spend',
   acceptOffer = 'take_offer',
   cancelOffer = 'cancel_offer',
@@ -255,9 +255,9 @@ export default function EstimatedFee(props: FeeProps) {
       if (selectedTime) {
         const estimate = formattedEstimates.find((formattedEstimate) => formattedEstimate.minutes === selectedTime);
         if (estimate) {
-          const xchFee = mojoToCactusLocaleString(estimate.estimate, 'en-US');
+          const cacFee = mojoToCactusLocaleString(estimate.estimate, 'en-US');
           setSelectedValue(estimate.formattedEstimate);
-          setValue(name, xchFee);
+          setValue(name, cacFee);
         }
       }
     }

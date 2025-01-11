@@ -1,6 +1,6 @@
 type OfferBuilderData = {
   offered: {
-    xch: {
+    cac: {
       amount: string;
     }[];
     tokens: {
@@ -19,7 +19,7 @@ type OfferBuilderData = {
     }[];
   };
   requested: {
-    xch: {
+    cac: {
       amount: string;
     }[];
     tokens: {

@@ -20,7 +20,7 @@ export default function OfferBuilderWalletBalance(props: OfferBuilderWalletBalan
 
   const isLoading = isLoadingWalletBalance || loading;
 
-  const xchBalance = useMemo(() => {
+  const cacBalance = useMemo(() => {
     if (isLoading || !wallet || !walletBalance || !('spendableBalance' in walletBalance)) {
       return undefined;
     }
@@ -36,7 +36,7 @@ export default function OfferBuilderWalletBalance(props: OfferBuilderWalletBalan
     return undefined;
   }, [isLoading, wallet, walletBalance, locale]);
 
-  if (!isLoading && xchBalance === undefined) {
+  if (!isLoading && cacBalance === undefined) {
     return null;
   }
 
@@ -47,7 +47,7 @@ export default function OfferBuilderWalletBalance(props: OfferBuilderWalletBalan
         'Loading...'
       ) : (
         <>
-          {xchBalance}
+          {cacBalance}
           &nbsp;
           {unit?.toUpperCase()}
         </>

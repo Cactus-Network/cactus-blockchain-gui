@@ -79,7 +79,7 @@ export default function VCRevokeDialog(props: ConfirmDialogProps) {
                   disabled={isSubmitting}
                   label={<Trans>Fee</Trans>}
                   fullWidth
-                  txType={FeeTxType.walletSendXCH}
+                  txType={FeeTxType.walletSendCAC}
                 />
               </Form>
             )}
