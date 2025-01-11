@@ -36,7 +36,7 @@
     "@babel/preset-env": "7.25.4",
     "@babel/preset-typescript": "7.24.7",
     "@rollup/plugin-babel": "6.0.4",
-    "@rollup/plugin-commonjs": "25.0.4",
+    "@rollup/plugin-commonjs": "28.0.2",
     "@rollup/plugin-node-resolve": "15.2.1",
     "@types/core-js": "2.5.5",
     "@types/debug": "4.1.12",
