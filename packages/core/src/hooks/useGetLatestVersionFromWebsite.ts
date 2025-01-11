@@ -26,7 +26,7 @@ export default function useGetLatestVersionFromWebsite(): UseGetLatestVersionFro
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [latestVersionURL] = useLocalStorage<string>(
     'latestVersionURL',
-    'https://download.cactus.net/latest/latest.json',
+    'https://download.cactus-network.net/latest/latest.json',
   );
   const [skipVersions, setSkipVersions] = useLocalStorage<string[]>('skipVersions', []);
   const { version: appVersion } = useAppVersion();
@@ -55,14 +55,14 @@ export default function useGetLatestVersionFromWebsite(): UseGetLatestVersionFro
         }, 1000); /* we need the delay, otherwise dialog will close too fast */
       } catch (e) {
         /* we don't need to handle error here, if we are unable to fetch version number
-           from cactus.net, we just ignore showing reminder dialog */
+           from cactus-network.net, we just ignore showing reminder dialog */
       }
     });
   }, [latestVersionURL]);
 
-  const downloadUrl = downloadPath ? new URL(downloadPath, 'https://www.cactus.net/').toString() : undefined;
-  const releaseNotesUrl = releaseNotesPath ? new URL(releaseNotesPath, 'https://www.cactus.net/').toString() : undefined;
-  const blogUrl = blogPath ? new URL(blogPath, 'https://www.cactus.net/').toString() : undefined;
+  const downloadUrl = downloadPath ? new URL(downloadPath, 'https://www.cactus-network.net/').toString() : undefined;
+  const releaseNotesUrl = releaseNotesPath ? new URL(releaseNotesPath, 'https://www.cactus-network.net/').toString() : undefined;
+  const blogUrl = blogPath ? new URL(blogPath, 'https://www.cactus-network.net/').toString() : undefined;
 
   return {
     appVersion,

@@ -6,8 +6,8 @@ import useWalletConnectPreferences from './useWalletConnectPreferences';
 const defaultMetadata = {
   name: 'Cactus Blockchain',
   description: 'GUI for Cactus Blockchain',
-  url: 'https://www.cactus.net',
-  icons: ['https://www.cactus.net/wp-content/uploads/2022/09/cactus-logo.svg'],
+  url: 'https://www.cactus-network.net',
+  icons: ['https://www.cactus-network.net/wp-content/uploads/2022/09/cactus-logo.svg'],
 };
 
 export type UseWalletConnectConfig = {

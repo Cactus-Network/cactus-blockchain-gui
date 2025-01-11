@@ -17,9 +17,9 @@ export default function PlotNFTSelectFaucet(props: Props) {
 
   const handleClick = React.useCallback(() => {
     if (currencyCode === 'TCAC') {
-      openExternal('https://testnet11-faucet.cactus.net/');
+      openExternal('https://testnet11-faucet.cactus-network.net/');
     } else {
-      openExternal('https://faucet.cactus.net/');
+      openExternal('https://faucet.cactus-network.net/');
     }
   }, [currencyCode, openExternal]);
 

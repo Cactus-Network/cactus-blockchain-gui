@@ -80,7 +80,7 @@ const PlotAddNFT = forwardRef((props: Props, ref) => {
               need to replot in order to join any of the standard pools.
             </Trans>
             &nbsp;
-            <Link target="_blank" href="https://docs.cactus.net/pool-farming">
+            <Link target="_blank" href="https://docs.cactus-network.net/pool-farming">
               <Trans>Learn more</Trans>
             </Link>
           </Typography>

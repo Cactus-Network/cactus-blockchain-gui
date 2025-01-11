@@ -30,7 +30,7 @@ async function openFAQURL(): Promise<void> {
 async function openSendFeedbackURL(): Promise<void> {
   try {
     const { shell } = window as any;
-    await shell.openExternal('https://feedback.cactus.net/lightwallet');
+    await shell.openExternal('https://feedback.cactus-network.net/lightwallet');
   } catch (e) {
     console.error(e);
   }

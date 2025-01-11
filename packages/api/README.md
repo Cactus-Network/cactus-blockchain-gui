@@ -1,10 +1,10 @@
 # cactus-blockchain-gui/api
 
-![Cactus logo](https://www.cactus.net/wp-content/uploads/2022/09/cactus-logo.svg)
+![Cactus logo](https://www.cactus-network.net/wp-content/uploads/2022/09/cactus-logo.svg)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Cactus-Network/cactus-blockchain-gui?logo=GitHub)
 
-This library provides support for TypeScript/JavaScript [Cactus](https://www.cactus.net) apps to access the [Cactus Blockchain RPC](https://docs.cactus.net/rpc/), by making it easier to perform the following actions:
+This library provides support for TypeScript/JavaScript [Cactus](https://www.cactus-network.net) apps to access the [Cactus Blockchain RPC](https://docs.cactus-network.net/rpc/), by making it easier to perform the following actions:
 
 - Making requests to the Cactus Blockchain RPC.
 - Catch responses and errors with standard try/catch and async/await syntax.

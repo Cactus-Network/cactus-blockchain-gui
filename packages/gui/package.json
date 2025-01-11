@@ -1,6 +1,6 @@
 {
   "name": "@cactus-network/gui",
-  "author": "Cactus Network <hello@cactus.net> (https://cactus.net/)",
+  "author": "Cactus Network <hello@cactus-network.net> (https://cactus-network.net/)",
   "description": "GUI for Cactus Blockchain",
   "license": "Apache-2.0",
   "productName": "Cactus Blockchain",

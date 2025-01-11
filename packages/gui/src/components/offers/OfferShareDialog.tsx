@@ -81,7 +81,7 @@ type CommonShareServiceDialogProps = CommonDialogProps & {
 
 type OfferShareServiceDialogProps = CommonOfferProps & CommonShareServiceDialogProps;
 
-const testnetDummyHost = 'offers-api-sim.cactus.net';
+const testnetDummyHost = 'offers-api-sim.cactus-network.net';
 
 const OfferSharingProviders: {
   [key in OfferSharingService]: OfferSharingProvider;

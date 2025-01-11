@@ -68,7 +68,7 @@ export default function ProfileAdd() {
   const canCreateProfile = (balance?.spendableBalance ?? 0) > 0;
 
   function handleClick() {
-    const url = `https://${isTestnet ? 'testnet11-faucet.cactus.net' : 'faucet.cactus.net'}/?address=${currentAddress}`;
+    const url = `https://${isTestnet ? 'testnet11-faucet.cactus-network.net' : 'faucet.cactus-network.net'}/?address=${currentAddress}`;
     openExternal(url);
   }
 

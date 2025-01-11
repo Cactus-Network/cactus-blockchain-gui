@@ -337,7 +337,7 @@ function FarmHealth() {
               </td>
             </tr>
             <tr>
-              <Link target="_blank" href="https://docs.cactus.net/faq/#why-does-my-cactus-farm-say-missing-signage-points">
+              <Link target="_blank" href="https://docs.cactus-network.net/faq/#why-does-my-cactus-farm-say-missing-signage-points">
                 <Trans>Learn more</Trans>
               </Link>
             </tr>

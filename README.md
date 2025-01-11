@@ -1,6 +1,6 @@
 # cactus-blockchain-gui
 
-![Cactus logo](https://www.cactus.net/wp-content/uploads/2022/09/cactus-logo.svg)
+![Cactus logo](https://www.cactus-network.net/wp-content/uploads/2022/09/cactus-logo.svg)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Cactus-Network/cactus-blockchain-gui?logo=GitHub)
 
@@ -141,7 +141,7 @@ Do not edit files directly in the repo, but instead please head over to our [Cro
 
 ## Simulator / SimNet
 
-1. Please follow the [Install and configure the simulator](https://docs.cactus.net/guides/simulator-user-guide/). Do this step only once.
+1. Please follow the [Install and configure the simulator](https://docs.cactus-network.net/guides/simulator-user-guide/). Do this step only once.
 2. In the cactus-blockchain directory, run this to setup the ENV variables. Use these instead of the ones mentioned in the above guide.
 
 ```

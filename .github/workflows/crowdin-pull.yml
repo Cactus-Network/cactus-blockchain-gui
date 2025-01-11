@@ -68,7 +68,7 @@ jobs:
           pull_request_body: "New Crowdin translations by [Crowdin GH Action](https://github.com/crowdin/github-action)"
           pull_request_base_branch_name: "${{ inputs.pr_target || 'main' }}"
           github_user_name: "Cactus Automation"
-          github_user_email: "automation@cactus.net"
+          github_user_email: "automation@cactus-network.net"
           gpg_private_key: ${{ secrets.CACTUS_AUTOMATION_PRIVATE_GPG_KEY_RSA }}
           gpg_passphrase: ${{ secrets.CACTUS_AUTOMATION_PRIVATE_GPG_PASSPHRASE }}
           skip_ref_checkout: "true"

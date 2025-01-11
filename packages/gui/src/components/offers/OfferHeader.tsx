@@ -47,7 +47,7 @@ export default function OfferHeader(props: OfferHeaderProps) {
           {'This offer is no longer valid because it was accepted or cancelled. Click '}
           <Link
             target="_blank"
-            href="https://docs.cactus.net/getting-started/wallet-guide/#taker-attempts-to-accept-an-invalid-offer"
+            href="https://docs.cactus-network.net/getting-started/wallet-guide/#taker-attempts-to-accept-an-invalid-offer"
           >
             here
           </Link>{' '}

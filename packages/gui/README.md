@@ -1,6 +1,6 @@
 # cactus-blockchain-gui/gui
 
-![Cactus logo](https://www.cactus.net/wp-content/uploads/2022/09/cactus-logo.svg)
+![Cactus logo](https://www.cactus-network.net/wp-content/uploads/2022/09/cactus-logo.svg)
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Cactus-Network/cactus-blockchain-gui?logo=GitHub)
 
