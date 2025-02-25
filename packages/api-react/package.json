@@ -33,7 +33,7 @@
     "@babel/preset-env": "7.25.4",
     "@babel/preset-typescript": "7.24.7",
     "@cactus-network/api": "1.0.0",
-    "@reduxjs/toolkit": "1.9.5",
+    "@reduxjs/toolkit": "2.6.0",
     "@rollup/plugin-babel": "6.0.4",
     "@rollup/plugin-commonjs": "25.0.4",
     "@rollup/plugin-node-resolve": "15.2.1",
