@@ -49,6 +49,7 @@ const babelQuery = {
         },
       },
     ],
+
     DEV && require.resolve('react-refresh/babel'),
   ].filter(Boolean),
 };
@@ -58,7 +59,7 @@ export default {
   context: CONTEXT,
   devtool: DEV ? 'inline-source-map' : 'source-map',
   entry: path.join(CONTEXT, '/src/index'),
-  target: 'electron-renderer',
+  target: 'web',
   stats: 'errors-only',
   cache: {
     type: 'filesystem',
@@ -89,21 +90,15 @@ export default {
     publicPath: './',
     hashFunction: 'sha256',
   },
-  externals: {
-    bufferutil: 'bufferutil',
-    'utf-8-validate': 'utf-8-validate',
-  },
   resolve: {
     extensions: ['.wasm', '.mjs', '.ts', '.tsx', '.js', '.jsx', '.json'],
     modules: [path.resolve(CONTEXT, 'node_modules'), path.resolve(CONTEXT, '../../node_modules'), 'node_modules'],
     alias: {
       '@mui/styled-engine': '@mui/styled-engine-sc',
-      crypto: 'crypto-browserify',
-      stream: 'stream-browserify',
-      // Use `ws` package for nodejs instead of `ws` package for browsers
-      // Without this alias, webpack will bundle `ws` package for browsers
-      // See https://github.com/Cactus-Network/cactus-blockchain-gui/pull/2413#issuecomment-2181012908
-      ws: require.resolve('ws'),
+    },
+    fallback: {
+      buffer: require.resolve('buffer/'),
+      punycode: require.resolve('punycode/'),
     },
   },
   optimization: {
@@ -143,14 +138,21 @@ export default {
       shorthands: true,
       collections: true,
     }),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(DEV ? 'development' : 'production'),
+      'process.env.MULTIPLE_WALLETS': JSON.stringify(process.env.MULTIPLE_WALLETS),
+      'process.env.LOCAL_TEST': JSON.stringify(process.env.LOCAL_TEST),
       'process.env.BROWSER': true,
       IS_BROWSER: true,
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body',
+      scriptLoading: 'blocking',
+      publicPath: './',
     }),
     DEV && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),

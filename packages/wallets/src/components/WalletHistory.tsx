@@ -99,6 +99,14 @@ async function handleRowClick(
 
 const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location) => [
   {
+    width: '70px',
+    field: (row: Row, metadata, isExpanded, toggleExpand) => (
+      <IconButton aria-label="expand row" size="small" onClick={() => toggleExpand(row)}>
+        {isExpanded ? <ExpandLessIcon color="info" /> : <ExpandMoreIcon color="info" />}
+      </IconButton>
+    ),
+  },
+  {
     field: (row: Row, metadata) => {
       const isOutgoing = getIsOutgoingTransaction(row);
 
@@ -119,7 +127,11 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
           &nbsp;
           <strong>
             <FormatLargeNumber
-              value={[WalletType.CAT, WalletType.CRCAT].includes(type) ? mojoToCAT(row.amount) : mojoToCactus(row.amount)}
+              value={
+                [WalletType.CAT, WalletType.RCAT, WalletType.CRCAT].includes(type)
+                  ? mojoToCAT(row.amount)
+                  : mojoToCactus(row.amount)
+              }
             />
           </strong>
           &nbsp;
@@ -234,15 +246,6 @@ const getCols = (type: WalletType, isSyncing, getOfferRecord, navigate, location
       </>
     ),
     title: <Trans>Fee</Trans>,
-  },
-
-  {
-    width: '70px',
-    field: (row: Row, metadata, isExpanded, toggleExpand) => (
-      <IconButton aria-label="expand row" size="small" onClick={() => toggleExpand(row)}>
-        {isExpanded ? <ExpandLessIcon color="info" /> : <ExpandMoreIcon color="info" />}
-      </IconButton>
-    ),
   },
 ];
 
@@ -386,8 +389,9 @@ export default function WalletHistory(props: Props) {
 
       const memoValues = memos ? Object.values(memos) : [];
 
-      const memoValuesDecoded = memoValues.map((memoHex) => {
+      const memoValuesDecoded = memoValues.map((mv) => {
         try {
+          const memoHex = (mv as string).replace(/^0x/, '');
           const buf = Buffer.from(memoHex, 'hex');
           const decodedValue = buf.toString('utf8');
           const bufCheck = Buffer.from(decodedValue, 'utf8');
@@ -397,7 +401,7 @@ export default function WalletHistory(props: Props) {
 
           return decodedValue;
         } catch (error: any) {
-          return memoHex;
+          return mv;
         }
       });
 

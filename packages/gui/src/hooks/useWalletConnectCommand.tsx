@@ -1,263 +1,108 @@
 import api, { store, useGetLoggedInFingerprintQuery } from '@cactus-network/api-react';
-import { useOpenDialog, useAuth } from '@cactus-network/core';
-import { Trans } from '@lingui/macro';
 import debug from 'debug';
-import React, { type ReactNode } from 'react';
+import JSONbig from 'json-bigint';
 
-import type Notification from '../@types/Notification';
-import type Pair from '../@types/Pair';
-import type WalletConnectCommandParam from '../@types/WalletConnectCommandParam';
-import WalletConnectConfirmDialog from '../components/walletConnect/WalletConnectConfirmDialog';
-import WalletConnectRequestPermissionsConfirmDialog from '../components/walletConnect/WalletConnectRequestPermissionsConfirmDialog';
-import NotificationType from '../constants/NotificationType';
-import walletConnectCommands from '../constants/WalletConnectCommands';
-import prepareWalletConnectCommand from '../util/prepareWalletConnectCommand';
+import { WcError, WcErrorCode } from '../@types/WcError';
 import waitForWalletSync from '../util/waitForWalletSync';
 
-import useWalletConnectPairs from './useWalletConnectPairs';
-import useWalletConnectPreferences from './useWalletConnectPreferences';
-
 const log = debug('cactus-gui:walletConnectCommand');
+const JSONbigNative = JSONbig({ useNativeBigInt: true });
 
-type UseWalletConnectCommandOptions = {
-  onNotification?: (notification: Notification) => void;
-};
+export default function useWalletConnectCommand() {
+  const { data: currentFingerprint, isLoading } = useGetLoggedInFingerprintQuery();
 
-function parseNotification(
-  fingerprint: number,
-  values: Record<string, string | number | boolean>,
-  pair: Pair,
-): Notification {
-  const { type, allFingerprints, offerData } = values;
+  async function handleProcess(
+    pairTopic: string,
+    command: string,
+    params: Record<string, unknown> & { fingerprint?: number },
+    ctx: { mainnet: boolean },
+  ) {
+    const { fingerprint } = params;
 
-  const from = pair.metadata?.name ?? <Trans>Unknown Dapp</Trans>;
-  const timestamp = Math.floor(new Date().getTime() / 1000);
-  const fingerprints = allFingerprints ? pair.fingerprints : [fingerprint];
-
-  const base = {
-    from,
-    timestamp,
-    fingerprints,
-  };
-
-  const uniqueRandomId = `wc-${new Date().getTime()}-${Math.floor(Math.random() * 1_000_000_000)}`;
-
-  if (type === NotificationType.OFFER) {
-    if (!offerData) {
-      throw new Error('Notification missing offerData');
-    }
-
-    return {
-      ...base,
-      type,
-      source: 'WALLET_CONNECT',
-      id: uniqueRandomId,
-      offerData: offerData.toString(),
-    };
-  }
-
-  if (type === NotificationType.ANNOUNCEMENT && 'message' in values) {
-    return {
-      ...base,
-      type,
-      source: 'WALLET_CONNECT',
-      id: uniqueRandomId,
-      message: values.message.toString(),
-      url: 'url' in values ? values.url.toString() : undefined,
-    };
-  }
-
-  throw new Error(`Invalid notification type ${type}`);
-}
-
-export default function useWalletConnectCommand(options: UseWalletConnectCommandOptions) {
-  const { onNotification } = options;
-  const openDialog = useOpenDialog();
-  const { logIn } = useAuth();
-  const { data: currentFingerprint, isLoading: isLoadingLoggedInFingerprint } = useGetLoggedInFingerprintQuery();
-  const { getPairBySession } = useWalletConnectPairs();
-
-  const { allowConfirmationFingerprintChange } = useWalletConnectPreferences();
-
-  const isLoading = isLoadingLoggedInFingerprint;
-
-  async function confirm(props: {
-    topic: string;
-    message: ReactNode;
-    params: WalletConnectCommandParam[];
-    values: Record<string, any>;
-    fingerprint: number;
-    isDifferentFingerprint: boolean;
-    command: string;
-    bypassConfirm?: boolean;
-    onChange: (values: Record<string, any>) => void;
-  }) {
-    const {
-      topic,
-      message,
-      params = [],
-      values,
-      fingerprint,
-      isDifferentFingerprint,
-      command,
-      bypassConfirm = false,
-      onChange,
-    } = props;
-
-    const pair = getPairBySession(topic);
+    // verify if pair exists
+    const pair = await window.permissionsAPI.findPair(pairTopic);
     if (!pair) {
-      throw new Error('Invalid session topic');
+      throw new WcError(`Pair not found`, WcErrorCode.INTERNAL_ERROR);
     }
 
-    if (pair.bypassCommands && command in pair.bypassCommands) {
-      log(`bypassing command ${command} with value ${pair.bypassCommands[command]}`);
-      return pair.bypassCommands[command];
+    if (ctx.mainnet !== pair.mainnet) {
+      throw new WcError(`Network mismatch`, WcErrorCode.UNSUPPORTED_CHAINS);
     }
-    if (command === 'requestPermissions') {
-      if (!values.commands || values.commands.some((cmd: string) => cmd === 'requestPermissions')) {
-        return false;
-      }
-      const { bypassCommands } = pair;
-      const hasPermissions = !!bypassCommands && values.commands.every((cmd: string) => bypassCommands[cmd]);
-      if (hasPermissions) {
-        return true;
-      }
-      const isConfirmed = await openDialog(
-        <WalletConnectRequestPermissionsConfirmDialog
-          topic={topic}
-          fingerprint={fingerprint}
-          isDifferentFingerprint={isDifferentFingerprint}
-          params={params}
-          values={values}
-          onChange={onChange}
-        />,
+
+    // verify if pair allows the requested command
+    if (!pair.commands.includes(command)) {
+      throw new WcError(`Command not allowed for this pair`, WcErrorCode.UNAUTHORIZED_METHOD);
+    }
+
+    // verify if pair allows the requested fingerprint
+    const requestedFingerprint = fingerprint ?? currentFingerprint;
+    if (
+      typeof requestedFingerprint !== 'number' ||
+      !requestedFingerprint ||
+      requestedFingerprint !== pair.fingerprint ||
+      currentFingerprint !== pair.fingerprint
+    ) {
+      throw new WcError(`Fingerprint not allowed for this command`, WcErrorCode.UNAUTHORIZED_METHOD);
+    }
+
+    // verify if command is supported
+    const commandMetadata = await window.permissionsAPI.getCommandMetadata(command);
+    if (!commandMetadata) {
+      throw new WcError(`Command not found`, WcErrorCode.METHOD_NOT_FOUND);
+    }
+
+    if (commandMetadata.requiresSync) {
+      log('Waiting for sync');
+      await waitForWalletSync();
+
+      const fingerprintRequest = store.dispatch(
+        api.endpoints.getLoggedInFingerprint.initiate(undefined, { forceRefetch: true }),
       );
-      return isConfirmed;
-    }
 
-    const isConfirmed = await openDialog(
-      <WalletConnectConfirmDialog
-        topic={topic}
-        command={command}
-        message={message}
-        fingerprint={fingerprint}
-        isDifferentFingerprint={isDifferentFingerprint}
-        bypassConfirm={bypassConfirm}
-        params={params}
-        values={values}
-        onChange={onChange}
-      />,
-    );
-    return isConfirmed;
-  }
+      try {
+        const fingerprintAfterSync = await fingerprintRequest.unwrap();
 
-  async function handleProcess(topic: string, requestedCommand: string, requestedParams: any) {
-    const {
-      command,
-      values: defaultValues,
-      definition,
-    } = prepareWalletConnectCommand(walletConnectCommands, requestedCommand, requestedParams);
+        // verify if current fingerprint after sync is still correct
+        const requestedFingerprintAfterSync = fingerprint ?? fingerprintAfterSync;
+        if (
+          typeof requestedFingerprintAfterSync !== 'number' ||
+          !requestedFingerprintAfterSync ||
+          requestedFingerprintAfterSync !== pair.fingerprint ||
+          fingerprintAfterSync !== pair.fingerprint
+        ) {
+          throw new WcError(`Fingerprint not allowed for this command`, WcErrorCode.UNAUTHORIZED_METHOD);
+        }
 
-    const { fingerprint } = requestedParams;
-
-    if (command === 'showNotification') {
-      const pair = getPairBySession(topic);
-      if (!pair) {
-        throw new Error('Invalid session topic');
-      }
-
-      const notification = parseNotification(fingerprint, defaultValues, pair);
-      onNotification?.(notification);
-
-      return {
-        success: true,
-      };
-    }
-
-    // validate fingerprint for current command
-    const { allFingerprints, waitForSync } = definition;
-    const isDifferentFingerprint = fingerprint !== currentFingerprint;
-    if (!allFingerprints) {
-      if (isDifferentFingerprint && !allowConfirmationFingerprintChange) {
-        throw new Error(`Invalid fingerprint ${fingerprint}`);
+        if (fingerprint && fingerprint !== fingerprintAfterSync) {
+          throw new WcError(`Fingerprint not allowed for this command`, WcErrorCode.INTERNAL_ERROR);
+        }
+      } finally {
+        fingerprintRequest.unsubscribe();
       }
     }
 
-    const { service, params: definitionParams = [], bypassConfirm } = definition;
+    const commandParams = {
+      ...params,
+    };
 
-    log('Confirm arguments', definitionParams);
-
-    let values = defaultValues;
-
-    function handleChangeParam(newValues: Record<string, any>) {
-      values = newValues;
+    // remove old waitForConfirmation - back compatibility, we are using requiresSync instead
+    if ('waitForConfirmation' in commandParams) {
+      delete commandParams.waitForConfirmation;
     }
 
-    const confirmed = await confirm({
-      topic,
-      message:
-        !allFingerprints && isDifferentFingerprint ? (
-          <Trans>
-            Do you want to log in to {fingerprint} and execute command {command}?
-          </Trans>
-        ) : (
-          <Trans>Do you want to execute command {command}?</Trans>
-        ),
-      params: definitionParams,
-      values,
-      fingerprint,
-      isDifferentFingerprint,
+    log('Executing', command, commandParams);
+
+    const result = await window.permissionsAPI.dispatchAsPair({
+      topic: pairTopic,
       command,
-      bypassConfirm,
-      onChange: handleChangeParam,
+      params: JSONbig.stringify(commandParams),
     });
 
-    if (!confirmed) {
-      throw new Error(`User cancelled command ${requestedCommand}`);
-    }
+    // parse result to object
+    const resultObject = JSONbigNative.parse(result);
 
-    // auto login before execute command
-    if (isDifferentFingerprint && allowConfirmationFingerprintChange) {
-      log('Changing fingerprint', fingerprint);
-      await logIn(fingerprint);
-    }
-
-    // wait for sync
-    if (waitForSync) {
-      log('Waiting for sync');
-      // wait for wallet synchronisation
-      await waitForWalletSync();
-    }
-
-    if (service === 'EXECUTE') {
-      const { execute } = definition;
-      const result = typeof execute === 'function' ? await execute(values) : execute;
-
-      return {
-        success: true,
-        ...result,
-      };
-    }
-
-    // validate current fingerprint again
-    const currentLoggedInFingerprintPromise = store.dispatch(api.endpoints.getLoggedInFingerprint.initiate());
-    const { data: currentFingerprintAfterWait } = await currentLoggedInFingerprintPromise;
-    currentLoggedInFingerprintPromise.unsubscribe();
-
-    if (currentFingerprintAfterWait !== fingerprint) {
-      throw new Error(`Fingerprint changed during execution`);
-    }
-
-    // execute command
-    log('Executing', command, values);
-    const resultPromise = store.dispatch(api.endpoints[command].initiate(values));
-    const result = await resultPromise;
-    log('Result', result);
-
-    // Removing the corresponding cache subscription
-    resultPromise.unsubscribe();
-
-    return result;
+    log('Result', resultObject);
+    return resultObject;
   }
 
   return {

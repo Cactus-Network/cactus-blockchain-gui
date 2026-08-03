@@ -20,8 +20,7 @@ const SendFeedback = styled.a`
 
 async function openFAQURL(): Promise<void> {
   try {
-    const { shell } = window as any;
-    await shell.openExternal('https://github.com/Cactus-Network/cactus-blockchain/wiki/FAQ');
+    await window.linkAPI.openExternal('https://github.com/Cactus-Network/cactus-blockchain/wiki/FAQ');
   } catch (e) {
     console.error(e);
   }
@@ -29,8 +28,7 @@ async function openFAQURL(): Promise<void> {
 
 async function openSendFeedbackURL(): Promise<void> {
   try {
-    const { shell } = window as any;
-    await shell.openExternal('https://feedback.cactus-network.net/lightwallet');
+    await window.linkAPI.openExternal('https://feedback.cactus-network.net/lightwallet');
   } catch (e) {
     console.error(e);
   }

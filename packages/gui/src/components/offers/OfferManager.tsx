@@ -1,10 +1,5 @@
 import { OfferTradeRecord, toBech32m } from '@cactus-network/api';
-import {
-  useCancelOfferMutation,
-  useGetTimestampForHeightQuery,
-  useGetHeightInfoQuery,
-  useGetWalletsQuery,
-} from '@cactus-network/api-react';
+import { useCancelOfferMutation, useCurrentBlockchainTime, useGetWalletsQuery } from '@cactus-network/api-react';
 import {
   Button,
   Card,
@@ -32,7 +27,6 @@ import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import useAssetIdName from '../../hooks/useAssetIdName';
 import useSaveOfferFile from '../../hooks/useSaveOfferFile';
 import useWalletOffers from '../../hooks/useWalletOffers';
-import getCurrentTime from '../../util/getCurrentTime';
 import offerToOfferBuilderData from '../../util/offerToOfferBuilderData';
 import resolveOfferInfo from '../../util/resolveOfferInfo';
 import NFTTitle from '../nfts/NFTTitle';
@@ -105,14 +99,7 @@ function OfferList(props: OfferListProps) {
 
   const isWalletSynced = useIsWalletSynced();
 
-  const { data: height, isLoading: isGetHeightInfoLoading } = useGetHeightInfoQuery(undefined, {
-    pollingInterval: 3000,
-  });
-  const { data: lastBlockTimeStampData, isLoading: isGetTimestampForHeightLoading } = useGetTimestampForHeightQuery(
-    { height: height || 0 },
-    { skip: !height },
-  );
-  const currentTime = getCurrentTime(lastBlockTimeStampData);
+  const { timestamp: currentTime, isLoading: isBlockchainTimeLoading } = useCurrentBlockchainTime();
 
   const cols = useMemo(() => {
     async function relistOffer(row: OfferTradeRecord, tradeId: string) {
@@ -231,7 +218,7 @@ function OfferList(props: OfferListProps) {
           let countdownDisplay = null;
           if (status !== 'CANCELLED' && validTimes.maxTime) {
             countdownDisplay =
-              !isGetHeightInfoLoading && !isGetTimestampForHeightLoading && isWalletSynced && currentTime !== 0
+              !isBlockchainTimeLoading && isWalletSynced && currentTime !== 0
                 ? OfferBuilderExpirationCountdown(currentTime, validTimes.maxTime, true)
                 : t`Loading expiration time...`;
           }
@@ -342,8 +329,7 @@ function OfferList(props: OfferListProps) {
     saveOffer,
     testnet,
     currentTime,
-    isGetHeightInfoLoading,
-    isGetTimestampForHeightLoading,
+    isBlockchainTimeLoading,
     isWalletSynced,
   ]);
 

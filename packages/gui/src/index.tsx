@@ -1,11 +1,45 @@
 import './wdyr.dev'; // must be first
 import './polyfill';
-import './config/env';
+
+// Make JSON.stringify BigInt-safe so WalletConnect's internal hash computation
+// (Verify API) doesn't crash when payloads contain BigInt values. Uses WC's own
+// "n"-suffix convention so hashes match the sender's patched sign-client.
+const origStringify = JSON.stringify;
+JSON.stringify = function jsonStringifyBigIntSafe(value: any, replacer?: any, space?: any) {
+  const effectiveReplacer = replacer || ((_: string, v: unknown) => (typeof v === 'bigint' ? `${v}n` : v));
+  return origStringify.call(JSON, value, effectiveReplacer, space);
+} as typeof JSON.stringify;
+
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 import App from './components/app/App';
 import initPrefs from './init-prefs';
+
+// The WalletConnect SDK can reject internal promises with "No matching key"
+// during benign stale-pairing races (e.g. reconnecting after storage cleanup)
+// from async paths outside our try/catch sites, producing noisy errors in
+// DevTools. Suppress those specific rejections but leave a visible breadcrumb
+// so they are not completely silent, and scope the suppression to
+// WalletConnect-originated errors so unrelated code paths are not swallowed.
+window.addEventListener('unhandledrejection', (event) => {
+  const { reason } = event;
+  const message = reason?.message ?? String(reason);
+  const stack: string = reason?.stack ?? '';
+
+  if (!message.includes('No matching key')) {
+    return;
+  }
+
+  const isWalletConnectOrigin = /walletconnect/i.test(stack);
+  if (!isWalletConnectOrigin) {
+    console.warn('[cactus-gui] "No matching key" rejection from non-WalletConnect origin; not suppressing:', reason);
+    return;
+  }
+
+  console.info('[cactus-gui] Suppressing WalletConnect stale-key rejection:', message);
+  event.preventDefault();
+});
 
 // we need to use additional root for hot reloading
 function Root() {

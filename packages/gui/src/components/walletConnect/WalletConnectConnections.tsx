@@ -8,12 +8,10 @@ import {
 import { Button, ListItemIcon, Typography, Divider } from '@mui/material';
 import React, { useCallback } from 'react';
 
-import useWalletConnectContext from '../../hooks/useWalletConnectContext';
+import useWalletConnect from '../../hooks/useWalletConnect';
 import useWalletConnectPreferences from '../../hooks/useWalletConnectPreferences';
 
 import WalletConnectAddConnectionDialog from './WalletConnectAddConnectionDialog';
-import WalletConnectConnectedDialog from './WalletConnectConnectedDialog';
-import WalletConnectPairInfoDialog from './WalletConnectPairInfoDialog';
 
 export type WalletConnectConnectionsProps = {
   onClose?: () => void;
@@ -24,39 +22,41 @@ export default function WalletConnectConnections(props: WalletConnectConnections
   const openDialog = useOpenDialog();
   const showError = useShowError();
   const { enabled, setEnabled } = useWalletConnectPreferences();
-  const { disconnect, pairs, isLoading } = useWalletConnectContext();
-
-  const handleAddConnection = useCallback(async () => {
-    onClose?.();
-    const topic = await openDialog(<WalletConnectAddConnectionDialog />);
-
-    if (topic) {
-      await openDialog(<WalletConnectConnectedDialog topic={topic} />);
-    }
-  }, [onClose, openDialog]);
-
-  async function handleDisconnect(topic: string) {
-    try {
-      onClose?.();
-      await disconnect(topic);
-    } catch (error) {
-      showError(error);
-    }
-  }
+  const { disconnectPair, pairs, isLoading } = useWalletConnect();
 
   function handleEnableWalletConnect() {
     setEnabled(true);
   }
 
-  const handleShowMoreInfo = useCallback(
-    (topic: string) => {
+  const handleAddConnection = useCallback(async () => {
+    try {
       onClose?.();
-      openDialog(<WalletConnectPairInfoDialog topic={topic} />);
-    },
-    [onClose, openDialog],
-  );
+      await openDialog(<WalletConnectAddConnectionDialog />);
+    } catch (err) {
+      showError(err);
+    }
+  }, [onClose, showError, openDialog]);
 
-  const pairsList = pairs.get();
+  async function handleDisconnectPair(topic: string) {
+    try {
+      onClose?.();
+      await disconnectPair(topic);
+    } catch (error) {
+      showError(error);
+    }
+  }
+
+  const handleEdit = useCallback(
+    async (topic: string) => {
+      onClose?.();
+      try {
+        await window.permissionsAPI.editPair(topic);
+      } catch (err) {
+        showError(err);
+      }
+    },
+    [onClose, showError],
+  );
 
   return (
     <Flex flexDirection="column" gap={1}>
@@ -66,24 +66,24 @@ export default function WalletConnectConnections(props: WalletConnectConnections
         </Typography>
         {isLoading ? (
           <Loading center />
-        ) : enabled && pairsList.length ? (
+        ) : enabled && pairs.length > 0 ? (
           <Flex flexDirection="column">
-            {pairsList.map((pair) => (
+            {pairs.map((pair) => (
               <Flex alignItems="center" key={pair.topic} justifyContent="space-between">
                 <Flex alignItems="center" gap={1}>
-                  <CheckCircleTwoToneIcon color={pair.sessions.length ? 'primary' : 'secondary'} />
+                  <CheckCircleTwoToneIcon color={pair.sessions > 0 ? 'primary' : 'secondary'} />
                   <Typography>{pair.metadata?.name ?? <Trans>Unknown Application</Trans>}</Typography>
                 </Flex>
                 <More>
-                  <MenuItem onClick={() => handleShowMoreInfo(pair.topic)} close>
+                  <MenuItem onClick={() => handleEdit(pair.topic)} close>
                     <ListItemIcon>
                       <EditIcon fontSize="small" color="info" />
                     </ListItemIcon>
                     <Typography variant="inherit" noWrap>
-                      <Trans>More Info</Trans>
+                      <Trans>Edit</Trans>
                     </Typography>
                   </MenuItem>
-                  <MenuItem onClick={() => handleDisconnect(pair.topic)} close>
+                  <MenuItem onClick={() => handleDisconnectPair(pair.topic)} close>
                     <ListItemIcon>
                       <DeleteIcon fontSize="small" color="info" />
                     </ListItemIcon>

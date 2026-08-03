@@ -8,7 +8,7 @@ msgstr ""
 "Language: fa_IR\n"
 "Project-Id-Version: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-12-08 00:05\n"
+"PO-Revision-Date: 2026-05-17 00:21\n"
 "Last-Translator: \n"
 "Language-Team: Persian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 25\n"
 
-#: src/components/WalletHistory.tsx:117
+#: src/components/WalletHistory.tsx:125
 msgid "-"
 msgstr "-"
 
@@ -30,7 +30,7 @@ msgstr "- یادداشت به طرف گیرنده کمک میکند تا پرد�
 msgid "- Set a time frame which allows you claw back (revoke) the transaction.<0/>- Recipient of the transaction can only claim the funds once that time frame expires."
 msgstr "- یک بازه زمانی تعیین کنید که به شما امکان میدهد تراکنش را پس بگیرید (لغو کنید).<0/>- گیرنده تراکنش فقط زمانی میتواند وجوه را مطالبه کند که این بازه زمانی منقضی شود."
 
-#: src/components/WalletHistory.tsx:117
+#: src/components/WalletHistory.tsx:125
 msgid "+"
 msgstr "+"
 
@@ -48,7 +48,7 @@ msgstr "گزینه ای را به بازگرداندن تراکنش اضافه �
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:68
-#: src/components/WalletsManageTokens.tsx:154
+#: src/components/WalletsManageTokens.tsx:155
 msgid "Add Token"
 msgstr "اضافه نمودن توکن"
 
@@ -94,7 +94,7 @@ msgstr "تراکنش های معلق را تأیید کنید"
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "آیا مطمئن هستید که میخواهید تراکنش های تایید نشده را حذف کنید؟"
 
-#: src/components/WalletHistory.tsx:130
+#: src/components/WalletHistory.tsx:142
 msgid "Asset"
 msgstr "دارایی"
 
@@ -124,13 +124,7 @@ msgstr ".از این به بعد تراکنسهای بازگرداندن خود�
 msgid "Before sending this transaction, you should ensure that the recipient has a wallet that can claim it manually after the timer has expired."
 msgstr "قبل از ارسال این تراکنش، باید اطمینان حاصل کنید که گیرنده کیف پولی دارد که پس از انقضای زمان مشخص میتواند آن را به صورت دستی مطالبه کند."
 
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr "توکن دارایی چیا"
-
-#: src/components/WalletHistoryClawbackChip.tsx:61
+#: src/components/WalletHistoryClawbackChip.tsx:53
 msgid "Can be claimed in "
 msgstr "قابلیت گرفتن در "
 
@@ -141,7 +135,7 @@ msgstr "لغو"
 
 #: src/components/cat/WalletCATSend.tsx:117
 #: src/components/WalletSend.tsx:153
-msgid "Cannot send cactus to coloured address. Please enter a cactus address."
+msgid "Cannot send chia to coloured address. Please enter a chia address."
 msgstr "خطا: چیا را به آدرس رنگی نمیتوان ارسال کرد. لطفاً یک آدرس چیا وارد کنید."
 
 #: src/components/card/WalletCardCRCatRestrictions.tsx:40
@@ -152,7 +146,13 @@ msgstr "محدودیت های اعتبار CAT"
 #~ msgid "Check my snapshot balance"
 #~ msgstr "Check my snapshot balance"
 
-#: src/components/WalletHistoryClawbackChip.tsx:68
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Chia Asset Token"
+msgstr "توکن دارایی چیا"
+
+#: src/components/WalletHistoryClawbackChip.tsx:60
 msgid "Claim transaction"
 msgstr "تراکنش گرفتن"
 
@@ -161,7 +161,7 @@ msgstr "تراکنش گرفتن"
 msgid "Claim Transaction"
 msgstr "تراکنش بازگرداندن"
 
-#: src/components/WalletHistoryClawbackChip.tsx:83
+#: src/components/WalletHistoryClawbackChip.tsx:75
 msgid "Claiming..."
 msgstr "...در حال گرقتن"
 
@@ -169,11 +169,11 @@ msgstr "...در حال گرقتن"
 msgid "Classic version of Stably USDS as held by Prime Trust"
 msgstr "نسخه کلاسیک توکن استیبل یو اس دی اس که توسط پرایم تراست نگهداری میشود"
 
-#: src/components/WalletHistory.tsx:432
+#: src/components/WalletHistory.tsx:436
 msgid "Claw back expiration"
 msgstr "انقضای پس گرفتن"
 
-#: src/components/WalletHistoryClawbackChip.tsx:94
+#: src/components/WalletHistoryClawbackChip.tsx:86
 msgid "Claw back this transaction"
 msgstr "بازکزداندن این تراکنش"
 
@@ -201,7 +201,7 @@ msgstr ".بازگرداندن اعمال خواهد شد"
 msgid "Clawback will not be applied."
 msgstr ".بازگرداندن اعمال نخواهد شد"
 
-#: src/components/WalletHistoryClawbackChip.tsx:109
+#: src/components/WalletHistoryClawbackChip.tsx:101
 msgid "Clawing back..."
 msgstr "...بازگرداندن"
 
@@ -219,11 +219,11 @@ msgstr "ببندید"
 msgid "Confirmation"
 msgstr "تائیدیه"
 
-#: src/components/WalletHistory.tsx:199
+#: src/components/WalletHistory.tsx:211
 msgid "Confirmed"
 msgstr "تایید شده"
 
-#: src/components/WalletHistory.tsx:421
+#: src/components/WalletHistory.tsx:425
 msgid "Confirmed at Height"
 msgstr "تایید شده در ارتفاع"
 
@@ -253,7 +253,7 @@ msgstr "ایجاد پیشنهاد"
 msgid "Create Transaction"
 msgstr "ایجاد تراکنش"
 
-#: src/components/WalletHistory.tsx:222
+#: src/components/WalletHistory.tsx:234
 msgid "Creation Date"
 msgstr "تاریخ ایجاد"
 
@@ -298,7 +298,7 @@ msgid "Distributed Identity"
 msgstr "هویت توزیع شده"
 
 #: src/components/WalletImport.tsx:157
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
 msgstr ".را که ذخیره کرده اید وارد کنید تا کیف پول چیا شما بازیابی شود {mnemonicWordCount} کد رمزها"
 
 #: src/components/cat/WalletCATSend.tsx:127
@@ -311,7 +311,7 @@ msgid "Farm"
 msgstr "فارم"
 
 #: src/components/cat/WalletCATSend.tsx:228
-#: src/components/WalletHistory.tsx:236
+#: src/components/WalletHistory.tsx:248
 #: src/components/WalletSend.tsx:254
 msgid "Fee"
 msgstr "کارمزد"
@@ -358,7 +358,7 @@ msgstr "آدرس ای پی"
 msgid "List of connections is empty"
 msgstr "لیست اتصالات خالی است"
 
-#: src/components/WalletsManageTokens.tsx:131
+#: src/components/WalletsManageTokens.tsx:132
 msgid "Manage token list"
 msgstr "مدیریت لیست توکن"
 
@@ -367,7 +367,7 @@ msgstr "مدیریت لیست توکن"
 msgid "Memo"
 msgstr "یادداشت"
 
-#: src/components/WalletHistory.tsx:426
+#: src/components/WalletHistory.tsx:430
 msgid "Memos"
 msgstr "یادداشت ها"
 
@@ -416,7 +416,7 @@ msgstr "کیف پول ان اف تی"
 msgid "Nickname"
 msgstr "نام مستعار"
 
-#: src/components/WalletHistory.tsx:503
+#: src/components/WalletHistory.tsx:507
 msgid "No previous transactions"
 msgstr "بدون تراکنش های قبلی"
 
@@ -424,8 +424,8 @@ msgstr "بدون تراکنش های قبلی"
 msgid "Node ID"
 msgstr "شناسه نود"
 
-#: src/components/WalletHistory.tsx:415
-#: src/components/WalletHistory.tsx:422
+#: src/components/WalletHistory.tsx:419
+#: src/components/WalletHistory.tsx:426
 msgid "Not Available"
 msgstr "غیرقابل دسترسی"
 
@@ -433,7 +433,7 @@ msgstr "غیرقابل دسترسی"
 msgid "Not Synced"
 msgstr "سینک نشده"
 
-#: src/components/WalletHistory.tsx:208
+#: src/components/WalletHistory.tsx:220
 msgid "Offer Accepted"
 msgstr "پیشنهاد پذیرفته شد"
 
@@ -462,7 +462,7 @@ msgstr "قراردادن کد کلمات ({0}رمز)"
 msgid "Payments approved"
 msgstr "پرداخت ها تایید شد"
 
-#: src/components/WalletHistory.tsx:201
+#: src/components/WalletHistory.tsx:213
 msgid "Pending"
 msgstr "در انتظار تایید"
 
@@ -587,9 +587,14 @@ msgstr "تغییر نام کیف پول"
 msgid "Restricted CAT"
 msgstr "توکن محدود"
 
-#: src/components/WalletHistory.tsx:207
+#: src/components/WalletHistory.tsx:219
 msgid "Retire"
 msgstr "کنارگذاشته شده"
+
+#: src/components/WalletName.tsx:35
+#: src/components/WalletsSidebar.tsx:99
+msgid "Revocable"
+msgstr "قابل فسخ"
 
 #: src/constants/WalletName.ts:8
 msgid "RL Wallet"
@@ -626,7 +631,7 @@ msgstr "موجودی قابل خرج کردن"
 msgid "Standard Wallet"
 msgstr "کیف پول استاندارد"
 
-#: src/components/WalletHistory.tsx:213
+#: src/components/WalletHistory.tsx:225
 msgid "Status"
 msgstr "وضعیت"
 
@@ -647,7 +652,7 @@ msgid "Syncing"
 msgstr "درحال سینک"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 msgstr "شاخص مشتق که کیف پول بلاکچین را اسکن میکند محدوده آدرس های کیف پول را تعیین مینماید. اگر تراکنش‌های زیادی دارید یا پیشنهادات لغو شده برای چیا ، توکن یا ان اف تی دارید، این عدد معمولاً بیشتر است. اگر فکر میکنید موجودی‌ شما نادرست است، ارزهای درون آن کمتر است، افزایش شاخص مشتق‌گیری میتواند به کیف پول کمک کندتا ارزهای گمشده را در کل موجودی قراردهد."
 
 #: src/components/cat/WalletCATSend.tsx:200
@@ -676,12 +681,12 @@ msgstr "تراکنش در انتظار درج در حافظه استخر ترا�
 msgid "This access token is verified"
 msgstr "این توکن در دسترس تأیید شده است"
 
-#: src/components/WalletHistory.tsx:159
+#: src/components/WalletHistory.tsx:171
 msgid "This is not a valid address for sending funds to"
 msgstr "این یک آدرس معتبر برای ارسال وجوه به آن نیست"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
 msgstr "این مقدار رمزارزچیایی است که در حال حاضر میتوانید برای انجام تراکنش ها استفاده کنید. این مقدار شامل پاداشهای درحال پردازش فارم، دریافتی های جدید و مقادیر رمزارز چیا که اخیراً هزینه کرده‌اید اما هنوز در بلاکچین نیستند نمیباشد."
 
 #: src/components/standard/WalletStandardCards.tsx:42
@@ -693,12 +698,17 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "این مجموع تراکنش های معلق ورودی و خروجی است (هنوز در بلاکچین گنجانده نشده). این شامل پاداش فارم نمیشود."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "این مقدار کل چیا در بلاکچین در بلاک اوج فعلی است که توسط کلیدهای شخصی شما کنترل میشود. این شامل پاداش‌های فارم بلاک شده میشود، اما تراکنش‌های ورودی و خروجی معلق نیست."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "این کل موجودی + موجودی در انتظار است: نشان میدهد پس از تأیید همه تراکنش‌های معلق، موجودی شما چقدر خواهد بود."
+
+#: src/components/WalletName.tsx:37
+#: src/components/WalletsSidebar.tsx:101
+msgid "This token can be revoked by the issuer"
+msgstr "این توکن میتواند توسط صادرکننده لغو شود"
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:201
 msgid "This transaction will be automatically claimed with a fee:"
@@ -709,7 +719,7 @@ msgstr ":این تراکنش به صورت خودکار با کارمزد گرف
 #~ msgstr "To"
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:183
-#: src/components/WalletHistory.tsx:185
+#: src/components/WalletHistory.tsx:197
 msgid "To:"
 msgstr ":به"
 
@@ -721,7 +731,7 @@ msgstr "توکن دارای شناسه دارایی خالی است"
 msgid "Token has empty name"
 msgstr "توکن نام خالی دارد"
 
-#: src/components/WalletsSidebar.tsx:104
+#: src/components/WalletsSidebar.tsx:122
 msgid "Tokens"
 msgstr "توکن ها"
 
@@ -733,7 +743,7 @@ msgstr "موجودی کل"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "تراکنش به نودکامل منتقل شد و در حافظه استخر تراکنش قرار گرفت."
 
-#: src/components/WalletHistory.tsx:480
+#: src/components/WalletHistory.tsx:484
 msgid "Transactions"
 msgstr "تراکنش ها"
 
@@ -786,7 +796,7 @@ msgstr "کیف پول با نوع {0} پشتیبانی نمیشود"
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "خوش آمدید. کلمات زیر برای پشتیبان گیری کیف پول شما استفاده میشود. بدون آنها، دسترسی به کیف پول خود را از دست خواهید داد، آنها را در محل امن نگه دارید! هر کلمه را همراه با شماره ترتیب کنار آنها یادداشت کنید. (ترتیب مهم است)"
 
-#: src/components/WalletHistoryClawbackChip.tsx:56
+#: src/components/WalletHistoryClawbackChip.tsx:48
 msgid "Will be autoclaimed in "
 msgstr "خودکار بازگردانده خواهد شد در "
 

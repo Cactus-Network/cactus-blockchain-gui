@@ -159,6 +159,6 @@ export CACTUS_KEYS_ROOT=~/.cactus_keys_simulator
 
 ## Cactus FAQ/WIKI
 
-Please check out the [wiki](https://github.com/Cactus-Network/cactus-blockchain/wiki)
+Please check out the [cactus-blockchain wiki](https://github.com/Cactus-Network/cactus-blockchain/wiki)
 and [FAQ](https://github.com/Cactus-Network/cactus-blockchain/wiki/FAQ) for
 information on this project.

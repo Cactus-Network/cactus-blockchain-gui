@@ -1,17 +1,6 @@
 import { WalletType } from '@cactus-network/api';
 import { useCreateOfferForIdsMutation } from '@cactus-network/api-react';
-import {
-  Back,
-  Button,
-  Card,
-  ButtonLoading,
-  Flex,
-  Form,
-  useOpenDialog,
-  useShowError,
-  cactusToMojo,
-  catToMojo,
-} from '@cactus-network/core';
+import { Back, Button, Card, ButtonLoading, Flex, Form, useShowError, cactusToMojo, catToMojo } from '@cactus-network/core';
 import { Trans, t } from '@lingui/macro';
 import { Grid } from '@mui/material';
 import BigNumber from 'bignumber.js';
@@ -22,7 +11,6 @@ import { useNavigate } from 'react-router-dom';
 import useSuppressShareOnCreate from '../../hooks/useSuppressShareOnCreate';
 
 import OfferEditorConditionsPanel from './OfferEditorConditionsPanel';
-import OfferEditorConfirmationDialog from './OfferEditorConfirmationDialog';
 import type OfferEditorRowData from './OfferEditorRowData';
 
 /* ========================================================================== */
@@ -70,7 +58,6 @@ function OfferEditor(props: OfferEditorProps) {
   const methods = useForm<FormData>({
     defaultValues,
   });
-  const openDialog = useOpenDialog();
   const errorDialog = useShowError();
   const [suppressShareOnCreate] = useSuppressShareOnCreate();
   const [createOfferForIds] = useCreateOfferForIdsMutation();
@@ -109,12 +96,6 @@ function OfferEditor(props: OfferEditorProps) {
         errorDialog(new Error(t`Amount exceeds spendable balance`));
       }
 
-      return;
-    }
-
-    const confirmedCreation = await openDialog(<OfferEditorConfirmationDialog />);
-
-    if (!confirmedCreation) {
       return;
     }
 
@@ -216,7 +197,7 @@ function getUpdatedOffer(offerParam: { [key: string]: BigNumber }, row: OfferEdi
     let mojoAmount = new BigNumber(0);
     if (walletTypeLocal === WalletType.STANDARD_WALLET) {
       mojoAmount = cactusToMojo(amount);
-    } else if ([WalletType.CAT, WalletType.CRCAT].includes(walletTypeLocal)) {
+    } else if ([WalletType.CAT, WalletType.RCAT, WalletType.CRCAT].includes(walletTypeLocal)) {
       mojoAmount = catToMojo(amount);
     }
 

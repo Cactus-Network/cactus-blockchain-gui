@@ -1,17 +1,23 @@
+import type { DataLayerOfferSummary } from '@cactus-network/api';
 import { OfferSummaryValidTimes } from '@cactus-network/api';
 import {
   useGetWalletsQuery,
   useCheckOfferValidityMutation,
-  useGetTimestampForHeightQuery,
-  useGetHeightInfoQuery,
+  useCurrentBlockchainTime,
+  useTakeOfferMutation,
 } from '@cactus-network/api-react';
 import {
   AlertDialog,
+  ConfirmDialog,
+  Fee,
   Flex,
   Button,
   ButtonLoading,
+  Form,
   Link,
   Loading,
+  cactusToMojo,
+  mojoToCactus,
   useShowError,
   useOpenDialog,
 } from '@cactus-network/core';
@@ -19,24 +25,26 @@ import { useIsWalletSynced } from '@cactus-network/wallets';
 import { Trans } from '@lingui/macro';
 import { Alert, Grid } from '@mui/material';
 import React, { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState, forwardRef } from 'react';
+import { useForm } from 'react-hook-form';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 import type OfferBuilderData from '../../@types/OfferBuilderData';
 import type OfferSummary from '../../@types/OfferSummary';
 import useAcceptOfferHook from '../../hooks/useAcceptOfferHook';
 import useWalletOffers from '../../hooks/useWalletOffers';
-import getCurrentTime from '../../util/getCurrentTime';
 import getUnknownCATs from '../../util/getUnknownCATs';
+import isDataLayerOfferSummary from '../../util/isDataLayerOfferSummary';
 import offerToOfferBuilderData from '../../util/offerToOfferBuilderData';
 import OfferState from '../offers/OfferState';
 
+import DataLayerOfferViewer from './DataLayerOfferViewer';
 import OfferBuilder from './OfferBuilder';
 import OfferBuilderExpirationSection from './OfferBuilderExpirationSection';
 import OfferNavigationHeader from './OfferNavigationHeader';
 
 export type OfferBuilderViewerProps = {
   offerData?: string; // when viewing and existing offer
-  offerSummary: OfferSummary;
+  offerSummary: OfferSummary | DataLayerOfferSummary;
   offerBuilderData?: OfferBuilderData; // when viewing an offer that hasn't been created yet
   referrerPath?: string;
   state?: OfferState;
@@ -47,6 +55,10 @@ export type OfferBuilderViewerProps = {
   address?: string; // where to send a counter offer
   fee?: string; // in mojos
   myOfferValidTimes?: OfferSummaryValidTimes;
+};
+
+type DataLayerOfferFeeFormData = {
+  fee: string;
 };
 
 function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
@@ -65,10 +77,13 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
     myOfferValidTimes,
   } = props;
 
+  const isDataLayer = isDataLayerOfferSummary(offerSummary);
+
   const showError = useShowError();
   const navigate = useNavigate();
   const location = useLocation();
   const [acceptOffer] = useAcceptOfferHook();
+  const [takeOffer] = useTakeOfferMutation();
   const [error, setError] = useState<Error | undefined>();
   const [isAccepting, setIsAccepting] = useState<boolean>(false);
   const { data: wallets, isLoading: isLoadingWallets } = useGetWalletsQuery();
@@ -80,32 +95,30 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
   const [isValid, setIsValid] = useState<boolean | undefined>();
   const isWalletSynced = useIsWalletSynced();
   const openDialog = useOpenDialog();
+  const dataLayerOfferMethods = useForm<DataLayerOfferFeeFormData>({
+    defaultValues: {
+      fee: fee ? mojoToCactus(fee).toFixed() : '',
+    },
+  });
 
   const showInvalid = !isValidating && isValid === false;
 
-  const validTimeList = isMyOffer ? myOfferValidTimes : offerSummary?.validTimes;
+  const validTimeList = isMyOffer ? myOfferValidTimes : !isDataLayer ? offerSummary?.validTimes : undefined;
 
   const hasExpiration =
     validTimeList?.maxTime !== null && validTimeList?.maxTime !== undefined && validTimeList?.maxTime !== 0;
 
-  let currentTime = null;
-  let expirationTime = null;
+  const { timestamp: blockchainTime, isLoading: isBlockchainTimeLoading } = useCurrentBlockchainTime();
+
+  let currentTime: number | null = null;
+  let expirationTime: number | null = null;
   let isExpired = false;
 
-  const { data: height, isLoading: isGetHeightInfoLoading } = useGetHeightInfoQuery(undefined, {
-    pollingInterval: 3000,
-  });
-  const { data: lastBlockTimeStampData, isLoading: isGetTimestampForHeightLoading } = useGetTimestampForHeightQuery(
-    { height: height || 0 },
-    { skip: !height },
-  );
+  if (hasExpiration) {
+    currentTime = blockchainTime;
+    expirationTime = validTimeList?.maxTime ?? null;
 
-  if (hasExpiration && !isExpired) {
-    currentTime = getCurrentTime(lastBlockTimeStampData);
-
-    expirationTime = validTimeList?.maxTime;
-
-    if (expirationTime !== 0) {
+    if (expirationTime !== 0 && expirationTime !== null) {
       isExpired = expirationTime < currentTime;
     }
   }
@@ -141,7 +154,7 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
   const setDefaultOfferedFee = !!imported; // When viewing an imported offer, we want to expand the offered fee section by default
   const offerSummaryStringified = offerSummary ? JSON.stringify(offerSummary) : undefined;
   const computedOfferBuilderData = useMemo(() => {
-    if (!offerSummaryStringified) {
+    if (!offerSummaryStringified || isDataLayer) {
       return undefined;
     }
 
@@ -155,7 +168,7 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
       setError(e);
       return undefined;
     }
-  }, [offerSummaryStringified, setDefaultOfferedFee, fee]);
+  }, [offerSummaryStringified, setDefaultOfferedFee, fee, isDataLayer]);
 
   const [offeredUnknownCATs, requestedUnknownCATs] = useMemo(() => {
     if (!computedOfferBuilderData || !wallets) {
@@ -194,7 +207,7 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
 
     await acceptOffer(
       offerData,
-      offerSummary,
+      offerSummary as OfferSummary,
       feeAmount,
       wallets,
       offers,
@@ -204,7 +217,7 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
   }
 
   function handleCounterOffer() {
-    const offer = offerToOfferBuilderData(offerSummary, false, '');
+    const offer = offerToOfferBuilderData(offerSummary as OfferSummary, false, '');
     navigate('/dashboard/offers/builder', {
       state: {
         referrerPath: location.pathname,
@@ -226,6 +239,113 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
     } else {
       offerBuilderRef.current?.submit();
     }
+  }
+
+  async function handleAcceptDataLayerOffer(formData: DataLayerOfferFeeFormData) {
+    if (!isWalletSynced) {
+      await openDialog(
+        <AlertDialog>
+          <Trans>Please wait for wallet synchronization</Trans>
+        </AlertDialog>,
+      );
+      return;
+    }
+    if (!offerData || isAccepting) {
+      return;
+    }
+    const feeInMojos = formData.fee ? cactusToMojo(formData.fee).toFixed() : '0';
+    const confirmed = await openDialog(
+      <ConfirmDialog
+        title={<Trans>Accept Data Layer Offer</Trans>}
+        confirmTitle={<Trans>Accept</Trans>}
+        cancelTitle={<Trans>Cancel</Trans>}
+        confirmColor="primary"
+      >
+        <Trans>Are you sure you want to accept this Data Layer offer?</Trans>
+      </ConfirmDialog>,
+    );
+    if (!confirmed) {
+      return;
+    }
+    try {
+      setIsAccepting(true);
+      await takeOffer({ offer: offerData, fee: feeInMojos }).unwrap();
+      await openDialog(
+        <AlertDialog title={<Trans>Success</Trans>}>
+          <Trans>Offer has been accepted and is awaiting confirmation.</Trans>
+        </AlertDialog>,
+      );
+      navigate('/dashboard/offers');
+    } catch (e) {
+      showError(e);
+    } finally {
+      setIsAccepting(false);
+    }
+  }
+
+  if (isDataLayer) {
+    const dlSummary = offerSummary as DataLayerOfferSummary;
+    const emptyDlOffer = dlSummary.offered.length === 0;
+    const canAcceptDl = !!offerData && !emptyDlOffer;
+
+    return (
+      <Form methods={dataLayerOfferMethods} onSubmit={handleAcceptDataLayerOffer}>
+        <Grid container>
+          <Flex flexDirection="column" flexGrow={1} gap={4}>
+            {!hideHeader && (
+              <Flex alignItems="center" justifyContent="space-between" gap={2}>
+                <OfferNavigationHeader referrerPath={referrerPath} />
+                {canAcceptDl && (
+                  <ButtonLoading
+                    type="submit"
+                    variant="contained"
+                    color="primary"
+                    isLoading={isAccepting}
+                    disableElevation
+                    disabled={showInvalid || isExpired}
+                  >
+                    <Trans>Accept Offer</Trans>
+                  </ButtonLoading>
+                )}
+              </Flex>
+            )}
+            {emptyDlOffer && (
+              <Alert severity="warning">
+                <Trans>This Data Layer offer contains no store updates and cannot be accepted.</Trans>
+              </Alert>
+            )}
+            {showInvalid && (
+              <Alert severity="error">
+                <Trans>
+                  {'This offer is no longer valid because it was accepted or cancelled. Click '}
+                  <Link
+                    target="_blank"
+                    href="https://docs.cactus-network.net/getting-started/wallet-guide/#taker-attempts-to-accept-an-invalid-offer"
+                  >
+                    here
+                  </Link>{' '}
+                  to learn more.
+                </Trans>
+              </Alert>
+            )}
+            {canAcceptDl && (
+              <Flex sx={{ maxWidth: 360 }}>
+                <Fee
+                  id="data-layer-offer-fee"
+                  variant="filled"
+                  name="fee"
+                  color="secondary"
+                  label={<Trans>Network Fee (Optional)</Trans>}
+                  disabled={isAccepting || showInvalid || isExpired}
+                  fullWidth
+                />
+              </Flex>
+            )}
+            <DataLayerOfferViewer summary={dlSummary} />
+          </Flex>
+        </Grid>
+      </Form>
+    );
   }
 
   return (
@@ -304,8 +424,7 @@ function OfferBuilderViewer(props: OfferBuilderViewerProps, ref: any) {
                 currentTime={currentTime}
                 expirationTime={expirationTime}
                 onSubmit={() => {}}
-                isGetHeightInfoLoading={isGetHeightInfoLoading}
-                isGetTimestampForHeightLoading={isGetTimestampForHeightLoading}
+                isBlockchainTimeLoading={isBlockchainTimeLoading}
               />
             )}
             <OfferBuilder

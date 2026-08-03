@@ -3,6 +3,15 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 
 import useWalletConnectPreferences from './useWalletConnectPreferences';
 
+function clearWalletConnectStorage(): void {
+  if (typeof indexedDB === 'undefined') return;
+  try {
+    indexedDB.deleteDatabase('WALLET_CONNECT_V2_INDEXED_DB');
+  } catch {
+    /* best-effort */
+  }
+}
+
 const defaultMetadata = {
   name: 'Cactus Blockchain',
   description: 'GUI for Cactus Blockchain',
@@ -22,7 +31,23 @@ export type UseWalletConnectConfig = {
   debug?: boolean;
 };
 
-let clientId = 1;
+type WalletConnectSingleton = {
+  client?: Client;
+  initPromise?: Promise<Client>;
+  configKey?: string;
+};
+
+function getSingleton(): WalletConnectSingleton {
+  const globalStore = globalThis as typeof globalThis & {
+    cactusWalletConnectSingleton?: WalletConnectSingleton;
+  };
+  if (!globalStore.cactusWalletConnectSingleton) {
+    globalStore.cactusWalletConnectSingleton = {};
+  }
+  return globalStore.cactusWalletConnectSingleton;
+}
+
+let clientRequestId = 1;
 
 export default function useWalletConnectClient(config: UseWalletConnectConfig) {
   const { projectId, relayUrl = 'wss://relay.walletconnect.com', metadata = defaultMetadata, debug = false } = config;
@@ -35,39 +60,70 @@ export default function useWalletConnectClient(config: UseWalletConnectConfig) {
 
   const metadataString = JSON.stringify(metadata);
   const memoizedMetadata = useMemo(() => JSON.parse(metadataString), [metadataString]);
+  const configKey = useMemo(
+    () => JSON.stringify({ projectId, relayUrl, metadata: memoizedMetadata, debug }),
+    [projectId, relayUrl, memoizedMetadata, debug],
+  );
 
   const prepareClient = useCallback(async () => {
-    const currentClientId = ++clientId;
+    const currentRequestId = ++clientRequestId;
+    const singleton = getSingleton();
 
     try {
-      setClient(undefined);
       setError(undefined);
       setIsLoading(true);
 
       if (!enabled) {
+        setClient(undefined);
         return;
       }
 
-      const newClient = await Client.init({
-        logger: debug ? 'debug' : undefined,
-        projectId,
-        relayUrl,
-        metadata: memoizedMetadata,
-      });
+      if (singleton.client) {
+        if (singleton.configKey && singleton.configKey !== configKey) {
+          console.warn('[WC singleton] Reusing existing client with different config');
+        }
+        if (currentRequestId === clientRequestId) {
+          setClient(singleton.client);
+        }
+        return;
+      }
 
-      if (currentClientId === clientId) {
+      if (!singleton.initPromise) {
+        singleton.configKey = configKey;
+        singleton.initPromise = Client.init({
+          // Keep internal WC protocol errors visible even in non-debug mode.
+          logger: debug ? 'debug' : 'error',
+          projectId,
+          relayUrl,
+          metadata: memoizedMetadata,
+        })
+          .then((createdClient) => {
+            singleton.client = createdClient;
+            return createdClient;
+          })
+          .catch((initError) => {
+            console.error('[WC] Client.init() failed, clearing storage', initError);
+            clearWalletConnectStorage();
+            singleton.initPromise = undefined;
+            singleton.configKey = undefined;
+            throw initError;
+          });
+      }
+
+      const newClient = await singleton.initPromise;
+      if (currentRequestId === clientRequestId) {
         setClient(newClient);
       }
     } catch (e) {
-      if (currentClientId === clientId) {
+      if (currentRequestId === clientRequestId) {
         setError(e as Error);
       }
     } finally {
-      if (currentClientId === clientId) {
+      if (currentRequestId === clientRequestId) {
         setIsLoading(false);
       }
     }
-  }, [projectId, relayUrl, memoizedMetadata, debug, enabled]);
+  }, [projectId, relayUrl, memoizedMetadata, debug, enabled, configKey]);
 
   useEffect(() => {
     prepareClient();

@@ -8,7 +8,7 @@ msgstr ""
 "Language: it_IT\n"
 "Project-Id-Version: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-09-15 00:05\n"
+"PO-Revision-Date: 2026-05-03 00:18\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 25\n"
 
-#: src/components/WalletHistory.tsx:117
+#: src/components/WalletHistory.tsx:125
 msgid "-"
 msgstr "-"
 
@@ -30,7 +30,7 @@ msgstr ""
 msgid "- Set a time frame which allows you claw back (revoke) the transaction.<0/>- Recipient of the transaction can only claim the funds once that time frame expires."
 msgstr ""
 
-#: src/components/WalletHistory.tsx:117
+#: src/components/WalletHistory.tsx:125
 msgid "+"
 msgstr "+"
 
@@ -48,7 +48,7 @@ msgstr ""
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:68
-#: src/components/WalletsManageTokens.tsx:154
+#: src/components/WalletsManageTokens.tsx:155
 msgid "Add Token"
 msgstr "Aggiungi token"
 
@@ -94,7 +94,7 @@ msgstr ""
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Sei sicuro di voler eliminare queste transazioni non confermate?"
 
-#: src/components/WalletHistory.tsx:130
+#: src/components/WalletHistory.tsx:142
 msgid "Asset"
 msgstr ""
 
@@ -124,13 +124,7 @@ msgstr ""
 msgid "Before sending this transaction, you should ensure that the recipient has a wallet that can claim it manually after the timer has expired."
 msgstr ""
 
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr "Cactus Asset Token"
-
-#: src/components/WalletHistoryClawbackChip.tsx:61
+#: src/components/WalletHistoryClawbackChip.tsx:53
 msgid "Can be claimed in "
 msgstr ""
 
@@ -141,8 +135,8 @@ msgstr "Annulla"
 
 #: src/components/cat/WalletCATSend.tsx:117
 #: src/components/WalletSend.tsx:153
-msgid "Cannot send cactus to coloured address. Please enter a cactus address."
-msgstr "Errore: impossibile inviare cactus ad un indirizzo colorato. Perfavore inserisci un indirizzo cactus."
+msgid "Cannot send chia to coloured address. Please enter a chia address."
+msgstr "Errore: impossibile inviare chia ad un indirizzo colorato. Perfavore inserisci un indirizzo chia."
 
 #: src/components/card/WalletCardCRCatRestrictions.tsx:40
 msgid "CAT credential restrictions"
@@ -152,7 +146,13 @@ msgstr ""
 #~ msgid "Check my snapshot balance"
 #~ msgstr "Check my snapshot balance"
 
-#: src/components/WalletHistoryClawbackChip.tsx:68
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Chia Asset Token"
+msgstr "Chia Asset Token"
+
+#: src/components/WalletHistoryClawbackChip.tsx:60
 msgid "Claim transaction"
 msgstr ""
 
@@ -161,7 +161,7 @@ msgstr ""
 msgid "Claim Transaction"
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:83
+#: src/components/WalletHistoryClawbackChip.tsx:75
 msgid "Claiming..."
 msgstr ""
 
@@ -169,11 +169,11 @@ msgstr ""
 msgid "Classic version of Stably USDS as held by Prime Trust"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:432
+#: src/components/WalletHistory.tsx:436
 msgid "Claw back expiration"
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:94
+#: src/components/WalletHistoryClawbackChip.tsx:86
 msgid "Claw back this transaction"
 msgstr ""
 
@@ -201,7 +201,7 @@ msgstr ""
 msgid "Clawback will not be applied."
 msgstr ""
 
-#: src/components/WalletHistoryClawbackChip.tsx:109
+#: src/components/WalletHistoryClawbackChip.tsx:101
 msgid "Clawing back..."
 msgstr ""
 
@@ -219,11 +219,11 @@ msgstr ""
 msgid "Confirmation"
 msgstr "Conferma"
 
-#: src/components/WalletHistory.tsx:199
+#: src/components/WalletHistory.tsx:211
 msgid "Confirmed"
 msgstr "Confermato"
 
-#: src/components/WalletHistory.tsx:421
+#: src/components/WalletHistory.tsx:425
 msgid "Confirmed at Height"
 msgstr "Confermato all'altezza"
 
@@ -253,7 +253,7 @@ msgstr ""
 msgid "Create Transaction"
 msgstr "Crea una transazione"
 
-#: src/components/WalletHistory.tsx:222
+#: src/components/WalletHistory.tsx:234
 msgid "Creation Date"
 msgstr ""
 
@@ -298,7 +298,7 @@ msgid "Distributed Identity"
 msgstr "Distributed Identity"
 
 #: src/components/WalletImport.tsx:157
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:127
@@ -311,7 +311,7 @@ msgid "Farm"
 msgstr "Coltiva"
 
 #: src/components/cat/WalletCATSend.tsx:228
-#: src/components/WalletHistory.tsx:236
+#: src/components/WalletHistory.tsx:248
 #: src/components/WalletSend.tsx:254
 msgid "Fee"
 msgstr "Costo della commissione"
@@ -322,7 +322,7 @@ msgstr ""
 
 #: src/components/WalletReceiveAddress.tsx:32
 msgid "HD or Hierarchical Deterministic keys are a type of public key/private key scheme where one private key can have a nearly infinite number of different public keys (and therefore wallet receive addresses) that will all ultimately come back to and be spendable by a single private key."
-msgstr "Le cactusvi HD (Hierarchical Deterministic) sono un tipo di schema a cactusve pubblica/privata dove una cactusve privata può avere un numero quasi infinito di cactusvi pubbliche diverse (e quindi indirizzi di ricezione del wallet) che sono utilizzabili da una singola cactusve privata."
+msgstr "Le chiavi HD (Hierarchical Deterministic) sono un tipo di schema a chiave pubblica/privata dove una chiave privata può avere un numero quasi infinito di chiavi pubbliche diverse (e quindi indirizzi di ricezione del wallet) che sono utilizzabili da una singola chiave privata."
 
 #: src/components/WalletSendTransactionResultDialog.tsx:47
 msgid ""
@@ -358,7 +358,7 @@ msgstr "Indirizzo IP"
 msgid "List of connections is empty"
 msgstr "La lista delle connessioni è vuoto"
 
-#: src/components/WalletsManageTokens.tsx:131
+#: src/components/WalletsManageTokens.tsx:132
 msgid "Manage token list"
 msgstr "Gestisci l'elenco dei token"
 
@@ -367,7 +367,7 @@ msgstr "Gestisci l'elenco dei token"
 msgid "Memo"
 msgstr "Memo"
 
-#: src/components/WalletHistory.tsx:426
+#: src/components/WalletHistory.tsx:430
 msgid "Memos"
 msgstr "Memo"
 
@@ -416,7 +416,7 @@ msgstr ""
 msgid "Nickname"
 msgstr "Nickname"
 
-#: src/components/WalletHistory.tsx:503
+#: src/components/WalletHistory.tsx:507
 msgid "No previous transactions"
 msgstr "Nessuna transazione precedente"
 
@@ -424,8 +424,8 @@ msgstr "Nessuna transazione precedente"
 msgid "Node ID"
 msgstr "ID nodo"
 
-#: src/components/WalletHistory.tsx:415
-#: src/components/WalletHistory.tsx:422
+#: src/components/WalletHistory.tsx:419
+#: src/components/WalletHistory.tsx:426
 msgid "Not Available"
 msgstr "Non Disponibile"
 
@@ -433,7 +433,7 @@ msgstr "Non Disponibile"
 msgid "Not Synced"
 msgstr "Non Sincronizzato"
 
-#: src/components/WalletHistory.tsx:208
+#: src/components/WalletHistory.tsx:220
 msgid "Offer Accepted"
 msgstr "Offerta accettata"
 
@@ -462,7 +462,7 @@ msgstr ""
 msgid "Payments approved"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:201
+#: src/components/WalletHistory.tsx:213
 msgid "Pending"
 msgstr "In attesa"
 
@@ -587,9 +587,14 @@ msgstr "Rinomina Portafoglio"
 msgid "Restricted CAT"
 msgstr ""
 
-#: src/components/WalletHistory.tsx:207
+#: src/components/WalletHistory.tsx:219
 msgid "Retire"
 msgstr "Ritira"
+
+#: src/components/WalletName.tsx:35
+#: src/components/WalletsSidebar.tsx:99
+msgid "Revocable"
+msgstr ""
 
 #: src/constants/WalletName.ts:8
 msgid "RL Wallet"
@@ -626,7 +631,7 @@ msgstr "Bilancio Spendibile"
 msgid "Standard Wallet"
 msgstr "Portafoglio Standard"
 
-#: src/components/WalletHistory.tsx:213
+#: src/components/WalletHistory.tsx:225
 msgid "Status"
 msgstr ""
 
@@ -647,7 +652,7 @@ msgid "Syncing"
 msgstr "Sincronizzando"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
 msgstr ""
 
 #: src/components/cat/WalletCATSend.tsx:200
@@ -676,13 +681,13 @@ msgstr ""
 msgid "This access token is verified"
 msgstr "Questo token di accesso è stato verificato"
 
-#: src/components/WalletHistory.tsx:159
+#: src/components/WalletHistory.tsx:171
 msgid "This is not a valid address for sending funds to"
 msgstr "Questo indirizzo non è valido per l'invio di fondi"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
-msgstr "Questo è l'ammontare di Cactus che puoi utilizzare attualmente per fare transazioni. Non include le ricompense coltivate in sospeso, transazioni in entrata in sospeso, e Cactus che tua hai appena speso ma non sono ancora nella blockchain."
+msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
+msgstr "Questo è l'ammontare di Chia che puoi utilizzare attualmente per fare transazioni. Non include le ricompense coltivate in sospeso, transazioni in entrata in sospeso, e Chia che tua hai appena speso ma non sono ancora nella blockchain."
 
 #: src/components/standard/WalletStandardCards.tsx:42
 msgid "This is the pending change, which are change coins which you have sent to yourself, but have not been confirmed yet."
@@ -693,12 +698,17 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "Questa è la somma delle transazioni in sospeso in entrata e in uscita (non ancora incluse nella blockchain). Questo non include le ricompense coltivate."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
-msgstr "Questo è l'ammontare totale di cactus all'attuale blocco di picco nella blockchain che è controllato dalle tue cactusvi private. Ciò include le ricompense da farming congelate, ma non le transazioni pendenti in ingresso e in uscita."
+msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgstr "Questo è l'ammontare totale di chia all'attuale blocco di picco nella blockchain che è controllato dalle tue chiavi private. Ciò include le ricompense da farming congelate, ma non le transazioni pendenti in ingresso e in uscita."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "Questo è il bilancio totale + il bilancio in attesa: questo è il bilancio che apparirà dopo che tutte le transazioni in attesa saranno confermate."
+
+#: src/components/WalletName.tsx:37
+#: src/components/WalletsSidebar.tsx:101
+msgid "This token can be revoked by the issuer"
+msgstr ""
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:201
 msgid "This transaction will be automatically claimed with a fee:"
@@ -709,7 +719,7 @@ msgstr ""
 #~ msgstr "To"
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:183
-#: src/components/WalletHistory.tsx:185
+#: src/components/WalletHistory.tsx:197
 msgid "To:"
 msgstr ""
 
@@ -721,7 +731,7 @@ msgstr "Il token ha un id asset vuoto"
 msgid "Token has empty name"
 msgstr "Il token ha un nome vuoto"
 
-#: src/components/WalletsSidebar.tsx:104
+#: src/components/WalletsSidebar.tsx:122
 msgid "Tokens"
 msgstr "Tokens"
 
@@ -733,7 +743,7 @@ msgstr "Bilancio Totale"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "La transazione é stata inviata con successo ad un nodo completo ed inclusa nella mempol."
 
-#: src/components/WalletHistory.tsx:480
+#: src/components/WalletHistory.tsx:484
 msgid "Transactions"
 msgstr "Transazioni"
 
@@ -786,7 +796,7 @@ msgstr "Portafoglio con tipo {0} non supportato"
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Benvenuto! Le parole seguenti sono utilizzate per il backup del tuo wallet. Senza di queste, perderai l'accesso al tuo wallet, tienile al sicuro! Scrivi ogni parola insieme al suo vicino numero d'ordine. (L'ordine è importate)"
 
-#: src/components/WalletHistoryClawbackChip.tsx:56
+#: src/components/WalletHistoryClawbackChip.tsx:48
 msgid "Will be autoclaimed in "
 msgstr ""
 

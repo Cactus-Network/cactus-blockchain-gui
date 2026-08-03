@@ -1,6 +1,6 @@
 import { TransactionType } from '@cactus-network/api';
 import type { Transaction } from '@cactus-network/api';
-import { useGetAutoClaimQuery, useGetTimestampForHeightQuery, useGetHeightInfoQuery } from '@cactus-network/api-react';
+import { useGetAutoClaimQuery, useCurrentBlockchainTime } from '@cactus-network/api-react';
 import { useTrans, Button } from '@cactus-network/core';
 import { defineMessage } from '@lingui/macro';
 import { AccessTime as AccessTimeIcon } from '@mui/icons-material';
@@ -19,19 +19,11 @@ export default function WalletHistoryClawbackChip(props: Props) {
   const { data: autoClaimData, isLoading: isGetAutoClaimLoading } = useGetAutoClaimQuery();
   const isAutoClaimEnabled = !isGetAutoClaimLoading && autoClaimData?.enabled;
 
-  const { data: height, isLoading: isGetHeightInfoLoading } = useGetHeightInfoQuery(undefined, {
-    pollingInterval: 3000,
-  });
-
-  const { data: lastBlockTimeStampData, isLoading: isGetTimestampForHeightLoading } = useGetTimestampForHeightQuery({
-    height: height || 0,
-  });
-
-  const lastBlockTimeStamp = lastBlockTimeStampData?.timestamp || 0;
+  const { timestamp: lastBlockTimeStamp, isLoading: isBlockchainTimeLoading } = useCurrentBlockchainTime();
 
   const t = useTrans();
 
-  if (isGetHeightInfoLoading || isGetTimestampForHeightLoading || !lastBlockTimeStamp) return null;
+  if (isBlockchainTimeLoading || !lastBlockTimeStamp) return null;
 
   let text = '';
   let Icon;

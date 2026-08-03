@@ -42,22 +42,55 @@ export default function useGetLatestVersionFromWebsite(): UseGetLatestVersionFro
   );
 
   useEffect(() => {
-    const { ipcRenderer } = window as any;
-    ipcRenderer.invoke('fetchHtmlContent', latestVersionURL).then((obj: any) => {
+    if (!latestVersionURL) {
+      return;
+    }
+
+    async function validateBlogUrl(blogUrlPath: string): Promise<boolean> {
       try {
-        const { version, downloadPageUrl, releaseNotesUrl, blogUrl } = obj.data;
+        const fullBlogUrl = new URL(blogUrlPath, 'https://www.cactus-network.net/').toString();
+        const blogResponse = await fetch(fullBlogUrl, { method: 'HEAD' });
+        return blogResponse.ok;
+      } catch {
+        return false;
+      }
+    }
+
+    async function fetchLatestVersion() {
+      try {
+        const response = await fetch(latestVersionURL as string, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept-Encoding': 'identity',
+          },
+        });
+
+        const data = await response.json();
+        const { version, downloadPageUrl, releaseNotesUrl, blogUrl } = data;
+
+        let validatedBlogUrl: string | null = blogUrl ?? null;
+        if (blogUrl) {
+          const blogExists = await validateBlogUrl(blogUrl);
+          if (!blogExists) {
+            validatedBlogUrl = null;
+          }
+        }
+
         setTimeout(() => {
           setLatestVersion(version);
           setDownloadPath(downloadPageUrl);
           setReleaseNotesPath(releaseNotesUrl);
-          setBlogPath(blogUrl);
+          setBlogPath(validatedBlogUrl);
           setIsLoading(false);
         }, 1000); /* we need the delay, otherwise dialog will close too fast */
       } catch (e) {
         /* we don't need to handle error here, if we are unable to fetch version number
            from cactus-network.net, we just ignore showing reminder dialog */
       }
-    });
+    }
+
+    fetchLatestVersion();
   }, [latestVersionURL]);
 
   const downloadUrl = downloadPath ? new URL(downloadPath, 'https://www.cactus-network.net/').toString() : undefined;

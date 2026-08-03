@@ -8,7 +8,7 @@ msgstr ""
 "Language: fi_FI\n"
 "Project-Id-Version: 1263bc1f20e1271bda78e84d2f4a6562\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2024-09-15 00:05\n"
+"PO-Revision-Date: 2026-06-07 00:26\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Crowdin-File: /main/packages/wallets/src/locales/en-US/messages.po\n"
 "X-Crowdin-File-ID: 25\n"
 
-#: src/components/WalletHistory.tsx:117
+#: src/components/WalletHistory.tsx:125
 msgid "-"
 msgstr "-"
 
@@ -28,9 +28,9 @@ msgstr "- Memo auttaa vastaanottajan puolta tunnistamaan maksun.<0/>- Kaikki mem
 
 #: src/components/WalletSend.tsx:294
 msgid "- Set a time frame which allows you claw back (revoke) the transaction.<0/>- Recipient of the transaction can only claim the funds once that time frame expires."
-msgstr "- Aseta aikaikuna, jonka aikana voit peruuttaa transaktion. 0/>- Transaktion vastaanottaja voi kuitata varat vasta kun aikaikkuna on umpeutunut."
+msgstr "- Aseta aikaikkuna, jonka aikana voit takaisinvetää (peruuttaa) transaktion. <0/>- Transaktion vastaanottaja voi kuitata varat vasta kun aikaikkuna on umpeutunut."
 
-#: src/components/WalletHistory.tsx:117
+#: src/components/WalletHistory.tsx:125
 msgid "+"
 msgstr "+"
 
@@ -48,7 +48,7 @@ msgstr "Lisää peruttavissa oleva transaktio-optio"
 
 #: src/components/cat/WalletCATCreateExistingSimple.tsx:61
 #: src/components/cat/WalletCATCreateSimple.tsx:68
-#: src/components/WalletsManageTokens.tsx:154
+#: src/components/WalletsManageTokens.tsx:155
 msgid "Add Token"
 msgstr "Lisää Token"
 
@@ -94,7 +94,7 @@ msgstr "Hyväksy vireillä olevat tapahtumat"
 msgid "Are you sure you want to delete unconfirmed transactions?"
 msgstr "Haluatko varmasti poistaa nämä vahvistamattomat tapahtumat?"
 
-#: src/components/WalletHistory.tsx:130
+#: src/components/WalletHistory.tsx:142
 msgid "Asset"
 msgstr "Assetti"
 
@@ -124,13 +124,7 @@ msgstr "Lunasta transaktiot automaattisesti tällä maksusummalla tästä lähti
 msgid "Before sending this transaction, you should ensure that the recipient has a wallet that can claim it manually after the timer has expired."
 msgstr "Ennen tämän transaktion lähettämistä sinun tulee varmistaa, että vastaanottajalla on lompakko, joka voi lunastaa transaktion ajastimen päättymisen jälkeen."
 
-#: src/components/cat/WalletCATSelect.tsx:25
-#: src/components/create/WalletCreateList.tsx:32
-#: src/constants/WalletName.ts:23
-msgid "Cactus Asset Token"
-msgstr "Cactus Asset Token"
-
-#: src/components/WalletHistoryClawbackChip.tsx:61
+#: src/components/WalletHistoryClawbackChip.tsx:53
 msgid "Can be claimed in "
 msgstr "Voidaan lunastaa "
 
@@ -141,8 +135,8 @@ msgstr "Peru"
 
 #: src/components/cat/WalletCATSend.tsx:117
 #: src/components/WalletSend.tsx:153
-msgid "Cannot send cactus to coloured address. Please enter a cactus address."
-msgstr "Cactusa (CAC) ei voi lähettää CAT-osoitteeseen. Anna cactus-osoite."
+msgid "Cannot send chia to coloured address. Please enter a chia address."
+msgstr "Chiaa (XCH) ei voi lähettää CAT-osoitteeseen. Anna chia-osoite."
 
 #: src/components/card/WalletCardCRCatRestrictions.tsx:40
 msgid "CAT credential restrictions"
@@ -152,7 +146,13 @@ msgstr "CAT käyttöoikeusrajoitukset"
 #~ msgid "Check my snapshot balance"
 #~ msgstr "Check my snapshot balance"
 
-#: src/components/WalletHistoryClawbackChip.tsx:68
+#: src/components/cat/WalletCATSelect.tsx:25
+#: src/components/create/WalletCreateList.tsx:32
+#: src/constants/WalletName.ts:23
+msgid "Chia Asset Token"
+msgstr "Chia Asset Token"
+
+#: src/components/WalletHistoryClawbackChip.tsx:60
 msgid "Claim transaction"
 msgstr "Lunasta transaktio"
 
@@ -161,7 +161,7 @@ msgstr "Lunasta transaktio"
 msgid "Claim Transaction"
 msgstr "Lunasta Transaktio"
 
-#: src/components/WalletHistoryClawbackChip.tsx:83
+#: src/components/WalletHistoryClawbackChip.tsx:75
 msgid "Claiming..."
 msgstr "Lunastetaan..."
 
@@ -169,11 +169,11 @@ msgstr "Lunastetaan..."
 msgid "Classic version of Stably USDS as held by Prime Trust"
 msgstr "Classic USDS Prime Trustin hallinnassa"
 
-#: src/components/WalletHistory.tsx:432
+#: src/components/WalletHistory.tsx:436
 msgid "Claw back expiration"
 msgstr "Takaisinvedon vanhentuminen"
 
-#: src/components/WalletHistoryClawbackChip.tsx:94
+#: src/components/WalletHistoryClawbackChip.tsx:86
 msgid "Claw back this transaction"
 msgstr "Takaisinvedä transaktio"
 
@@ -201,7 +201,7 @@ msgstr "Takaisinveto mahdollistetaan."
 msgid "Clawback will not be applied."
 msgstr "Takaisinvetoa ei mahdollisteta."
 
-#: src/components/WalletHistoryClawbackChip.tsx:109
+#: src/components/WalletHistoryClawbackChip.tsx:101
 msgid "Clawing back..."
 msgstr "Vedetään takaisin..."
 
@@ -219,11 +219,11 @@ msgstr "Sulje"
 msgid "Confirmation"
 msgstr "Vahvista"
 
-#: src/components/WalletHistory.tsx:199
+#: src/components/WalletHistory.tsx:211
 msgid "Confirmed"
 msgstr "Vahvistettu"
 
-#: src/components/WalletHistory.tsx:421
+#: src/components/WalletHistory.tsx:425
 msgid "Confirmed at Height"
 msgstr "Vahvistettu korkeudessa"
 
@@ -253,7 +253,7 @@ msgstr "Luo Tarjous"
 msgid "Create Transaction"
 msgstr "Luo Transaktio"
 
-#: src/components/WalletHistory.tsx:222
+#: src/components/WalletHistory.tsx:234
 msgid "Creation Date"
 msgstr "Luontipäivämäärä"
 
@@ -298,8 +298,8 @@ msgid "Distributed Identity"
 msgstr "Hajautettu Identiteetti"
 
 #: src/components/WalletImport.tsx:157
-msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Cactus wallet."
-msgstr "Anna tallentamasi {mnemonicWordCount} muistisanaa palauttaaksesi Cactus-lompakon."
+msgid "Enter the {mnemonicWordCount} word mnemonic that you have saved in order to restore your Chia wallet."
+msgstr "Anna tallentamasi {mnemonicWordCount} muistisanaa palauttaaksesi Chia-lompakon."
 
 #: src/components/cat/WalletCATSend.tsx:127
 msgid "Error the entered address appears to be for a different colour."
@@ -311,7 +311,7 @@ msgid "Farm"
 msgstr "Farmi"
 
 #: src/components/cat/WalletCATSend.tsx:228
-#: src/components/WalletHistory.tsx:236
+#: src/components/WalletHistory.tsx:248
 #: src/components/WalletSend.tsx:254
 msgid "Fee"
 msgstr "Veloitus"
@@ -358,7 +358,7 @@ msgstr "IP-osoite"
 msgid "List of connections is empty"
 msgstr "Yhteyksien luettelo on tyhjä"
 
-#: src/components/WalletsManageTokens.tsx:131
+#: src/components/WalletsManageTokens.tsx:132
 msgid "Manage token list"
 msgstr "Hallitse tokenilistaa"
 
@@ -367,7 +367,7 @@ msgstr "Hallitse tokenilistaa"
 msgid "Memo"
 msgstr "Muistio"
 
-#: src/components/WalletHistory.tsx:426
+#: src/components/WalletHistory.tsx:430
 msgid "Memos"
 msgstr "Muistiot"
 
@@ -416,7 +416,7 @@ msgstr "NFT-Lompakko"
 msgid "Nickname"
 msgstr "Alias"
 
-#: src/components/WalletHistory.tsx:503
+#: src/components/WalletHistory.tsx:507
 msgid "No previous transactions"
 msgstr "Ei aiempia transaktioita"
 
@@ -424,8 +424,8 @@ msgstr "Ei aiempia transaktioita"
 msgid "Node ID"
 msgstr "Noodin tunnus"
 
-#: src/components/WalletHistory.tsx:415
-#: src/components/WalletHistory.tsx:422
+#: src/components/WalletHistory.tsx:419
+#: src/components/WalletHistory.tsx:426
 msgid "Not Available"
 msgstr "Ei Saatavilla"
 
@@ -433,7 +433,7 @@ msgstr "Ei Saatavilla"
 msgid "Not Synced"
 msgstr "Ei Synkronoitu"
 
-#: src/components/WalletHistory.tsx:208
+#: src/components/WalletHistory.tsx:220
 msgid "Offer Accepted"
 msgstr "Tarjous Hyväksytty"
 
@@ -462,7 +462,7 @@ msgstr "Liitä muistisanat ({0} sanaa)"
 msgid "Payments approved"
 msgstr "Hyväksytyt maksut"
 
-#: src/components/WalletHistory.tsx:201
+#: src/components/WalletHistory.tsx:213
 msgid "Pending"
 msgstr "Odottaa"
 
@@ -587,9 +587,14 @@ msgstr "Uudelleennimeä Lompakko"
 msgid "Restricted CAT"
 msgstr "Rajoitettu CAT"
 
-#: src/components/WalletHistory.tsx:207
+#: src/components/WalletHistory.tsx:219
 msgid "Retire"
 msgstr "Poista vanhentunut"
+
+#: src/components/WalletName.tsx:35
+#: src/components/WalletsSidebar.tsx:99
+msgid "Revocable"
+msgstr "Peruutettava"
 
 #: src/constants/WalletName.ts:8
 msgid "RL Wallet"
@@ -626,7 +631,7 @@ msgstr "Saldo Käytettävissä"
 msgid "Standard Wallet"
 msgstr "Vakiolompakko"
 
-#: src/components/WalletHistory.tsx:213
+#: src/components/WalletHistory.tsx:225
 msgid "Status"
 msgstr "Tila"
 
@@ -647,8 +652,8 @@ msgid "Syncing"
 msgstr "Synkronoi"
 
 #: src/components/card/WalletCardTotalBalance.tsx:70
-msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for CAC, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
-msgstr "Derivaatioindeksi asettaa lompakon osoitteiden määrän, jota lompakko skannaa lohkoketjusta. Tämä luku on yleensä suurempi, jos sinulla on paljon tapahtumia tai peruutettuja tarjouksia CAC-, CAT- tai NFT-kolikoille. Jos uskot, että saldo on väärä, nosta derivaatioindeksiä, mikä auttaa lompakkoa sisällyttämään puuttuvat kolikot saldoon."
+msgid "The derivation index sets the range of wallet addresses that the wallet scans the blockchain for. This number is generally higher if you have a lot of transactions or canceled offers for XCH, CATs, or NFTs. If you believe your balance is incorrect because it’s missing coins, then increasing the derivation index could help the wallet include the missing coins in the balance total."
+msgstr "Derivaatioindeksi asettaa lompakon osoitteiden määrän, jota lompakko skannaa lohkoketjusta. Tämä luku on yleensä suurempi, jos sinulla on paljon tapahtumia tai peruutettuja tarjouksia XCH-, CAT- tai NFT-kolikoille. Jos uskot, että saldo on väärä, nosta derivaatioindeksiä, mikä auttaa lompakkoa sisällyttämään puuttuvat kolikot saldoon."
 
 #: src/components/cat/WalletCATSend.tsx:200
 msgid "The recipient of this transaction will need to have valid credentials in order to claim the sent assets. See the CR CAT restrictions above."
@@ -676,12 +681,12 @@ msgstr "Transaktio odottaa mempooliin sisällyttämistä, koska se on ristiriida
 msgid "This access token is verified"
 msgstr "Tämä käyttöoikeustoken on vahvistettu"
 
-#: src/components/WalletHistory.tsx:159
+#: src/components/WalletHistory.tsx:171
 msgid "This is not a valid address for sending funds to"
 msgstr "Tämä ei ole kelvollinen osoite varojen lähettämiseen"
 
 #: src/components/standard/WalletStandardCards.tsx:23
-msgid "This is the amount of Cactus that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Cactus that you have just spent but is not yet in the blockchain."
+msgid "This is the amount of Chia that you can currently use to make transactions. It does not include pending farming rewards, pending incoming transactions, and Chia that you have just spent but is not yet in the blockchain."
 msgstr "Transaktioihin käytettävissä oleva Chiojen määrä. Ei sisällä avoimia farmarin palkkioita, avoimia saapuvia transaktioita eikä lähetettyjä, mutta vahvistamattomia transaktioita."
 
 #: src/components/standard/WalletStandardCards.tsx:42
@@ -693,12 +698,17 @@ msgid "This is the sum of the incoming and outgoing pending transactions (not ye
 msgstr "Lähtevien ja saapuvien avointen transaktioiden summa (ei vielä lohkoketjussa). Ei sisällä farmarin palkkioita."
 
 #: src/components/standard/WalletStandardCards.tsx:17
-msgid "This is the total amount of cactus in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
+msgid "This is the total amount of chia in the blockchain at the current peak block that is controlled by your private keys. It includes frozen farming rewards, but not pending incoming and outgoing transactions."
 msgstr "Yksityisten avaimiesi hallinoimien Chiojen kokonaissumma lohkoketjussa. Sisälytää jäädytetyt palkkiot, mutta ei keskeneräisiä tulevia tai lähteviä transaktioita."
 
 #: src/components/standard/WalletStandardCards.tsx:30
 msgid "This is the total balance + pending balance: it is what your balance will be after all pending transactions are confirmed."
 msgstr "Nykyinen saldo + avoin saldo, eli tuleva saldo avointen transaktioiden jälkeen."
+
+#: src/components/WalletName.tsx:37
+#: src/components/WalletsSidebar.tsx:101
+msgid "This token can be revoked by the issuer"
+msgstr "Liikkeeseenlaskija voi peruuttaa tämän tokenin"
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:201
 msgid "This transaction will be automatically claimed with a fee:"
@@ -709,7 +719,7 @@ msgstr "Tämä tapahtuma lunastetaan automaattisesti maksulla:"
 #~ msgstr "To"
 
 #: src/components/ClawbackClaimTransactionDialog.tsx:183
-#: src/components/WalletHistory.tsx:185
+#: src/components/WalletHistory.tsx:197
 msgid "To:"
 msgstr "Vastaanottaja:"
 
@@ -721,7 +731,7 @@ msgstr "Tokenilla on tyhjä assettitunnus"
 msgid "Token has empty name"
 msgstr "Tokenilla on tyhjä nimi"
 
-#: src/components/WalletsSidebar.tsx:104
+#: src/components/WalletsSidebar.tsx:122
 msgid "Tokens"
 msgstr "Tokenit"
 
@@ -733,7 +743,7 @@ msgstr "Kokonaissaldo"
 msgid "Transaction has successfully been sent to a full node and included in the mempool."
 msgstr "Transaktio on onnistuneesti lähetetty noodille ja sisällytetty mempooliin."
 
-#: src/components/WalletHistory.tsx:480
+#: src/components/WalletHistory.tsx:484
 msgid "Transactions"
 msgstr "Transaktiot"
 
@@ -786,7 +796,7 @@ msgstr "Lompakkotyyppiä {0} ei tueta"
 msgid "Welcome! The following words are used for your wallet backup. Without them, you will lose access to your wallet, keep them safe! Write down each word along with the order number next to them. (Order is important)"
 msgstr "Tervetuloa! Seuraavia muistisanoja käytetään lompakon varmuuskopiointiin. Ilman niitä sinulla ei ole pääsyä lompakkoosi. Pidä ne tallessa! Kirjoita ylös sanat ja niiden järjestysnumerot. (Oikea järjestys on tärkeää)"
 
-#: src/components/WalletHistoryClawbackChip.tsx:56
+#: src/components/WalletHistoryClawbackChip.tsx:48
 msgid "Will be autoclaimed in "
 msgstr "Lunastetaan automaattisesti "
 

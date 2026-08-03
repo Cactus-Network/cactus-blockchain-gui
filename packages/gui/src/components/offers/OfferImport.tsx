@@ -1,6 +1,4 @@
-import fs, { Stats } from 'fs';
-
-import { type OfferSummaryRecord } from '@cactus-network/api';
+import { type DataLayerOfferSummary, type OfferSummaryRecord } from '@cactus-network/api';
 import { useGetOfferSummaryMutation } from '@cactus-network/api-react';
 import {
   Back,
@@ -15,6 +13,8 @@ import { Trans } from '@lingui/macro';
 import { Button, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
+
+import isDataLayerOfferSummary from '../../util/isDataLayerOfferSummary';
 
 import OfferDataEntryDialog from './OfferDataEntryDialog';
 import { offerContainsAssetOfType } from './utils';
@@ -36,7 +36,7 @@ function SelectOfferFile() {
 
   async function parseOfferSummary(rawOfferData: string, offerFilePath: string | undefined) {
     const [offerData /* , leadingText, trailingText */] = parseOfferData(rawOfferData);
-    let offerSummary: OfferSummaryRecord | undefined;
+    let offerSummary: OfferSummaryRecord | DataLayerOfferSummary | undefined;
 
     if (offerData) {
       const { data: response } = await getOfferSummary({ offerData });
@@ -50,9 +50,14 @@ function SelectOfferFile() {
     }
 
     if (offerSummary) {
-      const navigationPath = offerContainsAssetOfType(offerSummary, 'singleton')
-        ? '/dashboard/offers/view-nft'
-        : '/dashboard/offers/view';
+      let navigationPath: string;
+      if (isDataLayerOfferSummary(offerSummary)) {
+        navigationPath = '/dashboard/offers/view';
+      } else {
+        navigationPath = offerContainsAssetOfType(offerSummary, 'singleton')
+          ? '/dashboard/offers/view-nft'
+          : '/dashboard/offers/view';
+      }
 
       navigate(navigationPath, {
         state: { offerData, offerSummary, offerFilePath, imported: true },
@@ -62,39 +67,28 @@ function SelectOfferFile() {
     }
   }
 
-  async function handleOpen(offerFilePath: string) {
-    async function continueOpen(stats: Stats) {
-      try {
-        if (stats.size > 1024 * 1024) {
-          errorDialog(new Error('Offer file is too large (> 1MB)'));
-        } else {
-          const offerData = fs.readFileSync(offerFilePath, 'utf8');
-
-          await parseOfferSummary(offerData, offerFilePath);
-        }
-      } catch (e) {
-        errorDialog(e);
-      } finally {
-        setIsParsing(false);
+  async function handleOpen(file: File) {
+    try {
+      if (file.size > 1024 * 1024) {
+        errorDialog(new Error('Offer file is too large (> 1MB)'));
+        return;
       }
+
+      setIsParsing(true);
+      const offerData = await file.text();
+      await parseOfferSummary(offerData, file.name);
+    } catch (e) {
+      errorDialog(e);
+    } finally {
+      setIsParsing(false);
     }
-
-    setIsParsing(true);
-
-    fs.stat(offerFilePath, (err, stats) => {
-      if (err) {
-        errorDialog(err);
-      } else {
-        continueOpen(stats);
-      }
-    });
   }
 
-  async function handleDrop(acceptedFiles: [File]) {
+  async function handleDrop(acceptedFiles: File[]) {
     if (acceptedFiles.length !== 1) {
       errorDialog(new Error('Please drop one offer file at a time'));
     } else {
-      handleOpen(acceptedFiles[0].path);
+      handleOpen(acceptedFiles[0]);
     }
   }
 
@@ -115,14 +109,19 @@ function SelectOfferFile() {
   }
 
   async function handleSelectOfferFile() {
-    const dialogOptions = {
-      filters: [{ name: 'Offer Files', extensions: ['offer'] }],
-    } as Electron.OpenDialogOptions;
-    const { ipcRenderer } = window as any;
-    const { canceled, filePaths } = await ipcRenderer.invoke('showOpenDialog', dialogOptions);
-    if (!canceled && filePaths?.length) {
-      handleOpen(filePaths[0]);
+    const result = await window.appAPI.showOpenFileDialogAndRead({
+      extensions: ['offer'],
+    });
+
+    if (!result) {
+      return;
     }
+
+    const { content, filename } = result;
+
+    // convert string content to file
+    const file = new File([content], filename, { type: 'application/offer' });
+    handleOpen(file);
   }
 
   async function pasteParse(text: string) {

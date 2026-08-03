@@ -9,40 +9,39 @@ type MultipleDownloadDialogProps = {
   folder: string;
 };
 
-const { ipcRenderer } = window as any;
-
 export default function MultipleDownloadDialog(props: MultipleDownloadDialogProps) {
   const { onClose = () => {}, folder } = props;
   const theme = useTheme();
   const [progressObject, setProgressObject] = useState<any>({
     progress: 0,
     url: '',
-    i: 1,
+    index: 0,
     total: 1,
   });
   const [responseObject, setResponseObject] = useState<any>({});
   const [downloadDone, setDownloadDone] = useState<boolean>(false);
 
   useEffect(() => {
-    const downloadProgressFn = (_: any, obj: any) => {
+    const downloadProgressFn = (obj: any) => {
       setProgressObject(obj);
     };
-    const downloadDoneFn = (_: any, obj: any) => {
+    const downloadDoneFn = (obj: any) => {
       setResponseObject(obj);
       setDownloadDone(true);
     };
-    ipcRenderer.on('downloadProgress', downloadProgressFn);
-    ipcRenderer.on('multipleDownloadDone', downloadDoneFn);
+
+    const unsubscribeDownloadProgress = window.appAPI.subscribeToMultipleDownloadProgress(downloadProgressFn);
+    const unsubscribeDownloadDone = window.appAPI.subscribeToMultipleDownloadDone(downloadDoneFn);
 
     return () => {
-      ipcRenderer.off('downloadProgress', downloadProgressFn);
-      ipcRenderer.off('multipleDownloadDone', downloadDoneFn);
+      unsubscribeDownloadProgress();
+      unsubscribeDownloadDone();
     };
   }, []);
 
   function handleClose({ isCanceled }: { isCanceled: boolean }) {
     if (isCanceled) {
-      ipcRenderer.invoke('abortDownloadingFiles');
+      window.appAPI.abortDownloadingFiles();
     }
     onClose?.(true);
   }
@@ -75,7 +74,7 @@ export default function MultipleDownloadDialog(props: MultipleDownloadDialogProp
     }
     return (
       <Trans>
-        Downloading files {progressObject.i + 1}/{progressObject.total}
+        Downloading files {progressObject.index + 1}/{progressObject.total}
       </Trans>
     );
   }
@@ -102,7 +101,7 @@ export default function MultipleDownloadDialog(props: MultipleDownloadDialogProp
           <Box>{progressObject.url}</Box>
           <Box
             sx={{
-              width: `${progressObject.progress * 100}%`,
+              width: `${progressObject.progress}%`,
               height: '12px',
               background: `${theme.palette.primary.main}`,
               borderRadius: '3px',

@@ -25,17 +25,16 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        python-version: [3.8]
         os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Cache npm
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         env:
           cache-name: cache-node-modules
         with:
@@ -47,15 +46,12 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Setup Node 18.x
-        uses: actions/setup-node@v4
+      - name: Setup Node 24.x
+        uses: actions/setup-node@v6
         with:
-          node-version: "18.x"
+          node-version: "24.x"
 
       - name: Check npm audit on ${{ matrix.os }}
         shell: bash
         run: |
-          npm install
-          if ! output=$(npm audit --audit-level=high); then echo "$output" && exit 1; fi
-          echo "$output"
-          echo "No issues found."
+          npm audit --audit-level=high

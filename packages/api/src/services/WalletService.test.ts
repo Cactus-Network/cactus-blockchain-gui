@@ -1,14 +1,14 @@
-import { randomBytes } from 'crypto';
-
 import BigNumber from 'bignumber.js';
 
 import Message from '../Message';
 import { ServiceNameValue } from '../constants/ServiceName';
+import randomHex from '../utils/randomHex';
 
 import Wallet from './WalletService';
 
-jest.mock('crypto', () => ({
-  randomBytes: jest.fn(),
+jest.mock('../utils/randomHex', () => ({
+  __esModule: true,
+  default: jest.fn(),
 }));
 
 describe('WalletService', () => {
@@ -16,8 +16,8 @@ describe('WalletService', () => {
   let client: any;
 
   beforeEach(() => {
-    (randomBytes as any).mockReset();
-    (randomBytes as any).mockReturnValue(Buffer.from('test'));
+    (randomHex as jest.Mock).mockReset();
+    (randomHex as jest.Mock).mockReturnValue('test_request_id');
 
     client = {
       origin: 'test_origin',
@@ -558,6 +558,40 @@ describe('WalletService', () => {
     expect(client.send).toHaveBeenCalledWith(...expected);
   });
 
+  it('calls get_height_info with use_peak_height', async () => {
+    const args = { usePeakHeight: true };
+    const expected = [
+      new Message({
+        command: 'get_height_info',
+        data: args,
+        destination: 'cactus_wallet',
+        origin: 'test_origin' as ServiceNameValue,
+      }),
+      undefined,
+      undefined,
+    ];
+
+    await service.getHeightInfo(args);
+    expect(client.send).toHaveBeenCalledWith(...expected);
+  });
+
+  it('calls get_puzzle_and_solution', async () => {
+    const args = { coinName: `0x${'ab'.repeat(32)}` };
+    const expected = [
+      new Message({
+        command: 'get_puzzle_and_solution',
+        data: args,
+        destination: 'cactus_wallet',
+        origin: 'test_origin' as ServiceNameValue,
+      }),
+      undefined,
+      undefined,
+    ];
+
+    await service.getPuzzleAndSolution(args);
+    expect(client.send).toHaveBeenCalledWith(...expected);
+  });
+
   it('calls get_network_info', async () => {
     const expected = [
       new Message({
@@ -686,7 +720,7 @@ describe('WalletService', () => {
     const expected = [
       new Message({
         command: 'create_offer_for_ids',
-        data: { driver_dict: driverDict, ...restArgs },
+        data: { driver_dict: driverDict, extra_conditions: undefined, coin_ids: undefined, ...restArgs },
         destination: 'cactus_wallet',
         origin: 'test_origin' as ServiceNameValue,
       }),

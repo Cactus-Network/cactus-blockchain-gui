@@ -66,7 +66,7 @@ function buildAssetSelectorList(params: BuildAssetSelectorListParams): WalletOff
     if (wallet.type === WalletType.STANDARD_WALLET) {
       name = 'Cactus';
       symbol = cactusCurrencyCode;
-    } else if ([WalletType.CAT, WalletType.CRCAT].includes(wallet.type)) {
+    } else if ([WalletType.CAT, WalletType.RCAT, WalletType.CRCAT].includes(wallet.type)) {
       name = wallet.name;
       tail = wallet.meta.assetId;
       const cat = catList.find((catItem) => catItem.assetId.toLowerCase() === tail?.toLowerCase());

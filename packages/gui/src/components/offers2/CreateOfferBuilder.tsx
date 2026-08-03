@@ -1,10 +1,5 @@
 import { WalletType } from '@cactus-network/api';
-import {
-  useGetWalletsQuery,
-  useCreateOfferForIdsMutation,
-  useGetTimestampForHeightQuery,
-  useGetHeightInfoQuery,
-} from '@cactus-network/api-react';
+import { useGetWalletsQuery, useCreateOfferForIdsMutation, useCurrentBlockchainTime } from '@cactus-network/api-react';
 import { Flex, ButtonLoading, useOpenDialog, Loading } from '@cactus-network/core';
 import { useIsWalletSynced } from '@cactus-network/wallets';
 import { t, Trans } from '@lingui/macro';
@@ -15,9 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import type OfferBuilderData from '../../@types/OfferBuilderData';
 import useSuppressShareOnCreate from '../../hooks/useSuppressShareOnCreate';
 import useWalletOffers from '../../hooks/useWalletOffers';
-import getCurrentTime from '../../util/getCurrentTime';
 import offerBuilderDataToOffer from '../../util/offerBuilderDataToOffer';
-import OfferEditorConfirmationDialog from '../offers/OfferEditorConfirmationDialog';
 
 import OfferBuilder from './OfferBuilder';
 import OfferBuilderExpirationSection from './OfferBuilderExpirationSection';
@@ -77,14 +70,7 @@ export default function CreateOfferBuilder(props: CreateOfferBuilderProps) {
 
   const [suppressShareOnCreate] = useSuppressShareOnCreate();
 
-  const { data: height, isLoading: isGetHeightInfoLoading } = useGetHeightInfoQuery(undefined, {
-    pollingInterval: 3000,
-  });
-  const { data: lastBlockTimeStampData, isLoading: isGetTimestampForHeightLoading } = useGetTimestampForHeightQuery(
-    { height: height || 0 },
-    { skip: !height },
-  );
-  const currentTime = getCurrentTime(lastBlockTimeStampData);
+  const { timestamp: currentTime, isLoading: isBlockchainTimeLoading } = useCurrentBlockchainTime();
 
   const handleCreateOffer = useCallback(() => {
     offerBuilderRef.current?.submit();
@@ -96,10 +82,7 @@ export default function CreateOfferBuilder(props: CreateOfferBuilderProps) {
 
   const handleSubmit = useCallback(
     async (values: OfferBuilderData) => {
-      if (
-        expirationTimeMax !== 0 &&
-        (isGetHeightInfoLoading || isGetTimestampForHeightLoading || !isWalletSynced || currentTime === 0)
-      ) {
+      if (expirationTimeMax !== 0 && (isBlockchainTimeLoading || !isWalletSynced || currentTime === 0)) {
         throw new Error(t`Wallet must be synced before creating an offer with an expiration time`);
       }
 
@@ -138,11 +121,6 @@ export default function CreateOfferBuilder(props: CreateOfferBuilderProps) {
         if (!confirmedToProceed) {
           return;
         }
-      }
-
-      const confirmedCreation = await openDialog(<OfferEditorConfirmationDialog />);
-      if (!confirmedCreation) {
-        return;
       }
 
       try {
@@ -185,8 +163,7 @@ export default function CreateOfferBuilder(props: CreateOfferBuilderProps) {
       nftId,
       expirationTimeMax,
       currentTime,
-      isGetHeightInfoLoading,
-      isGetTimestampForHeightLoading,
+      isBlockchainTimeLoading,
       isWalletSynced,
     ],
   );

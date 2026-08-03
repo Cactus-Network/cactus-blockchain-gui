@@ -1,10 +1,11 @@
 import { Trans } from '@lingui/macro';
-import { ButtonProps, Dialog, DialogTitle, DialogContent, DialogContentText } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogContentText } from '@mui/material';
 import React, { type ReactNode, useEffect, useState, useCallback } from 'react';
 
 import useShowError from '../../hooks/useShowError';
 import Button from '../Button';
 import ButtonLoading from '../ButtonLoading';
+import type { ButtonLoadingProps } from '../ButtonLoading/ButtonLoading';
 import DialogActions from '../DialogActions';
 
 export type ConfirmDialogProps = {
@@ -14,10 +15,12 @@ export type ConfirmDialogProps = {
   onClose?: (value: boolean) => void;
   confirmTitle: ReactNode;
   cancelTitle: ReactNode;
-  confirmColor?: ButtonProps['color'] | 'danger';
+  confirmColor?: ButtonLoadingProps['color'];
   onConfirm?: () => Promise<void>;
   disableConfirmButton?: boolean;
   autoClose?: 'confirm' | 'cancel';
+  disableBackdropClick?: boolean;
+  disableEscapeKeyDown?: boolean;
 };
 
 export default function ConfirmDialog(props: ConfirmDialogProps) {
@@ -32,6 +35,8 @@ export default function ConfirmDialog(props: ConfirmDialogProps) {
     onConfirm,
     disableConfirmButton,
     autoClose,
+    disableBackdropClick = false,
+    disableEscapeKeyDown = false,
     ...rest
   } = props;
 
@@ -66,9 +71,19 @@ export default function ConfirmDialog(props: ConfirmDialogProps) {
     }
   }, [autoClose, handleConfirm, handleCancel]);
 
+  const handleDialogClose = useCallback(
+    (_event: object, reason: 'backdropClick' | 'escapeKeyDown') => {
+      if (disableBackdropClick && reason === 'backdropClick') return;
+      if (disableEscapeKeyDown && reason === 'escapeKeyDown') return;
+      handleCancel();
+    },
+    [disableBackdropClick, disableEscapeKeyDown, handleCancel],
+  );
+
   return (
     <Dialog
-      onClose={handleCancel}
+      onClose={handleDialogClose}
+      disableEscapeKeyDown={disableEscapeKeyDown}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       open={!autoClose && open}
